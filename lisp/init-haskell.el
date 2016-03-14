@@ -15,7 +15,9 @@
 (when (maybe-require-package 'company-ghci)
   (after-load 'haskell-mode
     (after-load 'company
-      (push 'company-ghci company-backends))))
+      (add-hook 'haskell-mode-hook
+                (lambda ()
+                  (add-to-list 'company-backends 'company-ghci))))))
 
 
 
