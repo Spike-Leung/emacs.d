@@ -48,7 +48,9 @@
 (after-load 'ruby-mode
   (add-hook 'ruby-mode-hook 'robe-mode))
 (after-load 'company
-  (add-to-list 'company-backends 'company-robe))
+  (dolist (hook '(ruby-mode-hook inf-ruby-mode-hook html-erb-mode-hook haml-mode))
+    (add-hook hook
+              (lambda () (sanityinc/local-push-company-backend 'company-robe)))))
 
 
 

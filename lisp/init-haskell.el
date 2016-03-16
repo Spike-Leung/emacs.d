@@ -16,8 +16,7 @@
   (after-load 'haskell-mode
     (after-load 'company
       (add-hook 'haskell-mode-hook
-                (lambda ()
-                  (add-to-list 'company-backends 'company-ghci))))))
+                (lambda () (sanityinc/local-push-company-backend 'company-ghci))))))
 
 
 

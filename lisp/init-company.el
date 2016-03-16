@@ -18,7 +18,12 @@
   (when (maybe-require-package 'company-quickhelp)
     (after-load 'company-quickhelp
       (define-key company-quickhelp-mode-map (kbd "M-h") nil))
-    (add-hook 'after-init-hook 'company-quickhelp-mode)))
+    (add-hook 'after-init-hook 'company-quickhelp-mode))
+
+  (defun sanityinc/local-push-company-backend (backend)
+    "Add BACKEND to a buffer-local version of `company-backends'."
+    (set (make-local-variable 'company-backends)
+         (append (list backend) company-backends))))
 
 
 ;; Suspend page-break-lines-mode while company menu is active
