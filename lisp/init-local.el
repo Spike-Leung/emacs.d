@@ -39,6 +39,10 @@
 
 (mapc 'hook-linum-mode modes-to-hook-with-linum)
 
+;; Use flx fuzzy finding to in ido
+(require-package 'flx-ido)
+(flx-ido-mode 1)
+(setq ido-use-faces nil) ;; disable ido faces to see flx highlights.
 
 
 ;;; Pick a colour scheme
@@ -99,7 +103,7 @@
   )
 
 (evil-leader/set-key
-  "t" 'find-file
+  "t" 'projectile-find-file
   "d" 'evil-delete-buffer
   "v" 'split-window-horizontally
   "o" 'org-agenda
