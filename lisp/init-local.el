@@ -106,6 +106,7 @@
   "c" 'delete-window
   "a" 'ag
   "," 'other-window
+  "w" 'toggle-truncate-lines
   )
 
 ;; Treat wrapped line scrolling as single lines
