@@ -111,6 +111,7 @@
   "a" 'ag
   "," 'other-window
   "w" 'toggle-truncate-lines
+  "g" 'magit-status
   )
 
 ;; Treat wrapped line scrolling as single lines
