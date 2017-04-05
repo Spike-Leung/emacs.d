@@ -37,7 +37,8 @@
                                  xml-mode-hook
                                  yaml-mode-hook))
 
-(mapcar 'hook-linum-mode modes-to-hook-with-linum)
+(mapc 'hook-linum-mode modes-to-hook-with-linum)
+
 
 
 ;;; Pick a colour scheme
