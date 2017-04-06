@@ -137,5 +137,10 @@
  org-default-notes-file "~/org/inbox.org"
  )
 
+;;; When Refile during capture, it saves the default capture target but not the file
+;;; you just refiled to, so just save every org buffer after a refile.
+(defadvice org-refile (after sanityinc/save-all-after-refile activate)
+  (org-save-all-org-buffers))
+
 (provide 'init-local)
 ;;; init-local.el ends here
