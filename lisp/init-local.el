@@ -130,6 +130,8 @@
 
 ;;Shift space breaks out of insert
 (define-key evil-insert-state-map (kbd "S-SPC") `evil-normal-state)
+;; Meta-v in insert mode pastes like you'd expect
+(define-key evil-insert-state-map (kbd "M-v") `yank)
 
 
 ;;; Org mode setup
