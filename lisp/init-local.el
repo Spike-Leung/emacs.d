@@ -74,8 +74,13 @@
 (require-package 'evil)
 (evil-mode 1)
 
-;; Evil key configurations
+;; Evil default state overrides
 (evil-set-initial-state 'org-agenda-mode 'normal)
+;; For whatever reason this doesn't work: (evil-set-initial-state 'org-capture-mode 'insert)
+;; so hook capture mode directly
+(add-hook 'org-capture-mode-hook 'evil-insert-state)
+
+;; Evil key configurations
 (defvar org-agenda-mode-map)
 (evil-define-key 'normal org-agenda-mode-map
   "l" 'org-agenda-later
