@@ -107,7 +107,7 @@
   "d" 'evil-delete-buffer
   "v" 'split-window-horizontally
   "o" 'org-agenda
-  "c" 'delete-window
+  "c" 'comment-dwim
   "a" 'ag
   "," 'other-window
   "w" 'toggle-truncate-lines
@@ -117,6 +117,8 @@
 ;; Treat wrapped line scrolling as single lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+(define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
 
 ;;; esc quits pretty much anything (like pending prompts in the minibuffer)
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
