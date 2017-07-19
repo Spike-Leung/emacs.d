@@ -15,27 +15,8 @@
 (defun hook-linum-mode (mode)
   (add-hook mode 'enable-linum-mode))
 
-(setq modes-to-hook-with-linum '(c-mode-hook
-                                 csv-mode-hook
-                                 emacs-lisp-mode-hook
-                                 coffee-mode-hook
-                                 feature-mode-hook
-                                 java-mode-hook
-                                 js-mode-hook
-                                 javascript-mode-hook
-                                 espresso-mode-hook
-                                 haml-mode-hook
-                                 lisp-mode-hook
-                                 nxml-mode-hook
-                                 php-mode-hook
-                                 ruby-mode-hook
-                                 sass-mode-hook
-                                 scss-mode-hook
-                                 sh-mode-hook
-                                 text-mode-hook
-                                 textile-mode-hook
-                                 xml-mode-hook
-                                 yaml-mode-hook))
+(setq modes-to-hook-with-linum '(prog-mode-hook
+                                 text-mode-hook))
 
 (mapc 'hook-linum-mode modes-to-hook-with-linum)
 
