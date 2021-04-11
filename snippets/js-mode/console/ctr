@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: console.trace
+# key: ctr
+# group: console
+# --
+console.trace(${1:text})

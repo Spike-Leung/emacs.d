@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: <template #...></template>
+# key: tps
+# --
+<template #${1:slot}>
+$0
+</template>
