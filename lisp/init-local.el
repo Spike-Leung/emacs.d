@@ -110,6 +110,12 @@ text and copying to the killring."
                         (org-agenda-todo-ignore-scheduled 'future)
                         (org-agenda-sorting-strategy
                          '(category-keep))))
+            (tags "/DONE"
+                  ((org-agenda-overriding-header "DONE")
+                   (org-agenda-tags-todo-honor-ignore-options t)
+                   (org-agenda-todo-ignore-scheduled 'future)
+                   (org-agenda-sorting-strategy
+                    '(category-keep))))
             (tags-todo "/SOMEDAY"
                        ((org-agenda-overriding-header "Someday")
                         (org-agenda-tags-todo-honor-ignore-options t)
