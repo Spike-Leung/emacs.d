@@ -174,6 +174,22 @@ text and copying to the killring."
 
 
 
+;;; org-roam
+
+(setq org-roam-v2-ack t)
+(setq org-roam-directory (file-truename "~/org-roam"))
+(global-set-key (kbd "C-c n  l") 'org-roam-buffer-toggle)
+(global-set-key (kbd "C-c n  f") 'org-roam-node-find)
+(global-set-key (kbd "C-c n  g") 'org-roam-graph)
+(global-set-key (kbd "C-c n  i") 'org-roam-node-insert)
+(global-set-key (kbd "C-c n  c") 'org-roam-capture)
+(global-set-key (kbd "C-c n  j") 'org-roam-dailies-capture-today)
+;; (global-set-key (kbd "C-M i") 'completion-at-point)
+
+(require-package 'org-roam)
+(org-roam-setup)
+
+
 
 ;;; @see https://docs.google.com/document/d/1P5At-z1sP8rgwYLHso5sEy3u4rMnIUDDgob9Y_BYuWE/edit
 ;; add beancount minor mode
