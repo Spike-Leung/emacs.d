@@ -21,5 +21,7 @@
 (require-package 'org-roam)
 (org-roam-setup)
 
+(require 'org-roam-protocol)
+
 (provide 'init-org-roam)
 ;;; init-org-roam.el ends here

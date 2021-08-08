@@ -11,6 +11,7 @@
 (require 'init-my-org)
 (require 'init-mu4e)
 (require 'init-org-roam)
+(require 'init-org-download)
 
 (provide 'init-local)
 ;;; init-local.el ends here
