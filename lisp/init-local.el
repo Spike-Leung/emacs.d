@@ -13,6 +13,7 @@
 (require 'init-org-roam)
 (require 'init-org-download)
 (require 'init-deft)
+(require 'init-easy-hugo)
 
 (provide 'init-local)
 ;;; init-local.el ends here
