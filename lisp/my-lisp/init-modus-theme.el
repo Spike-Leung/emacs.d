@@ -71,18 +71,18 @@
         (habit . traffic-light-deuteranopia))
 
       modus-themes-headings ; this is an alist: read the manual or its doc string
-      '((1 . (overline rainbow))
-        (2 . (rainbow))
-        (t . (no-bold rainbow)))
+      '((1 . (overline background))
+        (2 . (no-bold rainbow  overline))
+        (t . (no-bold rainbox)))
 
       modus-themes-variable-pitch-ui nil
       modus-themes-variable-pitch-headings t
       modus-themes-scale-headings t
-      modus-themes-scale-1 1.1
-      modus-themes-scale-2 1.15
-      modus-themes-scale-3 1.21
-      modus-themes-scale-4 1.27
-      modus-themes-scale-title 1.33)
+      modus-themes-scale-1 1.05
+      modus-themes-scale-2 1.1
+      modus-themes-scale-3 1.2
+      modus-themes-scale-4 1.4
+      modus-themes-scale-title 1.99)
 ;; Load the theme files before enabling a theme (else you get an error).
 (modus-themes-load-themes)
 ;; Load the theme of your choice:
