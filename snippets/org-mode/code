@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: #+begin_src ... #+end_src
+# key: code
+# --
+
+#+begin_src ${1:bash}
+  $0
+#+end_src
