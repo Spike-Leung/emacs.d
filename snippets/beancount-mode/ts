@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: transaction
+# key: ts
+# --
+2021-09-${3} * "${4}"
+  $0
