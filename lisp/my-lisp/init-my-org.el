@@ -135,6 +135,7 @@ text and copying to the killring."
 
 ;; (add-hook 'org-agenda-mode-hook 'hl-line-mode)
 
+
 
 (setq
  org-latex-listings 'minted
@@ -144,6 +145,7 @@ text and copying to the killring."
    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
+
 
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here
