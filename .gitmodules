@@ -1,0 +1,3 @@
+[submodule "lisp/my-lisp/beancount-mode"]
+	path = lisp/my-lisp/beancount-mode
+	url = https://github.com/beancount/beancount-mode.git
