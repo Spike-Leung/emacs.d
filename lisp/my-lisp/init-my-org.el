@@ -146,6 +146,7 @@ text and copying to the killring."
    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 
+(setq org-startup-folded nil)
 
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here
