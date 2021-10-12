@@ -6,6 +6,7 @@
 ;;; Code:
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
+(require 'pinentry)
 
 (setq
  mue4e-headers-skip-duplicates  t
@@ -17,7 +18,7 @@
  mu4e-change-filenames-when-moving t
  mu4e-attachment-dir "~/Downloads"
 
- mu4e-maildir       "~/Maildir"   ;; top-level Maildir
+ mu4e-maildir       "~/Maildir" ;; top-level Maildir
  ;; note that these folders below must start with /
  ;; the paths are relative to maildir root
  mu4e-refile-folder "/Archive"
@@ -30,7 +31,9 @@
 
 ;; this setting allows to re-sync and re-index mail
 ;; by pressing U
-(setq mu4e-get-mail-command  "mbsync -a")
+(setq mu4e-get-mail-command (format "INSIDE_EMACS=%s mbsync -a" emacs-version)
+      epa-pinentry-mode 'ask)
+(pinentry-start)
 
 (provide 'init-mu4e)                  ;
 ;;; init-mu4e.el ends here
