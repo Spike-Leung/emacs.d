@@ -77,7 +77,7 @@
 
       modus-themes-variable-pitch-ui nil
       modus-themes-variable-pitch-headings t
-      modus-themes-scale-headings t
+      modus-themes-scale-headings nil
       modus-themes-scale-1 1.05
       modus-themes-scale-2 1.1
       modus-themes-scale-3 1.2
