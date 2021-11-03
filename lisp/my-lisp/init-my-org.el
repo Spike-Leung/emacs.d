@@ -32,6 +32,7 @@ text and copying to the killring."
 (global-set-key (kbd "<f5>") 'my/copy-id-to-clipboard)
 
 
+
 
 ;;; Agenda views
 (let ((active-project-match "-INBOX/PROJECT"))
@@ -136,7 +137,28 @@ text and copying to the killring."
 ;; (add-hook 'org-agenda-mode-hook 'hl-line-mode)
 
 
+;;; Agenda files
+(setq org-agenda-files (list "~/org/mylife.org" "~/org/mywork.org" "~/org/birthday.org" "~/org/reference.org" "~/org/goals.org"))
 
+
+;;; Capture templates
+;;; Private
+(push '("p" "Private") org-capture-templates)
+(push '("pb" "Book" entry (file "~/org/book.org") (file "~/org/template/tpl-book.txt")) org-capture-templates)
+(push '("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt")) org-capture-templates)
+(push '("pm" "Movie" entry (file "~/org/movie.org") (file "~/org/template/tpl-movie.txt")) org-capture-templates)
+(push '("ps" "Shpping" entry (file+headline "~/org/mylife.org" "Shopping-list") (file "~/org/template/tpl-shopping.txt")) org-capture-templates)
+(push '("pw" "Weekly review" entry (file+olp+datetree "~/org/weekly-review.org") (file "~/org/template/tpl-weekly-review.txt")) org-capture-templates)
+
+;;; Goal
+(push '("g" "Goals") org-capture-templates)
+(push '("gs" "Short term goals (next 6 month)" entry (file+olp "~/org/goals.org" "Short term goals") (file "~/org/template/tpl-goal.txt")) org-capture-templates)
+(push '("gm" "Medium term goals (6 month up to 2 years)" entry (file+olp "~/org/goals.org" "Medium term goals") (file "~/org/template/tpl-goal.txt")) org-capture-templates)
+(push '("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt")) org-capture-templates)
+
+
+
+
 (setq
  org-latex-listings 'minted
  org-latex-packages-alist '(("" "minted"))
