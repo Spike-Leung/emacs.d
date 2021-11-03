@@ -5,8 +5,8 @@
 
 ;;; Code:
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
-(require 'pinentry)
 
 (setq
  mue4e-headers-skip-duplicates  t
@@ -33,7 +33,10 @@
 ;; by pressing U
 (setq mu4e-get-mail-command (format "INSIDE_EMACS=%s mbsync -a" emacs-version)
       epa-pinentry-mode 'ask)
-(pinentry-start)
+
+(when (maybe-require-package 'pinentry)
+  (with-eval-after-load 'pinentry
+    (pinentry-start)))
 
 (provide 'init-mu4e)                  ;
 ;;; init-mu4e.el ends here
