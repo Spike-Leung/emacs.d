@@ -143,21 +143,23 @@ text and copying to the killring."
 
 ;;; Capture templates
 ;;; Private
-(push '("p" "Private") org-capture-templates)
-(push '("pb" "Book" entry (file "~/org/book.org") (file "~/org/template/tpl-book.txt")) org-capture-templates)
-(push '("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt")) org-capture-templates)
-(push '("pm" "Movie" entry (file "~/org/movie.org") (file "~/org/template/tpl-movie.txt")) org-capture-templates)
-(push '("ps" "Shpping" entry (file+headline "~/org/mylife.org" "Shopping-list") (file "~/org/template/tpl-shopping.txt")) org-capture-templates)
-(push '("pw" "Weekly review" entry (file+olp+datetree "~/org/weekly-review.org") (file "~/org/template/tpl-weekly-review.txt")) org-capture-templates)
 
-;;; Goal
-(push '("g" "Goals") org-capture-templates)
-(push '("gs" "Short term goals (next 6 month)" entry (file+olp "~/org/goals.org" "Short term goals") (file "~/org/template/tpl-goal.txt")) org-capture-templates)
-(push '("gm" "Medium term goals (6 month up to 2 years)" entry (file+olp "~/org/goals.org" "Medium term goals") (file "~/org/template/tpl-goal.txt")) org-capture-templates)
-(push '("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt")) org-capture-templates)
-
-
-
+(setq org-capture-templates '(
+                              ;; private
+                              ("p" "Private")
+                              ("pb" "Book" entry (file "~/org/book.org") (file "~/org/template/tpl-book.txt"))
+                              ("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt"))
+                              ("pm" "Movie" entry (file "~/org/movie.org") (file "~/org/template/tpl-movie.txt"))
+                              ("ps" "Shpping" entry (file+headline "~/org/mylife.org" "Shopping-list") (file "~/org/template/tpl-shopping.txt"))
+                              ("pw" "Weekly review" entry (file+olp+datetree "~/org/weekly-review.org") (file "~/org/template/tpl-weekly-review.txt"))
+                              ;; goal
+                              ("g" "Goals")
+                              ("gs" "Short term goals (next 6 month)" entry (file+olp "~/org/goals.org" "Short term goals") (file "~/org/template/tpl-goal.txt"))
+                              ("gm" "Medium term goals (6 month up to 2 years)" entry (file+olp "~/org/goals.org" "Medium term goals") (file "~/org/template/tpl-goal.txt"))
+                              ("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt"))
+                              ;; toto
+                              ("t" "Todo" entry (file "~/org/inbox.org") (file "~/org/template/tpl-todo.txt"))
+                              ))
 
 (setq
  org-latex-listings 'minted
