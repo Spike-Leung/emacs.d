@@ -17,6 +17,7 @@
 (require 'beancount)
 (require 'init-easy-hugo)
 (require 'init-extension-mode)
+(require 'init-elfeed)
 
 (provide 'init-local)
 ;;; init-local.el ends here
