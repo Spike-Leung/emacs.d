@@ -12,18 +12,17 @@
 
 (when
     (maybe-require-package 'org-roam)
-  (eval-after-load 'org-roam
-    (progn
-      (org-roam-db-autosync-mode)
-      (global-set-key (kbd "C-c n  l") 'org-roam-buffer-toggle)
-      (global-set-key (kbd "C-c n  f") 'org-roam-node-find)
-      (global-set-key (kbd "C-c n  g") 'org-roam-graph)
-      (global-set-key (kbd "C-c n  i") 'org-roam-node-insert)
-      (global-set-key (kbd "C-c n  c") 'org-roam-capture)
-      (global-set-key (kbd "C-c n  j")
-                      'org-roam-dailies-capture-today)
-      (add-hook 'org-roam-find-file-hook 'turn-on-auto-fill)
-      )))
+  (with-eval-after-load 'org-roam
+    (org-roam-db-autosync-mode)))
+
+(global-set-key (kbd "C-c n  l") 'org-roam-buffer-toggle)
+(global-set-key (kbd "C-c n  f") 'org-roam-node-find)
+(global-set-key (kbd "C-c n  g") 'org-roam-graph)
+(global-set-key (kbd "C-c n  i") 'org-roam-node-insert)
+(global-set-key (kbd "C-c n  c") 'org-roam-capture)
+(global-set-key (kbd "C-c n  j") 'org-roam-dailies-capture-today)
+(add-hook 'org-roam-find-file-hook 'turn-on-auto-fill)
+
 ;; (maybe-require-package 'org-roam-protocol)
 
 (provide 'init-org-roam)
