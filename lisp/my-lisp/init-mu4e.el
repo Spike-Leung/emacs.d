@@ -1,5 +1,5 @@
 ;;; Package --- Summary
-;; init-mu43
+;; init-mu4e
 
 ;;; Commentary:
 
@@ -38,5 +38,5 @@
   (with-eval-after-load 'pinentry
     (pinentry-start)))
 
-(provide 'init-mu4e)                  ;
+(provide 'init-mu4e)
 ;;; init-mu4e.el ends here
