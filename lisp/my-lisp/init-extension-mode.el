@@ -2,8 +2,8 @@
 ;; init-extension-mode
 ;;; Commentary:
 ;;; Code:
-(add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-auto-mode 'web-mode "\\.jsp\\.vue'")
+(add-auto-mode 'js2-mode "\\.js\\'")
 
 (provide 'init-extension-mode)
 

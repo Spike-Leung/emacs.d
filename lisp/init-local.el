@@ -19,6 +19,7 @@
 (require 'init-extension-mode)
 (require 'init-elfeed)
 (require 'init-beancount)
+(require 'init-auto-save)
 
 (provide 'init-local)
 ;;; init-local.el ends here
