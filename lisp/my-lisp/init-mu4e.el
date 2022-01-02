@@ -8,6 +8,9 @@
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
 
+;; https://pengpengxp.github.io/archive/before-2018-11-10/2017-08-24-emacs-use-mu4e.html
+;; https://github.com/djcb/mu/issues/544
+(setenv "XAPIAN_CJK_NGRAM" "1")
 (setq
  mue4e-headers-skip-duplicates  t
  mu4e-view-show-images t
