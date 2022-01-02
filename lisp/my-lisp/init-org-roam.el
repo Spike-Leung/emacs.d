@@ -9,6 +9,7 @@
  org-roam-directory (file-truename "~/org-roam")
  org-roam-completion-everywhere t
  )
+(setq completion-ignore-case t)
 
 (when
     (maybe-require-package 'org-roam)
