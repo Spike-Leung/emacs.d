@@ -4,3 +4,6 @@
 [submodule "lisp/my-lisp/org-roam-ui"]
 	path = lisp/my-lisp/org-roam-ui
 	url = https://github.com/org-roam/org-roam-ui.git
+[submodule "lisp/my-lisp/auto-save"]
+	path = lisp/my-lisp/auto-save
+	url = https://github.com/manateelazycat/auto-save.git
