@@ -7,7 +7,7 @@
 
 (require 'auto-save)
 
-(setq auto-save-idle 5)
+(setq auto-save-idle 15)
 (setq auto-save-silent t)   ; quietly save
 (setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
 
