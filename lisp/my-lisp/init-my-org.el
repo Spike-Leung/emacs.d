@@ -171,6 +171,15 @@ text and copying to the killring."
 
 
 (setq org-startup-folded nil)
+
+;;; Mobile Org Settings
+;;; https://mobileorg.github.io/documentation/#syncing-with-mobileorg
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/org-roam")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/org/inbox.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here
