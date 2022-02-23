@@ -6,8 +6,8 @@
 (setq modus-themes-italic-constructs nil
       modus-themes-bold-constructs nil
       modus-themes-no-mixed-fonts nil
-      modus-themes-subtle-line-numbers nil
-      modus-themes-success-deuteranopia t
+      modus-themes-subtle-line-numbers t
+      modus-themes-success-deuteranopia nil
       modus-themes-tabs-accented t
       modus-themes-inhibit-reload t ; only applies to `customize-set-variable' and related
       modus-themes-fringes nil ; {nil,'subtle,'intense}
@@ -21,8 +21,9 @@
       ;; Options for `modus-themes-mode-line' are either nil, or a list
       ;; that can combine any of `3d' OR `moody', `borderless',
       ;; `accented', `padded'.
-      modus-themes-mode-line '(accented borderless)
+      modus-themes-mode-line '(accented borderless moody)
 
+      modus-themes-markup nil
       ;; Options for `modus-themes-syntax' are either nil (the default),
       ;; or a list of properties that may include any of those symbols:
       ;; `faint', `yellow-comments', `green-strings', `alt-syntax'
@@ -47,9 +48,11 @@
       ;; Options for `modus-themes-prompts' are either nil (the
       ;; default), or a list of properties that may include any of those
       ;; symbols: `background', `bold', `gray', `intense', `italic'
-      modus-themes-prompts nil;
+      modus-themes-prompts '(bold intense italic)
 
-      modus-themes-completions 'moderate ; {nil,'moderate,'opinionated}
+      modus-themes-completions '((matches . (extrabold))
+                                 (selection . (semibold accented))
+                                 (popup . (accented intense)))
 
       modus-themes-mail-citations nil ; {nil,'faint,'monochrome}
 
@@ -58,17 +61,15 @@
       ;; `no-extend', `bg-only', `accented'
       modus-themes-region '(bg-only no-extend)
 
-      ;; Options for `modus-themes-diffs': nil, 'desaturated,
-      ;; 'bg-only, 'deuteranopia, 'fg-only-deuteranopia
-      modus-themes-diffs 'fg-only-deuteranopia
+      modus-themes-diffs nil
 
       modus-themes-org-blocks 'gray-background ; {nil,'gray-background,'tinted-background}
 
       modus-themes-org-agenda ; this is an alist: read the manual or its doc string
       '((header-block . (variable-pitch scale-title))
         (header-date . (grayscale workaholic bold-today))
-        (scheduled . uniform)
-        (habit . traffic-light-deuteranopia))
+        (scheduled . rainbow)
+        (habit . traffic-light))
 
       modus-themes-headings ; this is an alist: read the manual or its doc string
       '((1 . (overline background))
