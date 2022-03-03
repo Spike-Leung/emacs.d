@@ -11,6 +11,14 @@
  )
 (setq completion-ignore-case t)
 
+(setq org-roam-dailies-directory "daily/")
+
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))))
+
 (when
     (maybe-require-package 'org-roam)
   (with-eval-after-load 'org-roam
@@ -22,6 +30,8 @@
 (global-set-key (kbd "C-c n  i") 'org-roam-node-insert)
 (global-set-key (kbd "C-c n  c") 'org-roam-capture)
 (global-set-key (kbd "C-c n  j") 'org-roam-dailies-capture-today)
+(global-set-key (kbd "C-c n  t") 'org-roam-dailies-goto-today)
+(global-set-key (kbd "C-c n  d") 'org-roam-dailies-goto-date)
 (add-hook 'org-roam-find-file-hook 'turn-on-auto-fill)
 
 ;; (maybe-require-package 'org-roam-protocol)
