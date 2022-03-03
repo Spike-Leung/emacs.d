@@ -15,5 +15,8 @@
       org-roam-ui-follow t
       org-roam-ui-update-on-save t)
 
+;; Not save org-roam-ui-mode in desktop to avoid error
+(push '(org-roam-ui-mode nil) desktop-minor-mode-table)
+
 (provide 'init-org-roam-ui)
 ;;; init-org-roam-ui.el ends here
