@@ -3,6 +3,6 @@
 # key: code
 # --
 
-#+begin_src ${1:bash}
+#+BEGIN_SRC ${1:bash}
   $0
-#+end_src
+#+END_SRC
