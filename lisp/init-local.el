@@ -20,6 +20,9 @@
 (require 'init-elfeed)
 (require 'init-beancount)
 (require 'init-auto-save)
+(require 'init-custom-function)
+(require 'init-typescript)
+
 
 (provide 'init-local)
 ;;; init-local.el ends here
