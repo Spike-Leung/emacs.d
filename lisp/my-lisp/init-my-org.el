@@ -72,12 +72,12 @@ text and copying to the killring."
                                 (org-agenda-skip-entry-if 'nottodo '("NEXT")))))
                         (org-tags-match-list-sublevels t)
                         (org-agenda-sorting-strategy
-                         '(todo-state-down effort-up category-keep))))
+                         '(todo-state-down effort-up category-keep priority-down))))
             (tags-todo ,active-project-match
                        ((org-agenda-overriding-header "Projects")
                         (org-tags-match-list-sublevels t)
                         (org-agenda-sorting-strategy
-                         '(category-keep))))
+                         '(category-keep priority-down))))
             (tags-todo "-INBOX/-NEXT"
                        ((org-agenda-overriding-header "Orphaned Tasks")
                         (org-agenda-tags-todo-honor-ignore-options t)
@@ -88,7 +88,7 @@ text and copying to the killring."
                                 (org-agenda-skip-subtree-if 'nottododo '("TODO")))))
                         (org-tags-match-list-sublevels t)
                         (org-agenda-sorting-strategy
-                         '(category-keep))))
+                         '(category-keep priority-down))))
             (tags-todo "/WAITING"
                        ((org-agenda-overriding-header "Waiting")
                         (org-agenda-tags-todo-honor-ignore-options t)
