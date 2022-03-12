@@ -10,15 +10,17 @@
       (while remove-packages
         (let ((package (car remove-packages)))
           (if (assq package package-alist)
-              (package-delete (package-get-descriptor package))))
+              (progn
+                (package-delete (package-get-descriptor package))
+                )))
         (setq remove-packages (cdr remove-packages)))
+      (if (featurep 'magit) (unload-feature 'magit t))
+      (let ((install-packages '(magit magit-todos github-clone forge)))
+        (while install-packages
+          (package-install (car install-packages))
+          (setq install-packages (cdr install-packages)) ;
+          ))
       )))
-
-;; (let ((install-packages) '(magit github-clone forge))
-;;   (while install-packages
-;;     (package-install (car install-packages))
-;;     (setq install-packages (cdr install-packages));
-;;     ))
 
 (provide 'init-custom-function)
 ;;; init-custom-function.el ends here
