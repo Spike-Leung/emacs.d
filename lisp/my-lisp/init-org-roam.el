@@ -12,6 +12,11 @@
 (setq completion-ignore-case t)
 
 (setq org-roam-dailies-directory "daily/")
+(setq org-roam-capture-templates
+      '(("d" "default" plain (file "~/org-roam/template/default.txt")
+         :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title} ")
+         :empty-lines-before 2
+         :unnarrowed t)))
 
 (setq org-roam-dailies-capture-templates
       '(("d" "default" entry
