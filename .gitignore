@@ -55,3 +55,4 @@ site-lisp/package/
 /smex-items
 /eln-cache/
 org-roam.db
+/projects
