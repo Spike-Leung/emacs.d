@@ -7,3 +7,6 @@
 [submodule "lisp/my-lisp/auto-save"]
 	path = lisp/my-lisp/auto-save
 	url = https://github.com/manateelazycat/auto-save.git
+[submodule "lisp/my-lisp/jest-coverage"]
+	path = lisp/my-lisp/jest-coverage
+	url = https://github.com/Spike-Leung/coverage.el.git

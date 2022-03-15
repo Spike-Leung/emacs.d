@@ -22,7 +22,7 @@
 (require 'init-auto-save)
 (require 'init-custom-function)
 (require 'init-typescript)
-
+(require 'init-jest-coverage)
 
 (provide 'init-local)
 ;;; init-local.el ends here
