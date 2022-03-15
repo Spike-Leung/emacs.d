@@ -34,5 +34,7 @@
 ;; enable typescript-tslint checker
 (with-eval-after-load 'flycheck (flycheck-add-mode 'typescript-tslint 'web-mode))
 
+(setq typescript-indent-level 2)
+
 (provide 'init-typescript)
 ;;; init-typescript.el ends here
