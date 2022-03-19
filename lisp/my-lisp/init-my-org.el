@@ -148,10 +148,14 @@ text and copying to the killring."
                               ;; private
                               ("p" "Private")
                               ("pb" "Book" entry (file "~/org/book.org") (file "~/org/template/tpl-book.txt"))
-                              ("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt"))
+                              ("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt") :jump-to-captured t)
                               ("pm" "Movie" entry (file "~/org/movie.org") (file "~/org/template/tpl-movie.txt"))
                               ("ps" "Shpping" entry (file+headline "~/org/mylife.org" "Shopping-list") (file "~/org/template/tpl-shopping.txt"))
-                              ("pw" "Weekly review" entry (file+olp+datetree "~/org/weekly-review.org") (file "~/org/template/tpl-weekly-review.txt"))
+                              ("pw" "Weekly review" entry
+                               (file+olp+datetree "~/org/weekly-review.org")
+                               (file "~/org/template/tpl-weekly-review.txt")
+                               :immediate-finish t
+                               :jump-to-captured t)
                               ;; goal
                               ("g" "Goals")
                               ("gs" "Short term goals (next 6 month)" entry (file+olp "~/org/goals.org" "Short term goals") (file "~/org/template/tpl-goal.txt"))
