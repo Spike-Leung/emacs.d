@@ -87,7 +87,7 @@
 ;; Load the theme files before enabling a theme (else you get an error).
 (modus-themes-load-themes)
 ;; Load the theme of your choice:
-(modus-themes-load-operandi)
+(modus-themes-load-vivendi)
 
 (provide 'init-modus-theme)
 ;;; init-modus-theme.el ends here
