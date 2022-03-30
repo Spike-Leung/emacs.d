@@ -17,12 +17,11 @@
 (require 'init-my-markdown)
 (require 'init-easy-hugo)
 (require 'init-extension-mode)
-(require 'init-elfeed)
 (require 'init-beancount)
 (require 'init-auto-save)
 (require 'init-custom-function)
 (require 'init-typescript)
-(require 'init-jest-coverage)
+;; (require 'init-jest-coverage)
 
 (provide 'init-local)
 ;;; init-local.el ends here
