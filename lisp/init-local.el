@@ -21,6 +21,8 @@
 (require 'init-auto-save)
 (require 'init-custom-function)
 (require 'init-typescript)
+(require 'init-proxy)
+(require 'init-english-helper)
 ;; (require 'init-jest-coverage)
 
 (provide 'init-local)

@@ -10,3 +10,6 @@
 [submodule "lisp/my-lisp/beancount-mode"]
 	path = lisp/my-lisp/beancount-mode
 	url = https://github.com/Spike-Leung/beancount-mode.git
+[submodule "lisp/my-lisp/insert-translated-name"]
+	path = lisp/my-lisp/insert-translated-name
+	url = https://github.com/manateelazycat/insert-translated-name.git
