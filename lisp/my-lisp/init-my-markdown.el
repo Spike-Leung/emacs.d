@@ -14,7 +14,8 @@
                    (buffer-substring-no-properties (point-min) (point-max))))
          (current-buffer)))
 
-(imp-set-user-filter 'my-markdown-html)
+(with-eval-after-load 'impatient-mode
+  (imp-set-user-filter 'my-markdown-html))
 
 
 (provide 'init-my-markdown)
