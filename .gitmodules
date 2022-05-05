@@ -13,3 +13,6 @@
 [submodule "lisp/my-lisp/insert-translated-name"]
 	path = lisp/my-lisp/insert-translated-name
 	url = https://github.com/manateelazycat/insert-translated-name.git
+[submodule "lisp/my-lisp/sort-tab"]
+	path = lisp/my-lisp/sort-tab
+	url = git@github.com:manateelazycat/sort-tab.git

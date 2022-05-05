@@ -23,6 +23,7 @@
 (require 'init-typescript)
 (require 'init-proxy)
 (require 'init-english-helper)
+(require 'init-sort-tab)
 ;; (require 'init-jest-coverage)
 
 (provide 'init-local)
