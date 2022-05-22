@@ -24,7 +24,7 @@
 (require 'init-proxy)
 (require 'init-english-helper)
 (require 'init-tab)
-;; (require 'init-sort-tab)
+(require 'init-sort-tab)
 ;; (require 'init-jest-coverage)
 
 (provide 'init-local)
