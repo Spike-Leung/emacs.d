@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: translate brace
+# key: tt
+# --
+{t("$1")}
