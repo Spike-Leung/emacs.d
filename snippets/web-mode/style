@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: style
+# key: sty
+# --
+export cosnt $1Style = css`
+$0
+`
