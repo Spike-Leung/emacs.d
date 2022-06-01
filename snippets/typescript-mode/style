@@ -2,6 +2,6 @@
 # name: style
 # key: sty
 # --
-export cosnt $1Style = css`
+export const $1Style = css\`
 $0
 `
