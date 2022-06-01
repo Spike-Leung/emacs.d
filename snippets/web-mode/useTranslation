@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: useTranslation
-# key: uset
+# key: ut
 # --
   const { t } = useTranslation()

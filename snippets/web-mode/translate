@@ -2,4 +2,4 @@
 # name: translate
 # key: t
 # --
-t("$1")
+t("editor$0")

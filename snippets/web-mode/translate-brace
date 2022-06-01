@@ -2,4 +2,4 @@
 # name: translate brace
 # key: tt
 # --
-{t("$1")}
+{t("editor$0")}
