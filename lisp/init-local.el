@@ -25,6 +25,7 @@
 (require 'init-english-helper)
 (require 'init-tab)
 (require 'init-company)
+(require 'init-reset-keybinding)
 ;; (require 'init-sort-tab)
 ;; (require 'init-jest-coverage)
 
