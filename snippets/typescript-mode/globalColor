@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: globalColor
+# key: gc
+# group: illa
+# --
+\${globalColor(\`--\${illaPrefix\}-${1:$$(yas-choose-value '("white" "gray" "grayBlue" "techPurple" "techPink" "blackAlpha" "blue" "red" "yellow" "orange" "cyan" "brand"))}-${2}\`)};
