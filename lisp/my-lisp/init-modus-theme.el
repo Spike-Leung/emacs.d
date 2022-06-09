@@ -59,9 +59,9 @@
       ;; Options for `modus-themes-region' are either nil (the default),
       ;; or a list of properties that may include any of those symbols:
       ;; `no-extend', `bg-only', `accented'
-      modus-themes-region '(bg-only no-extend)
+      modus-themes-region '(accented no-extend bg-only)
 
-      modus-themes-diffs nil
+      Modus-themes-diffs nil
 
       modus-themes-org-blocks 'gray-background ; {nil,'gray-background,'tinted-background}
 
