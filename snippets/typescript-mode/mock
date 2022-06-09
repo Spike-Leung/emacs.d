@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: mock
+# key: mock
+# --
+  rest.${1:$$(yas-choose-value '("get" "post" "put" "delete"))}(\`\${baseUrl}/$2`, (req, res, ctx) => {
+  $0
+  return res(ctx.status(200))
+}),
