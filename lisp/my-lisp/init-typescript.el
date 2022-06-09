@@ -37,6 +37,7 @@
 (with-eval-after-load 'flycheck (flycheck-add-mode 'typescript-tslint 'web-mode))
 
 (setq typescript-indent-level 2)
+(setq tide-server-max-response-length 400240)
 
 (provide 'init-typescript)
 ;;; init-typescript.el ends here
