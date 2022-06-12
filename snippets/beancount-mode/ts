@@ -2,5 +2,5 @@
 # name: transaction
 # key: ts
 # --
-2022-05-${3} * "${4}"
+`(format-time-string "%Y-%m")`-${3} * "${4}"
   $0
