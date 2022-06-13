@@ -21,6 +21,7 @@
 (require 'init-auto-save)
 (require 'init-custom-function)
 (require 'init-typescript)
+(require 'init-js)
 (require 'init-proxy)
 (require 'init-english-helper)
 (require 'init-tab)
