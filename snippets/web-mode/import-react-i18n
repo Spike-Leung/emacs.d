@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: react-i18next
+# name: import react-i18next
 # key: ri
 # --
 import { useTranslation } from "react-i18next"

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: export css const
+# key: ecc
+# --
+export const $1Style = css\`
+  $0
+`

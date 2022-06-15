@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: illa-style-init
+# key: illas
+# --
+import { css } from "@emotion/react"
+import { globalColor, illaPrefix } from "@illa-design/theme"

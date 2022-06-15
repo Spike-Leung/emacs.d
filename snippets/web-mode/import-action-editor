@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: import from action editor
-# key: impa
+# key: importa
 # --
 import { $0 } from "@/page/Editor/components/ActionEditor/$1"

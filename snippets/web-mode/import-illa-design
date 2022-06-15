@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import from @illa-design
+# key: importd
+# --
+import { $0 } from "@illa-design/$1"

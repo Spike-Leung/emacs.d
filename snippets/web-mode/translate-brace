@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: translate brace
+# name: translate with brace
 # key: tt
 # --
 {t("editor$0")}

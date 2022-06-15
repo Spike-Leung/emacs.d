@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: function component
+# key: fc
+# --
+import { FC } from "react"
+
+export const ${1:name}: FC = (props) => {
+  return <div></div>
+}
+
+$1.displayName = "$1"
