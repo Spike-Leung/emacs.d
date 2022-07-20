@@ -2,5 +2,5 @@
 # name: transaction
 # key: ts
 # --
-`(format-time-string "%Y-%m")`-${3} * "${4}"
+`(format-time-string "%Y-%m")`-$1 * "$2"
   $0
