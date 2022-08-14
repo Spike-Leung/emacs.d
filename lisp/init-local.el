@@ -7,7 +7,7 @@
 ;;; Code:
 (add-to-list 'load-path (expand-file-name "lisp/my-lisp" user-emacs-directory))
 
-(require 'init-modus-theme)
+(require 'init-my-theme)
 (require 'init-yasnippet)
 (require 'init-mu4e)
 (require 'init-my-org)
@@ -24,11 +24,10 @@
 (require 'init-js)
 (require 'init-proxy)
 (require 'init-english-helper)
-(require 'init-tab)
 (require 'init-company)
 (require 'init-reset-keybinding)
+;; (require 'init-tab)
 ;; (require 'init-sort-tab)
 ;; (require 'init-jest-coverage)
-
 (provide 'init-local)
 ;;; init-local.el ends here
