@@ -10,7 +10,7 @@
 
 ;; Load the themes
 (load-theme 'ef-spring t t)
-(load-theme 'ef-summer t t)
+(load-theme 'ef-summer t)
 (load-theme 'ef-winter t t)
 (load-theme 'ef-autumn t t)
 (load-theme 'ef-day t t)
