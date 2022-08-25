@@ -8,6 +8,7 @@
 (add-to-list 'load-path (expand-file-name "lisp/my-lisp" user-emacs-directory))
 
 (require 'init-my-theme)
+(require 'init-face)
 (require 'init-yasnippet)
 (require 'init-mu4e)
 (require 'init-my-org)
