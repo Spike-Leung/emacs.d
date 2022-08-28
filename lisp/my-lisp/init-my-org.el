@@ -100,7 +100,7 @@ text and copying to the killring."
                         (org-agenda-tags-todo-honor-ignore-options t)
                         (org-agenda-todo-ignore-scheduled 'future)
                         (org-agenda-sorting-strategy
-                         '(category-keep))))
+                         '(category-keep priority-down))))
             (tags "/DONE|CANCELED"
                   ((org-agenda-overriding-header "Done")
                    (org-agenda-tags-todo-honor-ignore-options t)

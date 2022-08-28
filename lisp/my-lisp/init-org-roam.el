@@ -13,15 +13,19 @@
 
 (setq org-roam-dailies-directory "daily/")
 (setq org-roam-capture-templates
-      '(("d" "default" plain (file "~/org-roam/template/default.txt")
+      '(("d" "Default" plain (file "~/org-roam/template/default.txt")
          :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title} ")
          :empty-lines-before 2
          :unnarrowed t)))
 
 (setq org-roam-dailies-capture-templates
-      '(("d" "default" entry
+      '(("d" "Default" entry
          "* %?"
          :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))
+        ("m" "Meditation" entry
+         "* 冥想"
+         :Target (file+head "%<%Y-%m-%d>.org"
                             "#+title: %<%Y-%m-%d>\n"))))
 
 (when
