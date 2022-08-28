@@ -3,9 +3,8 @@
 ;;; Commentary:
 ;;; Code:
 
-;; (require 'init-modus-themes)
+;; (require 'init-modus-theme)
 (require 'init-ef-themes)
 
-(message "hello")
 (provide 'init-my-theme)
 ;;; init-themes.el ends here

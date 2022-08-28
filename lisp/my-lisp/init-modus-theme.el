@@ -72,9 +72,9 @@
         (habit . traffic-light))
 
       modus-themes-headings ; this is an alist: read the manual or its doc string
-      '((1 . (overline background))
-        (2 . (no-bold rainbow  overline))
-        (t . (no-bold rainbox)))
+      '((1 . (overline ))
+        (2 . (no-bold rainbow overline))
+        (t . (no-bold rainbow)))
 
       modus-themes-variable-pitch-ui nil
       modus-themes-variable-pitch-headings t
