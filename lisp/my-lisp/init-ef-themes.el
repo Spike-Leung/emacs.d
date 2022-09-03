@@ -2,6 +2,7 @@
 ;; init-ef-themes
 ;;; Commentary:
 ;;; Code:
+;;; Official manual https://protesilaos.com/emacs/ef-themes
 (push (expand-file-name "lisp/my-lisp/ef-themes" user-emacs-directory) load-path)
 (require 'ef-themes)
 
@@ -10,9 +11,9 @@
 
 ;; Load the themes
 (load-theme 'ef-spring t t)
-(load-theme 'ef-summer t)
+(load-theme 'ef-summer t t)
 (load-theme 'ef-winter t t)
-(load-theme 'ef-autumn t t)
+(load-theme 'ef-autumn t)
 (load-theme 'ef-day t t)
 (load-theme 'ef-night t t)
 (load-theme 'ef-day t t)
