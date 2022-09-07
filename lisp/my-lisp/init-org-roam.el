@@ -25,7 +25,7 @@
                             "#+title: %<%Y-%m-%d>\n"))
         ("m" "Meditation" entry
          "* 冥想"
-         :Target (file+head "%<%Y-%m-%d>.org"
+         :target (file+head "%<%Y-%m-%d>.org"
                             "#+title: %<%Y-%m-%d>\n"))))
 
 (when
