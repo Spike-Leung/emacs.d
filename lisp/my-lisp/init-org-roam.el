@@ -39,8 +39,8 @@
 (global-set-key (kbd "C-c n  i") 'org-roam-node-insert)
 (global-set-key (kbd "C-c n  c") 'org-roam-capture)
 (global-set-key (kbd "C-c n  j") 'org-roam-dailies-capture-today)
-(global-set-key (kbd "C-c n  t") 'org-roam-dailies-goto-today)
-(global-set-key (kbd "C-c n  d") 'org-roam-dailies-goto-date)
+(global-set-key (kbd "C-c n  t") (lambda () (interactive) (org-roam-dailies-goto-today "d")))
+(global-set-key (kbd "C-c n  d") (lambda () (interactive) (org-roam-dailies-goto-date nil "d")))
 (add-hook 'org-roam-find-file-hook 'turn-on-auto-fill)
 
 ;; (maybe-require-package 'org-roam-protocol)
