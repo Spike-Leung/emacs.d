@@ -3,8 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 ;;; Official manual https://protesilaos.com/emacs/ef-themes
-(push (expand-file-name "lisp/my-lisp/ef-themes" user-emacs-directory) load-path)
-(require 'ef-themes)
+(require-package 'ef-themes)
 
 ;; Disable all other themes to avoid awkward blending:
 (mapc #'disable-theme custom-enabled-themes)
@@ -13,8 +12,8 @@
 (load-theme 'ef-spring t t)
 (load-theme 'ef-summer t t)
 (load-theme 'ef-winter t t)
-(load-theme 'ef-autumn t)
-(load-theme 'ef-day t t)
+(load-theme 'ef-autumn t t)
+(load-theme 'ef-day t )
 (load-theme 'ef-night t t)
 (load-theme 'ef-day t t)
 (load-theme 'ef-night t t)

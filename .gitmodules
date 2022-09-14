@@ -13,9 +13,6 @@
 [submodule "lisp/my-lisp/sort-tab"]
 	path = lisp/my-lisp/sort-tab
 	url = git@github.com:manateelazycat/sort-tab.git
-[submodule "lisp/my-lisp/ef-themes"]
-	path = lisp/my-lisp/ef-themes
-	url = git@github.com:protesilaos/ef-themes.git
 [submodule "lisp/my-lisp/beancount-mode"]
 	path = lisp/my-lisp/beancount-mode
 	url = git@github.com:beancount/beancount-mode.git
