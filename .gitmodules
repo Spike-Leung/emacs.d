@@ -7,9 +7,6 @@
 [submodule "lisp/my-lisp/jest-coverage"]
 	path = lisp/my-lisp/jest-coverage
 	url = https://github.com/Spike-Leung/coverage.el.git
-[submodule "lisp/my-lisp/beancount-mode"]
-	path = lisp/my-lisp/beancount-mode
-	url = https://github.com/Spike-Leung/beancount-mode.git
 [submodule "lisp/my-lisp/insert-translated-name"]
 	path = lisp/my-lisp/insert-translated-name
 	url = https://github.com/manateelazycat/insert-translated-name.git
@@ -19,3 +16,6 @@
 [submodule "lisp/my-lisp/ef-themes"]
 	path = lisp/my-lisp/ef-themes
 	url = git@github.com:protesilaos/ef-themes.git
+[submodule "lisp/my-lisp/beancount-mode"]
+	path = lisp/my-lisp/beancount-mode
+	url = git@github.com:beancount/beancount-mode.git
