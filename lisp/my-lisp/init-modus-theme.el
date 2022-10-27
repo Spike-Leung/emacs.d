@@ -16,7 +16,7 @@
       ;; default), or a list of properties that may include any of those
       ;; symbols: `straight-underline', `text-also', `background',
       ;; `intense'
-      modus-themes-lang-checkers nil
+      modus-themes-lang-checkers '(background text-also straight-underline)
 
       ;; Options for `modus-themes-mode-line' are either nil, or a list
       ;; that can combine any of `3d' OR `moody', `borderless',
