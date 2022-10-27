@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: template
+# key: tem
+# --
+<script setup lang="ts">
+$0
+</script>
+
+<template>
+
+</template>
