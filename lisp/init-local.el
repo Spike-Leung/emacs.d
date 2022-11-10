@@ -27,8 +27,6 @@
 (require 'init-english-helper)
 (require 'init-company)
 (require 'init-reset-keybinding)
-;; (require 'init-tab)
-;; (require 'init-sort-tab)
-;; (require 'init-jest-coverage)
+(require 'init-vue)
 (provide 'init-local)
 ;;; init-local.el ends here
