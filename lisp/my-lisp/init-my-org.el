@@ -184,7 +184,7 @@ text and copying to the killring."
                               ("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt"))
                               ;; toto
                               ("w" "Works")
-                              ("wd" "Daily Tasks" plain (file+olp+datetree "~/org/daily.org") (file "~/org/template/tpl-daily.txt") :jump-to-captured t)
+                              ("wd" "Daily Tasks" plain (file+olp+datetree "~/org/daily.org") (file "~/org/template/tpl-daily.txt") :jump-to-captured t :immediate-finish t)
                               ("t" "Todo" entry (file "~/org/inbox.org") (file "~/org/template/tpl-todo.txt"))
                               ))
 
