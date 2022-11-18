@@ -198,6 +198,13 @@ text and copying to the killring."
 
 
 (setq org-startup-folded nil)
+
+
+;;; To-do settings
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)" "NEXT(n)" "REPEAT(r)" "PROJECT(p)" "SOMEDAY(s!)" "WAITING(w@/!)" "DELEGATED(e!)" "HOLD(h)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")))
+      org-todo-repeat-to-state "REPEAT")
+
 
 ;;; Mobile Org Settings
 ;;; https://mobileorg.github.io/documentation/#syncing-with-mobileorg
