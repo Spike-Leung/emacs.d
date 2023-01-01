@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: CNY
+# key: c
+# --
+$1 CNY
+   $0
