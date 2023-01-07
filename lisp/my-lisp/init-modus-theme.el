@@ -86,7 +86,8 @@
 ;;       modus-themes-scale-title 1.99)
 ;; Load the theme of your choice:
 (load-theme 'modus-operandi-tinted t t)
-(enable-theme 'modus-operandi-tinted)
+(load-theme 'modus-vivendi-tinted t t)
+(enable-theme 'modus-vivendi-tinted)
 
 (provide 'init-modus-theme)
 ;;; init-modus-theme.el ends here
