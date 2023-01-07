@@ -29,5 +29,6 @@
 (require 'init-reset-keybinding)
 (require 'init-vue)
 (require 'init-eglot)
+(require 'init-elfeed)
 (provide 'init-local)
 ;;; init-local.el ends here
