@@ -58,7 +58,7 @@ text and copying to the killring."
 (let ((active-project-match "-INBOX/PROJECT"))
 
   (setq org-stuck-projects
-        `(,active-project-match ("NEXT")))
+        `(,active-project-match ("NEXT" "TODO")))
 
   (setq org-agenda-compact-blocks t
         org-agenda-sticky t
