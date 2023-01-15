@@ -2,5 +2,5 @@
 # name: CNY
 # key: c
 # --
-$1 CNY
+$1.${2:00} CNY
    $0
