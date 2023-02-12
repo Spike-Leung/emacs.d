@@ -3,91 +3,44 @@
 ;;; Commentary:
 ;;; Code:
 (require-package 'modus-themes)
-;; (setq modus-themes-italic-constructs nil
-;;       modus-themes-bold-constructs nil
-;;       modus-themes-no-mixed-fonts nil
-;;       modus-themes-subtle-line-numbers t
-;;       modus-themes-success-deuteranopia nil
-;;       modus-themes-tabs-accented t
-;;       modus-themes-inhibit-reload t ; only applies to `customize-set-variable' and related
-;;       modus-themes-fringes nil ; {nil,'subtle,'intense}
 
-;;       ;; Options for `modus-themes-lang-checkers' are either nil (the
-;;       ;; default), or a list of properties that may include any of those
-;;       ;; symbols: `straight-underline', `text-also', `background',
-;;       ;; `intense'
-;;       modus-themes-lang-checkers '(background text-also straight-underline)
+(setq modus-themes-headings
+      '((1 . (ultrabold 1.35)))
 
-;;       ;; Options for `modus-themes-mode-line' are either nil, or a list
-;;       ;; that can combine any of `3d' OR `moody', `borderless',
-;;       ;; `accented', `padded'.
-;;       modus-themes-mode-line '(accented borderless moody)
+      modus-themes-org-blocks 'gray-background
 
-;;       modus-themes-markup nil
-;;       ;; Optionns for `modus-themes-syntax' are either nil (the default),
-;;       ;; or a list of properties that may include any of those symbols:
-;;       ;; `faint', `yellow-comments', `green-strings', `alt-syntax'
-;;       modus-themes-syntax '(green-strings alt-syntax)
+      modus-themes-common-palette-overrides
+      '(
+        ;; Make line numbers less intense, but use a shade of red for the current line number
+        (fg-line-number-inactive "gray50")
+        (fg-line-number-active red-cooler)
+        (bg-line-number-inactive unspecified)
+        (bg-line-number-active unspecified)
 
-;;       ;; Options for `modus-themes-hl-line' are either nil (the default),
-;;       ;; or a list of properties that may include any of those symbols:
-;;       ;; `accented', `underline', `intense'
-;;       modus-themes-hl-line '(accented)
+        ;; Diffs with only foreground colours.  Word-wise ("refined") diffs
+        (bg-added           unspecified)
+        (bg-added-faint     unspecified)
+        (bg-added-refine    bg-inactive)
+        (fg-added           green)
+        (fg-added-intense   green-intense)
 
-;;       ;; Options for `modus-themes-paren-match' are either nil (the
-;;       ;; default), or a list of properties that may include any of those
-;;       ;; symbols: `bold', `intense', `underline'
-;;       modus-themes-paren-match '(bold intense)
+        (bg-changed         unspecified)
+        (bg-changed-faint   unspecified)
+        (bg-changed-refine  bg-inactive)
+        (fg-changed         yellow)
+        (fg-changed-intense yellow-intense)
 
-;;       ;; Options for `modus-themes-links' are either nil (the default),
-;;       ;; or a list of properties that may include any of those symbols:
-;;       ;; `neutral-underline' OR `no-underline', `faint' OR `no-color',
-;;       ;; `Bold', `italic', `background'
-;;       modus-themes-links '(neutral-underline)
+        (bg-removed         unspecified)
+        (bg-removed-faint   unspecified)
+        (bg-removed-refine  bg-inactive)
+        (fg-removed         red)
+        (fg-removed-intense red-intense)
 
-;;       ;; Options for `modus-themes-prompts' are either nil (the
-;;       ;; default), or a list of properties that may include any of those
-;;       ;; symbols: `background', `bold', `gray', `intense', `italic'
-;;       modus-themes-prompts '(bold intense italic)
+        (bg-diff-context    unspecified)))
 
-;;       modus-themes-completions '((matches . (extrabold))
-;;                                  (selection . (semibold accented))
-;;                                  (popup . (accented intense)))
-
-;;       modus-themes-mail-citations nil ; {nil,'faint,'monochrome}
-
-;;       ;; Options for `modus-themes-region' are either nil (the default),
-;;       ;; or a list of properties that may include any of those symbols:
-;;       ;; `no-extend', `bg-only', `accented'
-;;       modus-themes-region '(accented no-extend bg-only)
-
-;;       Modus-themes-diffs nil
-
-;;       modus-themes-org-blocks 'gray-background ; {nil,'gray-background,'tinted-background}
-
-;;       modus-themes-org-agenda ; this is an alist: read the manual or its doc string
-;;       '((header-block . (variable-pitch scale-title))
-;;         (header-date . (grayscale workaholic bold-today))
-;;         (scheduled . rainbow)
-;;         (habit . traffic-light))
-
-;;       modus-themes-headings ; this is an alist: read the manual or its doc string
-;;       '((1 . (overline ))
-;;         (2 . (no-bold rainbow overline))
-;;         (t . (no-bold rainbow)))
-
-;;       modus-themes-variable-pitch-ui nil
-;;       modus-themes-variable-pitch-headings t
-;;       modus-themes-scale-headings nil
-;;       modus-themes-scale-1 1.05
-;;       modus-themes-scale-2 1.1
-;;       modus-themes-scale-3 1.2
-;;       modus-themes-scale-4 1.4
-;;       modus-themes-scale-title 1.99)
 ;; Load the theme of your choice:
-(load-theme 'modus-operandi-tinted t t)
-(load-theme 'modus-vivendi-tinted t t)
-(enable-theme 'modus-vivendi-tinted)
+(load-theme 'modus-vivendi t t)
+(enable-theme 'modus-vivendi)
 
 (provide 'init-modus-theme)
 ;;; init-modus-theme.el ends here
