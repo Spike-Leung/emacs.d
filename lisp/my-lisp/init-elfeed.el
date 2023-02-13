@@ -7,6 +7,7 @@
   (with-eval-after-load 'elfeed
     (setq elfeed-feeds '(
                          "https://www.ruanyifeng.com/blog/atom.xml"
+                         "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
                          "https://weekly.howie6879.cn/rss/rss.xml"))))
 
 (provide 'init-elfeed)
