@@ -31,5 +31,7 @@
 (require 'init-eglot)
 (require 'init-elfeed)
 (require 'init-projectile)
+(require 'init-deno-bridge)
+(require 'init-translate)
 (provide 'init-local)
 ;;; init-local.el ends here
