@@ -30,5 +30,6 @@
 (require 'init-vue)
 (require 'init-eglot)
 (require 'init-elfeed)
+(require 'init-projectile)
 (provide 'init-local)
 ;;; init-local.el ends here
