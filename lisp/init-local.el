@@ -29,5 +29,6 @@
 (require 'init-eglot)
 (require 'init-elfeed)
 (require 'init-projectile)
+(require 'init-gitmoji)
 (provide 'init-local)
 ;;; init-local.el ends here

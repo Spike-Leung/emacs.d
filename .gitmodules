@@ -19,3 +19,6 @@
 [submodule "lisp/my-lisp/deno-bridge"]
 	path = lisp/my-lisp/deno-bridge
 	url = git@github.com:manateelazycat/deno-bridge.git
+[submodule "lisp/my-lisp/gitmoji"]
+	path = lisp/my-lisp/gitmoji
+	url = git@github.com:Spike-Leung/gitmoji.git
