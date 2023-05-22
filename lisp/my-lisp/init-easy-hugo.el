@@ -1,6 +1,4 @@
-;;; Package --- Summary
-;; init-easy-hugo
-
+;;; init-easy-hugo.el --- easy hugo config
 ;;; Commentary:
 ;;; Code:
 (when (maybe-require-package 'easy-hugo)

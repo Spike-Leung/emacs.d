@@ -1,8 +1,5 @@
-;;; Package --- Summary
-;; init-org-roam-ui
-
+;;; init-org-roam-ui.el --- org-roam-ui config
 ;;; Commentary:
-;;; org-roam-ui
 ;;; Code:
 (push (expand-file-name "lisp/my-lisp/org-roam-ui" user-emacs-directory) load-path)
 

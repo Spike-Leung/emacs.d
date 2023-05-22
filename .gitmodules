@@ -4,15 +4,9 @@
 [submodule "lisp/my-lisp/auto-save"]
 	path = lisp/my-lisp/auto-save
 	url = https://github.com/manateelazycat/auto-save.git
-[submodule "lisp/my-lisp/jest-coverage"]
-	path = lisp/my-lisp/jest-coverage
-	url = https://github.com/Spike-Leung/coverage.el.git
 [submodule "lisp/my-lisp/insert-translated-name"]
 	path = lisp/my-lisp/insert-translated-name
 	url = https://github.com/manateelazycat/insert-translated-name.git
-[submodule "lisp/my-lisp/sort-tab"]
-	path = lisp/my-lisp/sort-tab
-	url = git@github.com:manateelazycat/sort-tab.git
 [submodule "lisp/my-lisp/beancount-mode"]
 	path = lisp/my-lisp/beancount-mode
 	url = git@github.com:beancount/beancount-mode.git

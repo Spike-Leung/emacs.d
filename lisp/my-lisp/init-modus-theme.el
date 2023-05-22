@@ -1,5 +1,4 @@
-;;; Package --- Summary
-;;; init-modus-theme.el
+;;; init-modus-theme.el --- modus-theme customisations
 ;;; Commentary:
 ;;; Code:
 (require-package 'modus-themes)

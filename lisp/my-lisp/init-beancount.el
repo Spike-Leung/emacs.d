@@ -1,5 +1,4 @@
-;;; Package --- Summary
-;; init-beancount
+;;; init-beancount.el --- beancount support
 ;;; Commentary:
 ;;; Code:
 

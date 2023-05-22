@@ -1,5 +1,4 @@
-;;; Package --- Summary
-;; init-translate
+;;; init-translate.el --- translate i18n
 ;;; Commentary:
 ;;; See: https://github.com/manateelazycat/insert-translated-name
 ;;; Code:

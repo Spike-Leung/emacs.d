@@ -1,6 +1,4 @@
-;;; Package --- Summary
-;; init-org-roam
-
+;;; init-org-roam --- org roam config
 ;;; Commentary:
 ;;; org-roam
 ;;; Code:
@@ -42,7 +40,6 @@
 (global-set-key (kbd "C-c n  t") (lambda () (interactive) (org-roam-dailies-goto-today "d")))
 (global-set-key (kbd "C-c n  d") (lambda () (interactive) (org-roam-dailies-goto-date nil "d")))
 ;; (add-hook 'org-roam-find-file-hook 'turn-on-auto-fill)
-
 ;; (maybe-require-package 'org-roam-protocol)
 
 (provide 'init-org-roam)

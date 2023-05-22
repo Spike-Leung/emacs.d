@@ -1,9 +1,10 @@
-;;; Package --- Summary
-;; init-my-markdown
+;;; init-my-markdown.el --- use impatient-mode to preview markdown
 ;;; Commentary:
 ;;; - https://stackoverflow.com/questions/36183071/how-can-i-preview-markdown-in-emacs-in-real-time/36189456?noredirect=1#comment104784050_36189456
 ;;; - https://wikemacs.org/wiki/Markdown#Live_preview_as_you_type
 ;;; Code:
+
+;;; TODO: use github markdown style
 
 (maybe-require-package 'impatient-mode)
 
@@ -27,5 +28,4 @@
 
 
 (provide 'init-my-markdown)
-
 ;;; init-my-markdown.el ends here

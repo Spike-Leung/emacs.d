@@ -1,5 +1,4 @@
-;;; Package --- Summary
-;; init-company
+;;; init-company.el --- Some fix maybe?
 ;;; Commentary:
 ;;; Code:
 (custom-set-variables '(company-search-regexp-function 'company-search-words-in-any-order-regexp))

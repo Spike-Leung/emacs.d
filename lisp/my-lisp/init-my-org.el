@@ -1,9 +1,6 @@
-;;; Package --- Summary
-;; init-my-org
-
+;;; init-my-org.el --- org config to overwrite init-org.el
 ;;; Commentary:
 ;; links: https://koenig-haunstetten.de/2016/07/09/code-snippet-for-orgmode-e05s02/
-
 ;;; Code:
 (defun my/org-add-ids-to-headlines-in-file ()
   "Add ID properties to all headlines in the current file which do not already have one."

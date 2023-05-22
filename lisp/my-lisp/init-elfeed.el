@@ -1,6 +1,4 @@
-;;; Package --- Summary
-;; init-elfeed
-
+;;; init-elfeed.el --- elfeed config
 ;;; Commentary:
 ;;; Code:
 (when (maybe-require-package 'elfeed)
