@@ -158,7 +158,7 @@ text and copying to the killring."
 
 
 ;;; Agenda files
-(setq org-agenda-files (list "~/org/mylife.org" "~/org/mywork.org" "~/org/birthday.org" "~/org/reference.org" "~/org/goals.org"))
+(setq org-agenda-files (list "~/org/mylife.org" "~/org/mywork.org" "~/org/birthday.org" "~/org/reference.org" "~/org/goals.org" "~/org/dead.org"))
 
 
 ;;; Capture templates
