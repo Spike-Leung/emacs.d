@@ -6,6 +6,7 @@
 
 (require 'init-auto-save)
 (require 'init-beancount)
+(require 'init-codeium)
 (require 'init-company)
 (require 'init-easy-hugo)
 (require 'init-elfeed)

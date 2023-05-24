@@ -56,3 +56,4 @@ site-lisp/package/
 /eln-cache/
 org-roam.db
 /projects
+/codeium

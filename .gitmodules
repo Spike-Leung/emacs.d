@@ -16,3 +16,6 @@
 [submodule "lisp/my-lisp/gitmoji"]
 	path = lisp/my-lisp/gitmoji
 	url = git@github.com:Spike-Leung/gitmoji.git
+[submodule "lisp/my-lisp/codeium"]
+	path = lisp/my-lisp/codeium
+	url = git@github.com:Exafunction/codeium.el.git
