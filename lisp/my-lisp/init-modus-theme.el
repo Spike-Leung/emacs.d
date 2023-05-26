@@ -38,8 +38,8 @@
         (bg-diff-context    unspecified)))
 
 ;; Load the theme of your choice:
-(load-theme 'modus-vivendi t t)
-(enable-theme 'modus-vivendi)
+(load-theme 'modus-vivendi-tritanopia t t)
+(enable-theme 'modus-vivendi-tritanopia)
 
 (provide 'init-modus-theme)
 ;;; init-modus-theme.el ends here
