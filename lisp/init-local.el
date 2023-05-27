@@ -6,9 +6,11 @@
 
 (require 'init-auto-save)
 (require 'init-beancount)
+(require 'init-breadcrumb)
 ;; (require 'init-codeium)
 (require 'init-company)
 (require 'init-easy-hugo)
+(require 'init-eglot)
 (require 'init-elfeed)
 (require 'init-gitmoji)
 (require 'init-mu4e)
@@ -20,7 +22,6 @@
 (require 'init-projectile)
 (require 'init-proxy)
 (require 'init-typescript)
-(require 'init-vue)
 (require 'init-yasnippet)
 (provide 'init-local)
 ;;; init-local.el ends here
