@@ -4,7 +4,7 @@
 (require-package 'modus-themes)
 
 (setq modus-themes-headings
-      '((1 . (ultrabold 1.35)))
+      '((1 . (ultrabold 1.1)))
 
       modus-themes-org-blocks 'gray-background
 
