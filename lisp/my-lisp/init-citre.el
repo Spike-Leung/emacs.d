@@ -10,10 +10,12 @@
   (require 'citre-config)
   (global-set-key (kbd "C-x c j") 'citre-jump)
   (global-set-key (kbd "C-x c J") 'citre-jump-back)
-  (global-set-key (kbd "C-x c p") 'citre-peek)
-  (global-set-key (kbd "C-x c a") 'citre-ace-peek)
+  ;; https://github.com/universal-ctags/citre/blob/master/docs/user-manual/citre-peek.md#how-to-use-citre-peek
+  (global-set-key (kbd "C-x c p") 'citre-ace-peek)
   (global-set-key (kbd "C-x c u") 'citre-update-this-tags-file)
   (global-set-key (kbd "C-x c e") 'citre-edit-tags-file-recipe)
+  (global-set-key (kbd "C-x c s") 'citre-peek-save-session)
+  (global-set-key (kbd "C-x c l") 'citre-peek-load-session)
   (setq
    ;; Set these if readtags/ctags is not in your PATH.
    ;; citre-readtags-program "/path/to/readtags"
