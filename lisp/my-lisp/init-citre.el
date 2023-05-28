@@ -1,7 +1,8 @@
-;;; init-citre.el --- citre
+;;; init-citre.el --- for reading code, citre & clue
 ;;; Commentary:
 ;;; Code:
 ;;; See: https://github.com/universal-ctags/citre
+(push (expand-file-name "lisp/my-lisp/clue" user-emacs-directory) load-path)
 (maybe-require-package 'citre)
 
 (with-eval-after-load 'citre
@@ -49,6 +50,10 @@
 ;; add dirs/files to scan here, one line per dir/file
 "
    ))
+
+;; see: https://github.com/AmaiKinono/clue
+(require 'clue)
+(add-hook 'find-file-hook #'clue-auto-enable-clue-mode)
 
 (provide 'init-citre)
 ;;; init-citre.el ends here

@@ -22,3 +22,6 @@
 [submodule "lisp/my-lisp/breadcrumb"]
 	path = lisp/my-lisp/breadcrumb
 	url = git@github.com:joaotavora/breadcrumb.git
+[submodule "lisp/my-lisp/clue"]
+	path = lisp/my-lisp/clue
+	url = git@github.com:AmaiKinono/clue.git
