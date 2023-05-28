@@ -7,7 +7,7 @@
 (require 'init-auto-save)
 (require 'init-beancount)
 (require 'init-breadcrumb)
-;; (require 'init-codeium)
+(require 'init-citre)
 (require 'init-company)
 (require 'init-easy-hugo)
 (require 'init-elfeed)
