@@ -161,29 +161,35 @@ text and copying to the killring."
 ;;; Capture templates
 ;;; Private
 
-(setq org-capture-templates '(
-                              ;; private
-                              ("p" "Private")
-                              ("pa" "Anime" entry (file "~/org/anime.org") (file "~/org/template/tpl-anime.txt"))
-                              ("pb" "Book" entry (file "~/org/book.org") (file "~/org/template/tpl-book.txt"))
-                              ("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt") :jump-to-captured t)
-                              ("pm" "Movie" entry (file "~/org/movie.org") (file "~/org/template/tpl-movie.txt"))
-                              ("ps" "Shopping" entry (file+headline "~/org/mylife.org" "Shopping-list") (file "~/org/template/tpl-shopping.txt"))
-                              ("pw" "Weekly review" entry
-                               (file+olp+datetree "~/org/weekly-review.org")
-                               (file "~/org/template/tpl-weekly-review.txt")
-                               :immediate-finish t
-                               :jump-to-captured t)
-                              ;; goal
-                              ("g" "Goals")
-                              ("gs" "Short term goals (next 6 month)" entry (file+olp "~/org/goals.org" "Short term goals") (file "~/org/template/tpl-goal.txt"))
-                              ("gm" "Medium term goals (6 month up to 2 years)" entry (file+olp "~/org/goals.org" "Medium term goals") (file "~/org/template/tpl-goal.txt"))
-                              ("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt"))
-                              ;; toto
-                              ("w" "Works")
-                              ("wd" "Daily Tasks" plain (file+olp+datetree "~/org/daily.org") (file "~/org/template/tpl-daily.txt") :jump-to-captured t :immediate-finish t)
-                              ("t" "Todo" entry (file "~/org/inbox.org") (file "~/org/template/tpl-todo.txt"))
-                              ))
+(setq org-capture-templates
+      '(
+        ;; private
+        ("p" "Private")
+        ("pa" "Anime" entry (file "~/org/anime.org") (file "~/org/template/tpl-anime.txt"))
+        ("pb" "Book" entry (file "~/org/book.org") (file "~/org/template/tpl-book.txt"))
+        ("pd" "Diary" plain (file+olp+datetree "~/org/diary.org") (file "~/org/template/tpl-diary.txt") :jump-to-captured t)
+        ("pm" "Movie" entry (file "~/org/movie.org") (file "~/org/template/tpl-movie.txt"))
+        ("ps" "Shopping" entry (file+headline "~/org/mylife.org" "Shopping-list") (file "~/org/template/tpl-shopping.txt"))
+        ("pw" "Weekly review" entry
+         (file+olp+datetree "~/org/weekly-review.org")
+         (file "~/org/template/tpl-weekly-review.txt")
+         :immediate-finish t
+         :jump-to-captured t)
+        ;; goal
+        ("g" "Goals")
+        ("gs" "Short term goals (next 6 month)" entry (file+olp "~/org/goals.org" "Short term goals") (file "~/org/template/tpl-goal.txt"))
+        ("gm" "Medium term goals (6 month up to 2 years)" entry (file+olp "~/org/goals.org" "Medium term goals") (file "~/org/template/tpl-goal.txt"))
+        ("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt"))
+        ;; toto
+        ("w" "Works")
+        ("wd" "Daily Tasks" plain (file+olp+datetree "~/org/daily.org") (file "~/org/template/tpl-daily.txt") :jump-to-captured t :immediate-finish t)
+        ("t" "Todo" entry (file "~/org/inbox.org") (file "~/org/template/tpl-todo.txt"))
+        ("c" "Clue" entry (file "~/org/clue.org") "* %f %^{Things that you track}\n%?"
+         :jump-to-captured t
+         :empty-lines-after 1
+         :prepend t
+         :unnarrowed t)
+        ))
 
 (setq
  org-latex-listings 'minted
