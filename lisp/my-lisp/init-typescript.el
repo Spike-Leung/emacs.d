@@ -39,5 +39,8 @@
 (setq typescript-indent-level 2)
 (setq tide-server-max-response-length 400240)
 
+;; omit js2 semi warning
+(setq js2-strict-missing-semi-warning nil)
+
 (provide 'init-typescript)
 ;;; init-typescript.el ends here
