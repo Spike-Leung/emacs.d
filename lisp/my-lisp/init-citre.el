@@ -1,6 +1,7 @@
 ;;; init-citre.el --- for reading code, citre & clue
 ;;; Commentary:
 ;;; Code:
+;;; prerequisite: you should install: https://github.com/universal-ctags/ctags
 ;;; See: https://github.com/universal-ctags/citre
 (push (expand-file-name "lisp/my-lisp/clue" user-emacs-directory) load-path)
 (maybe-require-package 'citre)
