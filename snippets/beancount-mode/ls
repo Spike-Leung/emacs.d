@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: transaction with last month
+# key: ls
+# --
+`(format-time-string "%Y-%m" (let* ((now (current-time))
+       (month (nth 4 (decode-time now)))
+       (year (nth 5 (decode-time now))))
+  (if (> month 1)
+      (encode-time 0 0 0 1 (1- month) year)
+    (encode-time 0 0 0 1 12 (1- year)))))`-$1 * "$2"
+  $0
