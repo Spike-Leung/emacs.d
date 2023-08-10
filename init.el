@@ -104,7 +104,7 @@
 
 (require 'init-folding)
 
-(when (featurep 'treesit)
+(when (require 'treesit nil t)
   (require 'init-treesitter))
 
 ;;(require 'init-twitter)
