@@ -104,11 +104,6 @@
 
 (require 'init-folding)
 
-(when (and (require 'treesit nil t)
-           (fboundp 'treesit-available-p)
-           (treesit-available-p))
-  (require 'init-treesitter))
-
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
@@ -129,6 +124,14 @@
 
 (when (fboundp 'global-eldoc-mode)
   (add-hook 'after-init-hook 'global-eldoc-mode))
+
+(require 'init-direnv)
+
+(when (and (require 'treesit nil t)
+           (fboundp 'treesit-available-p)
+           (treesit-available-p))
+  (require 'init-treesitter))
+
 
 
 ;; Allow access from emacsclient
