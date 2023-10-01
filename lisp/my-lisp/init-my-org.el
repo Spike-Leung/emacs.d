@@ -218,5 +218,17 @@ text and copying to the killring."
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
+
+;;; setup org-modern
+(maybe-require-package 'org-modern)
+(with-eval-after-load 'org (global-org-modern-mode))
+(setq org-modern-block-name '(("src" . t) ("quote" "[" "]") ("example" . t)))
+(setq org-modern-timestamp nil)
+(setq org-modern-todo nil)
+(setq org-modern-checkbox nil)
+(setq org-modern-tag nil)
+(setq org-modern-progress nil)
+
+
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here
