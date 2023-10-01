@@ -6,7 +6,7 @@
 (setq modus-themes-headings
       '((1 . (ultrabold 1.1)))
 
-      modus-themes-org-blocks 'gray-background
+      ;; modus-themes-org-blocks 'gray-background
 
       modus-themes-common-palette-overrides
       '(
