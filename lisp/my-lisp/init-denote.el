@@ -1,7 +1,7 @@
 ;;; init-my-denote.el --- denote relavive config
 ;;; Commentary:
 ;;; Code:
-(require 'denote)
+(maybe-require-package 'denote)
 
 ;; Remember to check the doc strings of those variables.
 (setq denote-directory (expand-file-name "~/notes/"))
