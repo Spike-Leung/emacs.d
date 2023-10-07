@@ -117,10 +117,12 @@ COMMAND is one among `my-denote-commands-for-silos'."
   (define-key map (kbd "C-c n R") #'denote-rename-file-using-front-matter))
 
 ;; Key bindings specifically for Dired.
-(let ((map dired-mode-map))
-  (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
-  (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
-  (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter))
+(with-eval-after-load 'dired
+  (let ((map dired-mode-map))
+    (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
+    (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
+    (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter)))
+
 
 ;; (with-eval-after-load 'org-capture
 ;;   (setq denote-org-capture-specifiers "%l\n%i\n%?")
