@@ -31,6 +31,12 @@
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
 
+;; Process performance tuning
+
+(setq read-process-output-max (* 4 1024 1024))
+(setq process-adaptive-read-buffering nil)
+
+
 ;; Bootstrap config
 
 
@@ -101,8 +107,8 @@
   (require 'init-spelling))
 
 (require 'init-misc)
-
 (require 'init-folding)
+(require 'init-terminals)
 
 ;; Extra packages which don't require any configuration
 (require-package 'sudo-edit)
