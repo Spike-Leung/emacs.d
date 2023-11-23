@@ -71,7 +71,7 @@
 ;; This is a list of strings.")
 
 (defvar my-denote-silo-directories
-  `("~/notes/.hidden")
+  `("~/notes/.hidden" "~/notes/.privacy")
   "List of file paths pointing to my Denote silos.
 This is a list of strings.")
 
