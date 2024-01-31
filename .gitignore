@@ -60,3 +60,4 @@ org-roam.db
 /codeium
 /games
 /forge-*.sqlite
+/projectile.cache
