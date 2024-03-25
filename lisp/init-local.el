@@ -21,5 +21,7 @@
 (require 'init-proxy)
 (require 'init-typescript)
 (require 'init-yasnippet)
+(require 'init-magit)
+
 (provide 'init-local)
 ;;; init-local.el ends here
