@@ -13,14 +13,9 @@
 (add-hook 'vue-mode-hook 'eglot-ensure)
 
 (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(vue-mode . (eglot-volar "vue-language-server" "--stdio")))
-  (defclass eglot-volar (eglot-lsp-server) () :documentation "volar")
-  (cl-defmethod eglot-initialization-options ((server eglot-volar))
-    "Passes through required cquery initialization options"
-    `(
-      ;; Absolute path to node_modules/typescript/lib
-      :typescript (:tsdk ,(expand-file-name "~/.nvm/versions/node/v16.18.0/lib/node_modules/typescript/lib/"))
-      :fullCompletionList t
-      )))
+  (add-to-list 'eglot-server-programs
+               '(vue-mode . ("vue-language-server" "--stdio" :initializationOptions
+                             (:typescript
+                              (:tsdk "/home/spike/.nvm/versions/node/v16.20.2/lib/node_modules/typescript/lib/"))))))
 (provide 'init-vue-mode)
 ;;; init-vue-mode.el ends here
