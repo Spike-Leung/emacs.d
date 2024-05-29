@@ -12,6 +12,14 @@
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
 (add-hook 'vue-mode-hook 'eglot-ensure)
 
+(with-eval-after-load 'flycheck
+  ;; 确保当 vue-mode 启动时，启用 Flycheck
+  (add-hook 'vue-mode-hook (lambda () (flycheck-mode 1)))
+  ;; 指定在 vue-mode 中使用 javascript-eslint 检查器
+  (flycheck-add-mode 'javascript-eslint 'vue-mode))
+
+;;; ni -g typescript
+;;; ni -g @volar/vue-language-server
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
                '(vue-mode . ("vue-language-server" "--stdio" :initializationOptions
