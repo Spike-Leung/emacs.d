@@ -14,7 +14,7 @@
 
 (with-eval-after-load 'flycheck
   ;; 确保当 vue-mode 启动时，启用 Flycheck
-  (add-hook 'vue-mode-hook (lambda () (flycheck-mode 1)))
+  ;; (add-hook 'vue-mode-hook (lambda () (flycheck-mode 1)))
   ;; 指定在 vue-mode 中使用 javascript-eslint 检查器
   (flycheck-add-mode 'javascript-eslint 'vue-mode))
 
