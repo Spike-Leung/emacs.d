@@ -24,9 +24,8 @@
       (dolist (mode spike-leung/js-related-modes)
         (let ((mode-hook (intern (concat (symbol-name mode) "-hook"))))
           (add-hook mode-hook 'add-node-modules-path)
-          (add-hook mode-hook (lambda ()
-                                (setq-local completion-at-point-functions '(codeium-completion-at-point))))
-          )))))
+          (add-hook mode-hook (lambda () (flycheck-reset-enabled-checker 'javascript-eslint)))
+          (add-hook mode-hook (lambda () (setq-local completion-at-point-functions '(codeium-completion-at-point)))))))))
 
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
