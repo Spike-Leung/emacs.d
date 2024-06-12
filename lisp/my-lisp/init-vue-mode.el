@@ -10,7 +10,7 @@
 ;;; see: https://emacs-china.org/t/volar-eglot/21255
 (define-derived-mode vue-mode web-mode "Vue")
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
-(add-hook 'vue-mode-hook 'eglot-ensure)
+;; (add-hook 'vue-mode-hook 'eglot-ensure)
 
 (with-eval-after-load 'flycheck
   ;; 确保当 vue-mode 启动时，启用 Flycheck
