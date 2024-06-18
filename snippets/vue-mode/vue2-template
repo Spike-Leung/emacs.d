@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: tempate for vue2
+# key: tv2
+# --
+<template>
+
+</template>
+<script>
+export default {
+  data() {
+    return {};
+  }
+};
+</script>
+<style scoped lang="less">
+
+</style>
