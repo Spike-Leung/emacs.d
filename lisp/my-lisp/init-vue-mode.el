@@ -18,12 +18,16 @@
   ;; 指定在 vue-mode 中使用 javascript-eslint 检查器
   (flycheck-add-mode 'javascript-eslint 'vue-mode))
 
-;;; ni -g typescript
-;;; ni -g @volar/vue-language-server
+;;; ni -g typescript typescript-language-server @vue/language-server
+;;; 格式为 JSONRPC: https://www.gnu.org/software/emacs/manual/html_node/eglot/JSONRPC-objects-in-Elisp.html
+;;; initializationOptions: https://github.com/vuejs/language-tools/blob/master/packages/language-server/lib/types.ts#L1
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
-               '(vue-mode . ("vue-language-server" "--stdio" :initializationOptions
-                             (:typescript
-                              (:tsdk "/home/spike/.nvm/versions/node/v16.20.2/lib/node_modules/typescript/lib/"))))))
+               '(vue-mode . ("vue-language-server"
+                             "--stdio"
+                             :initializationOptions
+                             (
+                              :typescript (:tsdk "/home/spike/.volta/tools/image/packages/typescript/lib/node_modules/typescript/lib/")
+                              :vue (:hybridMode :json-false))))))
 (provide 'init-vue-mode)
 ;;; init-vue-mode.el ends here
