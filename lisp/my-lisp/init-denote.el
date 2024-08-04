@@ -37,7 +37,7 @@
 
 ;; If you use Markdown or plain text files (Org renders links as buttons
 ;; right away)
-(add-hook 'find-file-hook #'denote-link-buttonize-buffer)
+(add-hook 'find-file-hook #'denote-fontify-links-mode-maybe)
 
 ;; We use different ways to specify a path for demo purposes.
 ;; (setq denote-dired-directories
