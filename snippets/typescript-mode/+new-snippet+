@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: TypeScript Field Comment
+# key: tfc
+# --
+/** $0 */
