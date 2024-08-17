@@ -1,24 +1,12 @@
-[submodule "lisp/my-lisp/org-roam-ui"]
-	path = lisp/my-lisp/org-roam-ui
-	url = https://github.com/org-roam/org-roam-ui.git
 [submodule "lisp/my-lisp/auto-save"]
 	path = lisp/my-lisp/auto-save
 	url = https://github.com/manateelazycat/auto-save.git
-[submodule "lisp/my-lisp/insert-translated-name"]
-	path = lisp/my-lisp/insert-translated-name
-	url = https://github.com/manateelazycat/insert-translated-name.git
 [submodule "lisp/my-lisp/beancount-mode"]
 	path = lisp/my-lisp/beancount-mode
 	url = git@github.com:beancount/beancount-mode.git
-[submodule "lisp/my-lisp/deno-bridge"]
-	path = lisp/my-lisp/deno-bridge
-	url = git@github.com:manateelazycat/deno-bridge.git
 [submodule "lisp/my-lisp/gitmoji"]
 	path = lisp/my-lisp/gitmoji
 	url = git@github.com:Spike-Leung/gitmoji.git
-[submodule "lisp/my-lisp/breadcrumb"]
-	path = lisp/my-lisp/breadcrumb
-	url = git@github.com:joaotavora/breadcrumb.git
 [submodule "lisp/my-lisp/clue"]
 	path = lisp/my-lisp/clue
 	url = git@github.com:AmaiKinono/clue.git
