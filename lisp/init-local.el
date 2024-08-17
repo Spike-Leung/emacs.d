@@ -6,7 +6,7 @@
 
 (require 'init-auto-save)
 (require 'init-beancount)
-(require 'init-breadcrumb)
+;; (require 'init-breadcrumb)
 (require 'init-citre)
 (require 'init-company)
 (require 'init-denote)
@@ -16,7 +16,7 @@
 (require 'init-vue-mode)
 (require 'init-my-markdown)
 (require 'init-my-org)
-(require 'init-modus-theme)
+;; (require 'init-modus-theme)
 (require 'init-projectile)
 (require 'init-proxy)
 (require 'init-typescript)
