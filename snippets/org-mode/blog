@@ -2,8 +2,9 @@
 # name: blog
 # key: blog
 # --
-* News | Article
 
+* News | Article
+$0
 * Tutorial
 
 * Code
