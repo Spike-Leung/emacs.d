@@ -2,11 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 (when (maybe-require-package 'elfeed)
-  (with-eval-after-load 'elfeed
-    (setq elfeed-feeds '(
-                         "https://www.ruanyifeng.com/blog/atom.xml"
-                         "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
-                         "https://weekly.howie6879.cn/rss/rss.xml"))))
+  (when (maybe-require-package 'elfeed-org)
+    (setq rmh-elfeed-org-files (list "~/.emacs.d/elfeed.org"))
+    (elfeed-org)))
 
 (provide 'init-elfeed)
 ;;; init-elfeed.el ends here

@@ -11,6 +11,7 @@
 (require 'init-company)
 (require 'init-denote)
 (require 'init-easy-hugo)
+(require 'init-elfeed)
 (require 'init-gitmoji)
 (require 'init-mu4e)
 (require 'init-vue-mode)

@@ -61,3 +61,4 @@ org-roam.db
 /games
 /forge-*.sqlite
 /projectile.cache
+.elfeed/

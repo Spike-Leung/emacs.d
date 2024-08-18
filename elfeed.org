@@ -1,0 +1,35 @@
+* feed                                                                          :elfeed:
+
+** weekly                                                                         :weekly:
+
+*** [[https://feeds.feedburner.com/ruanyifeng][阮一峰的网络日志]]
+
+*** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志 (atom)]]
+
+*** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
+
+*** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]
+
+*** [[https://wiki.eryajf.net/rss.xml][二丫讲梵]]
+
+*** [[https://pythoncat.top/rss.xml][Python 潮流周刊]]
+
+*** [[https://zishu.me/index.xml][奇趣周刊]]
+
+*** [[https://quail.ink/ameow/feed/atom][猫鱼周刊]]
+
+
+** frontend                                                                      :frontend:
+
+*** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                             :javascript:
+
+*** [[https://feeds.feedburner.com/CSS-Weekly][CSS Weekly]]                                                                    :css:
+
+*** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                   :javascript:
+
+
+** blog                                                                          :blog:
+
+*** [[https://diygod.cc/feed][DIYgod]]
+
+*** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
