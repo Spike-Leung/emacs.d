@@ -18,6 +18,16 @@
 
 *** [[https://quail.ink/ameow/feed/atom][猫鱼周刊]]
 
+*** [[https://www.dmsrs.org/weekly.rss][视野修炼 - 技术周刊]]
+
+*** [[https://sugarat.top/weekly.rss][视野修炼 - 技术周刊]] (粥里有勺糖)
+
+*** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]
+
+
+*** [[https://weekly.lenband.com/rss.xml][冷板凳周刊]]
+
+*** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]
 
 ** frontend                                                                      :frontend:
 
@@ -27,9 +37,29 @@
 
 *** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                   :javascript:
 
+*** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][HTML5 Weekly]]
+
+*** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]
 
 ** blog                                                                          :blog:
 
 *** [[https://diygod.cc/feed][DIYgod]]
 
 *** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
+
+** news
+
+*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
+
+*** [[https://2d2d.io/feed.xml][TO-D 杂志]]
+
+* Not Feed
+
+- [[https://www.yuque.com/zenany/fe_weekly/about][Web 技术周刊]]
+- [[https://www.fre321.com/weekly][FRE123]]
+- [[https://github.com/ascoders/weekly][前端精读]]
+- [[https://monad.run/][#hsfzxjy#]]
+- [[https://haikuoshijie.cn/categories/daily][每日推荐]]
+- [[https://search.zhubai.love/][互联网时代的搜商]]
+- [[https://toolight.zhubai.love/][偷懒爱好者周刊]]
+- [[https://guozh.net/][破茧日报]]
