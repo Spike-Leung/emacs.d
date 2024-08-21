@@ -51,6 +51,8 @@
 *** [[https://atlas.xlog.app/feed][Atlas's 周记]]
 
 
+*** [[https://www.owenyoung.com/atom.xml][owenyoung]]
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
