@@ -50,7 +50,6 @@
 
 *** [[https://atlas.xlog.app/feed][Atlas's 周记]]
 
-
 *** [[https://www.owenyoung.com/atom.xml][owenyoung]]
 
 ** news
@@ -70,3 +69,6 @@
 ** [[https://toolight.zhubai.love/][偷懒爱好者周刊]]
 ** [[https://guozh.net/][破茧日报]]
 ** [[https://feihu.me/][libfeihu's Blog]]                                                               :iOS:
+** [[https://phrack.org/][PHRACK 期刊]]
+** [[https://yinji.org/][印记]]
+** [[https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/][IceBeer]]
