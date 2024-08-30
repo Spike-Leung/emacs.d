@@ -52,6 +52,8 @@
 
 *** [[https://www.owenyoung.com/atom.xml][owenyoung]]
 
+*** [[https://z.arlmy.me/atom.xml][素生]]
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
