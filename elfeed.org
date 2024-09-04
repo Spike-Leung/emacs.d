@@ -12,8 +12,6 @@
 
 *** [[https://wiki.eryajf.net/rss.xml][二丫讲梵]]
 
-*** [[https://pythoncat.top/rss.xml][Python 潮流周刊]]
-
 *** [[https://zishu.me/index.xml][奇趣周刊]]
 
 *** [[https://quail.ink/ameow/feed/atom][猫鱼周刊]]
@@ -54,6 +52,7 @@
 
 *** [[https://z.arlmy.me/atom.xml][素生]]
 
+*** [[https://www.lxchapu.com/rss.xml][柃夏chapu‘s blog]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
@@ -74,3 +73,4 @@
 ** [[https://phrack.org/][PHRACK 期刊]]
 ** [[https://yinji.org/][印记]]
 ** [[https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/][IceBeer]]
+** [[https://www.yuque.com/sheldia/ofaw3k/av0bbykvrg129kmd][刘晓羊-摄影博客]]
