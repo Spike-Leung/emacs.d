@@ -24,7 +24,7 @@
 (require 'init-yasnippet)
 (require 'init-magit)
 (require 'init-codeium)
-(require 'init-immersive-translate)
+(require 'init-translate)
 
 (provide 'init-local)
 ;;; init-local.el ends here
