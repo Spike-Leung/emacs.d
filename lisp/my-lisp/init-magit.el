@@ -96,15 +96,16 @@
      (get-buffer-create name)
      `("git" "--no-pager" "diff" "--ext-diff" ,@(when arg (list arg))))))
 
-(transient-define-prefix th/magit-aux-commands ()
-  "My personal auxiliary magit commands."
-  ["Auxiliary commands"
-   ("d" "Difftastic Diff (dwim)" th/magit-diff-with-difftastic)
-   ("s" "Difftastic Show" th/magit-show-with-difftastic)])
-
 (with-eval-after-load 'magit
   (transient-append-suffix 'magit-dispatch "!"
-    '("#" "My Magit Cmds" th/magit-aux-commands))
+    '("#" "My Magit Cmds" th/magit-aux-commands)
+    )
+
+  (transient-define-prefix th/magit-aux-commands ()
+    "My personal auxiliary magit commands."
+    ["Auxiliary commands"
+     ("d" "Difftastic Diff (dwim)" th/magit-diff-with-difftastic)
+     ("s" "Difftastic Show" th/magit-show-with-difftastic)])
 
   (define-key magit-status-mode-map (kbd "#") #'th/magit-aux-commands))
 
