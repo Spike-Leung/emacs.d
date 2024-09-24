@@ -16,6 +16,7 @@
 (require 'init-mu4e)
 (require 'init-vue-mode)
 (require 'init-my-markdown)
+(require 'init-my-misc)
 (require 'init-my-org)
 ;; (require 'init-modus-theme)
 (require 'init-projectile)
