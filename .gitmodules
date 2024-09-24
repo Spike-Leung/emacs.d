@@ -13,3 +13,6 @@
 [submodule "lisp/my-lisp/codeium"]
 	path = lisp/my-lisp/codeium
 	url = git@github.com:Exafunction/codeium.el.git
+[submodule "lisp/my-lisp/emacs-immersive-translate"]
+	path = lisp/my-lisp/emacs-immersive-translate
+	url = git@github.com:Spike-Leung/emacs-immersive-translate.git
