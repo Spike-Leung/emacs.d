@@ -44,7 +44,7 @@
 
 *** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
 
-*** [[https://innei.in/feed][<![CDATA[ 静かな森 ]​]>]]
+*** [[https://innei.in/feed][静かな森]]
 
 *** [[https://atlas.xlog.app/feed][Atlas's 周记]]
 
@@ -53,6 +53,11 @@
 *** [[https://z.arlmy.me/atom.xml][素生]]
 
 *** [[https://www.lxchapu.com/rss.xml][柃夏chapu‘s blog]]
+
+*** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]
+
+*** [[https://css-irl.info/rss.xml][CSS In Real Life]]
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
