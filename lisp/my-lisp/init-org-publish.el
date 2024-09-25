@@ -14,18 +14,24 @@
 <link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
 "
-         :html-postamble (concat org-html-postamble "
-<nav>
+         :html-preamble "
+ <nav>
   <ul>
-    <li><a href=\"/index.html\">Index</a></li>
+    <li><a href=\"/theindex.html\">Home</a></li>
     <li><a href=\"/about.html\">About</a></li>
+    <li><a href=\"/rss.xml\">RSS</a></li>
+    <li><a href=\"https://github.com/Spike-Leung\">GitHub</a></li>
   </ul>
 </nav>
-")
-         :html-postamble nil
+"
+         :html-postamble "
+<p class=\"author\">Author: %a (%e)</p>
+<p class=\"date\">Date: %d</p>
+"
          :makeindex t
          :auto-sitemap t
-         )
+         :author "Spike Leung"
+         :email "l-yanlei@hotmail.com")
 
         ("fonts"
          :base-directory "~/git/taxodium/fonts/"
