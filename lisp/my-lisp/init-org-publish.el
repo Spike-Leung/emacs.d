@@ -14,6 +14,33 @@
 
 (advice-add 'org-publish :around #'spike-leung/apply-theme-when-publish)
 
+
+(defun spike-leung/get-org-keyword (keyword)
+  "Get the value of the given KEYWORD in the current Org file."
+  (let ((keywords (org-collect-keywords (list keyword))))
+    (if-let ((value (car (cdr (assoc keyword keywords)))))
+        value
+      (format "No %s found" keyword))))
+
+
+(defun spike-leung/org-publish-find-date (file project)
+  "从 org 文件中提取 `#+date` 属性。"
+  (with-temp-buffer
+    (insert-file-contents file)
+    (org-mode)
+    (spike-leung/get-org-keyword "DATE")))
+
+(defun spike-leung/sitemap-format-entry (entry style project)
+  "自定义网站地图条目格式，添加日期信息。"
+  (let* ((filename (org-publish--expand-file-name entry project))
+         (date (spike-leung/org-publish-find-date filename project)))
+    (format "%s %s"
+            (org-publish-sitemap-default-entry entry style project)
+            (if date
+                date
+              "long time ago..."))))
+
+
 (setq org-publish-project-alist
       '(("orgfiles"
          :base-directory "~/git/taxodium/post"
@@ -46,6 +73,7 @@
          :auto-sitemap t
          :sitemap-filename "index.org"
          :sitemap-title "Index"
+         :sitemap-format-entry spike-leung/sitemap-format-entry
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
