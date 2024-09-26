@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(maybe-require-package 'ox-rss)
+
 (defun spike-leung/apply-theme-when-publish (&rest args)
   "Switch theme when do `org-publish'.ARGS will pass to `org-publish'."
   (let ((current-theme (car custom-enabled-themes)))
@@ -40,6 +42,48 @@
                 date
               "long time ago..."))))
 
+;; @see: https://writepermission.com/org-blogging-rss-feed.html
+(defun rw/org-rss-publish-to-rss (plist filename pub-dir)
+  "Publish RSS with PLIST, only when FILENAME is 'rss.org'.
+PUB-DIR is when the output will be placed."
+  (if (equal "rss.org" (file-name-nondirectory filename))
+      (org-rss-publish-to-rss plist filename pub-dir)))
+
+(defun rw/format-rss-feed (title list)
+  "Generate RSS feed as a string. TITLE is the RSS feed title and LIST contains files to include."
+  (message "%s" list)
+  (concat "#+TITLE: " title "\n\n" (org-list-to-subtree list)))
+
+;; (defun rw/format-rss-feed (title list)
+;;   "Generate RSS feed, as a string.
+;; TITLE is the title of the RSS feed.  LIST is an internal
+;; representation for the files to include, as returned by
+;; `org-list-to-lisp'.  PROJECT is the current project."
+;;   (concat "#+TITLE: " title "\n\n"
+;;           (org-list-to-subtree list '(:icount "" :istart ""))))
+
+(defun rw/format-rss-feed-entry (entry style project)
+  "Format ENTRY for the RSS feed.
+ENTRY is a file name.  STYLE is either 'list' or 'tree'.
+PROJECT is the current project."
+  (cond ((not (directory-name-p entry))
+         (let* ((file (org-publish--expand-file-name entry project))
+                (title (org-publish-find-title entry project))
+                (date (format-time-string "%Y-%m-%d" (org-publish-find-date entry project)))
+                (link (concat (file-name-sans-extension entry) ".html")))
+           (with-temp-buffer
+             (insert (format "* %s\n" title))
+             (insert ":PROPERTIES:\n:RSS_PERMALINK: " link "\n:PUBDATE: " date "\n:END:\n")
+             ;; (org-insert-property-drawer)
+             ;; (org-set-property "RSS_PERMALINK" link)
+             ;; (org-set-property "PUBDATE" date)
+             (insert (format "%s" title))
+             (buffer-string))
+           ))
+        ((eq style 'tree)
+         ;; Return only last subdir.
+         (file-name-nondirectory (directory-file-name entry)))
+        (t entry)))
 
 (setq org-publish-project-alist
       '(("orgfiles"
@@ -100,6 +144,23 @@
          :exclude ".*"
          :html-postamble nil)
 
+        ("rss"
+         :base-directory "~/git/taxodium/post"
+         :base-extension "org"
+         :publishing-directory "~/git/taxodium/publish"
+         :publishing-function rw/org-rss-publish-to-rss
+         :html-postamble nil
+         :section-numbers nil
+         :with-toc nil
+         :rss-extension "xml"
+         :html-link-home "https://taxodium.ink"
+         :html-link-use-abs-url t
+         :auto-sitemap t
+         :sitemap-filename "rss.org"
+         :sitemap-title "Taxodium"
+         :sitemap-function rw/format-rss-feed
+         :sitemap-format-entry rw/format-rss-feed-entry)
+
         ("public"
          :base-directory "~/git/taxodium/public/"
          :base-extension any
@@ -107,7 +168,8 @@
          :recursive t
          :publishing-function org-publish-attachment)
 
-        ("website" :components ("orgfiles" "public" "sitemap"))))
+
+        ("website" :components ("orgfiles" "public" "sitemap" "rss"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
