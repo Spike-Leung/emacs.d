@@ -167,15 +167,7 @@ PROJECT is the current project."
          :sitemap-function rw/format-rss-feed
          :sitemap-format-entry rw/format-rss-feed-entry)
 
-        ("public"
-         :base-directory "~/git/taxodium/public/"
-         :base-extension any
-         :publishing-directory "~/git/taxodium/publish/"
-         :recursive t
-         :publishing-function org-publish-attachment)
-
-
-        ("website" :components ("orgfiles" "public" "sitemap" "rss"))))
+        ("website" :components ("orgfiles" "sitemap" "rss"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
