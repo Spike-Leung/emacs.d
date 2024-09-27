@@ -114,10 +114,12 @@ PROJECT is the current project."
 <p class=\"author\">Author: %a (%e)</p>
 <p class=\"date\">Date: %d</p>
 "
+         :exclude "rss.org"
          :auto-sitemap t
          :sitemap-filename "index.org"
-         :sitemap-title "Index"
+         :sitemap-title "Taxodium"
          :sitemap-format-entry spike-leung/sitemap-format-entry
+         :sitemap-sort-files anti-chronologically
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
@@ -156,8 +158,10 @@ PROJECT is the current project."
          :html-link-home "https://taxodium.ink"
          :html-link-use-abs-url t
          :auto-sitemap t
+         :exclude "index|about"
          :sitemap-filename "rss.org"
          :sitemap-title "Taxodium"
+         :sitemap-sort-files anti-chronologically
          :sitemap-function rw/format-rss-feed
          :sitemap-format-entry rw/format-rss-feed-entry)
 
