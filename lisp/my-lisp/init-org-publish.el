@@ -106,7 +106,7 @@ PROJECT is the current project."
     <li><a href=\"/index.html\">Home</a></li>
     <li><a href=\"/about.html\">About</a></li>
     <li><a href=\"/rss.xml\">RSS</a></li>
-    <li><a href=\"https://github.com/Spike-Leung\">GitHub</a></li>
+    <li><a href=\"https://github.com/Spike-Leung/taxodium/tree/org-publish\">GitHub</a></li>
   </ul>
 </nav>
 "
@@ -140,7 +140,7 @@ PROJECT is the current project."
     <li><a href=\"/index.html\">Home</a></li>
     <li><a href=\"/about.html\">About</a></li>
     <li><a href=\"/rss.xml\">RSS</a></li>
-    <li><a href=\"https://github.com/Spike-Leung\">GitHub</a></li>
+    <li><a href=\"https://github.com/Spike-Leung/taxodium/tree/org-publish\">GitHub</a></li>
   </ul>
 </nav>
 "
