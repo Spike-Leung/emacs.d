@@ -111,8 +111,10 @@ PROJECT is the current project."
 </nav>
 "
          :html-postamble "
-<p class=\"author\">Author: %a (%e)</p>
+<p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
+<p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<p class=\"tip\">如果你有留言，可以发送到<a href=\"mailto:l-yanlei@hotmail.com\">我的邮箱</a>， 并告诉我是否可以公开 :)</p>
 "
          :exclude "rss.org"
          :auto-sitemap t
