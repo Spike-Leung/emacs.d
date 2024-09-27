@@ -5,7 +5,8 @@
 (maybe-require-package 'ox-rss)
 
 (defun spike-leung/apply-theme-when-publish (&rest args)
-  "Switch theme when do `org-publish'.ARGS will pass to `org-publish'."
+  "Switch theme when do `org-publish'.
+ARGS will pass to `org-publish'."
   (let ((current-theme (car custom-enabled-themes)))
     (load-theme 'modus-operandi-tinted t)
     (apply args)
@@ -26,11 +27,15 @@
 
 
 (defun spike-leung/org-publish-find-date (file project)
-  "从 org 文件中提取 `#+date` 属性。"
+  "Extract `#+date` form org file.
+FILE is org file name.
+PROJECT is the current project.
+"
   (with-temp-buffer
     (insert-file-contents file)
     (org-mode)
     (spike-leung/get-org-keyword "DATE")))
+
 
 (defun spike-leung/sitemap-format-entry (entry style project)
   "自定义网站地图条目格式，添加日期信息。"
@@ -49,9 +54,10 @@ PUB-DIR is when the output will be placed."
   (if (equal "rss.org" (file-name-nondirectory filename))
       (org-rss-publish-to-rss plist filename pub-dir)))
 
+
 (defun rw/format-rss-feed (title list)
-  "Generate RSS feed as a string. TITLE is the RSS feed title and LIST contains files to include."
-  (message "%s" list)
+  "Generate RSS feed as a string.
+TITLE is the RSS feed title and LIST contains files to include."
   (concat "#+TITLE: " title "\n\n" (org-list-to-subtree list)))
 
 ;; (defun rw/format-rss-feed (title list)
