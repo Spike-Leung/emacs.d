@@ -92,6 +92,7 @@ PROJECT is the current project."
          :with-toc t
          :with-tags t
          :with-broken-links marks
+         :time-stamp-file nil
          ;; TODO: 封装到变量
          :html-head "
 <link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
