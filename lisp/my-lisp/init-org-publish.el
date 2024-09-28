@@ -128,6 +128,7 @@ PROJECT is the current project."
          :base-extension "org"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function org-html-publish-to-html
+         :time-stamp-file nil
          :html-head "
 <link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
