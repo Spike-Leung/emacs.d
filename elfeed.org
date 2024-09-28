@@ -40,6 +40,8 @@
 
 ** blog                                                                          :blog:
 
+*** [[https://taxodium.ink/rss.xml][taxodium]]
+
 *** [[https://diygod.cc/feed][DIYgod]]
 
 *** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
@@ -57,6 +59,11 @@
 *** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]
 
 *** [[https://css-irl.info/rss.xml][CSS In Real Life]]
+
+*** [[https://qq.md/][葉開 • 時光記]]
+
+
+*** [[https://bilibi.li/][midnight serial experiments]]
 
 ** news
 
