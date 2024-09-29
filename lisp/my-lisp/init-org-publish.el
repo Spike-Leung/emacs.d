@@ -81,24 +81,13 @@ PROJECT is the current project."
          (file-name-nondirectory (directory-file-name entry)))
         (t entry)))
 
-
-(setq org-publish-project-alist
-      '(("orgfiles"
-         :base-directory "~/git/taxodium/post"
-         :base-extension "org"
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function org-html-publish-to-html
-         :section-numbers nil
-         :with-toc t
-         :with-tags t
-         :with-broken-links marks
-         :time-stamp-file nil
-         ;; TODO: 封装到变量
-         :html-head "
+(defconst spike-leung/html-head "
 <link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
 "
-         :html-preamble "
+  "`:html-head' for `org-publish'.")
+
+(defconst spike-leung/html-preamble "
  <nav>
   <ul>
     <li><a href=\"/index.html\">Home</a></li>
@@ -108,12 +97,31 @@ PROJECT is the current project."
   </ul>
 </nav>
 "
-         :html-postamble "
+  "`:html-preamble' for `org-publish'." )
+
+(defconst spike-lenng/html-postamble "
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
 <script src=\"https://utteranc.es/client.js\" repo=\"Spike-Leung/taxodium\" issue-term=\"pathname\" theme=\"github-light\" crossorigin=\"anonymous\" async></script>
 "
+  "`:html-postamble' for `org-publish'.")
+
+
+
+(setq org-publish-project-alist
+      `(("orgfiles"
+         :base-directory "~/git/taxodium/post"
+         :base-extension "org"
+         :publishing-directory "~/git/taxodium/publish"
+         :publishing-function org-html-publish-to-html
+         :section-numbers nil
+         :with-toc t
+         :with-tags t
+         :time-stamp-file nil
+         :html-head ,spike-leung/html-head
+         :html-preamble ,spike-leung/html-preamble
+         :html-postamble ,spike-lenng/html-postamble
          :exclude "rss.org"
          :auto-sitemap t
          :sitemap-filename "index.org"
@@ -129,20 +137,8 @@ PROJECT is the current project."
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function org-html-publish-to-html
          :time-stamp-file nil
-         :html-head "
-<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
-<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
-"
-         :html-preamble "
- <nav>
-  <ul>
-    <li><a href=\"/index.html\">Home</a></li>
-    <li><a href=\"/about.html\">About</a></li>
-    <li><a href=\"/rss.xml\">RSS</a></li>
-    <li><a href=\"https://github.com/Spike-Leung/taxodium/tree/org-publish\">GitHub</a></li>
-  </ul>
-</nav>
-"
+         :html-head ,spike-leung/html-head
+         :html-preamble ,spike-leung/html-preamble
          :include ("index.org")
          :exclude ".*"
          :html-postamble nil)
