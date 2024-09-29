@@ -1,18 +1,27 @@
 # -*- mode: snippet -*-
-# name: blog
-# key: blog
+# name: weekly
+# key: weekly
 # group: blog
 # --
 
-#+title: $1
-#+INDEX: $1
+#+title: Weekly#$1
+#+INDEX: weekly!#$1
 #+date: `(format-time-string "<%Y-%m-%d %a>" (current-time))`
 #+lastmod: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+author: Spike Leung
 #+email: l-yanlei@hotmail.com
 #+description: ""
-#+tags: blog
+#+tags: weekly
 
+
+* News | Article
 $0
+* Tutorial
 
-* Refs
+* Code
+
+* Cool Bit
+
+* Tool | Library
+
+* Music
