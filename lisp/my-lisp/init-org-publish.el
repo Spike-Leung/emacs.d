@@ -103,7 +103,22 @@ PROJECT is the current project."
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
-<script src=\"https://utteranc.es/client.js\" repo=\"Spike-Leung/taxodium\" issue-term=\"pathname\" theme=\"github-light\" crossorigin=\"anonymous\" async></script>
+<script src=\"https://giscus.app/client.js\"
+        data-repo=\"Spike-Leung/taxodium\"
+        data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
+        data-category=\"Announcements\"
+        data-category-id=\"DIC_kwDOF540R84Ci61D\"
+        data-mapping=\"pathname\"
+        data-strict=\"0\"
+        data-reactions-enabled=\"1\"
+        data-emit-metadata=\"0\"
+        data-input-position=\"top\"
+        data-theme=\"light_high_contrast\"
+        data-lang=\"en\"
+        data-loading=\"lazy\"
+        crossorigin=\"anonymous\"
+        async>
+</script>
 "
   "`:html-postamble' for `org-publish'.")
 
