@@ -87,6 +87,13 @@ PROJECT is the current project."
 "
   "`:html-head' for `org-publish'.")
 
+(defconst spike-leung/html-head-sitemap "
+<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"../styles/sitemap.css\" type=\"text/css\"/>
+<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
+"
+  "`:html-head' for `org-publish'.Customize for index.org.")
+
 (defconst spike-leung/html-preamble "
  <nav>
   <ul>
@@ -153,7 +160,7 @@ PROJECT is the current project."
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function org-html-publish-to-html
          :time-stamp-file nil
-         :html-head ,spike-leung/html-head
+         :html-head ,spike-leung/html-head-sitemap
          :html-preamble ,spike-leung/html-preamble
          :include ("index.org")
          :exclude ".*"
