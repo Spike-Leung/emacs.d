@@ -74,15 +74,29 @@
 * Not Feed
 
 ** [[https://www.yuque.com/zenany/fe_weekly/about][Web 技术周刊]]
+
 ** [[https://www.fre321.com/weekly][FRE123]]
+
 ** [[https://github.com/ascoders/weekly][前端精读]]
+
 ** [[https://monad.run/][#hsfzxjy#]]
+
 ** [[https://haikuoshijie.cn/categories/daily][每日推荐]]
+
 ** [[https://search.zhubai.love/][互联网时代的搜商]]
+
 ** [[https://toolight.zhubai.love/][偷懒爱好者周刊]]
+
 ** [[https://guozh.net/][破茧日报]]
+
 ** [[https://feihu.me/][libfeihu's Blog]]                                                               :iOS:
+
 ** [[https://phrack.org/][PHRACK 期刊]]
+
 ** [[https://yinji.org/][印记]]
+
 ** [[https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/][IceBeer]]
+
 ** [[https://www.yuque.com/sheldia/ofaw3k/av0bbykvrg129kmd][刘晓羊-摄影博客]]
+
+** [[http://xahlee.org/index.html][Xah Lee Web 李杀网]]
