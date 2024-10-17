@@ -65,6 +65,16 @@
 
 *** [[https://bilibi.li/][midnight serial experiments]]
 
+*** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]
+
+*** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]
+
+*** [[https://garden.bradwoods.io/rss.xml][Brad Woods Digital Garden]]
+
+*** [[https://expensive.toys/rss.xml][Artur Bień]]
+*** [[https://anotherdayu.com/feed/][Another Dayu]]
+*** [[https://css-irl.info/rss.xml][CSS In Real Life]]
+*** [[https://blakewatson.com/feed.xml][Blake Watson]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
