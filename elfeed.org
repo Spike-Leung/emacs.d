@@ -62,7 +62,6 @@
 
 *** [[https://qq.md/][葉開 • 時光記]]
 
-
 *** [[https://bilibi.li/][midnight serial experiments]]
 
 *** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]
@@ -72,9 +71,16 @@
 *** [[https://garden.bradwoods.io/rss.xml][Brad Woods Digital Garden]]
 
 *** [[https://expensive.toys/rss.xml][Artur Bień]]
+
 *** [[https://anotherdayu.com/feed/][Another Dayu]]
+
 *** [[https://css-irl.info/rss.xml][CSS In Real Life]]
+
 *** [[https://blakewatson.com/feed.xml][Blake Watson]]
+
+*** [[https://xenodium.com/rss.xml][Alvaro Ramirez's notes]]
+
+*** [[https://www.yoghurtlee.com/index.xml][园子里的日光]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
@@ -114,3 +120,5 @@
 ** [[https://0xffff.one/][OxFFFF]]
 
 ** [[https://randomascii.wordpress.com/][Randdom ASCII]]
+
+** [[https://smallyu.net][smallyu 的博客]]
