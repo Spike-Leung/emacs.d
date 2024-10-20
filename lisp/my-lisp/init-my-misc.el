@@ -81,7 +81,24 @@
             ;; Insert the new #+begin_export html block
             (insert (format "#+begin_export html\n<iframe style=\"width:100%%\" srcdoc=\"%s\"></iframe>\n#+end_export\n" srcdoc))))))))
 
-
+(defun pngcrush-compress-directory (directory)
+  "Compress all PNG, JPG, and JPEG files in DIRECTORY to the maximum extent using ImageMagick and pngcrush."
+  (interactive "DSelect directory: ")
+  (let ((image-files (directory-files directory t "\(\.png\|\.jpg\|\.jpeg\)$")))
+    (dolist (image-file image-files)
+      (let ((output-file (concat (file-name-sans-extension image-file) "-crushed.png")))
+        (cond
+         ((string-match-p "\.png$" image-file)
+          (call-process "pngcrush" nil nil nil "-brute" image-file output-file)
+          (rename-file output-file image-file t))
+         ((or (string-match-p "\.jpg$" image-file)
+              (string-match-p "\.jpeg$" image-file))
+          (let ((png-temp-file (concat (file-name-sans-extension image-file) "-temp.png")))
+            (call-process "magick" nil nil nil image-file png-temp-file)
+            (call-process "pngcrush" nil nil nil "-brute" png-temp-file output-file)
+            (rename-file output-file png-temp-file t)
+            (call-process "magick" nil nil nil "convert" png-temp-file image-file)
+            )))))))
 
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
