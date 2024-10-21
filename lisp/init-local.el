@@ -14,6 +14,7 @@
 (require 'init-elfeed)
 (require 'init-gitmoji)
 (require 'init-mu4e)
+(require 'init-helpful)
 (require 'init-vue-mode)
 (require 'init-my-editing-utils)
 (require 'init-my-markdown)
