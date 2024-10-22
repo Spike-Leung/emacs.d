@@ -10,6 +10,7 @@
 (require 'init-citre)
 (require 'init-company)
 (require 'init-denote)
+(require 'init-my-dired)
 (require 'init-easy-hugo)
 (require 'init-elfeed)
 (require 'init-gitmoji)
