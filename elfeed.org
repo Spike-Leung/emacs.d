@@ -86,6 +86,14 @@
 
 *** [[https://kristofferbalintona.me/index.xml][Kristoffer Balintona]]                                                        :emacs:
 
+*** [[https://blog.pursuitus.com/feed][Ouroboros]]
+
+*** [[https://blog.douchi.space/index.xml][椒盐豆豉]]
+
+*** [[https://spacexcode.com/blog/rss.xml][太空编程 Blog]]
+
+*** [[https://manateelazycat.github.io/feed.xml][Andy Stewart]]
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
@@ -129,3 +137,7 @@
 ** [[https://smallyu.net][smallyu 的博客]]
 
 ** [[https://fika.bar/blogs/paoramen][Pao Ramen]]
+
+** [[https://cr.yp.to/djb.html][D. J. Bernstein]]
+
+** [[https://www.geedea.pro/][極客死亡計劃]]
