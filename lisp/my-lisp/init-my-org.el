@@ -229,6 +229,9 @@ text and copying to the killring."
 ;; (setq org-modern-tag nil)
 ;; (setq org-modern-progress nil)
 
+(setq org-html-html5-fancy t)
+(setq org-html-doctype "html5")
+
 
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here
