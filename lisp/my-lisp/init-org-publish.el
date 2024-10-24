@@ -4,6 +4,63 @@
 
 (maybe-require-package 'ox-rss)
 
+
+(defconst spike-leung/html-head "
+<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
+<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
+"
+  "`:html-head' for `org-publish'.")
+
+(defconst spike-leung/html-head-sitemap "
+<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
+<link rel=\"stylesheet\" href=\"../styles/sitemap.css\" type=\"text/css\"/>
+<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
+"
+  "`:html-head' for `org-publish'.Customize for index.org.")
+
+(defconst spike-leung/html-preamble "
+ <nav>
+  <ul>
+    <li><a href=\"/index.html\">Home</a></li>
+    <li><a href=\"/about.html\">About</a></li>
+    <li><a href=\"/rss.xml\">RSS</a></li>
+    <li><a href=\"https://github.com/Spike-Leung/taxodium/tree/org-publish\">GitHub</a></li>
+    <li><a href=\"https://music.163.com/#/playlist?id=12531191848\">Playlist</a></li>
+    <li><a href=\"/_blank.html\">_blank</a></li>
+  </ul>
+</nav>
+"
+  "`:html-preamble' for `org-publish'." )
+
+(defconst spike-lenng/html-postamble "
+<p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
+<p class=\"date\">Date: %d</p>
+<p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<script src=\"https://giscus.app/client.js\"
+        data-repo=\"Spike-Leung/taxodium\"
+        data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
+        data-category=\"Announcements\"
+        data-category-id=\"DIC_kwDOF540R84Ci61D\"
+        data-mapping=\"pathname\"
+        data-strict=\"0\"
+        data-reactions-enabled=\"1\"
+        data-emit-metadata=\"0\"
+        data-input-position=\"top\"
+        data-theme=\"light_high_contrast\"
+        data-lang=\"en\"
+        data-loading=\"lazy\"
+        crossorigin=\"anonymous\"
+        async>
+</script>
+"
+  "`:html-postamble' for `org-publish'.")
+
+(defconst spike-leung/follow-claim-description
+  "feedId:63132271001948160+userId:72185894417953792"
+  "Follow claim description.")
+
 (defun spike-leung/apply-theme-when-publish (&rest args)
   "Switch theme when do `org-publish'.
 ARGS will pass to `org-publish'."
@@ -59,7 +116,16 @@ PUB-DIR is when the output will be placed."
 (defun rw/format-rss-feed (title list)
   "Generate RSS feed as a string.
 TITLE is the RSS feed title and LIST contains files to include."
-  (concat "#+TITLE: " title "\n\n" (org-list-to-subtree list)))
+  (concat
+   "#+TITLE: " title
+   "\n"
+   "#+DESCRIPTION: " (format
+                      "That the powerful play goes on, and you may contribute a verse. (%s)"
+                      spike-leung/follow-claim-description)
+   "\n"
+   "#+RSS_IMAGE_URL:" " https://taxodium.ink/favicon.ico"
+   "\n\n"
+   (org-list-to-subtree list)))
 
 
 (defun rw/format-rss-feed-entry (entry style project)
@@ -80,60 +146,6 @@ PROJECT is the current project."
          ;; Return only last subdir.
          (file-name-nondirectory (directory-file-name entry)))
         (t entry)))
-
-(defconst spike-leung/html-head "
-<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
-<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
-"
-  "`:html-head' for `org-publish'.")
-
-(defconst spike-leung/html-head-sitemap "
-<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
-<link rel=\"stylesheet\" href=\"../styles/sitemap.css\" type=\"text/css\"/>
-<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
-"
-  "`:html-head' for `org-publish'.Customize for index.org.")
-
-(defconst spike-leung/html-preamble "
- <nav>
-  <ul>
-    <li><a href=\"/index.html\">Home</a></li>
-    <li><a href=\"/about.html\">About</a></li>
-    <li><a href=\"/rss.xml\">RSS</a></li>
-    <li><a href=\"https://github.com/Spike-Leung/taxodium/tree/org-publish\">GitHub</a></li>
-    <li><a href=\"https://music.163.com/#/playlist?id=12531191848\">Playlist</a></li>
-    <li><a href=\"/_blank.html\">_blank</a></li>
-  </ul>
-</nav>
-"
-  "`:html-preamble' for `org-publish'." )
-
-(defconst spike-lenng/html-postamble "
-<p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
-<p class=\"date\">Date: %d</p>
-<p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
-<script src=\"https://giscus.app/client.js\"
-        data-repo=\"Spike-Leung/taxodium\"
-        data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
-        data-category=\"Announcements\"
-        data-category-id=\"DIC_kwDOF540R84Ci61D\"
-        data-mapping=\"pathname\"
-        data-strict=\"0\"
-        data-reactions-enabled=\"1\"
-        data-emit-metadata=\"0\"
-        data-input-position=\"top\"
-        data-theme=\"light_high_contrast\"
-        data-lang=\"en\"
-        data-loading=\"lazy\"
-        crossorigin=\"anonymous\"
-        async>
-</script>
-"
-  "`:html-postamble' for `org-publish'.")
-
-
 
 (setq org-publish-project-alist
       `(("orgfiles"
