@@ -10,7 +10,8 @@
 #+lastmod: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+author: Spike Leung
 #+email: l-yanlei@hotmail.com
-#+description: ""
+#+description: "Weekly info collected by Spike Leung"
+#+keywords: "Weekly News Code Music"
 #+tags: weekly
 #+OPTIONS: toc:1
 
