@@ -94,11 +94,22 @@
 
 *** [[https://manateelazycat.github.io/feed.xml][Andy Stewart]]
 
+*** [[https://justgoidea.com/rss.xml][槿呈Goidea]]
+
+*** [[https://veryjack.com/feed/][Jack‘s Space]]
+
+*** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:
+
+*** [[https://markentier.tech/feed.rss.xml][markentier.tech]]
+
+*** [[https://www.parkerchang.life/feed.xml][arker Chang's Web]]
+
+*** [[https://fhur.me/feed.xml][fhur's blog]]
+
+*** [[https://conge.livingwithfcs.org/feed.xml][Conge]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
-
-*** [[https://2d2d.io/feed.xml][TO-D 杂志]]
 
 * Not Feed
 
