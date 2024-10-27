@@ -23,6 +23,14 @@
   "`:html-head' for `org-publish'.Customize for index.org.")
 
 (defconst spike-leung/html-preamble "
+  <ul class=\"ally-nav\">
+    <li>
+      <a id=\"skip-content\" href=\"#content\">Skip to main content</a>
+    </li>
+    <li>
+      <a id=\"skip-postamble\" href=\"#postamble\">Skip to comments</a>
+    </li>
+  </ul>
  <nav>
   <ul>
     <li><a href=\"/index.html\">Home</a></li>
@@ -40,6 +48,11 @@
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<ul class=\"ally-nav\">
+  <li>
+    <a id=\"skip-preamble\" href=\"#preamble\">Skip to nav</a>
+  </li>
+</ul>
 <script src=\"https://giscus.app/client.js\"
         data-repo=\"Spike-Leung/taxodium\"
         data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
