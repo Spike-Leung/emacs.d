@@ -13,25 +13,13 @@
 "
   "`:html-head' for `org-publish'.")
 
-(defconst spike-leung/html-head-sitemap "
-<link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Bold/result.css\" />
-<link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
-<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"../styles/sitemap.css\" type=\"text/css\"/>
-<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
-"
+(defconst spike-leung/html-head-sitemap (concat
+                                         spike-leung/html-head
+                                         "<link rel=\"stylesheet\" href=\"../styles/sitemap.css\" type=\"text/css\"/>")
   "`:html-head' for `org-publish'.Customize for index.org.")
 
 (defconst spike-leung/html-preamble "
-  <ul class=\"ally-nav\">
-    <li>
-      <a id=\"skip-content\" href=\"#content\">Skip to main content</a>
-    </li>
-    <li>
-      <a id=\"skip-postamble\" href=\"#postamble\">Skip to comments</a>
-    </li>
-  </ul>
- <nav>
+<nav>
   <ul>
     <li><a href=\"/index.html\">Home</a></li>
     <li><a href=\"/about.html\">About</a></li>
@@ -44,15 +32,22 @@
 "
   "`:html-preamble' for `org-publish'." )
 
+(defconst spike-leung/html-preamble-content (concat "
+  <ul class=\"ally-nav\">
+    <li>
+      <a id=\"skip-content\" href=\"#content\">Skip to main content</a>
+    </li>
+    <li>
+      <a id=\"skip-postamble\" href=\"#postamble\">Skip to comments</a>
+    </li>
+  </ul>
+" spike-leung/html-preamble)
+  "`:html-preamble' for `org-publish'.Customize for content." )
+
 (defconst spike-lenng/html-postamble "
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
-<ul class=\"ally-nav\">
-  <li>
-    <a id=\"skip-preamble\" href=\"#preamble\">Skip to nav</a>
-  </li>
-</ul>
 <script src=\"https://giscus.app/client.js\"
         data-repo=\"Spike-Leung/taxodium\"
         data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
@@ -173,7 +168,7 @@ PROJECT is the current project."
          :with-tags t
          :time-stamp-file nil
          :html-head ,spike-leung/html-head
-         :html-preamble ,spike-leung/html-preamble
+         :html-preamble ,spike-leung/html-preamble-content
          :html-postamble ,spike-lenng/html-postamble
          :exclude "rss.org"
          :auto-sitemap t
