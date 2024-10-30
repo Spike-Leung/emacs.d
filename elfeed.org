@@ -107,6 +107,17 @@
 *** [[https://fhur.me/feed.xml][fhur's blog]]
 
 *** [[https://conge.livingwithfcs.org/feed.xml][Conge]]
+
+*** [[https://feed.8620.uk/zh][Chise Hachiroku]]
+
+*** [[https://www.wikimoe.com/rss][维基萌]]
+
+*** [[https://www.less-bug.com//index.xml][Less Bug]]
+
+*** [[https://mazzzystar.github.io/atom.xml][TL;DR]]
+
+*** [[https://atpx.com/feed.xml][atpX]]
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
@@ -152,3 +163,6 @@
 ** [[https://cr.yp.to/djb.html][D. J. Bernstein]]
 
 ** [[https://www.geedea.pro/][極客死亡計劃]]
+
+** [[https://www.yvesx.com/][举头三尺有神鱼]]
+** [[https://talk.macpowerusers.com/][MAC POWER USERS]]
