@@ -118,6 +118,8 @@
 
 *** [[https://atpx.com/feed.xml][atpX]]
 
+*** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
@@ -165,4 +167,7 @@
 ** [[https://www.geedea.pro/][極客死亡計劃]]
 
 ** [[https://www.yvesx.com/][举头三尺有神鱼]]
+
 ** [[https://talk.macpowerusers.com/][MAC POWER USERS]]
+
+** [[https://www.changhai.org/][卢昌海个人网站]]
