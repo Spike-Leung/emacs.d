@@ -116,6 +116,7 @@
 
 *** [[https://atpx.com/feed.xml][atpX]]
 
+*** [[https://tianxianzi.me/atom.xml][天仙子]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
