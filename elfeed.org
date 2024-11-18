@@ -118,9 +118,7 @@
 
 *** [[https://tianxianzi.me/atom.xml][天仙子]]
 
-*** [[https://meyerweb.com/eric/thoughts/feed/atom/][Eric Meyer]]                                                                  :css:
-
-*** [[https://blog.sakanano.moe/rss.xml][魚の]]
+*** [[https://ayu.land/revlog#feed][Sweetfish Ayu]]
 
 ** news
 
