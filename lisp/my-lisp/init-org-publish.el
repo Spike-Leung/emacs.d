@@ -8,14 +8,14 @@
 (defconst spike-leung/html-head "
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Bold/result.css\" />
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
-<link rel=\"stylesheet\" href=\"../styles/style.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"/styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
 "
   "`:html-head' for `org-publish'.")
 
 (defconst spike-leung/html-head-sitemap (concat
                                          spike-leung/html-head
-                                         "<link rel=\"stylesheet\" href=\"../styles/sitemap.css\" type=\"text/css\"/>")
+                                         "<link rel=\"stylesheet\" href=\"/styles/sitemap.css\" type=\"text/css\"/>")
   "`:html-head' for `org-publish'.Customize for index.org.")
 
 (defconst spike-leung/html-preamble "
