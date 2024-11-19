@@ -114,6 +114,15 @@ PROJECT is the current project.
                 date
               "long time ago..."))))
 
+(defun spike-leung/sitemap-function (title list)
+  "Generate sitemap as a string.
+TITLE is the sitemap title and LIST contains files to include."
+  (concat
+   "#+TITLE: " title
+   "\n"
+   "#+DESCRIPTION: That the powerful play goes on, and you may contribute a verse."
+   "\n\n"
+   (org-list-to-org list)))
 
 ;; @see: https://writepermission.com/org-blogging-rss-feed.html
 (defun rw/org-rss-publish-to-rss (plist filename pub-dir)
@@ -176,6 +185,7 @@ PROJECT is the current project."
          :sitemap-title "Taxodium"
          :sitemap-format-entry spike-leung/sitemap-format-entry
          :sitemap-sort-files anti-chronologically
+         :sitemap-function spike-leung/sitemap-function
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
