@@ -120,6 +120,9 @@
 
 *** [[https://ayu.land/revlog#feed][Sweetfish Ayu]]
 
+*** [[https://antfu.me/feed.xml][Anthony Fu]]
+
+*** [[https://bitfieldconsulting.com/posts?format=rss][Bitfield Consulting]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
