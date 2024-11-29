@@ -30,6 +30,7 @@
 (require 'init-codeium)
 (require 'init-translate)
 (require 'init-org-publish)
+(require 'init-gptel)
 
 (provide 'init-local)
 ;;; init-local.el ends here
