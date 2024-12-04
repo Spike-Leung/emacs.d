@@ -4,7 +4,6 @@
 
 (maybe-require-package 'ox-rss)
 
-
 (defconst spike-leung/html-head "
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Bold/result.css\" />
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
@@ -70,6 +69,14 @@
 (defconst spike-leung/follow-claim-description
   "feedId:63132271001948160+userId:72185894417953792"
   "Follow claim description.")
+
+(defun spike-leung/add-custom-id-to-all-headings ()
+  "Add a CUSTOM_ID property to all headings in the current buffer."
+  (interactive)
+  (org-map-entries
+   (lambda ()
+     (let ((custom-id (org-id-new)))
+       (org-set-property "CUSTOM_ID" custom-id)))))
 
 (defun spike-leung/apply-theme-when-publish (&rest args)
   "Switch theme when do `org-publish'.
