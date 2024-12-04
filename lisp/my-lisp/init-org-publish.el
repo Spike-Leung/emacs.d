@@ -206,7 +206,9 @@ PROJECT is the current project."
          :html-preamble ,spike-leung/html-preamble
          :include ("index.org")
          :exclude ".*"
-         :html-postamble nil)
+         :html-postamble nil
+         :author "Spike Leung"
+         :email "l-yanlei@hotmail.com")
 
         ("rss"
          :base-directory "~/git/taxodium/post"
