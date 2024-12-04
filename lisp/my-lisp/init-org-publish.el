@@ -222,7 +222,7 @@ PROJECT is the current project."
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
-        ("website" :components ("orgfiles" "sitemap" "rss"))))
+        ("website" :components ("orgfiles" "sitemap"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
