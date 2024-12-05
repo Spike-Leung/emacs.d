@@ -14,6 +14,26 @@
          (full-url (concat jira-base-url "/browse/" issue-id)))
     (browse-url full-url)))
 
+(defun spike-leung/open-jira-issue-from-magit-log ()
+  "Open the JIRA issue(s) from the current line in a `magit-log' buffer."
+  (interactive)
+  (let* ((current-line (thing-at-point 'line t))
+         (jira-id-regexp "\\([A-Za-z0-9]+-[0-9]+\\)")
+         (jira-base-url "https://jira.gyenno.com")
+         (start 0)
+         jira-ids)
+    ;; Extract all JIRA IDs from the current line
+    (while (string-match jira-id-regexp current-line start)
+      (push (match-string 0 current-line) jira-ids)
+      (setq start (match-end 0)))
+    (if jira-ids
+        ;; Open each JIRA issue in a browser
+        (dolist (issue-id (reverse jira-ids))
+          (let ((full-url (concat jira-base-url "/browse/" issue-id)))
+            (browse-url full-url)))
+      (message "No JIRA issue ID found on the current line."))))
+
+
 (defvar spike-leung/js-related-modes '(vue-mode typescript-mode web-mode js-mode js2-mode js-ts-mode)
   "List of modes to add node_modules path.")
 
