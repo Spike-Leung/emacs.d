@@ -32,7 +32,8 @@
           (let ((full-url (concat jira-base-url "/browse/" issue-id)))
             (browse-url full-url)))
       (message "No JIRA issue ID found on the current line."))))
-
+(with-eval-after-load 'magit
+  (define-key magit-log-mode-map (kbd "]") 'spike-leung/open-jira-issue-from-magit-log))
 
 (defvar spike-leung/js-related-modes '(vue-mode typescript-mode web-mode js-mode js2-mode js-ts-mode)
   "List of modes to add node_modules path.")
