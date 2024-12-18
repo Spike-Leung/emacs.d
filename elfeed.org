@@ -126,10 +126,14 @@
 
 *** [[https://emacsninja.com/emacs.atom][Vasilij Schneidermann]]                                                       :emacs:
 
+*** [[https://xuanwo.io/index.xml][Xuanwo's Blog]]
+
 *** [[https://yipai.me/feed][一派胡言]]
 
 *** [[https://www.linnana.me/feed.xml][不二木子]]
 
+>>>>>>> variant B
+======= end
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
