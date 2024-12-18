@@ -57,14 +57,14 @@
         data-reactions-enabled=\"1\"
         data-emit-metadata=\"0\"
         data-input-position=\"top\"
-        data-theme=\"light_high_contrast\"
+        data-theme=\"preferred_color_scheme\"
         data-lang=\"en\"
         data-loading=\"lazy\"
         crossorigin=\"anonymous\"
         async>
 </script>
 "
-  "`:html-postamble' for `org-publish'.")
+ "`:html-postamble' for `org-publish'.")
 
 (defconst spike-leung/follow-claim-description
   "feedId:63132271001948160+userId:72185894417953792"
