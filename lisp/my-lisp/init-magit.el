@@ -109,5 +109,42 @@
 
   (define-key magit-status-mode-map (kbd "#") #'th/magit-aux-commands))
 
+(with-eval-after-load 'magit-todos
+  (setq magit-todos-keywords
+        '("TODO" "FIXME" "HACK" "OPTIMIZE" "BUG" "CHECKME" "REVIEW" "DOCME" "TESTME"))
+
+  (setq hl-todo-keyword-faces
+        '(("TODO" . "#ff5f59")
+          ("FIXME" . "#fec43f")
+          ("HACK" . "#d0bc00")
+          ("OPTIMIZE" . "#44bc44")
+          ("BUG" . "#2fafff")
+          ("CHECKME" . "#9099d9")
+          ("REVIEW" . "#f78fe7")
+          ("DOCME" . "#feacd0")
+          ("TESTME" . "#00d3d0"))))
+
+(defconst spike-leung/magit-todo-keywords
+  '(("TODO" . "Task that needs to be done")
+    ("FIXME" . "Something is broken")
+    ("HACK" . "The code is suboptimal and should be refactored")
+    ("OPTIMIZE" . "The code is suboptimal and should be refactored")
+    ("BUG" . "There is a bug in the code")
+    ("CHECKME" . "The code needs to be reviewed")
+    ("REVIEW" . "The code needs to be reviewed")
+    ("DOCME" . "The code needs to be documented (either in codebase or external documentation)")
+    ("TESTME" . "Tests need to be written for that code selection")))
+
+(defun spike-leung/magit-todo-keyword-insert ()
+  "Use `consult` to select a keyword from `magit-todos-keywords` with descriptions and insert it into the buffer."
+  (interactive)
+  (let* ((keyword (consult--read
+                   (mapcar (lambda (pair)
+                             (concat (car pair) " - " (cdr pair)))
+                           spike-leung/magit-todo-keywords)
+                   :prompt "Select keyword: "
+                   :category 'consult-candidate)))
+    (insert (concat "// " (car (split-string keyword " - ")) ": "))))
+
 (provide 'init-magit)
 ;;; init-magit.el ends here
