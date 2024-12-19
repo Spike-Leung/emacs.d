@@ -5,6 +5,7 @@
 (maybe-require-package 'ox-rss)
 
 (defconst spike-leung/html-head "
+<meta name=\"color-scheme\" content=\"light dark\" />
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Bold/result.css\" />
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
 <link rel=\"stylesheet\" href=\"/styles/style.css\" type=\"text/css\"/>
@@ -16,20 +17,24 @@
                                          spike-leung/html-head
                                          "<link rel=\"stylesheet\" href=\"/styles/sitemap.css\" type=\"text/css\"/>")
   "`:html-head' for `org-publish'.Customize for index.org.")
-
-(defconst spike-leung/html-preamble "
+(defconst spike-leung/html-preamble
+  "
 <nav>
   <ul>
     <li><a href=\"/index.html\">Home</a></li>
-    <li><a href=\"/about.html\">About</a></li>
     <li><a href=\"/rss.xml\">RSS</a></li>
     <li><a href=\"https://music.163.com/#/playlist?id=12531191848\">Playlist</a></li>
     <li><a href=\"/_blank.html\">_blank</a></li>
     <li><a href=\"/search.html\">Search</a></li>
   </ul>
+  <select onchange=\"switchMode(this.value)\" id=\"lightdark\">
+    <option value=\"auto\">Auto</option>
+    <option value=\"light\">Light</option>
+    <option value=\"dark\">Dark</option>
+  </select>
 </nav>
 "
-  "`:html-preamble' for `org-publish'." )
+  "`:html-preamble' for `org-publish'.")
 
 (defconst spike-leung/html-preamble-content (concat "
   <ul class=\"ally-nav\">
@@ -47,6 +52,7 @@
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<script src=\"/js/color-scheme.js\" async></script>
 <script src=\"https://giscus.app/client.js\"
         data-repo=\"Spike-Leung/taxodium\"
         data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
@@ -64,7 +70,12 @@
         async>
 </script>
 "
- "`:html-postamble' for `org-publish'.")
+  "`:html-postamble' for `org-publish'.")
+
+(defconst spike-lenng/html-postamble-sitemap "
+<script src=\"/js/color-scheme.js\" async></script>
+"
+  "`:html-postamble' for `org-publish' sitemap.")
 
 (defconst spike-leung/follow-claim-description
   "feedId:63132271001948160+userId:72185894417953792"
@@ -205,9 +216,9 @@ PROJECT is the current project."
          :time-stamp-file nil
          :html-head ,spike-leung/html-head-sitemap
          :html-preamble ,spike-leung/html-preamble
+         :html-postamble ,spike-lenng/html-postamble-sitemap
          :include ("index.org")
          :exclude ".*"
-         :html-postamble nil
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
