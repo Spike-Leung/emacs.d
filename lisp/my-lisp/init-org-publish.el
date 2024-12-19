@@ -6,6 +6,7 @@
 
 (defconst spike-leung/html-head "
 <meta name=\"color-scheme\" content=\"light dark\" />
+<script src=\"/js/color-scheme.js\"></script>
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Bold/result.css\" />
 <link rel=\"stylesheet\" href=\"https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css\" />
 <link rel=\"stylesheet\" href=\"/styles/style.css\" type=\"text/css\"/>
@@ -17,6 +18,7 @@
                                          spike-leung/html-head
                                          "<link rel=\"stylesheet\" href=\"/styles/sitemap.css\" type=\"text/css\"/>")
   "`:html-head' for `org-publish'.Customize for index.org.")
+
 (defconst spike-leung/html-preamble
   "
 <nav>
@@ -52,7 +54,6 @@
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
-<script src=\"/js/color-scheme.js\" async></script>
 <script src=\"https://giscus.app/client.js\"
         data-repo=\"Spike-Leung/taxodium\"
         data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
@@ -71,11 +72,6 @@
 </script>
 "
   "`:html-postamble' for `org-publish'.")
-
-(defconst spike-lenng/html-postamble-sitemap "
-<script src=\"/js/color-scheme.js\" async></script>
-"
-  "`:html-postamble' for `org-publish' sitemap.")
 
 (defconst spike-leung/follow-claim-description
   "feedId:63132271001948160+userId:72185894417953792"
@@ -102,7 +98,6 @@ ARGS will pass to `org-publish'."
       (load-theme current-theme :no-confirm))))
 
 (advice-add 'org-publish :around #'spike-leung/apply-theme-when-publish)
-
 
 (defun spike-leung/get-org-keyword (keyword)
   "Get the value of the given KEYWORD in the current Org file."
@@ -216,7 +211,7 @@ PROJECT is the current project."
          :time-stamp-file nil
          :html-head ,spike-leung/html-head-sitemap
          :html-preamble ,spike-leung/html-preamble
-         :html-postamble ,spike-lenng/html-postamble-sitemap
+         :html-postamble nil
          :include ("index.org")
          :exclude ".*"
          :author "Spike Leung"
