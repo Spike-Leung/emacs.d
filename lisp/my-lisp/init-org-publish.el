@@ -89,10 +89,10 @@
   "Switch theme when do `org-publish'.
 ARGS will pass to `org-publish'."
   (let ((current-theme (car custom-enabled-themes)))
-    (load-theme 'modus-operandi-tinted t)
+    (load-theme 'modus-operandi t)
     (apply args)
     (when current-theme
-      (disable-theme 'modus-operandi-tinted)
+      (disable-theme 'modus-operandi)
       (enable-theme current-theme)
       (load-theme current-theme :no-confirm))))
 
