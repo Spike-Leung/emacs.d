@@ -52,6 +52,7 @@
 (defconst spike-lenng/html-postamble "
 <p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">Date: %d</p>
+<p class=\"date\">Last Modified: %C</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
 <script src=\"https://giscus.app/client.js\"
         data-repo=\"Spike-Leung/taxodium\"
