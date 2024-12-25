@@ -132,11 +132,19 @@
 
 *** [[https://www.linnana.me/feed.xml][不二木子]]
 
->>>>>>> variant B
-======= end
+*** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                  :emacs:
+
+*** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                              :emacs:
+
+*** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                      :frontend:
+
+*** [[https://scripter.co/index.xml][A Scripter's Notes]]                                                          :emacs:
+
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
+
+*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]
 
 * Archive
 
@@ -191,3 +199,5 @@
 ** [[https://talk.macpowerusers.com/][MAC POWER USERS]]
 
 ** [[https://www.changhai.org/][卢昌海个人网站]]
+
+** [[https://mikkolaine.blogspot.com/][Stars, Open source and more]]                                                  :star:
