@@ -15,6 +15,7 @@
 (require 'init-gitmoji)
 (require 'init-mu4e)
 (require 'init-helpful)
+(require 'init-my-javascript)
 (require 'init-vue-mode)
 (require 'init-my-editing-utils)
 (require 'init-my-markdown)
