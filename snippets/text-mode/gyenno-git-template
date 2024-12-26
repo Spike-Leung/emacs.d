@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: gynenno-git-template
+# key: gy
+# --
+${1:$$(yas-choose-value '("feat" "refactor" "fix" "style" "docs" "chore" "revert" "perf" "build" "ci" "test"))}($2): $0[/]
