@@ -228,10 +228,18 @@ text and copying to the killring."
 ;; (setq org-modern-checkbox nil)
 ;; (setq org-modern-tag nil)
 ;; (setq org-modern-progress nil)
-
-(setq org-html-html5-fancy t)
-(setq org-html-doctype "html5")
+
 
 
+(setq org-html-html5-fancy t)
+(setq org-html-doctype "html5")
+
+
+(push (expand-file-name "lisp/my-lisp/org-menu" user-emacs-directory) load-path)
+(with-eval-after-load 'org
+  (require 'org-menu)
+  (define-key org-mode-map (kbd "C-c m") 'org-menu))
+
+
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here

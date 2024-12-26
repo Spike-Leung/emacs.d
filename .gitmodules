@@ -13,3 +13,6 @@
 [submodule "lisp/my-lisp/emacs-immersive-translate"]
 	path = lisp/my-lisp/emacs-immersive-translate
 	url = git@github.com:Spike-Leung/emacs-immersive-translate.git
+[submodule "lisp/my-lisp/org-menu"]
+	path = lisp/my-lisp/org-menu
+	url = git@github.com:sheijk/org-menu.git
