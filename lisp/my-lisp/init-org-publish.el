@@ -138,6 +138,14 @@ TITLE is the sitemap title and LIST contains files to include."
    "\n\n"
    (org-list-to-org list)))
 
+(defun spike-leung/org-html-wrap-table (table backend info)
+  "Wrap tables in a div when exporting to HTML."
+  (when (org-export-derived-backend-p backend 'html)
+    (concat "<div class=\"table-wrapper\"> " table " </div>")))
+
+(with-eval-after-load 'ox
+  (add-to-list 'org-export-filter-table-functions 'spike-leung/org-html-wrap-table))
+
 ;; @see: https://writepermission.com/org-blogging-rss-feed.html
 (defun rw/org-rss-publish-to-rss (plist filename pub-dir)
   "Publish RSS with PLIST, only when FILENAME is 'rss.org'.
