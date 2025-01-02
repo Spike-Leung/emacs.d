@@ -24,7 +24,7 @@
 
 (with-eval-after-load 'gptel
   (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
-  (gptel-make-gemini "Deepseek" :key (spike-leung/get-deepseek-api-key) :stream t)
+  (gptel-make-openai "Deepseek" :key (spike-leung/get-deepseek-api-key) :stream t)
   (setq
    gptel-model 'gemini-1.5-pro-latest
    gptel-backend (gptel-make-gemini "Gemini"
