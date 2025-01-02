@@ -130,16 +130,17 @@
 
 *** [[https://yipai.me/feed][一派胡言]]
 
+*** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                      :frontend:
+
 *** [[https://www.linnana.me/feed.xml][不二木子]]
+
+*** [[https://scripter.co/index.xml][A Scripter's Notes]]                                                          :emacs:
 
 *** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                  :emacs:
 
 *** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                              :emacs:
 
-*** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                      :frontend:
-
-*** [[https://scripter.co/index.xml][A Scripter's Notes]]                                                          :emacs:
-
+*** [[https://jvns.ca/atom.xml][Julia Evans]]
 ** news
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
