@@ -23,13 +23,21 @@
   (spike-leung/get-api-key "gemini"))
 
 (with-eval-after-load 'gptel
+  (gptel-make-openai "DeepSeek"
+    :host "api.deepseek.com"
+    :endpoint "/chat/completions"
+    :stream t
+    :key (spike-leung/get-deepseek-api-key)
+    :models '(deepseek-chat deepseek-coder))
   (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
-  (gptel-make-openai "Deepseek" :key (spike-leung/get-deepseek-api-key) :stream t)
   (setq
    gptel-model 'gemini-1.5-pro-latest
-   gptel-backend (gptel-make-gemini "Gemini"
-                   :key (spike-leung/get-gemini-api-key)
-                   :stream t)))
+   gptel-backend (gptel-make-openai "DeepSeek"
+                   :host "api.deepseek.com"
+                   :endpoint "/chat/completions"
+                   :stream t
+                   :key (spike-leung/get-deepseek-api-key)
+                   :models '(deepseek-chat deepseek-coder))))
 
 (global-set-key (kbd "M-o g") 'gptel-menu)
 
