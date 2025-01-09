@@ -141,11 +141,12 @@
 *** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                              :emacs:
 
 *** [[https://jvns.ca/atom.xml][Julia Evans]]
-** news
 
-*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
+** daily                                                                        :daily:
 
-*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]
+*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
+
+*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :ignore:
 
 * Archive
 
