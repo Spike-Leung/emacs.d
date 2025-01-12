@@ -142,6 +142,9 @@
 
 *** [[https://jvns.ca/atom.xml][Julia Evans]]
 
+*** [[https://rachelbythebay.com/w/atom.xml][rachelbythebay]]
+
+*** [[https://polebug.github.io/atom.xml][Polebug - 保持思考、等待、斋戒]]
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
@@ -203,3 +206,5 @@
 ** [[https://www.changhai.org/][卢昌海个人网站]]
 
 ** [[https://mikkolaine.blogspot.com/][Stars, Open source and more]]                                                  :star:
+
+** [[https://blog.ursb.me/][Airing 的博客]]
