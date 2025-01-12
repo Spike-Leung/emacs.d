@@ -181,7 +181,9 @@ text and copying to the killring."
         ("gm" "Medium term goals (6 month up to 2 years)" entry (file+olp "~/org/goals.org" "Medium term goals") (file "~/org/template/tpl-goal.txt"))
         ("gl" "Long term goals (2 - 5 years from now)" entry (file+olp "~/org/goals.org" "Long term goals") (file "~/org/template/tpl-goal.txt"))
         ;; toto
-        ("w" "Works")
+        ("w" "Web site" entry
+         (file "")
+         "* %a :website:\n\n%U %?\n\n%:initial")
         ("wd" "Daily Tasks" plain (file+olp+datetree "~/org/daily.org") (file "~/org/template/tpl-daily.txt") :jump-to-captured t :immediate-finish t)
         ("t" "Todo" entry (file "~/org/inbox.org") (file "~/org/template/tpl-todo.txt"))
         ("c" "Clue" entry (file "~/org/clue.org") "* %f %^{Things that you track}\n%?"
@@ -250,7 +252,9 @@ text and copying to the killring."
 (server-start)
 ;; for wsl2
 (add-to-list 'load-path "/snap/emacs/current/usr/share/emacs/29.4/lisp/org/")
+(push (expand-file-name "lisp/my-lisp/org-protocol-capture-html" user-emacs-directory) load-path)
 (require 'org-protocol)
+(require 'org-protocol-capture-html)
 
 
 

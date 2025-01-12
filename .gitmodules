@@ -16,3 +16,6 @@
 [submodule "lisp/my-lisp/org-menu"]
 	path = lisp/my-lisp/org-menu
 	url = git@github.com:sheijk/org-menu.git
+[submodule "lisp/my-lisp/org-protocol-capture-html"]
+	path = lisp/my-lisp/org-protocol-capture-html
+	url = git@github.com:alphapapa/org-protocol-capture-html.git
