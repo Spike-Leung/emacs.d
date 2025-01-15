@@ -121,5 +121,28 @@
             (call-process "magick" nil nil nil "convert" png-temp-file image-file)
             )))))))
 
+
+;;; function to get api-key from authinfo
+(defun spike-leung/get-api-key (service)
+  "Retrieve the API key for SERVICE from authinfo."
+  (let* ((host (format "api.%s.com" service))
+         (creds (car (auth-source-search :host host :port 443))))
+    (if creds
+        (let ((api-key (plist-get creds :secret)))
+          (if (functionp api-key)
+              (funcall api-key)
+            api-key
+            (error "API key not found for %s" service)))
+      (error "No credentials found for %s" service))))
+
+(defun spike-leung/get-deepseek-api-key ()
+  "Retrieve the DeepSeek API key from authinfo."
+  (spike-leung/get-api-key "deepseek"))
+
+(defun spike-leung/get-gemini-api-key ()
+  "Retrieve the Gemini API key from authinfo."
+  (spike-leung/get-api-key "gemini"))
+
+
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
