@@ -63,3 +63,4 @@ org-roam.db
 /projectile.cache
 .elfeed/
 snippets/**/.*.el
+.aider*

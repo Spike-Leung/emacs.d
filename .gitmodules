@@ -19,3 +19,6 @@
 [submodule "lisp/my-lisp/org-protocol-capture-html"]
 	path = lisp/my-lisp/org-protocol-capture-html
 	url = git@github.com:alphapapa/org-protocol-capture-html.git
+[submodule "lisp/my-lisp/aider"]
+	path = lisp/my-lisp/aider
+	url = git@github.com:tninja/aider.el.git

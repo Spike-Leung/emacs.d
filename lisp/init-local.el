@@ -29,6 +29,7 @@
 (require 'init-translate)
 (require 'init-org-publish)
 (require 'init-gptel)
+(require 'init-aider)
 
 (provide 'init-local)
 ;;; init-local.el ends here
