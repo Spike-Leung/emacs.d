@@ -143,6 +143,39 @@
   "Retrieve the Gemini API key from authinfo."
   (spike-leung/get-api-key "gemini"))
 
+(defun spike-leung/describe-yapi-api ()
+  "获取选中的 [url]，携带 Cookie 请求 YAPI 接口并打开对应的链接。"
+  (interactive)
+  (let* ((url (if (use-region-p)
+                  (buffer-substring-no-properties (region-beginning) (region-end))
+                (read-string "请输入 URL: ")))  ; 如果没有选中 URL，手动输入
+         (yapi-url (concat "https://yapi.gyenno.com/api/project/search?q=" url))
+         (cookie (or (getenv "YAPI_COOKIE")
+                     (let ((input (read-string "请输入 Cookie: ")))  ; 提示用户输入 Cookie
+                       (setenv "YAPI_COOKIE" input)
+                       input)))  ; 从环境变量读取或手动输入并保存
+         (url-request-extra-headers `(("Cookie" . ,cookie)))  ; 设置请求头中的 Cookie
+         (response (with-current-buffer (url-retrieve-synchronously yapi-url)
+                     (goto-char (point-min))
+                     (if (re-search-forward "^$" nil t)
+                         (json-read-from-string (buffer-substring (point) (point-max)))
+                       (error "请求失败: 响应格式无效")))))
+    (if (and (eq (alist-get 'errcode response) 0)
+             (> (length (alist-get 'interface (alist-get 'data response))) 0))
+        (let* ((interface-list (alist-get 'interface (alist-get 'data response)))  ; 获取接口列表
+               (interface-titles (mapcar (lambda (i) (decode-coding-string (alist-get 'title i) 'utf-8)) interface-list))  ; 解码标题
+               (selected-title (completing-read "请选择一个接口: " interface-titles))  ; 让用户选择一个接口
+               (interface (cl-find-if (lambda (i) (string= (decode-coding-string (alist-get 'title i) 'utf-8) selected-title))
+                                      interface-list))  ; 根据标题查找对应的接口
+               (project-id (alist-get 'projectId interface))  ; 获取 projectId
+               (interface-id (alist-get '_id interface))  ; 获取 _id
+               (final-url (format "https://yapi.gyenno.com/project/%s/interface/api/%s"
+                                  (if (stringp project-id) project-id (number-to-string project-id))  ; 确保 projectId 是字符串
+                                  (if (stringp interface-id) interface-id (number-to-string interface-id)))))  ; 确保 _id 是字符串
+          (browse-url final-url))  ; 打开拼接后的链接
+      (message "未找到对应的接口信息"))))
+
+
 
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
