@@ -164,7 +164,9 @@
              (> (length (alist-get 'interface (alist-get 'data response))) 0))
         (let* ((interface-list (alist-get 'interface (alist-get 'data response)))  ; 获取接口列表
                (interface-titles (mapcar (lambda (i) (decode-coding-string (alist-get 'title i) 'utf-8)) interface-list))  ; 解码标题
-               (selected-title (completing-read "请选择一个接口: " interface-titles))  ; 让用户选择一个接口
+               (selected-title (if (= (length interface-titles) 1)
+                                   (car interface-titles)  ; 如果只有一个接口，直接选择它
+                                 (completing-read "请选择一个接口: " interface-titles)))  ; 否则让用户选择
                (interface (cl-find-if (lambda (i) (string= (decode-coding-string (alist-get 'title i) 'utf-8) selected-title))
                                       interface-list))  ; 根据标题查找对应的接口
                (project-id (alist-get 'projectId interface))  ; 获取 projectId
