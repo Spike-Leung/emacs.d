@@ -10,6 +10,12 @@
     :stream t
     :key (spike-leung/get-deepseek-api-key)
     :models '(deepseek-chat deepseek-coder))
+  (gptel-make-openai "SiliconFlow"
+    :host "api.siliconflow.com"
+    :endpoint "/chat/completions"
+    :stream t
+    :key (spike-leung/get-siliconflow-api-key)
+    :models '(deepseek-ai/DeepSeek-R1 deepseek-ai/DeepSeek-V3))
   (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
   (setq
    gptel-model 'deepseek-reasoner

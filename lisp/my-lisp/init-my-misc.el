@@ -139,6 +139,10 @@
   "Retrieve the DeepSeek API key from authinfo."
   (spike-leung/get-api-key "deepseek"))
 
+(defun spike-leung/get-siliconflow-api-key ()
+  "Retrieve the DeepSeek API key from authinfo."
+  (spike-leung/get-api-key "siliconflow"))
+
 (defun spike-leung/get-gemini-api-key ()
   "Retrieve the Gemini API key from authinfo."
   (spike-leung/get-api-key "gemini"))
