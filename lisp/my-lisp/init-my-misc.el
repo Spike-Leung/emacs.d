@@ -123,9 +123,9 @@
 
 
 ;;; function to get api-key from authinfo
-(defun spike-leung/get-api-key (service)
+(defun spike-leung/get-api-key (service &optional host)
   "Retrieve the API key for SERVICE from authinfo."
-  (let* ((host (format "api.%s.com" service))
+  (let* ((host (or host (format "api.%s.com" service)))
          (creds (car (auth-source-search :host host :port 443))))
     (if creds
         (let ((api-key (plist-get creds :secret)))
@@ -141,7 +141,7 @@
 
 (defun spike-leung/get-siliconflow-api-key ()
   "Retrieve the DeepSeek API key from authinfo."
-  (spike-leung/get-api-key "siliconflow"))
+  (spike-leung/get-api-key "siliconflow" "api.siliconflow.cn"))
 
 (defun spike-leung/get-gemini-api-key ()
   "Retrieve the Gemini API key from authinfo."
