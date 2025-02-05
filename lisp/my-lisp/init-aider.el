@@ -4,7 +4,7 @@
 (require 'aider)
 
 (with-eval-after-load 'aider
-  (setq aider-args '("--no-auto-commits" "--model" "r1"))
+  (setq aider-args '("--no-auto-commits" "--model" "deepseek/deepseek-coder"))
   (setenv "DEEPSEEK_API_KEY" (spike-leung/get-deepseek-api-key))
   (global-set-key (kbd "M-o a") 'aider-transient-menu))
 
