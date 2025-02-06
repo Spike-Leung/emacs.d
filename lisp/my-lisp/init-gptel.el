@@ -11,7 +11,7 @@
     :key (spike-leung/get-deepseek-api-key)
     :models '(deepseek-chat deepseek-coder))
   (gptel-make-openai "SiliconFlow"
-    :host "api.siliconflow.com"
+    :host "api.siliconflow.cn"
     :endpoint "/chat/completions"
     :stream t
     :key (spike-leung/get-siliconflow-api-key)
