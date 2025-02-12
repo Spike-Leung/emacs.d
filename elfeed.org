@@ -79,8 +79,6 @@
 
 *** [[https://xenodium.com/rss.xml][Alvaro Ramirez's notes]]
 
-*** [[https://www.yoghurtlee.com/index.xml][园子里的日光]]
-
 *** [[https://technicalwriting.dev/rss.xml][technicalwriting.dev]]
 
 *** [[https://lutaonan.com/rss.xml][Randy's Blog]]
@@ -162,6 +160,8 @@
 ** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
 
 ** [[https://www.wikimoe.com/rss][维基萌]]
+
+** [[https://www.yoghurtlee.com/index.xml][园子里的日光]]
 
 * Not Feed
 
