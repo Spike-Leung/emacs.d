@@ -15,8 +15,8 @@
     :endpoint "/chat/completions"
     :stream t
     :key (spike-leung/get-siliconflow-api-key)
-    :models '(deepseek-ai/DeepSeek-R1
-              deepseek-ai/DeepSeek-V3
+    :models '(Pro/deepseek-ai/DeepSeek-R1
+              Pro/deepseek-ai/DeepSeek-V3
               deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
               deepseek-ai/DeepSeek-R1-Distill-Llama-70B))
   (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
