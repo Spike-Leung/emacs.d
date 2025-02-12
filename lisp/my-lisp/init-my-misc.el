@@ -182,6 +182,13 @@
       (message "未找到对应的接口信息"))))
 
 
+;; @see: https://emacsredux.com/blog/2025/02/03/clean-unloading-of-emacs-themes/
+(defun spike-leung/disable-all-active-themes ()
+  "Disable all currently active themes."
+  (interactive)
+  (dolist (theme custom-enabled-themes)
+    (disable-theme theme)))
+
 
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
