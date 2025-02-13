@@ -156,6 +156,8 @@
 
 (push (expand-file-name "lisp/my-lisp/code-review" user-emacs-directory) load-path)
 (require 'code-review)
+(maybe-require-package 'uuidgen) ;; require by code-review
+(maybe-require-package 'emojify) ;; require by code-review
 (with-eval-after-load 'code-review
   (setq
    code-review-gitlab-host "gitlab.gyenno.com/api/v4"
