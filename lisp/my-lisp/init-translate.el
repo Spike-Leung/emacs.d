@@ -9,8 +9,8 @@
 (require 'immersive-translate)
 ;; need to add deepseek api-key with user `apikey` in `.authinfo`
 (setq immersive-translate-backend 'chatgpt
-      immersive-translate-chatgpt-host "api.deepseek.com"
-      immersive-translate-chatgpt-model "deepseek-chat"
+      immersive-translate-chatgpt-host "api.siliconflow.cn"
+      immersive-translate-chatgpt-model "Pro/deepseek-ai/DeepSeek-V3"
       immersive-translate-pending-message "(≖ᴗ≖๑)"
       immersive-translate-failed-message "(つд⊂) ")
 
