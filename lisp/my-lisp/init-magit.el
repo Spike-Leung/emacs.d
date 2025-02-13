@@ -146,5 +146,21 @@
                    :category 'consult-candidate)))
     (insert (concat "// " (car (split-string keyword " - ")) ": "))))
 
+;;; forge setting
+(with-eval-after-load 'forge
+  (push '("gitlab.gyenno.com"             ; GITHOST
+          "gitlab.gyenno.com/api/v4"      ; APIHOST
+          "gitlab.gyenno.com"             ; WEBHOST and INSTANCE-ID
+          forge-gitlab-repository)        ; CLASS
+        forge-alist))
+
+(push (expand-file-name "lisp/my-lisp/code-review" user-emacs-directory) load-path)
+(require 'code-review)
+(with-eval-after-load 'code-review
+  (setq
+   code-review-gitlab-host "gitlab.gyenno.com/api/v4"
+   code-review-gitlab-base-url "gitlab.gyenno.com"
+   code-review-gitlab-graphql-host "gitlab.gyenno.com/api")) ;; @see: https://github.com/wandersoncferreira/code-review/issues/174
+
 (provide 'init-magit)
 ;;; init-magit.el ends here

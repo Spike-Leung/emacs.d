@@ -22,3 +22,6 @@
 [submodule "lisp/my-lisp/aider"]
 	path = lisp/my-lisp/aider
 	url = git@github.com:tninja/aider.el.git
+[submodule "lisp/my-lisp/code-review"]
+	path = lisp/my-lisp/code-review
+	url = git@github.com:phelrine/code-review.git
