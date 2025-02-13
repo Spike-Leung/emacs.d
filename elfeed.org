@@ -146,11 +146,16 @@
 *** [[https://rachelbythebay.com/w/atom.xml][rachelbythebay]]
 
 *** [[https://polebug.github.io/atom.xml][Polebug - 保持思考、等待、斋戒]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
 
 *** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :ignore:
+
+# ** magazine                                                                     :magazine:
+
+# *** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]
 
 * Archive
 
