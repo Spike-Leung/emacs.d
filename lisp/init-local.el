@@ -27,6 +27,7 @@
 (require 'init-org-publish)
 (require 'init-gptel)
 (require 'init-aider)
+(require 'init-icons)
 
 (provide 'init-local)
 ;;; init-local.el ends here
