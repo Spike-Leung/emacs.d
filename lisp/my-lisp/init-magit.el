@@ -2,6 +2,7 @@
 ;;; Commentary: see: https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html
 ;;; Code:
 
+
 (defun th/magit--with-difftastic (buffer command)
   "Run COMMAND with GIT_EXTERNAL_DIFF=difft then show result in BUFFER."
   (let ((process-environment
