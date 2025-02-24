@@ -155,15 +155,15 @@
           forge-gitlab-repository)        ; CLASS
         forge-alist))
 
-(push (expand-file-name "lisp/my-lisp/code-review" user-emacs-directory) load-path)
-(require 'code-review)
-(maybe-require-package 'uuidgen) ;; require by code-review
-(maybe-require-package 'emojify) ;; require by code-review
-(with-eval-after-load 'code-review
-  (setq
-   code-review-gitlab-host "gitlab.gyenno.com/api/v4"
-   code-review-gitlab-base-url "gitlab.gyenno.com"
-   code-review-gitlab-graphql-host "gitlab.gyenno.com/api")) ;; @see: https://github.com/wandersoncferreira/code-review/issues/174
+;; (push (expand-file-name "lisp/my-lisp/code-review" user-emacs-directory) load-path)
+;; (require 'code-review)
+;; (maybe-require-package 'uuidgen) ;; require by code-review
+;; (maybe-require-package 'emojify) ;; require by code-review
+;; (with-eval-after-load 'code-review
+;;   (setq
+;;    code-review-gitlab-host "gitlab.gyenno.com/api/v4"
+;;    code-review-gitlab-base-url "gitlab.gyenno.com"
+;;    code-review-gitlab-graphql-host "gitlab.gyenno.com/api")) ;; @see: https://github.com/wandersoncferreira/code-review/issues/174
 
 (provide 'init-magit)
 ;;; init-magit.el ends here
