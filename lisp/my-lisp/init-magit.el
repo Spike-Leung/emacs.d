@@ -165,5 +165,9 @@
 ;;    code-review-gitlab-base-url "gitlab.gyenno.com"
 ;;    code-review-gitlab-graphql-host "gitlab.gyenno.com/api")) ;; @see: https://github.com/wandersoncferreira/code-review/issues/174
 
+;; diff-hl
+(with-eval-after-load 'diff-hl
+  (diff-hl-margin-mode))
+
 (provide 'init-magit)
 ;;; init-magit.el ends here
