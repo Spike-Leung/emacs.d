@@ -8,7 +8,7 @@
     google/gemini-flash-1.5-8b
     openai/gpt-4o-mini
     openai/gpt-4o
-    anthropic/claude-3.5-sonnet
+    anthropic/claude-3.7-sonnet
     deepseek/deepseek-r1:free
     deepseek/deepseek-r1
     deepseek/deepseek-chat
