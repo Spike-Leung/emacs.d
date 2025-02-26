@@ -145,7 +145,7 @@
 
 (defun spike-leung/get-openrouter-api-key ()
   "Retrieve the OpenRouter API key from authinfo."
-  (spike-leung/get-api-key "openrouter"))
+  (spike-leung/get-api-key "openrouter" "openrouter.ai"))
 
 (defun spike-leung/get-gemini-api-key ()
   "Retrieve the Gemini API key from authinfo."
