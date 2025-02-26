@@ -7,10 +7,10 @@
 ;;; because `translate-shell` use google translate, emacs should able to connect to google.
 (push (expand-file-name "lisp/my-lisp/emacs-immersive-translate" user-emacs-directory) load-path)
 (require 'immersive-translate)
-;; need to add deepseek api-key with user `apikey` in `.authinfo`
+;; need to api key with user `apikey` in `.authinfo`
 (setq immersive-translate-backend 'chatgpt
-      immersive-translate-chatgpt-host "api.siliconflow.cn"
-      immersive-translate-chatgpt-model "Pro/deepseek-ai/DeepSeek-V3"
+      immersive-translate-chatgpt-host "openrouter.ai/api"
+      immersive-translate-chatgpt-model "google/gemini-2.0-flash-001"
       immersive-translate-pending-message "(≖ᴗ≖๑)"
       immersive-translate-failed-message "(つд⊂) ")
 
