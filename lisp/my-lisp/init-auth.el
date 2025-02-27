@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 (setq epa-pinentry-mode 'loopback) ;; input pass in minibuffer
-(auth-source-pass-enable)
+
+;; (auth-source-pass-enable) ;;; use pass to manage auth-source
 
 ;;; function to get api-key from authinfo
 (defun spike-leung/get-api-key (service &optional host)
