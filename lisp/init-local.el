@@ -4,6 +4,7 @@
 ;;; Code:
 (add-to-list 'load-path (expand-file-name "lisp/my-lisp" user-emacs-directory))
 
+(require 'init-auth)
 (require 'init-auto-save)
 (require 'init-beancount)
 ;; (require 'init-breadcrumb)
