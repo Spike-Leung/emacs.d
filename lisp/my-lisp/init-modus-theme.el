@@ -30,6 +30,8 @@
         (fg-removed         red)
         (fg-removed-intense red-intense)
 
+        (comment rust)
+
         (bg-diff-context    unspecified)))
 
 ;; Load the theme of your choice:
