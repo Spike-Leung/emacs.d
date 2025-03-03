@@ -145,6 +145,8 @@
 
 *** [[https://polebug.github.io/atom.xml][Polebug - 保持思考、等待、斋戒]]
 
+*** [[https://www.autodidacts.io/troubleshooting/#:~:text=I%E2%80%99ll%20define%20troubleshooting%20as%20systematically%20determining%20the%20cause%20of%20unwanted%20behaviour%20in%20a%20system%2C%20and%20fixing%20it][Exploring the universe from the inside out]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
