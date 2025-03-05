@@ -46,7 +46,9 @@
           'grep)))
 
   (defvar my-denote-silo-directories
-    `("~/notes/.hidden" "~/notes/.privacy" "~/notes/gptel")
+    `("~/notes/.hidden"
+      "~/notes/.privacy"
+      "~/notes/gptel")
     "List of file paths pointing to my Denote silos.
 This is a list of strings.")
 
@@ -65,7 +67,7 @@ COMMAND is one among `my-denote-commands-for-silos'."
            (intern (completing-read
                     "Run command in silo: "
                     my-denote-commands-for-silos nil t))))
-    (let ((denote-user-enforced-denote-directory silo))
+    (let ((denote-directory silo))
       (call-interactively command)))
 
   ;; Denote DOES NOT define any key bindings.  This is for the user to
