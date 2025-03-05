@@ -24,18 +24,20 @@
 ;; @see: https://github.com/lorniu/go-translate
 (maybe-require-package 'go-translate)
 (maybe-require-package 'plz)
-(with-eval-after-load 'go-translate
-  (setq gt-langs '(en zh)
-        gt-chatgpt-key (spike-leung/get-deepseek-api-key)
-        gt-chatgpt-host "https://api.deepseek.com"
-        gt-chatgpt-model "deepseek-chat"
-        gt-default-translator (gt-translator
-                               :engines (list
-                                         (gt-chatgpt-engine))
-                               :render (gt-buffer-render
-                                        :buffer-name "gt-translator"
-                                        :window-config '((display-buffer-at-bottom))
-                                        :then (lambda (_) (pop-to-buffer "gt-translator"))))))
+(with-eval-after-load 'init-auth
+  (with-eval-after-load 'go-translate
+    (setq gt-langs '(en zh)
+          gt-chatgpt-key (spike-leung/get-deepseek-api-key)
+          gt-chatgpt-host "https://api.deepseek.com"
+          gt-chatgpt-model "deepseek-chat"
+          gt-default-translator (gt-translator
+                                 :engines (list
+                                           (gt-chatgpt-engine))
+                                 :render (gt-buffer-render
+                                          :buffer-name "gt-translator"
+                                          :window-config '((display-buffer-at-bottom))
+                                          :then (lambda (_) (pop-to-buffer "gt-translator")))))))
+
 
 (defvar spike-leung/my-translate-keymap (make-sparse-keymap)
   "Keymap for translation commands.")
