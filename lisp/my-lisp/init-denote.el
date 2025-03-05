@@ -52,21 +52,12 @@
     "List of file paths pointing to my Denote silos.
 This is a list of strings.")
 
-  (defvar my-denote-commands-for-silos
-    '(denote-open-or-create)
-    "List of Denote commands to call after selecting a silo.
-This is a list of symbols that specify the note-creating
-interactive functions that Denote provides.")
-
-  (defun my-denote-pick-silo-then-command (silo command)
-    "Select SILO and run Denote COMMAND in it.
-SILO is a file path from `my-denote-silo-directories', while
-COMMAND is one among `my-denote-commands-for-silos'."
+  (defun spike-leung/denote-open-or-create-silo (silo command)
+    "Select SILO and run Denote `denote-open-or-create' in it.
+SILO is a file path from `my-denote-silo-directories'"
     (interactive
      (list (completing-read "Select a silo: " my-denote-silo-directories nil t)
-           (intern (completing-read
-                    "Run command in silo: "
-                    my-denote-commands-for-silos nil t))))
+           'denote-open-or-create))
     (let ((denote-directory silo))
       (call-interactively command)))
 
@@ -74,7 +65,7 @@ COMMAND is one among `my-denote-commands-for-silos'."
   ;; decide.  For example:
   (let ((map global-map))
     (define-key map (kbd "C-c n n") #'denote-open-or-create)
-    (define-key map (kbd "C-c n N") #'my-denote-pick-silo-then-command)
+    (define-key map (kbd "C-c n N") #'spike-leung/denote-open-or-create-silo)
     (define-key map (kbd "C-c n c") #'denote-region) ; "contents" mnemonic
     (define-key map (kbd "C-c n s") #'denote-subdirectory)
     (define-key map (kbd "C-c n t") #'denote-template)
