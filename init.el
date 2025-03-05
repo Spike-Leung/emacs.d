@@ -20,6 +20,8 @@
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
+(defconst *is-wsl* (and (eq system-type 'gnu/linux)
+                        (getenv "WSL_DISTRO_NAME")))
 
 
 ;; Adjust garbage collection threshold for early startup (see use of gcmh below)

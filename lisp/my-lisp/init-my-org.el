@@ -197,6 +197,25 @@ text and copying to the killring."
          :jump-to-captured t
          :immediate-finish t)
         ))
+
+(when *is-wsl*
+  (setq org-capture-templates
+        '(("d"
+           "Daily Tasks"
+           plain
+           (file+olp+datetree "~/daily.org")
+           (file "~/spike-docs/org/template/daily.txt")
+           ("w" "Web site" entry
+            (file "")
+            "* %a :website:\n\n%U %?\n\n%:initial")
+           :jump-to-captured t
+           :immediate-finish t)
+          ("x" "Reading List" item
+           (file+headline "~/notes/20241112T202642--reading-list__collection_read.org" "Refs")
+           "[[%:link][%:description]]\n%i\n\n"
+           :jump-to-captured t
+           :immediate-finish t)
+          )))
 
 (setq
  org-latex-listings 'minted
