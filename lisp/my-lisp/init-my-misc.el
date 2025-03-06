@@ -137,6 +137,8 @@ Then generate a #+begin_export html block with an iframe, replacing any existing
       (message "未找到对应的接口信息"))))
 
 
+;;; outline-mode
+(setq outline-minor-mode-cycle t)
 
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
