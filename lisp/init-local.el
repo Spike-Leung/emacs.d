@@ -30,7 +30,6 @@
 (require 'init-my-misc)
 (require 'init-my-org)
 (require 'init-org-publish)
-(require 'init-projectile)
 (require 'init-translate)
 (require 'init-vue-mode)
 (require 'init-yasnippet)
