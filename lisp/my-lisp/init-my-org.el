@@ -232,6 +232,22 @@ text and copying to the killring."
 (setq org-startup-folded nil)
 
 
+;;; org-structure-template
+
+(setq org-structure-template-alist '(("e" . "example")
+                                     ("s" . "src")
+                                     ("se" . "src emacs-lisp")
+                                     ("sc" . "src css")
+                                     ("sb" . "src bash")
+                                     ("ss" . "src sh")
+                                     ("sh" . "src html")
+                                     ("sj" . "src javascript")
+                                     ("st" . "src typescript")
+                                     ("q" . "quote")
+                                     ("h" . "export html")
+                                     ("v" . "verse")))
+
+
 ;;; To-do settings
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "REPEAT(r)" "PROJECT(p)" "SOMEDAY(s!)" "WAITING(w@/!)" "DELEGATED(e!)" "HOLD(h)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")))
