@@ -280,7 +280,6 @@ text and copying to the killring."
 (setq org-html-doctype "html5")
 
 
-(push (expand-file-name "lisp/my-lisp/org-menu" user-emacs-directory) load-path)
 (with-eval-after-load 'org
   (require 'org-menu)
   (define-key org-mode-map (kbd "C-c m") 'org-menu))
@@ -290,7 +289,6 @@ text and copying to the killring."
 (server-start)
 ;; for wsl2
 (add-to-list 'load-path "/snap/emacs/current/usr/share/emacs/29.4/lisp/org/")
-(push (expand-file-name "lisp/my-lisp/org-protocol-capture-html" user-emacs-directory) load-path)
 (require 'org-protocol)
 (require 'org-protocol-capture-html)
 

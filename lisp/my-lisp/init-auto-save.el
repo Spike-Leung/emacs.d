@@ -1,7 +1,6 @@
 ;;; init-auto-save.el --- auto save file -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
-(push (expand-file-name "lisp/my-lisp/auto-save" user-emacs-directory) load-path)
 (require 'auto-save)
 
 (setq auto-save-idle 10)

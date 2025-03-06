@@ -5,7 +5,6 @@
 
 ;;; need to install https://github.com/soimort/translate-shell first.
 ;;; because `translate-shell` use google translate, emacs should able to connect to google.
-(push (expand-file-name "lisp/my-lisp/emacs-immersive-translate" user-emacs-directory) load-path)
 (require 'immersive-translate)
 ;; need to api key with user `apikey` in `.authinfo`
 (setq immersive-translate-backend 'chatgpt

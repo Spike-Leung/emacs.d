@@ -2,7 +2,13 @@
 ;; https://github.com/purcell/emacs.d
 ;;; Commentary:
 ;;; Code:
-(add-to-list 'load-path (expand-file-name "lisp/my-lisp" user-emacs-directory))
+
+;; Setup necessary load-path.
+(defconst my-lisp-dir (expand-file-name "lisp/my-lisp" user-emacs-directory) "Path of my custom Lisp.")
+(add-to-list 'load-path my-lisp-dir)
+(dolist (dir (directory-files my-lisp-dir t "^[^.]"))
+  (when (file-directory-p dir)
+    (add-to-list 'load-path dir)))
 
 (require 'init-aider)
 (require 'init-auth)

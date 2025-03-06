@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(push (expand-file-name "lisp/my-lisp/beancount-mode" user-emacs-directory) load-path)
 (require 'beancount)
 
 (push '("\\.\\(beancount\\|bean\\)\\'" . beancount-mode) auto-mode-alist)
