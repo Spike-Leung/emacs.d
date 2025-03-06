@@ -1,4 +1,4 @@
-;;; init-elfeed.el --- elfeed config
+;;; init-elfeed.el --- elfeed config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (when (maybe-require-package 'elfeed)

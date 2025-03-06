@@ -1,4 +1,4 @@
-;;; init-auth --- config for auth related
+;;; init-auth --- config for auth related -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (setq epa-pinentry-mode 'loopback) ;; input pass in minibuffer

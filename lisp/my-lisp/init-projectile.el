@@ -1,4 +1,4 @@
-;;; init-projectile.el --- projectile customisations
+;;; init-projectile.el --- projectile customisations -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (setq projectile-use-git-grep t)

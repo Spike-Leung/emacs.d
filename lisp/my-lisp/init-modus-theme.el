@@ -1,4 +1,4 @@
-;;; init-modus-theme.el --- modus-theme customisations
+;;; init-modus-theme.el --- modus-theme customisations -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (require-package 'modus-themes)

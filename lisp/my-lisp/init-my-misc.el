@@ -1,4 +1,4 @@
-;;; init-my-misc.el --- miscellaneous config
+;;; init-my-misc.el --- miscellaneous config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (with-eval-after-load 'magit

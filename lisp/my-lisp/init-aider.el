@@ -1,4 +1,4 @@
-;;; init-aider.el --- aider
+;;; init-aider.el --- aider -*- lexical-binding: t -*-
 ;;; Commentary:
 (push (expand-file-name "lisp/my-lisp/aider" user-emacs-directory) load-path)
 (require 'aider)

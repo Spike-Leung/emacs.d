@@ -1,4 +1,4 @@
-;;; init-translate.el --- translate related
+;;; init-translate.el --- translate related -*- lexical-binding: t -*-
 ;;; Commentary:
 
 

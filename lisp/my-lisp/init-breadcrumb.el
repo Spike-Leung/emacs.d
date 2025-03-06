@@ -1,4 +1,4 @@
-;;; init-breadcrumb.el --- breadcrumb
+;;; init-breadcrumb.el --- breadcrumb -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (push (expand-file-name "lisp/my-lisp/breadcrumb" user-emacs-directory) load-path)

@@ -1,4 +1,4 @@
-;;; init-my-javascript.el --- javascript related config
+;;; init-my-javascript.el --- javascript related config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (maybe-require-package 'jsdoc)

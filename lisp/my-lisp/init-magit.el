@@ -1,4 +1,4 @@
-;;; init-magit.el --- config magit
+;;; init-magit.el --- config magit -*- lexical-binding: t -*-
 ;;; Commentary: see: https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html
 ;;; Code:
 

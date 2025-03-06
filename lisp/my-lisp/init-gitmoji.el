@@ -1,4 +1,4 @@
-;;; init-gitmoji.el --- config gitmoji
+;;; init-gitmoji.el --- config gitmoji -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (push (expand-file-name "lisp/my-lisp/gitmoji" user-emacs-directory) load-path)

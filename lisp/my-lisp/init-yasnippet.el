@@ -1,4 +1,4 @@
-;;; init-yasnippet.el --- enable yasnippet global
+;;; init-yasnippet.el --- enable yasnippet global -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (maybe-require-package 'yasnippet)

@@ -1,4 +1,4 @@
-;;; init-beancount.el --- beancount support
+;;; init-beancount.el --- beancount support -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

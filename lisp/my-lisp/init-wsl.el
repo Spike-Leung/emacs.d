@@ -1,4 +1,4 @@
-;;; init-wsl.el --- config for wsl
+;;; init-wsl.el --- config for wsl -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 ;;; https://adam.kruszewski.name/2017-09-16-emacs-in-wsl-and-opening-links.html

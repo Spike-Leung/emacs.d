@@ -1,4 +1,4 @@
-;;; init-gptel.el --- gptel
+;;; init-gptel.el --- gptel -*- lexical-binding: t -*-
 ;;; Commentary:
 
 (maybe-require-package 'gptel)

@@ -1,4 +1,4 @@
-;;; init-proxy.el --- set proxy
+;;; init-proxy.el --- set proxy -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (custom-set-variables

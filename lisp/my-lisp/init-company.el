@@ -1,4 +1,4 @@
-;;; init-company.el --- Some fix maybe?
+;;; init-company.el --- Some fix maybe? -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (custom-set-variables '(company-search-regexp-function 'company-search-words-in-any-order-regexp))

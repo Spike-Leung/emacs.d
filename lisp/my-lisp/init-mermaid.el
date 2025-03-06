@@ -1,4 +1,4 @@
-;;; init-mermaid.el --- mermaid
+;;; init-mermaid.el --- mermaid -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;
 ;; Mermaid: https://mermaid.js.org/

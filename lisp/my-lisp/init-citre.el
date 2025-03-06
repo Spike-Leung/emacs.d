@@ -1,4 +1,4 @@
-;;; init-citre.el --- for reading code, citre & clue
+;;; init-citre.el --- for reading code, citre & clue -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 ;;; prerequisite: you should install: https://github.com/universal-ctags/ctags
