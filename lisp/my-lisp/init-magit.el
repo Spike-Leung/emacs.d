@@ -1,8 +1,14 @@
-;;; init-magit.el --- config magit -*- lexical-binding: t -*-
-;;; Commentary: see: https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html
+;;; init-magit.el --- magit -*- lexical-binding: t -*-
+;;; Commentary:
 ;;; Code:
 
+(with-eval-after-load 'magit
+  (setq magit-repository-directories
+        '(("~/" . 1)
+          ("~/git" . 1))))
 
+;;; use difftastic to diff
+;; @see: https://tsdh.org/posts/2022-08-01-difftastic-diffing-with-magit.html
 (defun th/magit--with-difftastic (buffer command)
   "Run COMMAND with GIT_EXTERNAL_DIFF=difft then show result in BUFFER."
   (let ((process-environment
@@ -147,14 +153,16 @@
                    :category 'consult-candidate)))
     (insert (concat "// " (car (split-string keyword " - ")) ": "))))
 
+
 ;;; forge setting
 (with-eval-after-load 'forge
-  (push '("gitlab.gyenno.com"             ; GITHOST
-          "gitlab.gyenno.com/api/v4"      ; APIHOST
-          "gitlab.gyenno.com"             ; WEBHOST and INSTANCE-ID
-          forge-gitlab-repository)        ; CLASS
+  (push '("gitlab.gyenno.com"           ; GITHOST
+          "gitlab.gyenno.com/api/v4"    ; APIHOST
+          "gitlab.gyenno.com"           ; WEBHOST and INSTANCE-ID
+          forge-gitlab-repository)      ; CLASS
         forge-alist))
 
+;;; code review setting
 ;; (require 'code-review)
 ;; (maybe-require-package 'uuidgen) ;; require by code-review
 ;; (maybe-require-package 'emojify) ;; require by code-review

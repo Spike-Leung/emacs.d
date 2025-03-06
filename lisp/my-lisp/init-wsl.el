@@ -1,7 +1,7 @@
 ;;; init-wsl.el --- config for wsl -*- lexical-binding: t -*-
 ;;; Commentary:
-;;; Code:
 ;;; https://adam.kruszewski.name/2017-09-16-emacs-in-wsl-and-opening-links.html
+;;; Code:
 
 (let ((cmd-exe "/mnt/c/Windows/System32/cmd.exe")
       (cmd-args '("/c" "start")))

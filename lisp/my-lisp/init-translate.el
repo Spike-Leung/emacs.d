@@ -1,10 +1,8 @@
 ;;; init-translate.el --- translate related -*- lexical-binding: t -*-
 ;;; Commentary:
+;;; Code:
 
-
-
-;;; need to install https://github.com/soimort/translate-shell first.
-;;; because `translate-shell` use google translate, emacs should able to connect to google.
+;;; immersive-translate
 (require 'immersive-translate)
 ;; need to api key with user `apikey` in `.authinfo`
 (setq immersive-translate-backend 'chatgpt
@@ -14,12 +12,13 @@
       immersive-translate-failed-message "(つд⊂) ")
 
 
-
+;;; fanyi
 ;; @see: https://github.com/condy0919/fanyi.el
 (maybe-require-package 'fanyi)
 
 
 
+;;; go-translate
 ;; @see: https://github.com/lorniu/go-translate
 (maybe-require-package 'go-translate)
 (maybe-require-package 'plz)
@@ -37,7 +36,8 @@
                                           :window-config '((display-buffer-at-bottom))
                                           :then (lambda (_) (pop-to-buffer "gt-translator")))))))
 
-
+
+;;; keybindings
 (defvar spike-leung/my-translate-keymap (make-sparse-keymap)
   "Keymap for translation commands.")
 

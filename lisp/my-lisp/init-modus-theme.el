@@ -1,7 +1,8 @@
 ;;; init-modus-theme.el --- modus-theme customisations -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
-(require-package 'modus-themes)
+
+(maybe-require-package 'modus-themes)
 
 (setq modus-themes-headings
       '((1 . (ultrabold 1.1)))
@@ -35,6 +36,7 @@
         (fg-removed         red)
         (fg-removed-intense red-intense)
 
+        ;; Highlight comments to make them more prominent. Hope it will not rust :P
         (comment rust)
 
         (bg-diff-context    unspecified)))
@@ -42,6 +44,14 @@
 ;; Load the theme of your choice:
 (load-theme 'modus-vivendi :no-confirm)
 (enable-theme 'modus-vivendi)
+
+;;; theme related
+;; @see: https://emacsredux.com/blog/2025/02/03/clean-unloading-of-emacs-themes/
+(defun spike-leung/disable-all-active-themes ()
+  "Disable all currently active themes."
+  (interactive)
+  (dolist (theme custom-enabled-themes)
+    (disable-theme theme)))
 
 (provide 'init-modus-theme)
 ;;; init-modus-theme.el ends here

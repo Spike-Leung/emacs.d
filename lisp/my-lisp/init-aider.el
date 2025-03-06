@@ -1,5 +1,6 @@
 ;;; init-aider.el --- aider -*- lexical-binding: t -*-
 ;;; Commentary:
+;;; Code:
 (require 'aider)
 
 (with-eval-after-load 'init-auth

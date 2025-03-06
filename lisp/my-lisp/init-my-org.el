@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;; links: https://koenig-haunstetten.de/2016/07/09/code-snippet-for-orgmode-e05s02/
 ;;; Code:
+
 (defun my/org-add-ids-to-headlines-in-file ()
   "Add ID properties to all headlines in the current file which do not already have one."
   (interactive)
@@ -12,13 +13,12 @@
 ;;             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 
 (defun my/copy-id-to-clipboard()
-  "Copy the ID property value to killring,
-if no ID is there then create a new unique ID.
-This function works only in org-mode buffers.
+  "Copy the ID property value to killring.
+If no ID is there then create a new unique ID.
+This function works only in `org-mode' buffers.
 
-The purpose of this function is to easily construct id:-links to
-Org-mode items. If its assigned to a key it saves you marking the
-text and copying to the killring."
+The purpose of this function is to easily construct id:-links to Org-mode items.
+If its assigned to a key it saves you marking the text and copying to the killring."
   (interactive)
   (when (eq major-mode 'org-mode) ; do this only in org-mode buffers
     (setq mytmpid (funcall 'org-id-get-create))
@@ -29,24 +29,24 @@ text and copying to the killring."
 ;;; https://www.youtube.com/watch?v=be8TC-i-NpE&list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE&index=40&t=111s
 ;;; https://koenig-haunstetten.de/2019/01/06/changes-to-my-orgmode-system/
 ;;; https://koenig-haunstetten.de/2018/02/17/improving-my-orgmode-workflow/
-(defun my/copy-idlink-to-clipboard() "Copy an ID link with the
-headline to killring, if no ID is there then create a new unique
-ID.  This function works only in org-mode or org-agenda buffers.
+(defun my/copy-idlink-to-clipboard()
+  "Copy an ID link with the headline to `kill-ring'.
+If no ID is there then create a new unique ID.
+This function works only in `org-mode' or `org-agenda' buffers.
 
-The purpose of this function is to easily construct id:-links to
-org-mode items. If its assigned to a key it saves you marking the
-text and copying to the killring."
-       (interactive)
-       (when (eq major-mode 'org-agenda-mode) ;switch to orgmode
-         (org-agenda-show)
-         (org-agenda-goto))
-       (when (eq major-mode 'org-mode) ; do this only in org-mode buffers
-         (setq mytmphead (nth 4 (org-heading-components)))
-         (setq mytmpid (funcall 'org-id-get-create))
-         (setq mytmplink (format "[[id:%s][%s]]" mytmpid mytmphead))
-         (kill-new mytmplink)
-         (message "Copied %s to killring (clipboard)" mytmplink)
-         ))
+The purpose of this function is to easily construct id:-links to `org-mode' items.
+If its assigned to a key it saves you marking the text and copying to the killring."
+  (interactive)
+  (when (eq major-mode 'org-agenda-mode) ;switch to orgmode
+    (org-agenda-show)
+    (org-agenda-goto))
+  (when (eq major-mode 'org-mode) ; do this only in org-mode buffers
+    (setq mytmphead (nth 4 (org-heading-components)))
+    (setq mytmpid (funcall 'org-id-get-create))
+    (setq mytmplink (format "[[id:%s][%s]]" mytmpid mytmphead))
+    (kill-new mytmplink)
+    (message "Copied %s to killring (clipboard)" mytmplink)
+    ))
 
 (global-set-key (kbd "<f5>") 'my/copy-idlink-to-clipboard)
 
@@ -155,7 +155,12 @@ text and copying to the killring."
 
 
 ;;; Agenda files
-(setq org-agenda-files (list "~/org/mylife.org" "~/org/mywork.org" "~/org/birthday.org" "~/org/reference.org" "~/org/goals.org" "~/org/dead.org"))
+(setq org-agenda-files (list "~/org/mylife.org"
+                             "~/org/mywork.org"
+                             "~/org/birthday.org"
+                             "~/org/reference.org"
+                             "~/org/goals.org"
+                             "~/org/dead.org"))
 
 (when *is-wsl*
   (setq org-agenda-files (list "~/spike-docs/org/work.org")))
@@ -230,10 +235,8 @@ text and copying to the killring."
 
 
 (setq org-startup-folded nil)
-
 
 ;;; org-structure-template
-
 (setq org-structure-template-alist '(("e" . "example")
                                      ("s" . "src")
                                      ("se" . "src emacs-lisp")
@@ -246,11 +249,20 @@ text and copying to the killring."
                                      ("q" . "quote")
                                      ("h" . "export html")
                                      ("v" . "verse")))
-
 
 ;;; To-do settings
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "REPEAT(r)" "PROJECT(p)" "SOMEDAY(s!)" "WAITING(w@/!)" "DELEGATED(e!)" "HOLD(h)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")))
+      (quote ((sequence
+               "TODO(t)"
+               "NEXT(n)"
+               "REPEAT(r)"
+               "PROJECT(p)"
+               "SOMEDAY(s!)"
+               "WAITING(w@/!)"
+               "DELEGATED(e!)"
+               "HOLD(h)"
+               "DONE(d!/!)"
+               "CANCELLED(c@/!)")))
       org-todo-repeat-to-state "REPEAT")
 
 
@@ -275,15 +287,12 @@ text and copying to the killring."
 ;; (setq org-modern-progress nil)
 
 
-
 (setq org-html-html5-fancy t)
 (setq org-html-doctype "html5")
-
 
 (with-eval-after-load 'org
   (require 'org-menu)
   (define-key org-mode-map (kbd "C-c m") 'org-menu))
-
 
 ;; enable org-protocol
 (server-start)
@@ -291,8 +300,6 @@ text and copying to the killring."
 (add-to-list 'load-path "/snap/emacs/current/usr/share/emacs/29.4/lisp/org/")
 (require 'org-protocol)
 (require 'org-protocol-capture-html)
-
 
-
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here

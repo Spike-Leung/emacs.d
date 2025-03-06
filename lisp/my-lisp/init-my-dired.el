@@ -32,6 +32,7 @@
           '(("\\.\\(png\\|jpe?g\\|tiff\\)" "feh" "xdg-open" )
             ("\\.\\(mp[34]\\|m4a\\|ogg\\|flac\\|webm\\|mkv\\)" "mpv" "xdg-open")
             (".*" "xdg-open")))
+
     ;; 由于 init-corfu.el 中将 `completion-category-overrides' 设置为 nil
     ;; 导致 `find-file' 无法使用缩写(~/g/t/p/1.org -> ~/git/taxodium/post/1.org)
     ;; 所以这里重新覆盖配置中的值，使其生效

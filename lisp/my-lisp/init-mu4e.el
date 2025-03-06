@@ -1,7 +1,9 @@
 ;;; init-mu4e.el --- mu4e config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
+
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+
 (require 'mu4e)
 ;; for sending mails
 (require 'smtpmail)
@@ -61,8 +63,6 @@
 
 ;; select the right sender email from the context.
 (setq message-sendmail-envelope-from 'header)
-
-
 
 (provide 'init-mu4e)
 ;;; init-mu4e.el ends here

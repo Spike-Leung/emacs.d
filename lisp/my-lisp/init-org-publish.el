@@ -109,9 +109,7 @@ ARGS will pass to `org-publish'."
 
 (defun spike-leung/org-publish-find-date (file project)
   "Extract `#+date` form org file.
-FILE is org file name.
-PROJECT is the current project.
-"
+FILE is org file name.PROJECT is the current project."
   (with-temp-buffer
     (insert-file-contents file)
     (org-mode)
@@ -119,7 +117,7 @@ PROJECT is the current project.
 
 
 (defun spike-leung/sitemap-format-entry (entry style project)
-  "自定义网站地图条目格式，添加日期信息。"
+  "自定义网站地图条目格式，添加日期信息."
   (let* ((filename (org-publish--expand-file-name entry project))
          (date (spike-leung/org-publish-find-date filename project)))
     (format "%s %s"

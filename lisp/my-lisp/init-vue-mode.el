@@ -1,6 +1,7 @@
 ;;; init-vue-mode.el --- vue mode config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
+
 (add-hook 'emacs-startup-hook (lambda () (setq gc-cons-threshold (* 100 1024 1024))))
 (setq-default eglot-events-buffer-size 0)
 

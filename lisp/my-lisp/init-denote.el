@@ -1,8 +1,8 @@
 ;;; init-my-denote.el --- denote relavive config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
-(maybe-require-package 'denote)
 
+(maybe-require-package 'denote)
 
 (when (maybe-require-package 'denote)
   ;; Remember to check the doc strings of those variables.
@@ -34,7 +34,6 @@
   ;; file names.  This provides a more informative view.
   (setq denote-backlinks-show-context t)
 
-
   (setq xref-search-program
         (cond
          ((or (executable-find "ripgrep")
@@ -61,8 +60,7 @@ SILO is a file path from `my-denote-silo-directories'"
     (let ((denote-directory silo))
       (call-interactively command)))
 
-  ;; Denote DOES NOT define any key bindings.  This is for the user to
-  ;; decide.  For example:
+  ;;; Denote key bindings.
   (let ((map global-map))
     (define-key map (kbd "C-c n n") #'denote-open-or-create)
     (define-key map (kbd "C-c n N") #'spike-leung/denote-open-or-create-silo)
@@ -85,7 +83,6 @@ SILO is a file path from `my-denote-silo-directories'"
       (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
       (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
       (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter)))
-
 
   (with-eval-after-load 'denote
     (add-hook 'find-file-hook #'denote-fontify-links-mode-maybe)

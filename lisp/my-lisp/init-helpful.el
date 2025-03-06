@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; https://github.com/Wilfred/helpful
 ;;; Code:
+
 (when (maybe-require-package 'helpful)
   ;; Note that the built-in `describe-function' includes both functions
   ;; and macros. `helpful-function' is functions only, so we provide

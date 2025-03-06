@@ -1,5 +1,6 @@
 ;;; init-gptel.el --- gptel -*- lexical-binding: t -*-
 ;;; Commentary:
+;;; Code:
 
 (maybe-require-package 'gptel)
 
@@ -39,7 +40,7 @@
       :stream t
       :key (spike-leung/get-siliconflow-api-key)
       :models spike-leung/siliconflow-models)
-    (gptel-make-openai "OpenRouter"       ;Any name you want
+    (gptel-make-openai "OpenRouter"
       :host "openrouter.ai"
       :endpoint "/api/v1/chat/completions"
       :stream t

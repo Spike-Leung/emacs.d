@@ -1,8 +1,8 @@
 ;;; init-citre.el --- for reading code, citre & clue -*- lexical-binding: t -*-
 ;;; Commentary:
-;;; Code:
 ;;; prerequisite: you should install: https://github.com/universal-ctags/ctags
 ;;; See: https://github.com/universal-ctags/citre
+;;; Code:
 (maybe-require-package 'citre)
 
 (with-eval-after-load 'citre

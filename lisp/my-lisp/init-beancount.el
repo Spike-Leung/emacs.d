@@ -10,10 +10,12 @@
 (define-key beancount-mode-map (kbd "C-c C-p") #'outline-previous-visible-heading)
 
 ;;; https://whatacold.io/blog/2022-09-10-emacs-beancount-accout-files/
-(defvar beancount-accounts-files nil "List of account files")
+(defvar beancount-accounts-files nil "List of account files.")
 (setq beancount-accounts-files
       (directory-files "~/Dropbox/beancount/accounts/" 'full (rx ".beancount" eos)))
+
 (defun w/beancount--collect-accounts-from-files (oldfun regex n)
+  "Collect all accounts from files."
   (let ((keys (funcall oldfun regex n))
         (hash (make-hash-table :test 'equal)))
     (dolist (key keys)
