@@ -157,6 +157,9 @@ text and copying to the killring."
 ;;; Agenda files
 (setq org-agenda-files (list "~/org/mylife.org" "~/org/mywork.org" "~/org/birthday.org" "~/org/reference.org" "~/org/goals.org" "~/org/dead.org"))
 
+(when *is-wsl*
+  (setq org-agenda-files (list "~/spike-docs/org/work.org")))
+
 
 ;;; Capture templates
 ;;; Private
