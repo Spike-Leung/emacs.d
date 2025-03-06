@@ -14,8 +14,8 @@
                                  "openrouter/anthropic/claude-3.7-sonnet"
                                  "deepseek/deepseek-chat"
                                  "openai/Pro/deepseek-ai/DeepSeek-V3" ;; provide by siliconflow))
-                                 (global-set-key (kbd "M-o a") 'aider-transient-menu)))))
-
+                                 ))
+    (global-set-key (kbd "M-o a") 'aider-transient-menu)))
 
 
 (provide 'init-aider)
