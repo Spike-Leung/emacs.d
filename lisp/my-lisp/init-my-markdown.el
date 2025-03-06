@@ -10,7 +10,12 @@
 (defun spike-leung/imp-markdown-filter (buffer)
   "Define imp markdown filter.Wrap BUFFER with 'strapdown.min.js'."
   (princ (with-current-buffer buffer
-           (format "<!DOCTYPE html><html><title>Impatient Markdown</title><xmp theme=\"united\" style=\"display:none;\"> %s  </xmp><script src=\"https://cdn.jsdelivr.net/gh/Naereen/StrapDown.js@master/strapdown.min.js\"></script></html>"
+           (format "<!DOCTYPE html>
+<html>
+<title>Impatient Markdown</title>
+<xmp theme=\"lumen\" style=\"display:none;\">%s</xmp>
+<script src=\"https://cdn.jsdelivr.net/gh/Naereen/StrapDown.js@master/strapdown.min.js\"></script>
+</html>"
                    (buffer-substring-no-properties (point-min) (point-max))))
          (current-buffer)))
 
@@ -20,7 +25,9 @@
   (progn
     (httpd-start)
     (impatient-mode nil)
-    (imp-set-user-filter 'spike-leung/imp-markdown-filter)))
+    (imp-set-user-filter 'spike-leung/imp-markdown-filter)
+    (let ((port httpd-port))
+      (browse-url (concat "http://localhost:" (number-to-string port) "/imp")))))
 
 (defun spike-leung/disable-preview-markdown ()
   "Disable preview markdown."
@@ -29,7 +36,6 @@
     (httpd-stop)
     (impatient-mode -1)
     (imp-remove-user-filter)))
-
 
 (provide 'init-my-markdown)
 ;;; init-my-markdown.el ends here
