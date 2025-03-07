@@ -36,8 +36,7 @@
 
 (when *is-a-mac*
   (require 'init-beancount)
-  (require 'init-mu4e)
-  (require 'init-proxy))
+  (require 'init-mu4e))
 
 (when *is-wsl*
   (require 'init-wsl))
