@@ -25,6 +25,9 @@
 *** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]
 
 *** [[https://a4.zyzhang.com/index.xml][A4 周刊]]
+
+*** [[https://54321.versun.me/feed][54321 Weekly]]
+
 ** frontend                                                                      :frontend:
 
 *** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                             :javascript:
