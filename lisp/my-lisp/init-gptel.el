@@ -5,16 +5,23 @@
 (maybe-require-package 'gptel)
 
 (defvar spike-leung/openrouter-models
-  '(google/gemini-2.0-flash-001
+  '(;; google
+    google/gemini-2.0-flash-001
     google/gemini-flash-1.5-8b
+    google/gemma-3-27b-it:free
+    ;; openai
     openai/gpt-4o-mini
     openai/gpt-4o
+    ;; anthropic
     anthropic/claude-3.7-sonnet
+    ;; deepseek
     deepseek/deepseek-r1:free
     deepseek/deepseek-r1
     deepseek/deepseek-chat
     deepseek/deepseek-chat:free
-    qwen/qwen-2.5-72b-instruct)
+    ;; qwen
+    qwen/qwen-2.5-72b-instruct
+    qwen/qwq-32b)
   "List of available models for OpenRouter API.")
 
 (defvar spike-leung/siliconflow-models
