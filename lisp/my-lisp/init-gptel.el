@@ -7,7 +7,6 @@
 (defvar spike-leung/openrouter-models
   '(;; google
     google/gemini-2.0-flash-001
-    google/gemini-flash-1.5-8b
     google/gemma-3-27b-it:free
     ;; openai
     openai/gpt-4o-mini
