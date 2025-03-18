@@ -40,6 +40,8 @@
 
 *** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]
 
+*** [[https://feeds2.feedburner.com/html5doctor][html5 doctor]]
+
 ** blog                                                                          :blog:
 
 *** [[https://taxodium.ink/rss.xml][taxodium]]
@@ -152,6 +154,8 @@
 
 *** [[https://ferd.ca/feed.rss][Ferd.ca]]
 
+*** [[https://lhasa.icu/rss.xml][游钓四方]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
@@ -162,6 +166,8 @@
 
 # *** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]
 
+** news
+*** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
 * Archive
 
 ** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
@@ -221,4 +227,7 @@
 ** [[https://mikkolaine.blogspot.com/][Stars, Open source and more]]                                                  :star:
 
 ** [[https://blog.ursb.me/][Airing 的博客]]
+
 ** [[https://yovey.me/][Fragments]]                                                                    :photograph:travel:
+
+** [[https://www.hillelwayne.com/][Hillel Wayne]]
