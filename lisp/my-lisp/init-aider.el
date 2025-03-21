@@ -14,7 +14,8 @@
         (setenv "OPENAI_API_KEY" (spike-leung/get-siliconflow-api-key))
         (setenv "OPENAI_API_BASE" "https://api.siliconflow.cn")
         (setenv "OPENROUTER_API_KEY" (spike-leung/get-openrouter-api-key))
-        (setq aider-args '("--no-auto-commits" "--model" "openrouter/anthropic/claude-3.7-sonnet"))
+        ;; (setq aider-args '("--no-auto-commits" "--model" "openrouter/anthropic/claude-3.7-sonnet"))
+        (setq aider-args '("--no-auto-commits" "--model" "openrouter/deepseek/deepseek-chat"))
         (setq aider-popular-models '("openrouter/anthropic/claude-3.7-sonnet"
                                      "openrouter/deepseek/deepseek-r1"
                                      "openrouter/deepseek/deepseek-chat"
