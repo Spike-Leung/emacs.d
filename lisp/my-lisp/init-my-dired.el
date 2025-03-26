@@ -31,6 +31,7 @@
     (setq dired-guess-shell-alist-user
           '(("\\.\\(png\\|jpe?g\\|tiff\\)" "feh" "xdg-open" )
             ("\\.\\(mp[34]\\|m4a\\|ogg\\|flac\\|webm\\|mkv\\)" "mpv" "xdg-open")
+            ("\\.\\(svg\\)" "eog")
             (".*" "xdg-open")))
 
     ;; 由于 init-corfu.el 中将 `completion-category-overrides' 设置为 nil
