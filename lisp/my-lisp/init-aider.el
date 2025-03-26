@@ -19,9 +19,9 @@
         (setq aider-popular-models '("openrouter/anthropic/claude-3.7-sonnet"
                                      "openrouter/deepseek/deepseek-r1"
                                      "openrouter/deepseek/deepseek-chat"
-                                     "openrouter/openai/gpt-4o"
-                                     "openrouter/openai/gpt-4o-mini"
+                                     "openrouter/deepseek/deepseek-chat-v3-0324"
                                      "openrouter/google/gemini-2.0-flash-001"
+                                     "openrouter/google/gemini-2.5-pro-exp-03-25:free"
                                      "openrouter/qwen/qwq-32b"
                                      ;; deepseek official
                                      "deepseek/deepseek-chat"

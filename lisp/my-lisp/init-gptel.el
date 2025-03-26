@@ -8,16 +8,18 @@
   '(;; google
     google/gemini-2.0-flash-001
     google/gemma-3-27b-it:free
+    google/gemini-2.5-pro-exp-03-25:free
     ;; openai
     openai/gpt-4o-mini
     openai/gpt-4o
     ;; anthropic
     anthropic/claude-3.7-sonnet
     ;; deepseek
-    deepseek/deepseek-r1:free
     deepseek/deepseek-r1
     deepseek/deepseek-chat
-    deepseek/deepseek-chat:free
+    deepseek/deepseek-chat-v3-0324
+    ;; Mistral
+    mistralai/mistral-small-3.1-24b-instruct
     ;; qwen
     qwen/qwen-2.5-72b-instruct
     qwen/qwq-32b)
@@ -54,7 +56,7 @@
       :models spike-leung/openrouter-models)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
     ;; set default
-    (setq gptel-model   'google/gemini-2.0-flash-001
+    (setq gptel-model   'google/gemini-2.5-pro-exp-03-25:free
           gptel-backend
           (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
