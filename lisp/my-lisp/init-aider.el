@@ -29,5 +29,8 @@
                                      "openai/Pro/deepseek-ai/DeepSeek-V3"))
         (global-set-key (kbd "M-o a") 'aider-transient-menu)))))
 
+(set-face-attribute 'comint-highlight-prompt nil :foreground (modus-themes-get-color-value 'green-cooler))
+(set-face-attribute 'comint-highlight-input nil :foreground (modus-themes-get-color-value 'yellow-warmer))
+
 (provide 'init-aider)
 ;;; init-aider.el ends here
