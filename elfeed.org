@@ -156,6 +156,10 @@
 
 *** [[https://lhasa.icu/rss.xml][游钓四方]]
 
+*** [[https://ploum.net/atom_en.xml][Ploum.net]]
+
+*** [[https://blog.solazy.me/feed/][So!azy]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
@@ -231,3 +235,5 @@
 ** [[https://yovey.me/][Fragments]]                                                                    :photograph:travel:
 
 ** [[https://www.hillelwayne.com/][Hillel Wayne]]
+** [[https://ctian.livejournal.com/][春田冰河]]
+** [[https://laike9m.com/][laike9m's blog]]
