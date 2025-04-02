@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: insert source link
+# key: s
+# --
+
+[[$0][Source]]

@@ -1,9 +1,9 @@
 # -*- mode: snippet -*-
-# name: begin_details
-# key: details
+# name: details
+# key: d
 # --
 
 #+begin_details
-#+html: <summary>$0</summary>
+#+html: <summary>${0:摘录}</summary>
 
 #+end_details
