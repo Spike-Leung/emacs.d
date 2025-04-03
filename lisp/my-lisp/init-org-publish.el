@@ -3,6 +3,7 @@
 ;;; Code:
 
 (maybe-require-package 'ox-rss)
+(maybe-require-package 'kaomoji)
 
 (defconst spike-leung/html-head "
 <meta name=\"color-scheme\" content=\"light dark\" />
