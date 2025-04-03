@@ -56,7 +56,7 @@
       :models spike-leung/openrouter-models)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
     ;; set default
-    (setq gptel-model   'google/gemini-2.0-flash-001
+    (setq gptel-model   'google/gemini-2.5-pro-exp-03-25:free
           gptel-backend
           (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
