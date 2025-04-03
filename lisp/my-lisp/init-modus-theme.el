@@ -3,6 +3,7 @@
 ;;; Code:
 
 (maybe-require-package 'modus-themes)
+(maybe-require-package 'ef-themes)
 
 (setq modus-themes-headings
       '((1 . (ultrabold 1.1)))
