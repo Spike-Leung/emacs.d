@@ -160,6 +160,8 @@
 
 *** [[https://blog.solazy.me/feed/][So!azy]]
 
+*** [[https://johnrakestraw.com/index.xml][thinking out loud]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
