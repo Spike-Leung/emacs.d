@@ -15,6 +15,10 @@
 ;;; fanyi
 ;; @see: https://github.com/condy0919/fanyi.el
 (maybe-require-package 'fanyi)
+(with-eval-after-load 'fanyi
+  (custom-set-variables '(fanyi-providers '(
+                                            fanyi-haici-provider
+                                            fanyi-longman-provider))))
 
 
 
