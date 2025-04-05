@@ -4,6 +4,7 @@
 
 (maybe-require-package 'ox-rss)
 (maybe-require-package 'kaomoji)
+(maybe-require-package 'olivetti)
 
 (defconst spike-leung/html-head "
 <meta name=\"color-scheme\" content=\"light dark\" />

@@ -3,6 +3,7 @@
 ;;; Code:
 
 (maybe-require-package 'string-inflection)
+(maybe-require-package 'vundo)
 
 (provide 'init-my-editing-utils)
 ;;; init-my-editing-utils.el ends here
