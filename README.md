@@ -23,6 +23,7 @@ see: [my-lisp](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp)
 - [init-denote.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-denote.el): Denote-related settings, frequently used.
 - [init-elfeed.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-elfeed.el)
 - [init-gitmoji.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-gitmoji.el): Uses gitmojis for commits, frequently used. ([Gitmoji](https://github.com/carloscuesta/gitmoji))
+- [init-kaomoji.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-kaomoji.el): A modification of [kaomoji.el](https://github.com/kuanyui/kaomoji.el). I removed helm support and added consult support since I mainly use consult. I also removed some kaomoji that I didn't need. I might add more later.
 - [init-gptel.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-gptel.el): GPTel configuration, frequently used.
 - [init-helpful.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-helpful.el): Enhances help functionality.
 - [init-icons.el](https://github.com/Spike-Leung/emacs.d/tree/main/lisp/my-lisp/init-icons.el): Improves Emacs's appearance.
