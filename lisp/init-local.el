@@ -21,6 +21,7 @@
 (require 'init-gptel)
 (require 'init-helpful)
 (require 'init-icons)
+(require 'init-kaomoji)
 (require 'init-magit)
 (require 'init-modus-theme)
 (require 'init-my-dired)
