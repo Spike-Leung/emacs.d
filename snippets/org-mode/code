@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: code
+# key: c
+# --
+
+#+ATTR_HTML: :textarea t
+#+BEGIN_EXAMPLE
+$0
+#+END_EXAMPLE
