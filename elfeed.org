@@ -164,6 +164,8 @@
 
 *** [[https://arne.me/weekly/feed.xml][Arne’s Weekly]]
 
+*** [[https://endler.dev/rss.xml][Matthias Endler]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
