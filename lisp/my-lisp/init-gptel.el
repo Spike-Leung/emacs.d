@@ -20,6 +20,8 @@
     deepseek/deepseek-chat-v3-0324
     ;; Mistral
     mistralai/mistral-small-3.1-24b-instruct
+    ;; openrouter
+    openrouter/quasar-alpha
     ;; qwen
     qwen/qwen-2.5-72b-instruct
     qwen/qwq-32b)
@@ -56,7 +58,7 @@
       :models spike-leung/openrouter-models)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
     ;; set default
-    (setq gptel-model   'google/gemini-2.0-flash-001
+    (setq gptel-model   'openrouter/quasar-alpha
           gptel-backend
           (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
