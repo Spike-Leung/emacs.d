@@ -162,6 +162,8 @@
 
 *** [[https://johnrakestraw.com/index.xml][thinking out loud]]
 
+*** [[https://arne.me/weekly/feed.xml][Arne’s Weekly]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
