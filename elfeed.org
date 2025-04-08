@@ -166,6 +166,8 @@
 
 *** [[https://endler.dev/rss.xml][Matthias Endler]]
 
+*** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
