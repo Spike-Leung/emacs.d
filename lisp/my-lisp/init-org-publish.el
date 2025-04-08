@@ -25,8 +25,8 @@
 <nav>
   <ul>
     <li><a href=\"/index.html\">Home</a></li>
-    <li><a href=\"/rss.xml\">RSS</a></li>
-    <li><a href=\"https://music.163.com/#/playlist?id=12531191848\">Playlist</a></li>
+    <li><a href=\"/rss.xml\">Feed</a></li>
+    <li><a href=\"/inside-black-hole.html\">黑洞里</a></li>
     <li><a href=\"/search.html\">Search</a></li>
   </ul>
   <select onchange=\"switchMode(this.value)\" id=\"lightdark\">
@@ -266,6 +266,21 @@ PROJECT is the current project."
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
+        ("black-hole"
+         :base-directory "~/git/taxodium/black-hole"
+         :base-extension "org"
+         :publishing-directory "~/git/taxodium/publish"
+         :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+         :section-numbers nil
+         :with-toc t
+         :with-tags t
+         :time-stamp-file nil
+         :html-head ,spike-leung/html-head
+         :html-postamble ,spike-leung/html-postamble
+         :html-preamble ,spike-leung/html-preamble-content
+         :author "Spike Leung"
+         :email "l-yanlei@hotmail.com")
+
         ("sitemap"
          :base-directory "~/git/taxodium/post"
          :base-extension "org"
@@ -301,7 +316,7 @@ PROJECT is the current project."
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
-        ("website" :components ("orgfiles" "sitemap"))))
+        ("website" :components ("orgfiles" "sitemap" "black-hole"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
