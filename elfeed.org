@@ -1,46 +1,43 @@
 * feed                                                                          :elfeed:
 
 ** weekly                                                                         :weekly:
+*** frontend                                                                    :frontend:
 
-*** [[https://feeds.feedburner.com/ruanyifeng][阮一峰的网络日志]]
+**** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                          :javascript:
 
-*** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志 (atom)]]
+**** [[https://feeds.feedburner.com/CSS-Weekly][CSS Weekly]]                                                                 :css:
 
-*** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
+**** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                :javascript:
 
-*** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]
+**** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]
 
-*** [[https://zishu.me/index.xml][奇趣周刊]]
+**** [[http://html5doctor.com/feed/][HTML5 doctor]]
 
-*** [[https://quail.ink/ameow/feed/atom][猫鱼周刊]]
+*** others
 
-*** [[https://www.dmsrs.org/weekly.rss][视野修炼 - 技术周刊]]
+**** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志 (atom)]]
 
-*** [[https://sugarat.top/weekly.rss][视野修炼 - 技术周刊]] (粥里有勺糖)
+**** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
 
-*** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]
+**** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]
 
-*** [[https://weekly.lenband.com/rss.xml][冷板凳周刊]]
+**** [[https://quail.ink/ameow/feed/atom][猫鱼周刊]]
 
-*** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]
+**** [[https://54321.versun.me/feed][54321 Weekly]]
 
-*** [[https://a4.zyzhang.com/index.xml][A4 周刊]]
+**** [[https://zishu.me/index.xml][奇趣周刊]]
 
-*** [[https://54321.versun.me/feed][54321 Weekly]]
+**** [[https://www.dmsrs.org/weekly.rss][视野修炼 - 技术周刊]]
 
-** frontend                                                                      :frontend:
+**** [[https://sugarat.top/weekly.rss][粥里有勺糖]]
 
-*** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                             :javascript:
+**** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                  :design:ux:
 
-*** [[https://feeds.feedburner.com/CSS-Weekly][CSS Weekly]]                                                                    :css:
+**** [[https://weekly.lenband.com/rss.xml][冷板凳周刊]]
 
-*** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                   :javascript:
+**** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]                                                               :design:
 
-*** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][HTML5 Weekly]]
-
-*** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]
-
-*** [[https://feeds2.feedburner.com/html5doctor][html5 doctor]]
+**** [[https://a4.zyzhang.com/index.xml][A4 周刊]]
 
 ** blog                                                                          :blog:
 
@@ -51,6 +48,8 @@
 *** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
 
 *** [[https://innei.in/feed][静かな森]]
+
+*** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
 
 *** [[https://atlas.xlog.app/feed][Atlas's 周记]]
 
@@ -181,7 +180,9 @@
 # *** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]
 
 ** news
+
 *** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
+
 * Archive
 
 ** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
@@ -197,8 +198,6 @@
 ** [[https://www.fre321.com/weekly][FRE123]]
 
 ** [[https://github.com/ascoders/weekly][前端精读]]
-
-** [[https://monad.run/][#hsfzxjy#]]
 
 ** [[https://haikuoshijie.cn/categories/daily][每日推荐]]
 
@@ -245,5 +244,7 @@
 ** [[https://yovey.me/][Fragments]]                                                                    :photograph:travel:
 
 ** [[https://www.hillelwayne.com/][Hillel Wayne]]
+
 ** [[https://ctian.livejournal.com/][春田冰河]]
+
 ** [[https://laike9m.com/][laike9m's blog]]
