@@ -168,6 +168,8 @@
 
 *** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]
 
+*** [[https://caa-ins.org/feed][网络社会研究所]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
