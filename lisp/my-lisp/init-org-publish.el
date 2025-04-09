@@ -266,6 +266,21 @@ PROJECT is the current project."
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
+        ("draft"
+         :base-directory "~/git/taxodium/draft"
+         :base-extension "org"
+         :publishing-directory "~/git/taxodium/draft-preview"
+         :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+         :section-numbers nil
+         :with-toc t
+         :with-tags t
+         :time-stamp-file nil
+         :html-head ,spike-leung/html-head
+         :html-postamble ,spike-leung/html-postamble
+         :html-preamble ,spike-leung/html-preamble-content
+         :author "Spike Leung"
+         :email "l-yanlei@hotmail.com")
+
         ("black-hole"
          :base-directory "~/git/taxodium/black-hole"
          :base-extension "org"
