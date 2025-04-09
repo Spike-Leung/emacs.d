@@ -29,10 +29,12 @@
     ;; suggestions.  Of course, you can always type an arbitrary program
     ;; despite these defaults.
     (setq dired-guess-shell-alist-user
-          '(("\\.\\(png\\|jpe?g\\|tiff\\)" "feh" "xdg-open" )
-            ("\\.\\(mp[34]\\|m4a\\|ogg\\|flac\\|webm\\|mkv\\)" "mpv" "xdg-open")
-            ("\\.\\(svg\\)" "eog")
-            (".*" "xdg-open")))
+          ;; you need to install 'wslu' for wslview to work
+          '(("\\.pdf\\'" "wslview" "zathura" "evince" "okular" "mupdf")
+            ("\\.\\(png\\|jpe?g\\|tiff\\)" "wslview" "feh" "sxiv" "ristretto")
+            ("\\.\\(mp[34]\\|m4a\\|ogg\\|flac\\|webm\\|mkv\\)" "wslview" "mpv" "vlc")
+            ("\\.\\(svg\\)" "wslview" "eog" "ristretto")
+            (".*" "wslview" "xdg-open")))
 
     ;; 由于 init-corfu.el 中将 `completion-category-overrides' 设置为 nil
     ;; 导致 `find-file' 无法使用缩写(~/g/t/p/1.org -> ~/git/taxodium/post/1.org)
