@@ -5,5 +5,7 @@
 (maybe-require-package 'string-inflection)
 (maybe-require-package 'vundo)
 
+(global-set-key (kbd "C-x u") 'vundo)
+
 (provide 'init-my-editing-utils)
 ;;; init-my-editing-utils.el ends here
