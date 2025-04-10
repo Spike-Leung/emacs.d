@@ -18,9 +18,16 @@
   (when-let ((entry (assoc cand spike-leung/kaomoji--candidates)))
     (concat
      (propertize " " 'display '(space :align-to 50))
-     (propertize (cdr entry)
-                 'face `(:foreground ,(ef-themes-get-color-value 'constant))))))
-
+     (propertize
+      (cdr entry)
+      'face
+      (cond
+       ((fboundp 'modus-themes-get-color-value)
+        `(:foreground ,(modus-themes-get-color-value `rust)))
+       ((fboundp 'ef-themes-get-color-value)
+        `(:foreground ,(ef-themes-get-color-value `rust)))
+       (t
+        nil))))))
 
 (defvar spike-leung/kaomoji--candidates nil
   "List of candidates for consult.")
