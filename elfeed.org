@@ -1,6 +1,7 @@
 * feed                                                                          :elfeed:
 
 ** weekly                                                                         :weekly:
+
 *** frontend                                                                    :frontend:
 
 **** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                          :javascript:
@@ -27,17 +28,21 @@
 
 **** [[https://zishu.me/index.xml][奇趣周刊]]
 
-**** [[https://www.dmsrs.org/weekly.rss][视野修炼 - 技术周刊]]
-
 **** [[https://sugarat.top/weekly.rss][粥里有勺糖]]
 
 **** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                  :design:ux:
 
-**** [[https://weekly.lenband.com/rss.xml][冷板凳周刊]]
-
 **** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]                                                               :design:
 
 **** [[https://a4.zyzhang.com/index.xml][A4 周刊]]
+
+** kill-the-newsletter                                                          :newsletter:
+
+*** [[https://kill-the-newsletter.com/feeds/3hl5jx56nh55vdvwhoh1.xml][kill-the-newsletter@taxodium]]
+
+处理那些没有 feed 的网站。
+
+- [[https://weekly.lenband.com/][冷板凳周刊]]
 
 ** blog                                                                          :blog:
 
@@ -51,23 +56,21 @@
 
 *** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
 
-*** [[https://atlas.xlog.app/feed][Atlas's 周记]]
-
 *** [[https://www.owenyoung.com/atom.xml][owenyoung]]
 
 *** [[https://z.arlmy.me/atom.xml][素生]]
 
+*** [[https://atlas.xlog.app/feed][Atlas's 周记]]
+
 *** [[https://www.lxchapu.com/rss.xml][柃夏chapu‘s blog]]
 
-*** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]
+*** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]                                                          :css:web:frontend:
 
-*** [[https://css-irl.info/rss.xml][CSS In Real Life]]
+*** [[https://css-irl.info/rss.xml][CSS In Real Life]]                                                            :css:web:frontend:
 
-*** [[https://qq.md/][葉開 • 時光記]]
+*** [[https://bilibi.li/feed.rss][midnight serial experiments]]
 
-*** [[https://bilibi.li/][midnight serial experiments]]
-
-*** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]
+*** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]                                                            :frontend:css:web:
 
 *** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]
 
