@@ -55,6 +55,7 @@
 <p class=\"date\">Date: %d</p>
 <p class=\"date\">Last Modified: %C</p>
 <p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<script src=\"/js/sidenote.js\"></script>
 <script src=\"https://giscus.app/client.js\"
         data-repo=\"Spike-Leung/taxodium\"
         data-repo-id=\"MDEwOlJlcG9zaXRvcnkzOTYyNDQwMzk=\"
