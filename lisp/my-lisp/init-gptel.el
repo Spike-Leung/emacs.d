@@ -34,7 +34,6 @@
     deepseek-ai/DeepSeek-R1-Distill-Llama-70B)
   "List of available models for SiliconFlow API.")
 
-
 (with-eval-after-load 'init-auth
   (with-eval-after-load 'gptel
     ;; define provider
@@ -67,8 +66,34 @@
             :key (spike-leung/get-openrouter-api-key)
             :models spike-leung/openrouter-models))))
 
-
 (global-set-key (kbd "M-o g") 'gptel-menu)
+
+
+;;; some helpful utils use gptel
+
+(defun spike-leung/translate-region-to-english ()
+  "Translate the selected region to English using gptel and replace it in the buffer."
+  (interactive)
+  (if (use-region-p)
+      (let ((text (buffer-substring-no-properties (region-beginning) (region-end))))
+        (gptel-request
+            (format "Translate the following text to English:\n\n%s" text)
+          :callback (lambda (response _)
+                      (when response
+                        (let ((start (region-beginning))
+                              (end (region-end)))
+                          (save-excursion
+                            (delete-region start end)
+                            (goto-char start)
+                            (insert response)))))))
+    (user-error "No region selected")))
+
+;;; keybindings
+(defvar spike-leung/my-gptel-utils (make-sparse-keymap)
+  "Keymap for gptel utils commands.")
+
+(define-key spike-leung/my-gptel-utils (kbd "t") 'spike-leung/translate-region-to-english)
+(global-set-key (kbd "M-o u") spike-leung/my-gptel-utils)
 
 (provide 'init-gptel)
 ;;; init-gptel.el ends here
