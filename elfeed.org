@@ -172,6 +172,8 @@
 
 *** [[https://caa-ins.org/feed][网络社会研究所]]
 
+*** [[https://endler.dev/rss.xml][Matthias Endler]]
+
 ** daily                                                                        :daily:
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
