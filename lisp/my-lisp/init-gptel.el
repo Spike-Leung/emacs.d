@@ -12,6 +12,9 @@
     ;; openai
     openai/gpt-4o-mini
     openai/gpt-4o
+    openai/gpt-4.1
+    openai/gpt-4.1-mini
+    openai/gpt-4.1-nano
     ;; anthropic
     anthropic/claude-3.7-sonnet
     ;; deepseek
@@ -57,7 +60,7 @@
       :models spike-leung/openrouter-models)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
     ;; set default
-    (setq gptel-model   'openrouter/optimus-alpha
+    (setq gptel-model   'openai/gpt-4.1-nano
           gptel-backend
           (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
