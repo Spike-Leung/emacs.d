@@ -74,21 +74,46 @@
 ;;; some helpful utils use gptel
 
 (defun spike-leung/translate-region-to-english ()
-  "Translate the selected region to English using gptel and replace it in the buffer."
+  "Translate the selected region to English using gptel and replace it in the buffer.
+If no region is active, try to guess the sentence or paragraph at point."
   (interactive)
-  (if (use-region-p)
-      (let ((text (buffer-substring-no-properties (region-beginning) (region-end))))
+  (let* ((has-region (use-region-p))
+         (bounds
+          (cond
+           (has-region
+            (cons (region-beginning) (region-end)))
+           ((use-region-p)
+            (cons (region-beginning) (region-end)))
+           ((and (fboundp 'bounds-of-thing-at-point))
+            (or (bounds-of-thing-at-point 'sentence)
+                (bounds-of-thing-at-point 'paragraph)
+                (bounds-of-thing-at-point 'line)
+                (cons (point) (point))))
+           (t (cons (point) (point)))))
+         (start (car bounds))
+         (end (cdr bounds))
+         (text (buffer-substring-no-properties start end))
+         (model 'openai/gpt-4.1-nano)
+         (backend (gptel-make-openai "OpenRouter"
+                    :host "openrouter.ai"
+                    :endpoint "/api/v1/chat/completions"
+                    :stream t
+                    :key (spike-leung/get-openrouter-api-key)
+                    :models spike-leung/openrouter-models)))
+    (if (string-blank-p text)
+        (user-error "No text to translate")
+      (let ((gptel-backend backend)
+            (gptel-model model)
+            (gptel-use-tools nil)
+            (gptel-use-context nil))
         (gptel-request
             (format "Translate the following text to English:\n\n%s" text)
           :callback (lambda (response _)
                       (when response
-                        (let ((start (region-beginning))
-                              (end (region-end)))
-                          (save-excursion
-                            (delete-region start end)
-                            (goto-char start)
-                            (insert response)))))))
-    (user-error "No region selected")))
+                        (save-excursion
+                          (delete-region start end)
+                          (goto-char start)
+                          (insert response)))))))))
 
 ;;; keybindings
 (defvar spike-leung/my-gptel-utils (make-sparse-keymap)
