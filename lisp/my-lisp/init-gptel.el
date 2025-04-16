@@ -72,11 +72,13 @@
 
 
 ;;; some helpful utils use gptel
-
-(defun spike-leung/translate-region-to-english ()
-  "Translate the selected region to English using gptel and replace it in the buffer.
-If no region is active, try to guess the sentence or paragraph at point."
-  (interactive)
+(defun spike-leung/translate-region (prompt)
+  "Translate the selected region (default to English) replace it.
+If no region is active, try to guess the sentence or paragraph at point.
+With prefix argument, PROMPT is used as the translation prompt."
+  (interactive
+   (list (when current-prefix-arg
+           (read-string "Translation prompt: " "Translate the following text to English:"))))
   (require 'gptel)
   (let* ((has-region (use-region-p))
          (bounds
@@ -93,7 +95,8 @@ If no region is active, try to guess the sentence or paragraph at point."
            (t (cons (point) (point)))))
          (start (car bounds))
          (end (cdr bounds))
-         (text (buffer-substring-no-properties start end)))
+         (text (buffer-substring-no-properties start end))
+         (prompt-text (or prompt "Translate the following text to English:")))
     (if (string-blank-p text)
         (user-error "No text to translate")
       (let ((openrouter-backend (gptel-make-openai "OpenRouter"
@@ -112,7 +115,7 @@ If no region is active, try to guess the sentence or paragraph at point."
                      (gptel-use-tools nil)
                      (gptel-use-context nil))
                  (gptel-request
-                     (format "Translate the following text to English:\n\n%s" text)
+                     (format "%s\n\n%s" prompt-text text)
                    :callback
                    (lambda (response _)
                      (if (and response (not (string-blank-p response)))
@@ -131,7 +134,7 @@ If no region is active, try to guess the sentence or paragraph at point."
 (defvar spike-leung/my-gptel-utils (make-sparse-keymap)
   "Keymap for gptel utils commands.")
 
-(define-key spike-leung/my-gptel-utils (kbd "t") 'spike-leung/translate-region-to-english)
+(define-key spike-leung/my-gptel-utils (kbd "t") 'spike-leung/translate-region)
 (global-set-key (kbd "M-o u") spike-leung/my-gptel-utils)
 
 (provide 'init-gptel)
