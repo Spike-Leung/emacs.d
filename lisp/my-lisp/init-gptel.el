@@ -77,6 +77,7 @@
   "Translate the selected region to English using gptel and replace it in the buffer.
 If no region is active, try to guess the sentence or paragraph at point."
   (interactive)
+  (require 'gptel)
   (let* ((has-region (use-region-p))
          (bounds
           (cond
@@ -92,28 +93,39 @@ If no region is active, try to guess the sentence or paragraph at point."
            (t (cons (point) (point)))))
          (start (car bounds))
          (end (cdr bounds))
-         (text (buffer-substring-no-properties start end))
-         (model 'openai/gpt-4.1-nano)
-         (backend (gptel-make-openai "OpenRouter"
-                    :host "openrouter.ai"
-                    :endpoint "/api/v1/chat/completions"
-                    :stream t
-                    :key (spike-leung/get-openrouter-api-key)
-                    :models spike-leung/openrouter-models)))
+         (text (buffer-substring-no-properties start end)))
     (if (string-blank-p text)
         (user-error "No text to translate")
-      (let ((gptel-backend backend)
-            (gptel-model model)
-            (gptel-use-tools nil)
-            (gptel-use-context nil))
-        (gptel-request
-            (format "Translate the following text to English:\n\n%s" text)
-          :callback (lambda (response _)
-                      (when response
-                        (save-excursion
-                          (delete-region start end)
-                          (goto-char start)
-                          (insert response)))))))))
+      (let ((openrouter-backend (gptel-make-openai "OpenRouter"
+                                  :host "openrouter.ai"
+                                  :endpoint "/api/v1/chat/completions"
+                                  :stream t
+                                  :key (spike-leung/get-openrouter-api-key)
+                                  :models spike-leung/openrouter-models))
+            (primary-model 'openai/gpt-4.1-nano)
+            (fallback-model 'google/gemini-2.0-flash-001))
+        (cl-labels
+            ((do-translate
+               (model)
+               (let ((gptel-backend openrouter-backend)
+                     (gptel-model model)
+                     (gptel-use-tools nil)
+                     (gptel-use-context nil))
+                 (gptel-request
+                     (format "Translate the following text to English:\n\n%s" text)
+                   :callback
+                   (lambda (response _)
+                     (if (and response (not (string-blank-p response)))
+                         (save-excursion
+                           (delete-region start end)
+                           (goto-char start)
+                           (insert response))
+                       (if (eq model primary-model)
+                           (progn
+                             (message "Primary model failed, retrying with fallback model...")
+                             (do-translate fallback-model))
+                         (message "Translation failed with both models."))))))))
+          (do-translate primary-model))))))
 
 ;;; keybindings
 (defvar spike-leung/my-gptel-utils (make-sparse-keymap)
