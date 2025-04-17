@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: html <mark>
+# key: m
+# --
+
+@@html:<mark>$0</mark>@@
