@@ -26,6 +26,7 @@
 (require 'init-modus-theme)
 (require 'init-my-dired)
 (require 'init-my-editing-utils)
+(require 'init-my-folding)
 (require 'init-my-javascript)
 (require 'init-my-markdown)
 (require 'init-my-misc)
