@@ -90,6 +90,7 @@
 **** [[https://feihu.me/blog/feed.atom][libfeihu Blog]]
 **** [[https://laike9m.com/blog/rss/][laike9m's blog]]
 **** [[https://lenband.com/feed/][冷板凳]]
+**** [[https://kuilz.github.io/index.xml][kuilz]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 
