@@ -178,7 +178,7 @@
 
 **** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]
 
-**** [[https://quail.ink/ameow/feed/atom][猫鱼周刊]]
+**** [[https://ameow.xyz/feed.xml][猫鱼周刊]]
 
 **** [[https://54321.versun.me/feed][54321 Weekly]]
 
@@ -203,7 +203,7 @@
 - email: 3hl5jx56nh55vdvwhoh1@kill-the-newsletter.com
 - rss url: https://kill-the-newsletter.com/feeds/3hl5jx56nh55vdvwhoh1.xml
 
-- [[https://weekly.lenband.com/][冷板凳周刊]]
+- https://bytes.dev/
 
 ** news & magazine                                                              :magazine:news:
 
