@@ -18,7 +18,8 @@
     (let* ((file (read-file-name "Select PNG file: " nil nil t nil
                                  (lambda (f) (string-match-p "\\.png\\'" f)))))
       (when (and file (file-exists-p file) (string-match-p "\\.png\\'" file))
-        (start-process "feh" nil "feh" "--reload" "1" file)))))
+        (message "file: %s" file)
+        (start-process "preview-mermaid" "*preview-mermaid*" "feh" "--reload" "1" (expand-file-name file))))))
 
 (provide 'init-mermaid)
 ;;; init-mermaid.el ends here
