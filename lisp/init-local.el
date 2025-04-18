@@ -23,6 +23,7 @@
 (require 'init-icons)
 (require 'init-kaomoji)
 (require 'init-magit)
+(require 'init-mermaid)
 (require 'init-modus-theme)
 (require 'init-my-dired)
 (require 'init-my-editing-utils)
