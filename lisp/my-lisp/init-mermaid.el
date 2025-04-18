@@ -12,7 +12,7 @@
 (add-to-list 'auto-mode-alist '("\\.mmd\\'" . mermaid-mode))
 
 (when *is-wsl*
-  (defun spike-leung/open-png-with-feh ()
+  (defun spike-leung/preview-mermaid-png ()
     "Prompt for a PNG file and open it with 'feh --reload 1'."
     (interactive)
     (let* ((file (read-file-name "Select PNG file: " nil nil t nil
