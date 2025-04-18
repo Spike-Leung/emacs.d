@@ -19,10 +19,11 @@
                                      "openrouter/anthropic/claude-3.7-sonnet:thinking"
                                      ;; deepseek
                                      "openrouter/deepseek/deepseek-r1"
-                                     "openrouter/deepseek/deepseek-chat"
                                      "openrouter/deepseek/deepseek-chat-v3-0324"
                                      ;; gemini
                                      "openrouter/google/gemini-2.0-flash-001"
+                                     "openrouter/google/gemini-2.5-flash-preview"
+                                     "openrouter/google/gemini-2.5-flash-preview:thinking"
                                      "openrouter/google/gemini-2.5-pro-preview-03-25"
                                      ;; openai
                                      "openrouter/openai/gpt-4o"
@@ -30,8 +31,6 @@
                                      "openrouter/openai/gpt-4.1"
                                      "openrouter/openai/gpt-4.1-mini"
                                      "openrouter/openai/gpt-4.1-nano"
-                                     ;; qwen
-                                     "openrouter/qwen/qwq-32b"
                                      ;; deepseek official
                                      "deepseek/deepseek-chat"
                                      ;; provide by siliconflow

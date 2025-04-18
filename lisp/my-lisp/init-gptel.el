@@ -7,8 +7,9 @@
 (defvar spike-leung/openrouter-models
   '(;; google
     google/gemini-2.0-flash-001
-    google/gemma-3-27b-it:free
     google/gemini-2.5-pro-preview-03-25
+    google/gemini-2.5-flash-preview
+    google/gemini-2.5-flash-preview:thinking
     ;; openai
     openai/gpt-4o
     openai/gpt-4o-mini
@@ -20,13 +21,7 @@
     anthropic/claude-3.7-sonnet:thinking
     ;; deepseek
     deepseek/deepseek-r1
-    deepseek/deepseek-chat
-    deepseek/deepseek-chat-v3-0324
-    ;; Mistral
-    mistralai/mistral-small-3.1-24b-instruct
-    ;; qwen
-    qwen/qwen-2.5-72b-instruct
-    qwen/qwq-32b)
+    deepseek/deepseek-chat-v3-0324)
   "List of available models for OpenRouter API.")
 
 (defvar spike-leung/siliconflow-models
@@ -106,7 +101,7 @@ With prefix argument, PROMPT is used as the translation prompt."
                                   :key (spike-leung/get-openrouter-api-key)
                                   :models spike-leung/openrouter-models))
             (primary-model 'openai/gpt-4.1-nano)
-            (fallback-model 'google/gemini-2.0-flash-001))
+            (fallback-model 'google/gemini-2.5-flash-preview))
         (cl-labels
             ((do-translate
                (model)
@@ -115,19 +110,19 @@ With prefix argument, PROMPT is used as the translation prompt."
                      (gptel-use-tools nil)
                      (gptel-use-context nil))
                  (gptel-request
-                     (format "%s\n\n%s" prompt-text text)
-                   :callback
-                   (lambda (response _)
-                     (if (and response (not (string-blank-p response)))
-                         (save-excursion
-                           (delete-region start end)
-                           (goto-char start)
-                           (insert response))
-                       (if (eq model primary-model)
-                           (progn
-                             (message "Primary model failed, retrying with fallback model...")
-                             (do-translate fallback-model))
-                         (message "Translation failed with both models."))))))))
+                  (format "%s\n\n%s" prompt-text text)
+                  :callback
+                  (lambda (response _)
+                    (if (and response (not (string-blank-p response)))
+                        (save-excursion
+                          (delete-region start end)
+                          (goto-char start)
+                          (insert response))
+                      (if (eq model primary-model)
+                          (progn
+                            (message "Primary model failed, retrying with fallback model...")
+                            (do-translate fallback-model))
+                        (message "Translation failed with both models."))))))))
           (do-translate primary-model))))))
 
 ;;; keybindings
