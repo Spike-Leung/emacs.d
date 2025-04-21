@@ -155,6 +155,7 @@ If a model is selected, it is memorized for next use."
               (gptel-log-level 'debug))
           (gptel-request
               (format "%s\n\n%s" prompt text)
+            :fsm (gptel-make-fsm :handlers gptel-send--handlers)
             :callback
             (lambda (response _)
               (if (and response (not (string-blank-p response)))
