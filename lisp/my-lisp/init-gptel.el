@@ -151,8 +151,7 @@ Always prompt the user to select or enter a prompt."
 (defvar spike-leung/my-gptel-utils (make-sparse-keymap)
   "Keymap for gptel utils commands.")
 
-(define-key spike-leung/my-gptel-utils (kbd "t") 'spike-leung/gptel-rewrite)
-(global-set-key (kbd "M-o u") spike-leung/my-gptel-utils)
+(global-set-key (kbd "M-o u") 'spike-leung/gptel-rewrite)
 
 (provide 'init-gptel)
 ;;; init-gptel.el ends here
