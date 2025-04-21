@@ -86,28 +86,41 @@ Each entry is (DISPLAY . PROMPT).The first entry is the default."
   :type '(alist :key-type string :value-type string)
   :group 'spike-leung)
 
-(defun spike-leung/gptel-rewrite (&optional prompt)
+(defvar spike-leung/gptel-rewrite-last-model 'google/gemini-2.5-flash-preview
+  "Last model used for `spike-leung/gptel-rewrite'.")
+
+(defun spike-leung/gptel-rewrite (&optional prompt model)
   "Rewrite the selected region using a customizable PROMPT.
-Always prompt the user to select or enter a prompt."
+Always prompt the user to select or enter a prompt.
+With optional MODEL (prefix arg), prompt for model, default is 'google/gemini-2.5-flash-preview.
+If a model is selected, it is memorized for next use."
   (interactive
-   (list
-    (let* ((seperator " - ")
-           (key-face `(:foreground ,(modus-themes-get-color-value 'green-cooler)))
-           (choices
-            (append
-             (mapcar (lambda (entry)
-                       (let ((key (car entry))
-                             (val (cdr entry)))
-                         (format "%s%s%s" (propertize key 'face key-face) seperator val)))
-                     spike-leung/custom-rewrite-prompts)
-             (list (propertize "Custom..." 'face key-face))))
-           (choice (completing-read "Choose rewrite prompt: " choices nil t)))
-      (if (string-equal choice "Custom...")
-          (read-string "Custom rewrite prompt: ")
-        ;; Extract the key from the formatted string
-        (let* ((key (car (split-string choice seperator)))
-               (found (assoc key spike-leung/custom-rewrite-prompts)))
-          (cdr found))))))
+   (let* ((seperator " - ")
+          (key-face `(:foreground ,(modus-themes-get-color-value 'green-cooler)))
+          (choices
+           (append
+            (mapcar (lambda (entry)
+                      (let ((key (car entry))
+                            (val (cdr entry)))
+                        (format "%s%s%s" (propertize key 'face key-face) seperator val)))
+                    spike-leung/custom-rewrite-prompts)
+            (list (propertize "Custom..." 'face key-face))))
+          (choice (completing-read "Choose rewrite prompt: " choices nil t))
+          (prompt-text (if (string-equal choice "Custom...")
+                           (read-string "Custom rewrite prompt: ")
+                         (let* ((key (car (split-string choice seperator)))
+                                (found (assoc key spike-leung/custom-rewrite-prompts)))
+                           (cdr found))))
+          (model (when current-prefix-arg
+                   (intern
+                    (completing-read
+                     (format "Choose model (default %s): "
+                             (symbol-name spike-leung/gptel-rewrite-last-model))
+                     (mapcar #'symbol-name spike-leung/openrouter-models)
+                     nil t
+                     nil nil
+                     (symbol-name spike-leung/gptel-rewrite-last-model))))))
+     (list prompt-text (or model spike-leung/gptel-rewrite-last-model))))
   (require 'gptel)
   (let* ((has-region (use-region-p))
          (bounds
@@ -124,8 +137,9 @@ Always prompt the user to select or enter a prompt."
            (t (cons (point) (point)))))
          (start (car bounds))
          (end (cdr bounds))
-         (text (buffer-substring-no-properties start end))
-         (prompt-text prompt))
+         (text (buffer-substring-no-properties start end)))
+    (when model
+      (setq spike-leung/gptel-rewrite-last-model model))
     (if (string-blank-p text)
         (user-error "No text to translate")
       (let ((openrouter-backend (gptel-make-openai "OpenRouter"
@@ -133,36 +147,24 @@ Always prompt the user to select or enter a prompt."
                                   :endpoint "/api/v1/chat/completions"
                                   :stream t
                                   :key (spike-leung/get-openrouter-api-key)
-                                  :models spike-leung/openrouter-models))
-            (primary-model 'openai/gpt-4.1-nano)
-            (fallback-model 'google/gemini-2.5-flash-preview))
-        (cl-labels
-            ((do-translate
-               (model)
-               (let ((gptel-backend openrouter-backend)
-                     (gptel-model model)
-                     (gptel-use-tools nil)
-                     (gptel-use-context nil))
-                 (gptel-request
-                     (format "%s\n\n%s" prompt-text text)
-                   :callback
-                   (lambda (response _)
-                     (if (and response (not (string-blank-p response)))
-                         (save-excursion
-                           (delete-region start end)
-                           (goto-char start)
-                           (insert response))
-                       (if (eq model primary-model)
-                           (progn
-                             (message "Primary model failed, retrying with fallback model...")
-                             (do-translate fallback-model))
-                         (message "Translation failed with both models."))))))))
-          (do-translate primary-model))))))
+                                  :models spike-leung/openrouter-models)))
+        (let ((gptel-backend openrouter-backend)
+              (gptel-model (or model spike-leung/gptel-rewrite-last-model))
+              (gptel-use-tools nil)
+              (gptel-use-context nil)
+              (gptel-log-level 'debug))
+          (gptel-request
+              (format "%s\n\n%s" prompt text)
+            :callback
+            (lambda (response _)
+              (if (and response (not (string-blank-p response)))
+                  (save-excursion
+                    (delete-region start end)
+                    (goto-char start)
+                    (insert response))
+                (message "Translation failed.")))))))))
 
 ;;; keybindings
-(defvar spike-leung/my-gptel-utils (make-sparse-keymap)
-  "Keymap for gptel utils commands.")
-
 (global-set-key (kbd "M-o u") 'spike-leung/gptel-rewrite)
 
 (provide 'init-gptel)
