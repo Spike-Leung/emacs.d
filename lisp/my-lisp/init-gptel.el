@@ -74,11 +74,12 @@
     ("Translate to Chinese" . "翻译成中文。对于翻译后的内容，中文和英文/数字之间要保留一个空格。需要翻译的文本: ")
     ("Format quotes" .
      "按照以下要求，格式化内容:
-1.移除英文
-2.在每个中文句号(。)换行，行与行之间需要添加一行空行
-3.如果存在中英文混合，中文和英文/数字之间需要保留一个空格
-4.如果涉及到人名，使用英文的名字
-5.如果涉及到缩写，需要在中文附近补充英文缩写和完整的英文，如最低合格读者 (MQR, Minimum Qualified Reader)
+- 如果存在英文和中文翻译，移除英文
+- 每行一个句子，在每个中文句号(。)换行
+- 行与行之间需要有一行空行，且最多一行空行，如果存在多行空行，请移除
+- 如果存在中英文混合，中文和英文/数字之间需要保留一个空格
+- 如果涉及到人名，使用英文的名字
+- 如果涉及到缩写，需要在中文附近补充英文缩写和完整的英文，如最低合格读者 (MQR, Minimum Qualified Reader)
 "))
   "Alist of translation prompt options for `spike-leung/gptel-rewrite'.
 Each entry is (DISPLAY . PROMPT).The first entry is the default."
