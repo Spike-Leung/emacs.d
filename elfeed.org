@@ -156,6 +156,9 @@
 ***** [[http://xahlee.info/comp/unicode_fun.xml][Xah unicode Blog]]
 ***** [[http://xahlee.info/comp/blog.xml][Xah Programing Blog]]
 ***** [[http://xahlee.info/js/blog.xml][Xah Web Dev Blog]]
+**** [[https://danq.me/feed/][Dan Q]]
+**** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
+**** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
