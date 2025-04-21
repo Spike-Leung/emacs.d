@@ -91,6 +91,7 @@
 **** [[https://laike9m.com/blog/rss/][laike9m's blog]]
 **** [[https://lenband.com/feed/][冷板凳]]
 **** [[https://kuilz.github.io/index.xml][kuilz]]
+**** [[https://cbvivi.today/feed.xml][cbvivi]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 
@@ -197,6 +198,8 @@
 
 **** [[https://haikuoshijie.cn/feed][小棉袄的百味人生]]
 **** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]
+**** [[https://nicetrypod.com/feed/audio.xml][Nice Try]]
+
 ** kill-the-newsletter                                                          :newsletter:
 
 *** [[https://kill-the-newsletter.com/feeds/3hl5jx56nh55vdvwhoh1.xml][kill-the-newsletter@taxodium]]
