@@ -71,7 +71,7 @@
 
 (defcustom spike-leung/custom-rewrite-prompts
   '(("Translate" . "Translate the following text to English:")
-    ("Translate to Chinese" . "将以下文本翻译成中文：")
+    ("Translate to Chinese" . "翻译成中文。对于翻译后的内容，中文和英文/数字之间要保留一个空格。需要翻译的文本: ")
     ("Format quotes" .
      "按照以下要求，格式化内容:
 1.移除英文
@@ -90,12 +90,23 @@ Each entry is (DISPLAY . PROMPT).The first entry is the default."
 Always prompt the user to select or enter a prompt."
   (interactive
    (list
-    (let* ((choices (append (mapcar #'car spike-leung/custom-rewrite-prompts)
-                            '("Custom...")))
+    (let* ((seperator " - ")
+           (key-face `(:foreground ,(modus-themes-get-color-value 'green-cooler)))
+           (choices
+            (append
+             (mapcar (lambda (entry)
+                       (let ((key (car entry))
+                             (val (cdr entry)))
+                         (format "%s%s%s" (propertize key 'face key-face) seperator val)))
+                     spike-leung/custom-rewrite-prompts)
+             (list (propertize "Custom..." 'face key-face))))
            (choice (completing-read "Choose rewrite prompt: " choices nil t)))
       (if (string-equal choice "Custom...")
           (read-string "Custom rewrite prompt: ")
-        (cdr (assoc choice spike-leung/custom-rewrite-prompts))))))
+        ;; Extract the key from the formatted string
+        (let* ((key (car (split-string choice seperator)))
+               (found (assoc key spike-leung/custom-rewrite-prompts)))
+          (cdr found))))))
   (require 'gptel)
   (let* ((has-region (use-region-p))
          (bounds
