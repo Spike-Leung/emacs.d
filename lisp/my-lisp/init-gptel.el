@@ -146,14 +146,24 @@ Each entry is (DISPLAY . PROMPT).The first entry is the default."
 (defvar spike-leung/gptel-rewrite-last-model 'google/gemini-2.5-flash-preview
   "Last model used for `spike-leung/gptel-rewrite'.")
 
-(defun spike-leung/gptel-rewrite (&optional prompt model)
-  "Rewrite the selected region using a customizable PROMPT.
-Always prompt the user to select or enter a prompt.
-With optional MODEL (prefix arg), prompt for model, default is 'google/gemini-2.5-flash-preview.
+(defun spike-leung/gptel-rewrite (model &optional prompt)
+  "Rewrite region or `thing-at-point' using a customizable PROMPT and MODEL.
+If called without prefix, use the default model
+`spike-leung/gptel-rewrite-last-model'.
 If a model is selected, it is memorized for next use."
   (interactive
    (let* ((seperator " - ")
           (key-face `(:foreground ,(modus-themes-get-color-value 'green-cooler)))
+          (model (if current-prefix-arg
+                     (intern
+                      (completing-read
+                       (format "Choose model (default %s): "
+                               (symbol-name spike-leung/gptel-rewrite-last-model))
+                       (mapcar #'symbol-name spike-leung/openrouter-models)
+                       nil t
+                       nil nil
+                       (symbol-name spike-leung/gptel-rewrite-last-model)))
+                   spike-leung/gptel-rewrite-last-model))
           (choices
            (append
             (mapcar (lambda (entry)
@@ -168,16 +178,8 @@ If a model is selected, it is memorized for next use."
                          (let* ((key (car (split-string choice seperator)))
                                 (found (assoc key spike-leung/custom-rewrite-prompts)))
                            (cdr found))))
-          (model (when current-prefix-arg
-                   (intern
-                    (completing-read
-                     (format "Choose model (default %s): "
-                             (symbol-name spike-leung/gptel-rewrite-last-model))
-                     (mapcar #'symbol-name spike-leung/openrouter-models)
-                     nil t
-                     nil nil
-                     (symbol-name spike-leung/gptel-rewrite-last-model))))))
-     (list prompt-text (or model spike-leung/gptel-rewrite-last-model))))
+          )
+     (list model prompt-text)))
   (require 'gptel)
   (let* ((has-region (use-region-p))
          (bounds
@@ -206,7 +208,7 @@ If a model is selected, it is memorized for next use."
                                   :key (spike-leung/get-openrouter-api-key)
                                   :models spike-leung/openrouter-models)))
         (let ((gptel-backend openrouter-backend)
-              (gptel-model (or model spike-leung/gptel-rewrite-last-model))
+              (gptel-model model)
               (gptel-use-tools nil)
               (gptel-use-context nil)
               (gptel-log-level 'debug))
