@@ -31,7 +31,7 @@
     <li><a href=\"/rss.xml\">订阅</a></li>
     <li><a href=\"/search.html\">搜索</a></li>
   </ul>
-  <select onchange=\"switchMode(this.value)\" id=\"lightdark\">
+  <select onchange=\"switchMode(this.value)\" id=\"lightdark\" class=\"js-required\">
     <option value=\"auto\">Auto</option>
     <option value=\"light\">Light</option>
     <option value=\"dark\">Dark</option>
@@ -75,6 +75,13 @@
         crossorigin=\"anonymous\"
         async>
 </script>
+<noscript>
+  <style>
+    .js-required {
+       display: none;
+     }
+  </style>
+</noscript>
 "
   "`:html-postamble' for `org-publish'.")
 
