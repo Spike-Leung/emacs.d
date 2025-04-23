@@ -160,6 +160,8 @@
 **** [[https://danq.me/feed/][Dan Q]]
 **** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
 **** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]
+**** [[https://feeds.feedburner.com/thoughtsfromtheredplanet?format=xml][thoughts from the red planet]]
+**** [[https://overreacted.io/rss.xml][overreacted]]                                                                :frontend:react:
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
