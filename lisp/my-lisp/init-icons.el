@@ -3,6 +3,7 @@
 ;;; Code:
 
 (when (maybe-require-package 'nerd-icons)
+  (require 'nerd-icons)
   (maybe-require-package 'nerd-icons-dired)
   (maybe-require-package 'nerd-icons-ibuffer)
   (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
