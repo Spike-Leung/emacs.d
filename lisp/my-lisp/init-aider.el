@@ -31,6 +31,9 @@
                                      "openrouter/openai/gpt-4.1"
                                      "openrouter/openai/gpt-4.1-mini"
                                      "openrouter/openai/gpt-4.1-nano"
+                                     ;; qwen
+                                     "openrouter/qwen/qwen3-235b-a22b"
+                                     "openrouter/qwen/qwen3-30b-a3b"
                                      ;; deepseek official
                                      "deepseek/deepseek-chat"
                                      ;; provide by siliconflow

@@ -21,7 +21,10 @@
     anthropic/claude-3.7-sonnet:thinking
     ;; deepseek
     deepseek/deepseek-r1
-    deepseek/deepseek-chat-v3-0324)
+    deepseek/deepseek-chat-v3-0324
+    ;; qwen
+    qwen/qwen3-235b-a22b
+    qwen/qwen3-30b-a3b)
   "List of available models for OpenRouter API.")
 
 (defvar spike-leung/siliconflow-models
