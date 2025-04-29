@@ -4,28 +4,7 @@
 
 (maybe-require-package 'gptel)
 
-(defvar spike-leung/openrouter-models
-  '(;; google
-    google/gemini-2.0-flash-001
-    google/gemini-2.5-pro-preview-03-25
-    google/gemini-2.5-flash-preview
-    google/gemini-2.5-flash-preview:thinking
-    ;; openai
-    openai/gpt-4o
-    openai/gpt-4o-mini
-    openai/gpt-4.1
-    openai/gpt-4.1-mini
-    openai/gpt-4.1-nano
-    ;; anthropic
-    anthropic/claude-3.7-sonnet
-    anthropic/claude-3.7-sonnet:thinking
-    ;; deepseek
-    deepseek/deepseek-r1
-    deepseek/deepseek-chat-v3-0324
-    ;; qwen
-    qwen/qwen3-235b-a22b
-    qwen/qwen3-30b-a3b)
-  "List of available models for OpenRouter API.")
+(require 'init-openrouter-models)
 
 (defvar spike-leung/siliconflow-models
   '(Pro/deepseek-ai/DeepSeek-R1
@@ -54,7 +33,7 @@
       :endpoint "/api/v1/chat/completions"
       :stream t
       :key (spike-leung/get-openrouter-api-key)
-      :models spike-leung/openrouter-models)
+      :models #'spike-leung/get-openrouter-models)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
     ;; set default
     (setq gptel-model   'google/gemini-2.5-flash-preview:thinking
@@ -64,7 +43,16 @@
             :endpoint "/api/v1/chat/completions"
             :stream t
             :key (spike-leung/get-openrouter-api-key)
-            :models spike-leung/openrouter-models))))
+            :models #'spike-leung/get-openrouter-models))))
+
+(defun spike-leung/gptel-ensure-openrouter-models (&rest _args)
+  (unless spike-leung/openrouter-models
+    (spike-leung/get-openrouter-models
+     nil
+     (lambda (models)
+       (setq spike-leung/openrouter-models models)))))
+
+(advice-add 'spike-leung/gptel-rewrite :before #'spike-leung/gptel-ensure-openrouter-models)
 
 (global-set-key (kbd "M-o g") 'gptel-menu)
 

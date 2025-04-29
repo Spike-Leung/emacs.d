@@ -1,8 +1,7 @@
 ;;; init-aider.el --- aider -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
-
-(eval-after-load 'aider (message "aider"))
+(require 'init-openrouter-models)
 
 (when (maybe-require-package 'aider)
   (with-eval-after-load 'init-auth
@@ -15,30 +14,19 @@
         (setenv "OPENAI_API_BASE" "https://api.siliconflow.cn")
         (setenv "OPENROUTER_API_KEY" (spike-leung/get-openrouter-api-key))
         (setq aider-args '("--no-auto-commits" "--model" "openrouter/openai/gpt-4.1"))
-        (setq aider-popular-models '("openrouter/anthropic/claude-3.7-sonnet"
-                                     "openrouter/anthropic/claude-3.7-sonnet:thinking"
-                                     ;; deepseek
-                                     "openrouter/deepseek/deepseek-r1"
-                                     "openrouter/deepseek/deepseek-chat-v3-0324"
-                                     ;; gemini
-                                     "openrouter/google/gemini-2.0-flash-001"
-                                     "openrouter/google/gemini-2.5-flash-preview"
-                                     "openrouter/google/gemini-2.5-flash-preview:thinking"
-                                     "openrouter/google/gemini-2.5-pro-preview-03-25"
-                                     ;; openai
-                                     "openrouter/openai/gpt-4o"
-                                     "openrouter/openai/gpt-4o-mini"
-                                     "openrouter/openai/gpt-4.1"
-                                     "openrouter/openai/gpt-4.1-mini"
-                                     "openrouter/openai/gpt-4.1-nano"
-                                     ;; qwen
-                                     "openrouter/qwen/qwen3-235b-a22b"
-                                     "openrouter/qwen/qwen3-30b-a3b"
-                                     ;; deepseek official
-                                     "deepseek/deepseek-chat"
-                                     ;; provide by siliconflow
-                                     "openai/Pro/deepseek-ai/DeepSeek-V3"))
-        (global-set-key (kbd "M-o a") 'aider-transient-menu)))))
+        ;; Use advice to lazy-load models before menu
+        (advice-add 'aider-transient-menu :before #'spike-leung/aider-ensure-models)))
+
+    (global-set-key (kbd "M-o a") 'aider-transient-menu)))
+
+(defun spike-leung/aider-ensure-models (&rest _args)
+  "Ensure `aider-popular-models` is set from OpenRouter models."
+  (unless aider-popular-models
+    (spike-leung/get-openrouter-models
+     nil
+     (lambda (models)
+       (setq aider-popular-models
+             (mapcar (lambda (m) (concat "openrouter/" (symbol-name m))) models))))))
 
 (add-hook 'aider-comint-mode-hook (lambda ()
                                     (set-face-attribute 'comint-highlight-prompt nil :foreground (modus-themes-get-color-value 'green-cooler))
