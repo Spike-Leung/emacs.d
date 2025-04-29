@@ -33,7 +33,7 @@
       :endpoint "/api/v1/chat/completions"
       :stream t
       :key (spike-leung/get-openrouter-api-key)
-      :models #'spike-leung/get-openrouter-models)
+      :models spike-leung/openrouter-models-cache)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
     ;; set default
     (setq gptel-model   'google/gemini-2.5-flash-preview:thinking
@@ -43,20 +43,9 @@
             :endpoint "/api/v1/chat/completions"
             :stream t
             :key (spike-leung/get-openrouter-api-key)
-            :models #'spike-leung/get-openrouter-models))))
-
-(defun spike-leung/gptel-ensure-openrouter-models (&rest _args)
-  (unless spike-leung/openrouter-models
-    (spike-leung/get-openrouter-models
-     nil
-     (lambda (models)
-       (setq spike-leung/openrouter-models models)))))
-
-(advice-add 'spike-leung/gptel-rewrite :before #'spike-leung/gptel-ensure-openrouter-models)
+            :models spike-leung/openrouter-models-cache))))
 
 (global-set-key (kbd "M-o g") 'gptel-menu)
-
-
 
 ;;; some helpful utils use gptel
 
@@ -78,7 +67,7 @@ If a model is selected, it is memorized for next use."
                       (completing-read
                        (format "Choose model (default %s): "
                                (symbol-name spike-leung/gptel-rewrite-last-model))
-                       (mapcar #'symbol-name spike-leung/openrouter-models)
+                       (mapcar #'symbol-name spike-leung/openrouter-models-cache)
                        nil t
                        nil nil
                        (symbol-name spike-leung/gptel-rewrite-last-model)))
@@ -125,7 +114,7 @@ If a model is selected, it is memorized for next use."
                                   :endpoint "/api/v1/chat/completions"
                                   :stream t
                                   :key (spike-leung/get-openrouter-api-key)
-                                  :models spike-leung/openrouter-models)))
+                                  :models spike-leung/openrouter-models-cache)))
         (let ((gptel-backend openrouter-backend)
               (gptel-model model)
               (gptel-use-tools nil)

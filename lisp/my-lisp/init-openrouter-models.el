@@ -38,6 +38,7 @@ If CALLBACK is non-nil, call it with the models list."
 (defun spike-leung/get-openrouter-models (&optional force-refresh callback)
   "Get cached OpenRouter models, refresh if cache is old or FORCE-REFRESH.
 If CALLBACK is non-nil, call it with the models list (async)."
+  (interactive)
   (if (or force-refresh
           (null spike-leung/openrouter-models-cache)
           (null spike-leung/openrouter-models-cache-timestamp)
@@ -46,6 +47,9 @@ If CALLBACK is non-nil, call it with the models list (async)."
       (spike-leung/fetch-openrouter-models callback)
     (when callback (funcall callback spike-leung/openrouter-models-cache))
     spike-leung/openrouter-models-cache))
+
+;; init
+(spike-leung/get-openrouter-models nil)
 
 (provide 'init-openrouter-models)
 ;;; init-openrouter-models.el ends here
