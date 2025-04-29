@@ -20,13 +20,13 @@
     (global-set-key (kbd "M-o a") 'aider-transient-menu)))
 
 (defun spike-leung/aider-ensure-models (&rest _args)
-  "Ensure `aider-popular-models` is set from OpenRouter models."
-  (unless aider-popular-models
-    (spike-leung/get-openrouter-models
-     nil
-     (lambda (models)
-       (setq aider-popular-models
-             (mapcar (lambda (m) (concat "openrouter/" (symbol-name m))) models))))))
+  "Set `aider-popular-models` from OpenRouter models cache."
+  (unless spike-leung/openrouter-models-cache
+    (spike-leung/get-openrouter-models))
+  (when spike-leung/openrouter-models-cache
+    (setq aider-popular-models
+          (mapcar (lambda (m) (concat "openrouter/" (symbol-name m)))
+                  spike-leung/openrouter-models-cache))))
 
 (add-hook 'aider-comint-mode-hook (lambda ()
                                     (set-face-attribute 'comint-highlight-prompt nil :foreground (modus-themes-get-color-value 'green-cooler))
