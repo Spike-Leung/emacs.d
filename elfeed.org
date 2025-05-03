@@ -155,9 +155,6 @@
 **** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
 **** xah                                                                        :xah:
 ***** [[http://xahlee.info/emacs/emacs/blog.xml][Xah Emacs Blog]]
-***** [[http://xahlee.info/comp/unicode_fun.xml][Xah unicode Blog]]
-***** [[http://xahlee.info/comp/blog.xml][Xah Programing Blog]]
-***** [[http://xahlee.info/js/blog.xml][Xah Web Dev Blog]]
 **** [[https://danq.me/feed/][Dan Q]]
 **** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
 **** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]
@@ -170,6 +167,7 @@
 **** [[https://jetgirl.art/rss/][JetGirlArt]]
 **** [[https://thelogicaloptimist.com/index.php/blog/feed/][The Logical Optimist]]
 **** [[https://blog.videah.net/atom.xml][videah's blog]]
+**** [[https://feeds.feedburner.com/FunctioningForm][LukeW]]                                                                      :design:
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
