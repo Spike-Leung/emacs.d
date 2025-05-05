@@ -163,6 +163,13 @@
 **** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]
 **** [[https://feeds.feedburner.com/thoughtsfromtheredplanet?format=xml][thoughts from the red planet]]
 **** [[https://overreacted.io/rss.xml][overreacted]]                                                                :frontend:react:
+**** [[https://jasonfantl.com/feed.xml][Jason Fantl]]
+**** [[https://seths.blog/feed/][SETH'S BLOG]]
+**** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
+**** [[https://www.codesimplicity.com/feed/][Code Simplicity]]
+**** [[https://jetgirl.art/rss/][JetGirlArt]]
+**** [[https://thelogicaloptimist.com/index.php/blog/feed/][The Logical Optimist]]
+**** [[https://blog.videah.net/atom.xml][videah's blog]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
