@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: 图片描述
+# key: ca
+# --
+
+#+CAPTION: $0 (图片来源：$1)
