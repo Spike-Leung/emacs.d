@@ -4,15 +4,10 @@
 *** Chinese
 
 **** [[https://taxodium.ink/rss.xml][taxodium]]
-
 **** [[https://anotherdayu.com/feed/][Another Dayu]]
-
 **** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
-
 **** [[https://www.owenyoung.com/atom.xml][owenyoung]]
-
 **** [[https://z.arlmy.me/atom.xml][素生]]
-
 **** [[https://1q43.blog/feed/][虹线]]
 **** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
 **** [[https://www.geedea.pro/index.xml][極客死亡計劃]]
@@ -20,64 +15,35 @@
 **** [[https://www.icebeer.top/feed/][IceBeer]]
 **** [[https://yinji.org/feed][印记]]
 **** [[https://diygod.cc/feed][DIYgod]]
-
 **** [[https://manateelazycat.github.io/feed.xml][Andy Stewart]]
-
 **** [[https://innei.in/feed][静かな森]]
-
 **** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
-
 **** [[https://atlas.xlog.app/feed][Atlas's 周记]]
-
 **** [[https://www.lxchapu.com/rss.xml][柃夏 chapu‘s blog]]
-
 **** [[https://lutaonan.com/rss.xml][Randy's Blog]]
-
 **** [[https://blog.pursuitus.com/feed][Ouroboros]]
-
 **** [[https://blog.douchi.space/index.xml][椒盐豆豉]]
-
 **** [[https://justgoidea.com/rss.xml][槿呈 Goidea]]
-
 **** [[https://spacexcode.com/blog/rss.xml][太空编程 Blog]]
-
 **** [[https://veryjack.com/feed/][Jack‘s Space]]
-
 **** [[https://www.parkerchang.life/feed.xml][arker Chang's Web]]
-
 **** [[https://conge.livingwithfcs.org/feed.xml][Conge]]
-
 **** [[https://feed.8620.uk/zh][Chise Hachiroku]]
-
 **** [[https://www.less-bug.com//index.xml][Less Bug]]
-
 **** [[https://mazzzystar.github.io/atom.xml][TL;DR]]
-
 **** [[https://atpx.com/feed.xml][atpX]]
-
 **** [[https://antfu.me/feed.xml][Anthony Fu]]
-
 **** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]
-
 **** [[https://www.yoghurtlee.com/index.xml][园子里的日光]]
-
 **** [[https://www.changhai.org/feed.xml][卢昌海个人主页]]
 **** [[https://www.wikimoe.com/rss][维基萌]]
-
 **** [[https://xuanwo.io/index.xml][Xuanwo's Blog]]
-
 **** [[https://yipai.me/feed][一派胡言]]
-
 **** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                     :frontend:
-
 **** [[https://www.linnana.me/feed.xml][不二木子]]
-
 **** [[https://polebug.github.io/atom.xml][Polebug - 保持思考、等待、斋戒]]
-
 **** [[https://lhasa.icu/rss.xml][游钓四方]]
-
 **** [[https://blog.solazy.me/feed/][So!azy]]
-
 **** [[https://tianxianzi.me/atom.xml][天仙子]]
 
 国内网络似乎无法打开
@@ -95,61 +61,33 @@
 **** [[https://blog.gzj.life/zh-cn/index.xml][ISouthRain Blog]]                                                            :emacs:
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
-
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
-
 **** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                          :writing:emacs:
-
 **** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
-
 **** [[https://jvns.ca/atom.xml][Julia Evans]]
-
 **** [[https://rachelbythebay.com/w/atom.xml][rachelbythebay]]                                                             :writing:
-
 **** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]                                                         :css:web:frontend:
-
 **** [[https://css-irl.info/rss.xml][CSS In Real Life]]                                                           :css:web:frontend:
-
 **** [[https://bilibi.li/feed.rss][midnight serial experiments]]
-
 **** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]                                                           :frontend:css:web:
-
 **** [[https://garden.bradwoods.io/rss.xml][Brad Woods Digital Garden]]
-
 **** [[https://expensive.toys/rss.xml][Artur Bień]]                                                                 :emacs:css:
-
 **** [[https://blakewatson.com/feed.xml][Blake Watson]]
-
 **** [[https://xenodium.com/rss.xml][Alvaro Ramirez's notes]]                                                     :emacs:
-
 **** [[https://technicalwriting.dev/rss.xml][technicalwriting.dev]]
-
 **** [[https://kristofferbalintona.me/index.xml][Kristoffer Balintona]]                                                       :emacs:emacs:
-
 **** [[http://antirez.com/rss][<antirez>]]                                                                  :programing:llm:
-
 **** [[https://markentier.tech/feed.rss.xml][markentier.tech]]
-
 **** [[https://fhur.me/feed.xml][fhur's blog]]
-
 **** [[https://ayu.land/revlog#feed][Sweetfish Ayu]]                                                              :kawai:
-
 **** [[https://bitfieldconsulting.com/posts?format=rss][Bitfield Consulting]]
-
 **** [[https://emacsninja.com/emacs.atom][Vasilij Schneidermann]]                                                      :emacs:
-
 **** [[https://scripter.co/index.xml][A Scripter's Notes]]                                                         :emacs:
-
 **** [[https://www.autodidacts.io/rss/][The Autodidacts]]
-
 **** [[https://ferd.ca/feed.rss][Ferd.ca]]                                                                    :programing:
-
 **** [[https://ploum.net/atom_en.xml][Ploum.net]]                                                                  :programing:
-
 **** [[https://arne.me/weekly/feed.xml][Arne’s Weekly]]
-
 **** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]                                                        :writing:
-
 **** [[https://randomascii.wordpress.com/feed/][Random ASCII – tech blog of Bruce Dawson]]
 **** [[https://blog.cr.yp.to/feed.application=xml][D. J. Bernstein's personal weblog.]]
 **** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
@@ -168,6 +106,7 @@
 **** [[https://thelogicaloptimist.com/index.php/blog/feed/][The Logical Optimist]]
 **** [[https://blog.videah.net/atom.xml][videah's blog]]
 **** [[https://feeds.feedburner.com/FunctioningForm][LukeW]]                                                                      :design:
+**** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
