@@ -13,7 +13,7 @@
         (setenv "OPENAI_API_KEY" (spike-leung/get-siliconflow-api-key))
         (setenv "OPENAI_API_BASE" "https://api.siliconflow.cn")
         (setenv "OPENROUTER_API_KEY" (spike-leung/get-openrouter-api-key))
-        (setq aider-args '("--no-auto-commits" "--model" "openrouter/openai/gpt-4.1"))
+        (setq aider-args '("--no-auto-commits" "--model" "openrouter/google/gemini-2.5-pro-preview"))
         ;; Use advice to lazy-load models before menu
         (advice-add 'aider-transient-menu :before #'spike-leung/aider-ensure-models)))
 
