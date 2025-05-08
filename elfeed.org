@@ -91,7 +91,7 @@
 **** [[https://randomascii.wordpress.com/feed/][Random ASCII – tech blog of Bruce Dawson]]
 **** [[https://blog.cr.yp.to/feed.application=xml][D. J. Bernstein's personal weblog.]]
 **** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
-**** xah                                                                        :xah:
+**** xah                                                                        :xah:ignore:
 ***** [[http://xahlee.info/emacs/emacs/blog.xml][Xah Emacs Blog]]
 **** [[https://danq.me/feed/][Dan Q]]
 **** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
