@@ -5,8 +5,8 @@
 (require 'json)
 (require 'url)
 
-(defvar spike-leung/openrouter-models-cache nil
-  "Cached list of OpenRouter models as symbols.")
+(defvar spike-leung/openrouter-models-cache '()
+  "Cached list of OpenRouter models as symbols. Initialized to an empty list.")
 
 (defvar spike-leung/openrouter-models-cache-timestamp nil
   "Timestamp (float) of last OpenRouter models cache.")
@@ -15,9 +15,13 @@
   "Time-to-live for OpenRouter models cache, in seconds."
   :type 'integer)
 
+(defvar spike-leung/openrouter-models-updated-hook nil
+  "Hook run after OpenRouter models are fetched and cache is updated.")
+
 (defun spike-leung/fetch-openrouter-models (&optional callback)
   "Fetch the list of models from OpenRouter API and cache them.
-If CALLBACK is non-nil, call it with the models list."
+If CALLBACK is non-nil, call it with the models list.
+Runs `spike-leung/openrouter-models-updated-hook` after updating cache."
   (let ((url-request-method "GET")
         (url "https://openrouter.ai/api/v1/models"))
     (url-retrieve
@@ -32,6 +36,9 @@ If CALLBACK is non-nil, call it with the models list."
                               (alist-get 'data data))))
          (setq spike-leung/openrouter-models-cache models)
          (setq spike-leung/openrouter-models-cache-timestamp (float-time))
+
+         (run-hooks 'spike-leung/openrouter-models-updated-hook)
+
          (when callback (funcall callback models))
          (message "OpenRouter models updated: %s" (length models)))))))
 
@@ -40,13 +47,19 @@ If CALLBACK is non-nil, call it with the models list."
 If CALLBACK is non-nil, call it with the models list (async)."
   (interactive)
   (if (or force-refresh
-          (null spike-leung/openrouter-models-cache)
+          (null spike-leung/openrouter-models-cache) ; This is true if cache is '()
           (null spike-leung/openrouter-models-cache-timestamp)
           (> (- (float-time) spike-leung/openrouter-models-cache-timestamp)
              spike-leung/openrouter-models-cache-ttl))
       (spike-leung/fetch-openrouter-models callback)
-    (when callback (funcall callback spike-leung/openrouter-models-cache))
-    spike-leung/openrouter-models-cache))
+    (progn
+      (when callback (funcall callback spike-leung/openrouter-models-cache))
+      ;; If cache is valid and callback exists, still run the hook
+      ;; in case the consumer wants to react even if no fetch occurred.
+      ;; However, the primary use case is after a fetch.
+      ;; For now, let's only run hook after actual fetch/update.
+      ;; If needed, this can be revisited.
+      spike-leung/openrouter-models-cache)))
 
 ;; init
 (spike-leung/get-openrouter-models nil)
