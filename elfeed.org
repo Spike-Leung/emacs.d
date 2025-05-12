@@ -93,7 +93,7 @@
 **** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
 **** xah                                                                        :xah:ignore:
 ***** [[http://xahlee.info/emacs/emacs/blog.xml][Xah Emacs Blog]]
-**** [[https://danq.me/feed/][Dan Q]]
+**** [[https://danq.me/feed/][Dan Q]]                                                                      :ignore:
 **** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
 **** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]
 **** [[https://feeds.feedburner.com/thoughtsfromtheredplanet?format=xml][thoughts from the red planet]]
@@ -164,7 +164,7 @@
 
 *** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
 
-*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]
+*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :ignore:
 
 *** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]
 
