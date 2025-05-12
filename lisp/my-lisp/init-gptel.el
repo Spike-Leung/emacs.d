@@ -152,18 +152,13 @@ If a model is selected, it is memorized for next use."
       (setq spike-leung/gptel-rewrite-last-model model))
     (if (string-blank-p text)
         (user-error "No text to translate")
-      ;; It's better to use the gptel-backend that is already configured
-      ;; or select the "OpenRouter" provider by name if needed,
-      ;; rather than recreating it here.
-      ;; The hook should ensure the main "OpenRouter" provider is up-to-date.
-      (let ((gptel-model model) ; gptel-model should be set to the chosen OpenRouter model
-            ;; Ensure gptel-backend is set to the "OpenRouter" provider
-            ;; if the chosen model is an OpenRouter model.
-            ;; For simplicity, assuming if a model from spike-leung/openrouter-models-cache
-            ;; is chosen, we want to use the OpenRouter backend.
-            (gptel-backend (if (memq model spike-leung/openrouter-models-cache)
-                               (gptel-provider "OpenRouter") ; Get the configured OpenRouter provider
-                             gptel-backend)) ; Otherwise, use the current default
+      (let ((gptel-model model)
+            (gptel-backend (gptel-make-openai "OpenRouter"
+                             :host "openrouter.ai"
+                             :endpoint "/api/v1/chat/completions"
+                             :stream t
+                             :key (spike-leung/get-openrouter-api-key)
+                             :models spike-leung/openrouter-models-cache)) ; Otherwise, use the current default
             (gptel-use-tools nil)
             (gptel-use-context nil)
             (gptel-log-level 'debug))
@@ -174,16 +169,16 @@ If a model is selected, it is memorized for next use."
           ;; or the (gptel-provider "OpenRouter") call above.
           )
         (gptel-request
-         (format "%s\n\n%s" prompt text)
-         :fsm (gptel-make-fsm :handlers gptel-send--handlers)
-         :callback
-         (lambda (response _)
-           (if (and response (not (string-blank-p response)))
-               (save-excursion
-                 (delete-region start end)
-                 (goto-char start)
-                 (insert response))
-             (message "Translation failed."))))))))
+            (format "%s\n\n%s" prompt text)
+          :fsm (gptel-make-fsm :handlers gptel-send--handlers)
+          :callback
+          (lambda (response _)
+            (if (and response (not (string-blank-p response)))
+                (save-excursion
+                  (delete-region start end)
+                  (goto-char start)
+                  (insert response))
+              (message "Translation failed."))))))))
 
 ;;; keybindings
 (global-set-key (kbd "M-o u") 'spike-leung/gptel-rewrite)
