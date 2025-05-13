@@ -1,4 +1,4 @@
-;;; init-modus-theme.el --- modus-theme customisations -*- lexical-binding: t -*-
+;;; init-my-theme.el --- my-theme customisations -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -49,7 +49,8 @@
 
 ;; Load the theme of your choice:
 (load-theme 'modus-vivendi :no-confirm)
-(enable-theme 'modus-vivendi)
+(load-theme 'ef-dream :no-confirm)
+(enable-theme 'ef-dream)
 
 ;;; theme related
 ;; @see: https://emacsredux.com/blog/2025/02/03/clean-unloading-of-emacs-themes/
@@ -59,5 +60,5 @@
   (dolist (theme custom-enabled-themes)
     (disable-theme theme)))
 
-(provide 'init-modus-theme)
-;;; init-modus-theme.el ends here
+(provide 'init-my-theme)
+;;; init-my-theme.el ends here
