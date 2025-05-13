@@ -59,6 +59,7 @@
 **** [[https://kuilz.github.io/index.xml][kuilz]]
 **** [[https://cbvivi.today/feed.xml][cbvivi]]
 **** [[https://blog.gzj.life/zh-cn/index.xml][ISouthRain Blog]]                                                            :emacs:
+**** [[https://jt26wzz.com/rss.xml][从不说安全词]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
