@@ -107,6 +107,7 @@
 **** [[https://blog.videah.net/atom.xml][videah's blog]]
 **** [[https://feeds.feedburner.com/FunctioningForm][LukeW]]                                                                      :design:
 **** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]
+**** [[https://matklad.github.io/feed.xml][matklad]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
