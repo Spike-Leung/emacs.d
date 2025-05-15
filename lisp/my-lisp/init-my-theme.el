@@ -4,6 +4,8 @@
 
 (maybe-require-package 'modus-themes)
 (maybe-require-package 'ef-themes)
+(maybe-require-package 'gruvbox-theme)
+(maybe-require-package 'monokai-pro-theme)
 
 ;;; spacious-padding
 ;; (maybe-require-package 'spacious-padding)
