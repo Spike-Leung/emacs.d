@@ -109,6 +109,7 @@
 **** [[https://feeds.feedburner.com/FunctioningForm][LukeW]]                                                                      :design:
 **** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]
 **** [[https://matklad.github.io/feed.xml][matklad]]
+**** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
