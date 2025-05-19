@@ -307,5 +307,11 @@ If its assigned to a key it saves you marking the text and copying to the killri
 (require 'org-protocol)
 (require 'org-protocol-capture-html)
 
+;; 让中文也可以不加空格就使用行内格式, see: https://emacs-china.org/t/orgmode/9740/14
+(setcar (nthcdr 0 org-emphasis-regexp-components) " \t('\"{[:nonascii:]")
+(setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[[:nonascii:]")
+(org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
+(org-element-update-syntax)
+
 (provide 'init-my-org)                  ;
 ;;; init-my-org.el ends here
