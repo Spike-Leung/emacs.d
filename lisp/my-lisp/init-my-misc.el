@@ -139,6 +139,7 @@ Then generate a #+begin_export html block with an iframe, replacing any existing
 
 ;;; outline-mode
 (setq outline-minor-mode-cycle t)
+(setq text-mode-ispell-word-completion nil)
 
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
