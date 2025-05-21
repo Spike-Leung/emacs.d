@@ -14,7 +14,6 @@
 (require 'init-auth)
 (require 'init-auto-save)
 (require 'init-citre)
-(require 'init-company)
 (require 'init-denote)
 (require 'init-elfeed)
 (require 'init-gitmoji)
