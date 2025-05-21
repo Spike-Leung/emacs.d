@@ -6,6 +6,10 @@
 (maybe-require-package 'ef-themes)
 (maybe-require-package 'gruvbox-theme)
 (maybe-require-package 'monokai-pro-theme)
+(maybe-require-package 'nyan-mode)
+
+(with-eval-after-load 'nyan-mode
+  (setq nyan-cat-face-number 4))
 
 ;;; spacious-padding
 ;; (maybe-require-package 'spacious-padding)
