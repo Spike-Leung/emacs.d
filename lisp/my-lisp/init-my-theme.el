@@ -54,6 +54,47 @@
 (load-theme 'ef-dream :no-confirm)
 (enable-theme 'ef-dream)
 
+;; --- Random theme cycling ---
+(defvar spike-leung/candidate-themes
+  '(modus-operandi
+    modus-operandi-tinted
+    modus-vivendi
+    modus-vivendi-tinted
+    ef-arbutus
+    ef-autumn
+    ef-bio
+    ef-cherie
+    ef-cyprus
+    ef-dark
+    ef-deuteranopia-dark
+    ef-deuteranopia-light
+    ef-dream
+    ef-duo-dark
+    ef-duo-light
+    ef-eagle
+    ef-elea-dark
+    ef-elea-light
+    ef-frost
+    ef-kassio
+    ef-light
+    ef-maris-dark
+    ef-maris-light
+    ef-melissa-dark
+    ef-melissa-light
+    ef-night
+    ef-owl
+    ef-reverie
+    ef-rosa
+    ef-spring
+    ef-summer
+    ef-symbiosis
+    ef-trio-dark
+    ef-trio-light
+    ef-tritanopia-dark
+    ef-tritanopia-light
+    ef-winter)
+  "A list of themes to randomly cycle through.")
+
 ;;; theme related
 ;; @see: https://emacsredux.com/blog/2025/02/03/clean-unloading-of-emacs-themes/
 (defun spike-leung/disable-all-active-themes ()
@@ -61,6 +102,23 @@
   (interactive)
   (dolist (theme custom-enabled-themes)
     (disable-theme theme)))
+
+(defun spike-leung/apply-random-theme ()
+  "Disable current themes and apply a random theme from `spike-leung/candidate-themes`."
+  (interactive)
+  (when (boundp 'spike-leung/candidate-themes)
+    (spike-leung/disable-all-active-themes)
+    (let ((theme (nth (random (length spike-leung/candidate-themes)) spike-leung/candidate-themes)))
+      (condition-case err
+          (progn
+            ;; Load theme to ensure its specific settings/customizations are applied
+            (load-theme theme :no-confirm)
+            ;; Enable the theme (this actually applies it and adds to custom-enabled-themes)
+            (enable-theme theme)
+            (message "Applied random theme: %s" theme))
+        (error (message "Error applying theme %s: %s" theme err))))))
+
+(run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme)
 
 (provide 'init-my-theme)
 ;;; init-my-theme.el ends here
