@@ -110,6 +110,7 @@
 **** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]
 **** [[https://matklad.github.io/feed.xml][matklad]]
 **** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
+**** [[https://themkat.net/feed.xml][TheMKat’s blog]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
