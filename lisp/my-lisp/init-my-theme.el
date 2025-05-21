@@ -6,10 +6,17 @@
 (maybe-require-package 'ef-themes)
 (maybe-require-package 'gruvbox-theme)
 (maybe-require-package 'monokai-pro-theme)
-(maybe-require-package 'nyan-mode)
 
-(with-eval-after-load 'nyan-mode
-  (setq nyan-cat-face-number 4))
+;; nyan-mode config
+(maybe-require-package 'nyan-mode)
+(setq nyan-cat-face-number 4)
+(nyan-mode 1)
+(if *is-a-mac*
+    (progn
+      (setq
+       nyan-animate-nyancat t
+       nyan-wavy-trail t)
+      (nyan-start-animation)))
 
 ;;; spacious-padding
 ;; (maybe-require-package 'spacious-padding)
