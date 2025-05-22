@@ -91,7 +91,7 @@
     ef-maris-dark
     ef-maris-light
     ;; ef-melissa-dark
-    ef-melissa-light
+    ;; ef-melissa-light
     ef-night
     ef-owl
     ef-reverie
