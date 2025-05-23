@@ -6,6 +6,7 @@
 (maybe-require-package 'ef-themes)
 (maybe-require-package 'gruvbox-theme)
 (maybe-require-package 'monokai-pro-theme)
+(maybe-require-package 'doric-themes)
 
 ;; nyan-mode config
 (maybe-require-package 'nyan-mode)
@@ -103,7 +104,17 @@
     ef-trio-light
     ef-tritanopia-dark
     ef-tritanopia-light
-    ef-winter)
+    ef-winter
+    doric-cherry
+    doric-dark
+    doric-earth
+    doric-fire
+    doric-light
+    doric-marble
+    doric-obsidian
+    doric-plum
+    doric-water
+    doric-wind)
   "A list of themes to randomly cycle through.")
 
 ;;; theme related
