@@ -117,6 +117,9 @@
     doric-wind)
   "A list of themes to randomly cycle through.")
 
+(defvar spike-leung/theme-cycle-timer nil
+  "Timer for cycling themes.")
+
 ;;; theme related
 ;; @see: https://emacsredux.com/blog/2025/02/03/clean-unloading-of-emacs-themes/
 (defun spike-leung/disable-all-active-themes ()
@@ -140,7 +143,26 @@
             (message "Applied random theme: %s" theme))
         (error (message "Error applying theme %s: %s" theme err))))))
 
-(run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme)
+(defun spike-leung/toggle-random-theme-cycling ()
+  "Toggle the random theme cycling timer."
+  (interactive)
+  (if (timerp spike-leung/theme-cycle-timer)
+      (progn
+        (cancel-timer spike-leung/theme-cycle-timer)
+        (setq spike-leung/theme-cycle-timer nil)
+        (message "Random theme cycling stopped."))
+    (progn
+      (setq spike-leung/theme-cycle-timer
+            (run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme))
+      (message "Random theme cycling started. Next change in ~15 minutes. Timer: %s" spike-leung/theme-cycle-timer))))
+
+;; Start theme cycling by default, ensuring only one instance from this init file
+(if (timerp spike-leung/theme-cycle-timer)
+    (message "Random theme cycling timer already active: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to manage." spike-leung/theme-cycle-timer)
+  (progn
+    (setq spike-leung/theme-cycle-timer
+          (run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme))
+    (message "Random theme cycling started automatically. Next change in ~15 minutes. Timer: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to stop/start." spike-leung/theme-cycle-timer)))
 
 (provide 'init-my-theme)
 ;;; init-my-theme.el ends here
