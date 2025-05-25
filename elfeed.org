@@ -112,6 +112,7 @@
 **** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
 **** [[https://themkat.net/feed.xml][TheMKat’s blog]]
 **** [[https://bryn.codes/feed.xml][Bryn Newell]]
+**** [[https://alexwlchan.net/atom.xml][Alex Chan]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
