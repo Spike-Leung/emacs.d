@@ -113,6 +113,7 @@
 **** [[https://themkat.net/feed.xml][TheMKat’s blog]]
 **** [[https://bryn.codes/feed.xml][Bryn Newell]]
 **** [[https://alexwlchan.net/atom.xml][Alex Chan]]
+**** [[https://blog.plover.com/index.atom][The Universe of Discourse]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
