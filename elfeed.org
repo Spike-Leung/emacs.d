@@ -60,6 +60,10 @@
 **** [[https://cbvivi.today/feed.xml][cbvivi]]
 **** [[https://blog.gzj.life/zh-cn/index.xml][ISouthRain Blog]]                                                            :emacs:
 **** [[https://jt26wzz.com/rss.xml][从不说安全词]]
+**** [[https://pathos.page/feed.xml][2750 words]]
+**** [[https://jesor.me/feed.xml][大破进击]]
+**** [[https://wangyurui.com/feed.xml][太隐]]
+**** [[https://www.gaotianchi.com/feed.xml][高天驰]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
@@ -114,6 +118,10 @@
 **** [[https://bryn.codes/feed.xml][Bryn Newell]]
 **** [[https://alexwlchan.net/atom.xml][Alex Chan]]
 **** [[https://blog.plover.com/index.atom][The Universe of Discourse]]
+**** [[https://filiph.net/text/atom.xml][filiph.net/text]]
+**** [[https://jeffbradberry.com/feeds/all.atom.xml][Jeff Bradberry]]                                                             :emacs:
+**** [[https://chrismaiorana.com/feed/][The Daily Macro]]                                                            :emacs:
+**** [[https://lynn.sh/rss.xml][Lynn]]                                                                       :emacs:
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
@@ -169,7 +177,7 @@
 
 *** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
 
-*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]
+*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :ignore:
 
 *** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :ignore:
 
