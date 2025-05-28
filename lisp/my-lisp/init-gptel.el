@@ -46,7 +46,6 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
 
 (with-eval-after-load 'init-auth
   (with-eval-after-load 'gptel
-    ;; define providers
     (gptel-make-openai "DeepSeek"
       :host "api.deepseek.com"
       :endpoint "/chat/completions"
@@ -59,18 +58,17 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
       :stream t
       :key (spike-leung/get-siliconflow-api-key)
       :models spike-leung/siliconflow-models)
-    (gptel-make-openai "OpenRouter" ; Initial setup
+    (gptel-make-openai "OpenRouter"
       :host "openrouter.ai"
       :endpoint "/api/v1/chat/completions"
       :stream t
       :key (spike-leung/get-openrouter-api-key)
-      :models spike-leung/openrouter-models-cache) ; Uses cache, which might be empty/stale initially
+      :models spike-leung/openrouter-models-cache)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
 
-    ;; set default
-    (setq gptel-model   'google/gemini-2.5-flash-preview:thinking ; Example, adjust as needed
+    (setq gptel-model   'google/gemini-2.5-flash-preview-05-20:thinking
           gptel-backend
-          (gptel-make-openai "OpenRouter" ; Initial setup for default backend
+          (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
             :endpoint "/api/v1/chat/completions"
             :stream t
