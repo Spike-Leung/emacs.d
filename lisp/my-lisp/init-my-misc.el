@@ -30,7 +30,8 @@
       (message "No JIRA issue ID found on the current line."))))
 
 (with-eval-after-load 'magit
-  (define-key magit-log-mode-map (kbd "]") 'spike-leung/open-jira-issue-from-magit-log))
+  (define-key magit-log-mode-map (kbd "]") 'spike-leung/open-jira-issue-from-magit-log)
+  (define-key magit-status-mode-map (kbd "]") 'spike-leung/open-jira-issue-from-magit-log))
 
 
 
