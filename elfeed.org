@@ -122,6 +122,9 @@
 **** [[https://jeffbradberry.com/feeds/all.atom.xml][Jeff Bradberry]]                                                             :emacs:
 **** [[https://chrismaiorana.com/feed/][The Daily Macro]]                                                            :emacs:
 **** [[https://lynn.sh/rss.xml][Lynn]]                                                                       :emacs:
+**** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
+**** [[https://borretti.me/feed.xml][Fernando Borretti]]
+**** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
