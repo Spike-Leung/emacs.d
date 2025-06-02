@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(set-face-attribute 'default nil :height 200)
-
+(set-face-attribute 'default nil :height 200 :font "Iosevka")
 ;;; make background transparent
 ;; (setq frame-background-mode "light")
 ;; (set-face-background 'default "unspecified-bg")
