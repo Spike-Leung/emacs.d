@@ -4,10 +4,11 @@
 
 ;;; immersive-translate
 (require 'immersive-translate)
+(add-hook 'elfeed-show-mode-hook #'immersive-translate-setup)
 ;; need to api key with user `apikey` in `.authinfo`
 (setq immersive-translate-backend 'chatgpt
       immersive-translate-chatgpt-host "openrouter.ai/api"
-      immersive-translate-chatgpt-model "google/gemini-2.0-flash-001"
+      immersive-translate-chatgpt-model "google/gemini-2.5-flash-preview-05-20"
       immersive-translate-pending-message "(≖ᴗ≖๑)"
       immersive-translate-failed-message "(つд⊂) ")
 
@@ -29,12 +30,13 @@
 (with-eval-after-load 'init-auth
   (with-eval-after-load 'go-translate
     (setq gt-langs '(en zh)
-          gt-chatgpt-key (spike-leung/get-deepseek-api-key)
-          gt-chatgpt-host "https://api.deepseek.com"
-          gt-chatgpt-model "deepseek-chat"
+          gt-chatgpt-key (spike-leung/get-openrouter-api-key)
+          gt-chatgpt-host "https://openrouter.ai/api"
+          gt-chatgpt-model "google/gemini-2.5-flash-preview-05-20"
           gt-default-translator (gt-translator
                                  :engines (list
-                                           (gt-chatgpt-engine))
+                                           ;; FIXME: stream nil will pass stream: null in request, which is not support by openrouter, report a issue sometime
+                                           (gt-chatgpt-engine :stream nil))
                                  :render (gt-buffer-render
                                           :buffer-name "gt-translator"
                                           :window-config '((display-buffer-at-bottom))
