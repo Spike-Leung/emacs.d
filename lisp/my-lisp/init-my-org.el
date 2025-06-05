@@ -261,6 +261,7 @@ If its assigned to a key it saves you marking the text and copying to the killri
                "WAITING(w@/!)"
                "DELEGATED(e!)"
                "HOLD(h)"
+               "|"
                "DONE(d!/!)"
                "CANCELLED(c@/!)")))
       org-todo-repeat-to-state "REPEAT")
