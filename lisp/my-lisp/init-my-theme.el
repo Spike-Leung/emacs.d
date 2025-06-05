@@ -4,9 +4,10 @@
 
 (maybe-require-package 'modus-themes)
 (maybe-require-package 'ef-themes)
+(maybe-require-package 'doric-themes)
 (maybe-require-package 'gruvbox-theme)
 (maybe-require-package 'monokai-pro-theme)
-(maybe-require-package 'doric-themes)
+(maybe-require-package 'timu-caribbean-theme)
 
 ;; nyan-mode config
 (maybe-require-package 'nyan-mode)
@@ -114,7 +115,16 @@
     doric-obsidian
     doric-plum
     doric-water
-    doric-wind)
+    doric-wind
+    sanityinc-solarized-dark
+    sanityinc-solarized-light
+    sanityinc-tomorrow-day
+    sanityinc-tomorrow-night
+    sanityinc-tomorrow-bright
+    sanityinc-tomorrow-eighties
+    gruvbox
+    monokai
+    timu-caribbean)
   "A list of themes to randomly cycle through.")
 
 (defvar spike-leung/theme-cycle-timer nil
