@@ -10,6 +10,8 @@
   (when (file-directory-p dir)
     (add-to-list 'load-path dir)))
 
+(require 'init-my-keybindings)
+
 (require 'init-aider)
 (require 'init-auth)
 (require 'init-auto-save)

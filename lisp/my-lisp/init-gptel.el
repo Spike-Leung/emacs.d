@@ -86,8 +86,6 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
              (> (length spike-leung/openrouter-models-cache) 0))
     (spike-leung/gptel-refresh-openrouter-provider)))
 
-(global-set-key (kbd "M-o g") 'gptel-menu)
-
 ;;; some helpful utils use gptel
 
 (require 'init-gptel-prompts)
@@ -178,8 +176,9 @@ If a model is selected, it is memorized for next use."
                   (insert response))
               (message "Translation failed."))))))))
 
-;;; keybindings
-(global-set-key (kbd "M-o u") 'spike-leung/gptel-rewrite)
+(with-eval-after-load 'init-my-keybindings
+  (define-key spike-leung/meta-o-keymap (kbd "g") 'gptel-menu)
+  (define-key spike-leung/meta-o-keymap (kbd "u") 'spike-leung/gptel-rewrite))
 
 (provide 'init-gptel)
 ;;; init-gptel.el ends here

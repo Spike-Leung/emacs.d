@@ -51,7 +51,8 @@
 (define-key spike-leung/my-translate-keymap (kbd "f") 'fanyi-dwim2)
 (define-key spike-leung/my-translate-keymap (kbd "g") 'gt-do-translate)
 
-(global-set-key (kbd "M-o t") spike-leung/my-translate-keymap)
+(with-eval-after-load 'init-my-keybindings
+  (define-key spike-leung/meta-o-keymap (kbd "t") spike-leung/my-translate-keymap))
 
 
 (provide 'init-translate)
