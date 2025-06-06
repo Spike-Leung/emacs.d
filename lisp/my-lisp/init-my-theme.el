@@ -130,6 +130,21 @@
 (defvar spike-leung/theme-cycle-timer nil
   "Timer for cycling themes.")
 
+(defvar spike-leung/shuffled-themes-queue nil
+  "A queue of shuffled themes to apply.")
+(defvar spike-leung/last-applied-theme nil
+  "The last theme that was applied.")
+
+(defun spike-leung/shuffle-list (list)
+  "Return a shuffled copy of LIST using the Fisher-Yates algorithm."
+  (let ((list (copy-sequence list))
+        (len (length list)))
+    (dotimes (i len list)
+      (let* ((j (+ i (random (- len i))))
+             (tmp (elt list i)))
+        (setf (elt list i) (elt list j))
+        (setf (elt list j) tmp)))))
+
 ;;; theme related
 ;; @see: https://emacsredux.com/blog/2025/02/03/clean-unloading-of-emacs-themes/
 (defun spike-leung/disable-all-active-themes ()
@@ -139,19 +154,28 @@
     (disable-theme theme)))
 
 (defun spike-leung/apply-random-theme ()
-  "Disable current themes and apply a random theme from `spike-leung/candidate-themes`."
+  "Apply a theme from a shuffled list, ensuring all are used before repeating."
   (interactive)
   (when (boundp 'spike-leung/candidate-themes)
     (spike-leung/disable-all-active-themes)
-    (let ((theme (nth (random (length spike-leung/candidate-themes)) spike-leung/candidate-themes)))
+    ;; Refill the queue if it's empty
+    (when (not spike-leung/shuffled-themes-queue)
+      (setq spike-leung/shuffled-themes-queue (spike-leung/shuffle-list spike-leung/candidate-themes))
+      ;; Avoid immediate repetition from the previous cycle
+      (when (and spike-leung/last-applied-theme
+                 (eq (car spike-leung/shuffled-themes-queue) spike-leung/last-applied-theme))
+        (setq spike-leung/shuffled-themes-queue
+              (append (cdr spike-leung/shuffled-themes-queue)
+                      (list (car spike-leung/shuffled-themes-queue))))))
+
+    (let ((theme (pop spike-leung/shuffled-themes-queue)))
+      (setq spike-leung/last-applied-theme theme)
       (condition-case err
           (progn
-            ;; Load theme to ensure its specific settings/customizations are applied
             (load-theme theme :no-confirm)
-            ;; Enable the theme (this actually applies it and adds to custom-enabled-themes)
             (enable-theme theme)
-            (message "Applied random theme: %s" theme))
-        (error (message "Error applying theme %s: %s" theme err))))))
+            (message "｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡ Applied random theme: %s" theme))
+        (error (message "(╯°□°）╯︵ ┻━┻ Error applying theme %s: %s" theme err))))))
 
 (defun spike-leung/toggle-random-theme-cycling ()
   "Toggle the random theme cycling timer."
