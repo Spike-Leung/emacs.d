@@ -125,6 +125,7 @@
 **** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
 **** [[https://borretti.me/feed.xml][Fernando Borretti]]
 **** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]
+**** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
