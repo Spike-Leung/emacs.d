@@ -64,3 +64,4 @@ org-roam.db
 .elfeed/
 snippets/**/.*.el
 .aider*
+/org-persist
