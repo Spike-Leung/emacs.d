@@ -11,7 +11,8 @@
     (add-to-list 'load-path dir)))
 
 (require 'init-my-keybindings)
-
+;; some package require modus theme's method, so load the theme first
+(require 'init-my-theme)
 (require 'init-aider)
 (require 'init-auth)
 (require 'init-auto-save)
@@ -25,7 +26,6 @@
 (require 'init-kaomoji)
 (require 'init-magit)
 (require 'init-mermaid)
-(require 'init-my-theme)
 (require 'init-my-dired)
 (require 'init-my-editing-utils)
 (require 'init-my-folding)

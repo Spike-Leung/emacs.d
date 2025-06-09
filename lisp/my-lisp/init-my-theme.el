@@ -25,6 +25,9 @@
 (setq spacious-padding-subtle-mode-line t)
 (spacious-padding-mode 1)
 
+;; require modus-themes to load its methods
+(require 'modus-themes)
+
 (setq modus-themes-headings
       '((1 . (ultrabold 1.1)))
 
@@ -61,11 +64,6 @@
         (comment rust)
 
         (bg-diff-context    unspecified)))
-
-;; Load the theme of your choice:
-(load-theme 'modus-vivendi :no-confirm)
-(load-theme 'ef-dream :no-confirm)
-(enable-theme 'ef-dream)
 
 ;; --- Random theme cycling ---
 (defvar spike-leung/candidate-themes
