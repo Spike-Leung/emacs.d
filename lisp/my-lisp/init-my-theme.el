@@ -198,5 +198,8 @@
           (run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme))
     (message "Random theme cycling started automatically. Next change in ~15 minutes. Timer: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to stop/start." spike-leung/theme-cycle-timer)))
 
+;; pick a random them when init
+(spike-leung/apply-random-theme)
+
 (provide 'init-my-theme)
 ;;; init-my-theme.el ends here
