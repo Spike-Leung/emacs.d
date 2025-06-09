@@ -20,10 +20,10 @@
        nyan-wavy-trail t)
       (nyan-start-animation)))
 
-;;; spacious-padding
-;; (maybe-require-package 'spacious-padding)
-;; (setq spacious-padding-subtle-mode-line t)
-;; (spacious-padding-mode 1)
+;; spacious-padding
+(maybe-require-package 'spacious-padding)
+(setq spacious-padding-subtle-mode-line t)
+(spacious-padding-mode 1)
 
 (setq modus-themes-headings
       '((1 . (ultrabold 1.1)))
