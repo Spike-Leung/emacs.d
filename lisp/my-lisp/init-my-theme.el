@@ -10,20 +10,20 @@
 (maybe-require-package 'timu-caribbean-theme)
 
 ;; nyan-mode config
-(maybe-require-package 'nyan-mode)
-(setq nyan-cat-face-number 4)
-(nyan-mode 1)
-(if *is-a-mac*
-    (progn
-      (setq
-       nyan-animate-nyancat t
-       nyan-wavy-trail t)
-      (nyan-start-animation)))
+;; (maybe-require-package 'nyan-mode)
+;; (setq nyan-cat-face-number 4)
+;; (nyan-mode 1)
+;; (if *is-a-mac*
+;;     (progn
+;;       (setq
+;;        nyan-animate-nyancat t
+;;        nyan-wavy-trail t)
+;;       (nyan-start-animation)))
 
 ;; spacious-padding
-(maybe-require-package 'spacious-padding)
-(setq spacious-padding-subtle-mode-line t)
-(spacious-padding-mode 1)
+;; (maybe-require-package 'spacious-padding)
+;; (setq spacious-padding-subtle-mode-line t)
+;; (spacious-padding-mode 1)
 
 ;; require modus-themes to load its methods
 (require 'modus-themes)
