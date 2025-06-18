@@ -15,9 +15,9 @@
       (setenv "OPENAI_API_BASE" "https://api.siliconflow.cn")
       (setenv "OPENROUTER_API_KEY" (spike-leung/get-openrouter-api-key))
       (setq aider-args '("--no-auto-commits"
-                         "--model" "openrouter/google/gemini-2.5-pro-preview"
-                         "--editor-model" "openrouter/google/gemini-2.5-flash-preview-05-20"
-                         "--weak-model" "openrouter/google/gemini-2.5-flash-preview-05-20"))
+                         "--model" "openrouter/google/gemini-2.5-pro"
+                         "--editor-model" "openrouter/google/gemini-2.5-flash"
+                         "--weak-model" "openrouter/google/gemini-2.5-flash"))
       ;; Use advice to lazy-load models before menu
       (advice-add 'aider-transient-menu :before #'spike-leung/aider-ensure-models)))
 

@@ -66,7 +66,7 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
       :models spike-leung/openrouter-models-cache)
     (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
 
-    (setq gptel-model   'google/gemini-2.5-flash-preview-05-20:thinking
+    (setq gptel-model   'google/gemini-2.5-flash
           gptel-backend
           (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
@@ -90,7 +90,7 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
 
 (require 'init-gptel-prompts)
 
-(defvar spike-leung/gptel-rewrite-last-model 'google/gemini-2.5-flash-preview
+(defvar spike-leung/gptel-rewrite-last-model 'google/gemini-2.5-flash
   "Last model used for `spike-leung/gptel-rewrite'.")
 
 (defun spike-leung/gptel-rewrite (model &optional prompt)
