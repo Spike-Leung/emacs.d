@@ -51,21 +51,13 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
       :endpoint "/chat/completions"
       :stream t
       :key (spike-leung/get-deepseek-api-key)
-      :models '(deepseek-chat deepseek-coder))
-    (gptel-make-openai "SiliconFlow"
-      :host "api.siliconflow.cn"
-      :endpoint "/chat/completions"
-      :stream t
-      :key (spike-leung/get-siliconflow-api-key)
-      :models spike-leung/siliconflow-models)
+      :models '(deepseek-chat deepseek-coder)
     (gptel-make-openai "OpenRouter"
       :host "openrouter.ai"
       :endpoint "/api/v1/chat/completions"
       :stream t
       :key (spike-leung/get-openrouter-api-key)
-      :models spike-leung/openrouter-models-cache)
-    (gptel-make-gemini "Gemini" :key (spike-leung/get-gemini-api-key) :stream t)
-
+      :models spike-leung/openrouter-models-cache
     (setq gptel-model   'google/gemini-2.5-flash
           gptel-backend
           (gptel-make-openai "OpenRouter"
