@@ -9,6 +9,13 @@
 (maybe-require-package 'monokai-pro-theme)
 (maybe-require-package 'timu-caribbean-theme)
 
+(require 'modus-themes)
+(require 'ef-themes)
+(require 'doric-themes)
+(require 'gruvbox-theme)
+(require 'monokai-pro-theme)
+(require 'timu-caribbean-theme)
+
 ;; nyan-mode config
 ;; (maybe-require-package 'nyan-mode)
 ;; (setq nyan-cat-face-number 4)
@@ -24,9 +31,6 @@
 ;; (maybe-require-package 'spacious-padding)
 ;; (setq spacious-padding-subtle-mode-line t)
 ;; (spacious-padding-mode 1)
-
-;; require modus-themes to load its methods
-(require 'modus-themes)
 
 (setq modus-themes-headings
       '((1 . (ultrabold 1.1)))
