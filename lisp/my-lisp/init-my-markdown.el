@@ -9,7 +9,7 @@
   "Define imp markdown filter.
 Wrap BUFFER with HTML, render with https://github.com/markedjs/marked and style with https://github.com/sindresorhus/github-markdown-css"
   (princ (with-current-buffer buffer
-(format "<!DOCTYPE html>
+           (format "<!DOCTYPE html>
 <html>
   <title>Markdown Preview</title>
   <head>
@@ -48,14 +48,10 @@ Wrap BUFFER with HTML, render with https://github.com/markedjs/marked and style 
          (current-buffer)))
 
 (defun spike-leung/preview-markdown ()
-  "Preview markdown."
+  "Live Preview markdown."
   (interactive)
-  (progn
-    (httpd-start)
-    (impatient-mode nil)
-    (imp-set-user-filter 'spike-leung/imp-markdown-filter)
-    (let ((port httpd-port))
-      (browse-url (concat "http://localhost:" (number-to-string port) "/imp")))))
+  (imp-visit-buffer)
+  (imp-set-user-filter 'spike-leung/imp-markdown-filter))
 
 (defun spike-leung/disable-preview-markdown ()
   "Disable preview markdown."
