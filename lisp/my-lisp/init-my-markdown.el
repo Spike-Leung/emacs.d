@@ -61,5 +61,8 @@ Wrap BUFFER with HTML, render with https://github.com/markedjs/marked and style 
     (impatient-mode -1)
     (imp-remove-user-filter)))
 
+(with-eval-after-load 'init-my-keybindings
+  (define-key spike-leung/meta-o-keymap (kbd "p") 'spike-leung/preview-markdown))
+
 (provide 'init-my-markdown)
 ;;; init-my-markdown.el ends here
