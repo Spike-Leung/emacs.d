@@ -64,6 +64,7 @@
 **** [[https://jesor.me/feed.xml][大破进击]]
 **** [[https://wangyurui.com/feed.xml][太隐]]
 **** [[https://www.gaotianchi.com/feed.xml][高天驰]]
+**** [[https://www.ixiqin.com/feed/][白宦成]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
@@ -126,6 +127,7 @@
 **** [[https://borretti.me/feed.xml][Fernando Borretti]]
 **** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]
 **** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]
+**** [[https://falseknees.com/rss.xml][false knees]]                                                                :manga:anime:
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
