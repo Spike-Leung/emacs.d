@@ -50,6 +50,7 @@ Wrap BUFFER with HTML, render with https://github.com/markedjs/marked and style 
 (defun spike-leung/preview-markdown ()
   "Live Preview markdown."
   (interactive)
+  (impatient-mode)
   (imp-visit-buffer)
   (imp-set-user-filter 'spike-leung/imp-markdown-filter))
 
