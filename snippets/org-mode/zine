@@ -1,31 +1,33 @@
 # -*- mode: snippet -*-
-# name: weekly
-# key: weekly
+# name: zine
+# key: zine
 # group: blog
 # --
 
-#+title: Weekly#$1
-#+INDEX: weekly!#$1
+#+title: Zine#$1
+#+INDEX: Zine!#$1
 #+date: `(format-time-string "<%Y-%m-%d %a>" (current-time))`
 #+lastmod: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+author: Spike Leung
 #+email: l-yanlei@hotmail.com
-#+description: "Weekly info collected by Spike Leung"
-#+keywords: "Weekly News Code Music"
-#+tags: weekly
+#+description: "Info collected by Spike Leung"
+#+keywords: "Zine News Code Music"
+#+tags: zine
 #+OPTIONS: toc:1 ^:{}
 #+LANGUAGE: zh-CN
 #+startup: content indent
 
 $0
 
+* 琐碎二三事
+
 * News | Article
+
+* Cool Bit
 
 * Tutorial | Resource
 
 * Code Related
-
-* Cool Bit
 
 * Tool | Library
 
