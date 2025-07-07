@@ -45,9 +45,6 @@
 **** [[https://lhasa.icu/rss.xml][游钓四方]]
 **** [[https://blog.solazy.me/feed/][So!azy]]
 **** [[https://tianxianzi.me/atom.xml][天仙子]]
-
-国内网络似乎无法打开
-
 **** [[https://guozh.net/feed/][老郭种树]]
 **** [[https://www.yvesx.com/feed/][举头三尺有神鱼]]
 **** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
@@ -65,9 +62,13 @@
 **** [[https://wangyurui.com/feed.xml][太隐]]
 **** [[https://www.gaotianchi.com/feed.xml][高天驰]]
 **** [[https://www.ixiqin.com/feed/][白宦成]]
+**** [[https://www.justzht.com/rss/][JustZht's EchoChamber]]
+**** [[https://oxxx.cn/feed/][森木志]]
+**** [[https://chengpeiquan.com/feed.xml][程沛权 - 养了三只猫]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
+**** [[https://protesilaos.com/feeds/][Protesilaos]]                                                                :emacs:
 **** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                          :writing:emacs:
 **** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
 **** [[https://jvns.ca/atom.xml][Julia Evans]]
@@ -128,6 +129,10 @@
 **** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]
 **** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]
 **** [[https://falseknees.com/rss.xml][false knees]]                                                                :manga:anime:
+**** [[https://dbushell.com/rss.xml][dbushell.com]]
+**** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
+**** [[https://nothingissimple.ablatedsprocket.com/rss.xml][Nothing Is Simple]]                                                          :emacs:
+**** [[https://michal.sapka.pl/rss.xml][Michał M. Sapka]]                                                            :emacs:
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
@@ -178,6 +183,7 @@
 - rss url: https://kill-the-newsletter.com/feeds/3hl5jx56nh55vdvwhoh1.xml
 
 - https://bytes.dev/
+- https://moretothat.com/
 
 ** news & magazine                                                              :magazine:news:
 
