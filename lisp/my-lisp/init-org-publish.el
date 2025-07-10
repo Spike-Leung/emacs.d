@@ -17,7 +17,7 @@
 <link rel=\"stylesheet\" href=\"/styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
 "
-"`:html-head' for `org-publish'.")
+  "`:html-head' for `org-publish'.")
 
 (defconst spike-leung/html-head-sitemap (concat
                                          spike-leung/html-head
@@ -148,7 +148,9 @@ TITLE is the sitemap title and LIST contains files to include."
   (concat
    "#+TITLE: " title
    "\n"
-   "#+DESCRIPTION: That the powerful play goes on, and you may contribute a verse."
+   "#+DESCRIPTION: SpikeLeung's blog."
+   "\n\n"
+   "That the powerful play goes on, and you may contribute a verse."
    "\n\n"
    (org-list-to-org list)))
 
