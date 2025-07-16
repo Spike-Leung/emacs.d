@@ -33,5 +33,9 @@
             :around #'w/beancount--collect-accounts-from-files
             '((name . "collect accounts from files as well")))
 
+;;; 启用 history mode 便于快速输入频繁输入的账户
+(with-eval-after-load 'corfu
+  (corfu-history-mode))
+
 (provide 'init-beancount)
 ;;; init-beancount.el ends here
