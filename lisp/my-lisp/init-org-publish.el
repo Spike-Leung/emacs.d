@@ -74,6 +74,18 @@
 "
   "`:html-postamble' for `org-publish'.")
 
+(defconst spike-leung/html-postamble-sitemap "
+<script src=\"/js/backtop.js\" defer></script>
+<noscript>
+  <style>
+    .js-required {
+       display: none;
+     }
+  </style>
+</noscript>
+"
+  "sitemap `:html-postamble' for `org-publish'.")
+
 (defconst spike-leung/follow-claim-description
   "feedId:63132271001948160+userId:72185894417953792"
   "Follow claim description.")
@@ -306,7 +318,7 @@ PROJECT is the current project."
          :time-stamp-file nil
          :html-head ,spike-leung/html-head-sitemap
          :html-preamble ,spike-leung/html-preamble
-         :html-postamble nil
+         :html-postamble ,spike-leung/html-postamble-sitemap
          :include ("index.org")
          :exclude ".*"
          :author "Spike Leung"
