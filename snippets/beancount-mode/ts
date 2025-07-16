@@ -1,6 +1,8 @@
 # -*- mode: snippet -*-
 # name: transaction
 # key: ts
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
 # --
 `(format-time-string "%Y-%m")`-$1 * "$2"
   $0
+  Assets:Bank:CMB:Checking-5243
