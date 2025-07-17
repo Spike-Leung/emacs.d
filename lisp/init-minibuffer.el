@@ -9,7 +9,11 @@
   (when (maybe-require-package 'embark)
     (with-eval-after-load 'vertico
       (define-key vertico-map (kbd "C-c C-o") 'embark-export)
-      (define-key vertico-map (kbd "C-c C-c") 'embark-act)))
+      (define-key vertico-map (kbd "C-c C-c") 'embark-act)
+      ;; https://github.com/oantolin/embark?tab=readme-ov-file#selecting-commands-via-completion-outside-of-embark
+      (setq prefix-help-command #'embark-prefix-help-command)
+      (vertico-multiform-mode)
+      (add-to-list 'vertico-multiform-categories '(embark-keybinding grid))))
 
   (when (maybe-require-package 'consult)
     (defmacro sanityinc/no-consult-preview (&rest cmds)
