@@ -8,7 +8,7 @@
 ;; need to api key with user `apikey` in `.authinfo`
 (setq immersive-translate-backend 'chatgpt
       immersive-translate-chatgpt-host "openrouter.ai/api"
-      immersive-translate-chatgpt-model "google/gemini-2.5-flash-preview-05-20"
+      immersive-translate-chatgpt-model "google/gemini-2.5-flash"
       immersive-translate-pending-message "(≖ᴗ≖๑)"
       immersive-translate-failed-message "(つд⊂) ")
 
