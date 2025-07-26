@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: html example
+# key: he
+# --
+
+#+begin_src html :exports none
+$0
+#+end_src

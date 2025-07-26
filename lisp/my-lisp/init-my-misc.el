@@ -45,7 +45,7 @@ Then generate a #+begin_export html block with an iframe, replacing any existing
   (let (html-content escaped-html srcdoc start end export-start export-end)
     ;; Search for the next #+begin_src html block from the current position
     (save-excursion
-      (when (re-search-forward "^#\\+begin_src html" nil t)
+      (when (re-search-forward "^#\\+begin_src html :exports none" nil t)
         (setq start (match-end 0))
         (when (re-search-forward "^#\\+end_src" nil t)
           (setq end (match-beginning 0))
