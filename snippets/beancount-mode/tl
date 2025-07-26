@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: transaction liabilities
+# key: tl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+`(format-time-string "%Y-%m")`-$1 * "$2"
+  $0
+  Liabilities:Bank:CMB:Credit-5875
