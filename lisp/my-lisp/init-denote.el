@@ -1,4 +1,4 @@
-;;; init-my-denote.el --- denote relavive config -*- lexical-binding: t -*-
+;;; init-my-denote.el --- denote relavive config
 ;;; Commentary:
 ;;; Code:
 
