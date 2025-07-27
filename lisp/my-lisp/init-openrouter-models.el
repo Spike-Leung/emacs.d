@@ -2,8 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'json)
-(require 'url)
+(maybe-require-package 'plz)
+(require 'plz)
 
 (defvar spike-leung/openrouter-models-cache '()
   "Cached list of OpenRouter models as symbols. Initialized to an empty list.")
@@ -22,25 +22,17 @@
   "Fetch the list of models from OpenRouter API and cache them.
 If CALLBACK is non-nil, call it with the models list.
 Runs `spike-leung/openrouter-models-updated-hook` after updating cache."
-  (let ((url-request-method "GET")
-        (url "https://openrouter.ai/api/v1/models"))
-    (url-retrieve
-     url
-     (lambda (_status)
-       (goto-char url-http-end-of-headers)
-       (let* ((json-object-type 'alist)
-              (json-array-type 'list)
-              (json-key-type 'symbol)
-              (data (json-read))
-              (models (mapcar (lambda (m) (intern (alist-get 'id m)))
-                              (alist-get 'data data))))
-         (setq spike-leung/openrouter-models-cache models)
-         (setq spike-leung/openrouter-models-cache-timestamp (float-time))
-
-         (run-hooks 'spike-leung/openrouter-models-updated-hook)
-
-         (when callback (funcall callback models))
-         (message "OpenRouter models updated: %s" (length models)))))))
+  (plz 'get "https://openrouter.ai/api/v1/models"
+    :headers '(("Content-Type" . "application/json"))
+    :as #'json-read
+    :then (lambda (response)
+            (let ((models (mapcar (lambda (m) (intern (alist-get 'id m)))
+                                  (alist-get 'data response))))
+              (setq spike-leung/openrouter-models-cache models)
+              (setq spike-leung/openrouter-models-cache-timestamp (float-time))
+              (run-hooks 'spike-leung/openrouter-models-updated-hook)
+              (when callback (funcall callback models))
+              (message "OpenRouter models updated: %s" (length models))))))
 
 (defun spike-leung/get-openrouter-models (&optional force-refresh callback)
   "Get cached OpenRouter models, refresh if cache is old or FORCE-REFRESH.
