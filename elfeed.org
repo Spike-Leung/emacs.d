@@ -9,7 +9,7 @@
 **** [[https://www.owenyoung.com/atom.xml][owenyoung]]
 **** [[https://z.arlmy.me/atom.xml][素生]]
 **** [[https://1q43.blog/feed/][虹线]]
-**** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
+**** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]                                                                     :ignore:
 **** [[https://www.geedea.pro/index.xml][極客死亡計劃]]
 **** [[https://onojyun.com/feed/][莫比乌斯]]                                                                   :ignore:
 **** [[https://www.icebeer.top/feed/][IceBeer]]
@@ -36,7 +36,7 @@
 **** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]
 **** [[https://chlo.is/feed.atom][园子里的日光]]
 **** [[https://www.changhai.org/feed.xml][卢昌海个人主页]]
-**** [[https://www.wikimoe.com/rss][维基萌]]
+**** [[https://www.wikimoe.com/rss][维基萌]]                                                                     :ignore:
 **** [[https://xuanwo.io/index.xml][Xuanwo's Blog]]
 **** [[https://yipai.me/feed][一派胡言]]
 **** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                     :frontend:
@@ -65,6 +65,7 @@
 **** [[https://www.justzht.com/rss/][JustZht's EchoChamber]]
 **** [[https://oxxx.cn/feed/][森木志]]
 **** [[https://chengpeiquan.com/feed.xml][程沛权 - 养了三只猫]]
+**** [[https://www.kawabangga.com/feed][卡瓦邦噶！]]
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
@@ -113,7 +114,7 @@
 **** [[https://thelogicaloptimist.com/index.php/blog/feed/][The Logical Optimist]]
 **** [[https://blog.videah.net/atom.xml][videah's blog]]
 **** [[https://feeds.feedburner.com/FunctioningForm][LukeW]]                                                                      :design:
-**** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]
+**** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]                                                  :ignore:
 **** [[https://matklad.github.io/feed.xml][matklad]]
 **** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
 **** [[https://themkat.net/feed.xml][TheMKat’s blog]]
@@ -135,6 +136,10 @@
 **** [[https://michal.sapka.pl/rss.xml][Michał M. Sapka]]                                                            :emacs:
 **** [[https://nerdgirlthoughts.game.blog/feed/][Nerd Girl Thoughts]]
 **** [[https://gwern.substack.com/feed][Gwern.net]]
+**** [[https://feeds.feedburner.com/typepad/ihdT][Scott Adams Says]]
+**** [[https://licoricewhipit.tumblr.com/rss][Black Licorice]]
+**** [[https://plainvanillaweb.com/blog/feed.xml][Plain Vanilla Blog]]
+**** [[https://andrewkelley.me/rss.xml][Andrew Kelley]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
@@ -167,12 +172,12 @@
 
 **** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                  :design:ux:
 
-**** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]                                                               :design:
+**** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]                                                               :design:ignore:
 
 **** [[https://a4.zyzhang.com/index.xml][A4 周刊]]
 
-**** [[https://haikuoshijie.cn/feed][小棉袄的百味人生]]
 **** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]
+
 **** [[https://nicetrypod.com/feed/audio.xml][Nice Try]]
 
 ** kill-the-newsletter                                                          :newsletter:
@@ -217,7 +222,5 @@
 ** [[https://www.fre321.com/weekly][FRE123]]
 
 ** [[https://github.com/ascoders/weekly][前端精读]]
-
-p** [[https://phrack.org/][PHRACK 期刊]]
-
+** [[https://phrack.org/][PHRACK 期刊]]
 ** [[https://www.yuque.com/sheldia/ofaw3k/av0bbykvrg129kmd][刘晓羊-摄影博客]]
