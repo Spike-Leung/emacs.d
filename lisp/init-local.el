@@ -41,7 +41,7 @@
 (when *is-a-mac*
   (require 'init-beancount)
   (require 'init-face)
-  (require 'init-proxy)
+  ;; (require 'init-proxy)
   ;; (require 'init-mu4e)
   )
 
