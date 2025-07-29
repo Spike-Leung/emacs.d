@@ -47,9 +47,6 @@
     <li>
       <a id=\"skip-content\" href=\"#content\">Skip to main content</a>
     </li>
-    <li>
-      <a id=\"skip-postamble\" href=\"#postamble\">Skip to comments</a>
-    </li>
   </ul>
 " spike-leung/html-preamble)
   "`:html-preamble' for `org-publish'.Customize for content." )
@@ -64,7 +61,6 @@
 <script src=\"/js/code-enhanced.js\" defer></script>
 <script src=\"/js/image-enhanced.js\" defer></script>
 <script src=\"/js/backtop.js\" defer></script>
-<script src=\"/js/giscus.js\" defer></script>
 <noscript>
   <style>
     .js-required {
