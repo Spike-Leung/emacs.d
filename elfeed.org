@@ -44,7 +44,6 @@
 **** [[https://polebug.github.io/atom.xml][Polebug - 保持思考、等待、斋戒]]
 **** [[https://lhasa.icu/rss.xml][游钓四方]]
 **** [[https://blog.solazy.me/feed/][So!azy]]
-**** [[https://tianxianzi.me/atom.xml][天仙子]]
 **** [[https://guozh.net/feed/][老郭种树]]
 **** [[https://www.yvesx.com/feed/][举头三尺有神鱼]]
 **** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
@@ -69,6 +68,7 @@
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
+**** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]                                                          :life:
 **** [[https://protesilaos.com/feeds/][Protesilaos]]                                                                :emacs:
 **** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                          :writing:emacs:
 **** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
@@ -128,7 +128,6 @@
 **** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
 **** [[https://borretti.me/feed.xml][Fernando Borretti]]
 **** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]
-**** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]
 **** [[https://falseknees.com/rss.xml][false knees]]                                                                :manga:anime:
 **** [[https://dbushell.com/rss.xml][dbushell.com]]
 **** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
@@ -140,6 +139,12 @@
 **** [[https://licoricewhipit.tumblr.com/rss][Black Licorice]]
 **** [[https://plainvanillaweb.com/blog/feed.xml][Plain Vanilla Blog]]
 **** [[https://andrewkelley.me/rss.xml][Andrew Kelley]]
+**** [[https://tracydurnell.com/feed/atom/][Tracy Durnell's Mind Garden]]
+**** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                           :emacs:
+**** [[https://www.murilopereira.com/feed.atom][Murilo Pereira]]                                    :emacs:
+**** [[https://sightlessscribbles.com/feed.xml][Sightless Scribbles]]
+**** [[https://j3s.sh/feed.atom][j3s.sh]]
+**** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
 ** weekly                                                                         :weekly:
 
 *** frontend                                                                    :frontend:
@@ -166,19 +171,11 @@
 
 **** [[https://54321.versun.me/feed][54321 Weekly]]
 
-**** [[https://zishu.me/index.xml][奇趣周刊]]
-
-**** [[https://sugarat.top/weekly.rss][粥里有勺糖]]
-
 **** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                  :design:ux:
-
-**** [[https://moonvy.com/blog/rss.xml][设计素材周刊]]                                                               :design:ignore:
-
-**** [[https://a4.zyzhang.com/index.xml][A4 周刊]]
 
 **** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]
 
-**** [[https://nicetrypod.com/feed/audio.xml][Nice Try]]
+**** [[https://nicetrypod.com/feed/audio.xml][Nice Try]]                                                                   :ignore:podcast:
 
 ** kill-the-newsletter                                                          :newsletter:
 
@@ -200,7 +197,7 @@
 
 *** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :ignore:
 
-*** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]
+*** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]                                                             :ignore:
 
 *** [[https://caa-ins.org/feed][网络社会研究所]]
 
