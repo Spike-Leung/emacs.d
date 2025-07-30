@@ -65,6 +65,7 @@
 **** [[https://oxxx.cn/feed/][森木志]]
 **** [[https://chengpeiquan.com/feed.xml][程沛权 - 养了三只猫]]
 **** [[https://www.kawabangga.com/feed][卡瓦邦噶！]]
+**** [[https://archive.casouri.cc/rock/day/atom.xml][余日摇滚]]                                                                   :music:
 *** English
 **** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                 :emacs:
 **** [[https://takeonrules.com/index.xml][Jeremy Friesen - Take on Rules]]                                             :emacs:writing:
