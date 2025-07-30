@@ -6,7 +6,7 @@
 
 #+title: Zine#$1
 #+INDEX: Zine!#$1
-#+date: `(format-time-string "<%Y-%m-%d %a>" (current-time))`
+#+date: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+lastmod: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+author: Spike Leung
 #+email: l-yanlei@hotmail.com
@@ -39,5 +39,6 @@ $0
 ** 书
 ** 电影
 ** 视频
-** 博客
+** 播客
 ** 音乐
+** 游戏

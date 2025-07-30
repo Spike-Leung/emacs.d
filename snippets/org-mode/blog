@@ -6,7 +6,7 @@
 
 #+title: $1
 #+INDEX: $1
-#+date: `(format-time-string "<%Y-%m-%d %a>" (current-time))`
+#+date: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+lastmod: `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))`
 #+author: Spike Leung
 #+email: l-yanlei@hotmail.com
