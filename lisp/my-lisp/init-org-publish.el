@@ -53,11 +53,11 @@
   "`:html-preamble' for `org-publish'.Customize for content." )
 
 (defconst spike-leung/html-postamble "
-<p class=\"author\">Author: <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
-<p class=\"date\">Date: %d</p>
-<p class=\"date\">Last Modified: %C</p>
-<p class=\"license\">License: <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
-<p class=\"support-me\">Support me: <a href=\"https://taxodium.ink/support-me.html\">Pay what you like</a></p>
+<p class=\"author\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
+<p class=\"date\">创建于： %d</p>
+<p class=\"date\">修改于： %C</p>
+<p class=\"license\">许可证： <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<p class=\"support-me\">支持我： <a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>
 <script src=\"/js/sidenote.js\" defer></script>
 <script src=\"/js/code-enhanced.js\" defer></script>
 <script src=\"/js/image-enhanced.js\" defer></script>
@@ -72,7 +72,47 @@
 "
   "`:html-postamble' for `org-publish'.")
 
-(defconst spike-leung/html-postamble-sitemap "
+(defun spike-leung/html-postamble (info)
+  "Dynamic html-postamble with INFO.
+INFO is property list of export."
+  (let* ((file (plist-get info :input-file))
+         (filename (file-name-nondirectory file))
+         (directory (file-name-directory file))
+         (project (plist-get info :project))
+         (created (org-read-date nil nil (spike-leung/org-publish-find-date filename project)))
+         (lastmod (format-time-string "%Y-%m-%d %H:%M" (org-timestamp-from-string (plist-get info :date))))
+         (author (plist-get info :author))
+         (author (when (listp author) (car author)))
+         (author (format "%s" author))
+         (github-base-url "https://github.com/Spike-Leung/taxodium/blob/org-publish/")
+         (github-url
+          (cond
+           ((string-match-p "/post/" directory)
+            (concat github-base-url "post/"))
+           ((string-match-p "/black-hole/" directory)
+            (concat github-base-url "black-hole/"))
+           (t github-base-url))))
+    (concat
+     "<p class=\"author\">作 者：<a href=\"mailto:l-yanlei@hotmail.com\">" author "</a></p>"
+     "<p class=\"date\">创建于：" created "</p>"
+     "<p class=\"lastmode\">修改于：" lastmod "</p>"
+     "<p class=\"license\">许可证：<a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>"
+     "<p class=\"support-me\">支持我：<a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>"
+     "<p><a href=\"" github-url filename "\">查看此文章的原始 org 文件</a></p>"
+     "<script src=\"/js/sidenote.js\" defer></script>"
+     "<script src=\"/js/code-enhanced.js\" defer></script>"
+     "<script src=\"/js/image-enhanced.js\" defer></script>"
+     "<script src=\"/js/backtop.js\" defer></script>"
+     "<noscript>
+        <style>
+          .js-required {
+             display: none;
+           }
+        </style>
+      </noscript>"
+     )))
+
+  (defconst spike-leung/html-postamble-sitemap "
 <script src=\"/js/backtop.js\" defer></script>
 <noscript>
   <style>
@@ -267,7 +307,7 @@ PROJECT is the current project."
          :time-stamp-file nil
          :html-head ,spike-leung/html-head
          :html-preamble ,spike-leung/html-preamble-content
-         :html-postamble ,spike-leung/html-postamble
+         :html-postamble spike-leung/html-postamble
          :exclude "rss.org"
          :auto-sitemap t
          :sitemap-filename "index.org"
@@ -303,8 +343,8 @@ PROJECT is the current project."
          :with-tags t
          :time-stamp-file nil
          :html-head ,spike-leung/html-head
-         :html-postamble ,spike-leung/html-postamble
          :html-preamble ,spike-leung/html-preamble-content
+         :html-postamble spike-leung/html-postamble
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
