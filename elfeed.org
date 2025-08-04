@@ -147,6 +147,9 @@
 **** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
 **** [[https://www.fuzzycomputer.com/rss][fuzzycomputer.com]]
 **** [[https://soatok.blog/feed/][Dhole Moments]]
+**** [[https://zine.milliesquilly.com/rss.xml][zine of millie]]                                                             :cool:ux:
+**** [[https://grantslatton.com/rss.xml][Grant Slatton's Blog]]                                                       :writing:
+**** [[https://1900.live/rss/][@1900'Blog]]
 *** Blaugust                                                                    :blog:blaugust:
 **** [[https://mattbee.zone/rss.xml][A Lovely Harmless Monster]]
 **** [[https://iam.skoo.bz/rss/][A Calm in the Chaos]]
@@ -200,7 +203,7 @@
 **** [[https://punkto.org/zonerender?https://thekeerok.neocities.org/archive][Keeroks Space]]
 **** [[https://sincerityplayground.bearblog.dev/feed/][KF's Playground]]
 **** [[https://kimberlyhirsh.com/feed.xml][kimberlyhirsh]]
-**** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]
+**** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]                                                      :keep:
 **** [[https://lameazoid.com/feed/][Lameazoid.com]]
 **** [[https://lapislabel.net/feed.xml][lapislabel.net]]
 **** [[https://lars-christian.com/feed.xml][Lars-Christian's website]]
@@ -257,7 +260,7 @@
 **** [[https://www.thedragonchronicle.com/feed/][The Dragon Chronicle]]
 **** [[https://www.ghastlymirror.xyz/rss.xml][The Ghastly Mirror]]
 **** [[https://criminallyvulgar.dev/feed/][The Sun and the Air]]
-**** [[https://theworksofegan.net/feed.xml][The Works of Egan]]
+**** [[https://theworksofegan.net/feed.xml][The Works of Egan]]                                                          :keep:
 **** [[https://thetangent.space/feed.xml][theTangentSpace]]
 **** [[https://www.timbornholdt.com/blog/feed.rss][Tim Bornholdt]]
 **** [[https://www.timetoloot.com/feed/][Time to Loot]]
