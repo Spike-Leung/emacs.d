@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(set-face-attribute 'default nil :height 200 :font "Iosevka" :font "LXGW WenKai Mono")
+(set-face-attribute 'default nil :height 200 :font "Google Sans Code" :font "Iosevka" :font "LXGW WenKai Mono")
 ;;; make background transparent
 ;; (setq frame-background-mode "light")
 ;; (set-face-background 'default "unspecified-bg")
