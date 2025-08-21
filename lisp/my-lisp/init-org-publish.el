@@ -83,9 +83,9 @@ INFO is property list of export."
          (project (plist-get info :project))
          (created (org-read-date nil nil (spike-leung/org-publish-find-date filename project)))
          (lastmod (format-time-string "%Y-%m-%d %H:%M" (org-timestamp-from-string (plist-get info :date))))
-         (author (plist-get info :author))
-         (author (when (listp author) (car author)))
-         (author (format "%s" author))
+         ;; (author (plist-get info :author))
+         ;; (author (when (listp author) (car author)))
+         ;; (author (format "%s" author))
          (github-base-url "https://github.com/Spike-Leung/taxodium/blob/org-publish/")
          (github-url
           (cond
@@ -95,7 +95,7 @@ INFO is property list of export."
             (concat github-base-url "black-hole/"))
            (t github-base-url))))
     (concat
-     "<p class=\"author\">作 者：<a href=\"mailto:l-yanlei@hotmail.com\">" author "</a></p>"
+     "<p class=\"author\">作 者：<a href=\"mailto:l-yanlei@hotmail.com\">" "Spike Leung" "</a></p>"
      "<p class=\"date\">创建于：" created "</p>"
      "<p class=\"lastmode\">修改于：" lastmod "</p>"
      "<p class=\"license\">许可证：<a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>"
