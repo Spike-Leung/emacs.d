@@ -34,6 +34,7 @@
 (require 'init-my-misc)
 (require 'init-my-org)
 (require 'init-org-publish)
+(require 'init-my-prog)
 (require 'init-translate)
 (require 'init-vue-mode)
 (require 'init-yasnippet)
