@@ -80,7 +80,7 @@ INFO is property list of export."
          (filename (file-name-nondirectory file))
          (directory (file-name-directory file))
          (project (plist-get info :project))
-         (created (org-read-date nil nil (spike-leung/org-publish-find-date filename project)))
+         (created (org-read-date nil nil (spike-leung/org-publish-get-org-keyword filename project "DATE")))
          (lastmod (format-time-string "%Y-%m-%d %H:%M" (org-timestamp-from-string (plist-get info :date))))
          ;; (author (plist-get info :author))
          ;; (author (when (listp author) (car author)))
@@ -113,7 +113,7 @@ INFO is property list of export."
       </noscript>"
      )))
 
-  (defconst spike-leung/html-postamble-sitemap "
+(defconst spike-leung/html-postamble-sitemap "
 <script src=\"/js/backtop.js\" defer></script>
 <noscript>
   <style>
@@ -151,32 +151,34 @@ ARGS will pass to `org-publish'."
 
 (advice-add 'org-publish :around #'spike-leung/apply-theme-when-publish)
 
-(defun spike-leung/get-org-keyword (keyword)
-  "Get the value of the given KEYWORD in the current Org file."
-  (let ((keywords (org-collect-keywords (list keyword))))
-    (if-let ((value (car (cdr (assoc keyword keywords)))))
-        value
-      (format "No %s found" keyword))))
 
-
-(defun spike-leung/org-publish-find-date (file project)
-  "Extract `#+date` form org file.
-FILE is org file name.PROJECT is the current project."
-  (with-temp-buffer
-    (insert-file-contents file)
-    (org-mode)
-    (spike-leung/get-org-keyword "DATE")))
-
+(defun spike-leung/org-publish-get-org-keyword (entry project keyword)
+  "Get the value of the given KEYWORD in the current Org file.
+KEYWORD is case-insensitive."
+  (let ((file (org-publish--expand-file-name entry project)))
+    (when (and (file-readable-p file) (not (directory-name-p file)))
+      (org-with-file-buffer file
+        (let* ((normalized-keyword (s-upcase keyword))
+               (keywords (org-collect-keywords (list normalized-keyword))))
+          (car (cdr (assoc normalized-keyword keywords))))))))
 
 (defun spike-leung/sitemap-format-entry (entry style project)
-  "自定义网站地图条目格式，添加日期信息."
-  (let* ((filename (org-publish--expand-file-name entry project))
-         (date (spike-leung/org-publish-find-date filename project)))
-    (format "%s %s"
-            (org-publish-sitemap-default-entry entry style project)
-            (if date
-                date
-              "long time ago..."))))
+  "Custom format for site map ENTRY, as a string.
+ENTRY is a file name.  STYLE is the style of the sitemap.
+PROJECT is the current project."
+  (let* ((export-file-name (spike-leung/org-publish-get-org-keyword entry project "export_file_name")))
+    (cond ((not (directory-name-p entry))
+           (format "[[file:%s][%s]]"
+                   (or
+                    (if export-file-name
+                        (format "%s.org" export-file-name)
+                      nil)
+                    entry)
+                   (org-publish-find-title entry project)))
+          ((eq style 'tree)
+           ;; Return only last subdir.
+           (file-name-nondirectory (directory-file-name entry)))
+          (t entry))))
 
 (defun spike-leung/sitemap-function (title list)
   "Generate sitemap as a string.
