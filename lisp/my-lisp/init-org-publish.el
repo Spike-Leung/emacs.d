@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(maybe-require-package 'ox-rss)
 (maybe-require-package 'olivetti)
 
 
@@ -199,28 +198,6 @@ TITLE is the sitemap title and LIST contains files to include."
 (with-eval-after-load 'ox
   (add-to-list 'org-export-filter-table-functions 'spike-leung/org-html-wrap-table))
 
-;; @see: https://writepermission.com/org-blogging-rss-feed.html
-(defun rw/org-rss-publish-to-rss (plist filename pub-dir)
-  "Publish RSS with PLIST, only when FILENAME is 'rss.org'.
-PUB-DIR is when the output will be placed."
-  (if (equal "rss.org" (file-name-nondirectory filename))
-      (org-rss-publish-to-rss plist filename pub-dir)))
-
-
-(defun rw/format-rss-feed (title list)
-  "Generate RSS feed as a string.
-TITLE is the RSS feed title and LIST contains files to include."
-  (concat
-   "#+TITLE: " title
-   "\n"
-   "#+DESCRIPTION: " (format
-                      "That the powerful play goes on, and you may contribute a verse. (%s)"
-                      spike-leung/follow-claim-description)
-   "\n"
-   "#+RSS_IMAGE_URL:" " https://taxodium.ink/favicon.ico"
-   "\n\n"
-   (org-list-to-subtree list)))
-
 
 (defun spike-leung/org-html-publish-common (plist filename pub-dir)
   "Common HTML publishing logic for org files and sitemap.
@@ -277,25 +254,6 @@ PUB-DIR is the publishing directory."
                                    href
                                    transition-name))))
         (write-region (point-min) (point-max) html-file)))))
-
-(defun rw/format-rss-feed-entry (entry style project)
-  "Format ENTRY for the RSS feed.
-ENTRY is a file name.  STYLE is either 'list' or 'tree'.
-PROJECT is the current project."
-  (cond ((not (directory-name-p entry))
-         (let* ((title (org-publish-find-title entry project))
-                (date (format-time-string "%Y-%m-%d" (org-publish-find-date entry project)))
-                (link (concat (file-name-sans-extension entry) ".html")))
-           (with-temp-buffer
-             (insert (format "%s\n" title))
-             (insert ":PROPERTIES:\n:RSS_PERMALINK: " link "\n:PUBDATE: " date "\n:END:\n")
-             (insert (format "%s" title))
-             (buffer-string))
-           ))
-        ((eq style 'tree)
-         ;; Return only last subdir.
-         (file-name-nondirectory (directory-file-name entry)))
-        (t entry)))
 
 (setq org-publish-project-alist
       `(("orgfiles"
@@ -361,27 +319,6 @@ PROJECT is the current project."
          :html-postamble ,spike-leung/html-postamble-sitemap
          :include ("index.org")
          :exclude ".*"
-         :author "Spike Leung"
-         :email "l-yanlei@hotmail.com")
-
-        ("rss"
-         :base-directory "~/git/taxodium/post"
-         :base-extension "org"
-         :exclude "about\\|index"
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function rw/org-rss-publish-to-rss
-         :html-postamble nil
-         :section-numbers nil
-         :with-toc nil
-         :rss-extension "xml"
-         :html-link-home "https://taxodium.ink"
-         :html-link-use-abs-url t
-         :auto-sitemap t
-         :sitemap-filename "rss.org"
-         :sitemap-title "Taxodium"
-         :sitemap-sort-files anti-chronologically
-         :sitemap-function rw/format-rss-feed
-         :sitemap-format-entry rw/format-rss-feed-entry
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
