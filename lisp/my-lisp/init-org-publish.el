@@ -73,46 +73,6 @@
 "
   "`:html-postamble' for `org-publish'.")
 
-(defun spike-leung/html-postamble (info)
-  "Dynamic html-postamble with INFO.
-INFO is property list of export."
-  (let* ((file (plist-get info :input-file))
-         (filename (file-name-nondirectory file))
-         (directory (file-name-directory file))
-         (project (plist-get info :project))
-         (created (org-read-date nil nil (spike-leung/org-publish-get-org-keyword filename project "DATE")))
-         (lastmod (format-time-string "%Y-%m-%d %H:%M" (org-timestamp-from-string (plist-get info :date))))
-         ;; (author (plist-get info :author))
-         ;; (author (when (listp author) (car author)))
-         ;; (author (format "%s" author))
-         (github-base-url "https://github.com/Spike-Leung/taxodium/blob/org-publish/")
-         (github-url
-          (cond
-           ((string-match-p "/post/" directory)
-            (concat github-base-url "post/"))
-           ((string-match-p "/black-hole/" directory)
-            (concat github-base-url "black-hole/"))
-           (t github-base-url))))
-    (concat
-     "<p class=\"author\">作 者：<a href=\"mailto:l-yanlei@hotmail.com\">" "Spike Leung" "</a></p>"
-     "<p class=\"date\">创建于：" created "</p>"
-     "<p class=\"lastmode\">修改于：" lastmod "</p>"
-     "<p class=\"license\">许可证：<a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>"
-     "<p class=\"support-me\">支持我：<a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>"
-     "<p><a href=\"" github-url filename "\">查看此文章的原始 org 文件</a></p>"
-     "<script src=\"/js/sidenote.js\" defer></script>"
-     "<script src=\"/js/code-enhanced.js\" defer></script>"
-     "<script src=\"/js/image-enhanced.js\" defer></script>"
-     "<script src=\"/js/backtop.js\" defer></script>"
-     "<noscript>
-        <style>
-          .js-required {
-             display: none;
-           }
-        </style>
-      </noscript>"
-     )))
-
 (defconst spike-leung/html-postamble-sitemap "
 <script src=\"/js/backtop.js\" defer></script>
 <noscript>
@@ -259,7 +219,7 @@ PUB-DIR is the publishing directory."
 
 (setq org-publish-project-alist
       `(("orgfiles"
-         :base-directory "~/git/taxodium/post"
+         :base-directory "~/git/taxodium/posts"
          :base-extension "org"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
@@ -269,7 +229,7 @@ PUB-DIR is the publishing directory."
          :time-stamp-file nil
          :html-head ,spike-leung/html-head
          :html-preamble ,spike-leung/html-preamble-content
-         :html-postamble spike-leung/html-postamble
+         :html-postamble ,spike-leung/html-postamble
          :exclude "rss.org"
          :auto-sitemap t
          :sitemap-filename "index.org"
@@ -311,7 +271,7 @@ PUB-DIR is the publishing directory."
          :email "l-yanlei@hotmail.com")
 
         ("sitemap"
-         :base-directory "~/git/taxodium/post"
+         :base-directory "~/git/taxodium/posts"
          :base-extension "org"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-sitemap
@@ -324,7 +284,22 @@ PUB-DIR is the publishing directory."
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
-        ("website" :components ("orgfiles" "sitemap" "black-hole"))))
+        ("static"
+         :base-directory "~/git/taxodium/static"
+         :base-extension any
+         :recursive t
+         :publishing-directory "~/git/taxodium/publish"
+         :publishing-function org-publish-attachment)
+
+        ("pages"
+         :base-directory "~/git/taxodium/pages"
+         :base-extension any
+         :recursive t
+         :publishing-directory "~/git/taxodium/publish"
+         :publishing-function org-publish-attachment)
+
+        ;; copy static fisrt
+        ("website" :components ("static" "pages" "orgfiles" "sitemap" "black-hole"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
