@@ -230,7 +230,7 @@ PUB-DIR is the publishing directory."
          :html-head ,spike-leung/html-head
          :html-preamble ,spike-leung/html-preamble-content
          :html-postamble ,spike-leung/html-postamble
-         :exclude "rss.org"
+         :exclude "rss\\.org\\|draft\\|blackhole"
          :auto-sitemap t
          :sitemap-filename "index.org"
          :sitemap-title "Taxodium"
@@ -241,8 +241,8 @@ PUB-DIR is the publishing directory."
          :email "l-yanlei@hotmail.com")
 
         ("draft"
-         :base-directory "~/git/taxodium/draft"
-         :base-extension "org"
+         :base-directory "~/git/taxodium/posts"
+         :base-extension "draft"
          :publishing-directory "~/git/taxodium/draft-preview"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -256,7 +256,7 @@ PUB-DIR is the publishing directory."
          :email "l-yanlei@hotmail.com")
 
         ("black-hole"
-         :base-directory "~/git/taxodium/black-hole"
+         :base-directory "~/git/taxodium/posts"
          :base-extension "org"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
@@ -266,13 +266,13 @@ PUB-DIR is the publishing directory."
          :time-stamp-file nil
          :html-head ,spike-leung/html-head
          :html-preamble ,spike-leung/html-preamble-content
-         :html-postamble spike-leung/html-postamble
+         :html-postamble ,spike-leung/html-postamble
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
         ("sitemap"
          :base-directory "~/git/taxodium/posts"
-         :base-extension "org"
+         :base-extension "blackhole"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-sitemap
          :time-stamp-file nil
@@ -284,13 +284,6 @@ PUB-DIR is the publishing directory."
          :author "Spike Leung"
          :email "l-yanlei@hotmail.com")
 
-        ("static"
-         :base-directory "~/git/taxodium/static"
-         :base-extension any
-         :recursive t
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function org-publish-attachment)
-
         ("pages"
          :base-directory "~/git/taxodium/pages"
          :base-extension any
@@ -299,7 +292,7 @@ PUB-DIR is the publishing directory."
          :publishing-function org-publish-attachment)
 
         ;; copy static fisrt
-        ("website" :components ("static" "pages" "orgfiles" "sitemap" "black-hole"))))
+        ("website" :components ("pages" "orgfiles" "sitemap" "black-hole"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
