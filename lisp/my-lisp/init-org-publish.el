@@ -235,6 +235,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
       `(("orgfiles"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
+         :exclude "rss\\.org\\|draft\\|blackhole"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -244,7 +245,6 @@ Export File Name is returned by `denote-retrieve-title-value'."
          :html-head ,spike-leung/html-head
          :html-preamble ,spike-leung/html-preamble-content
          :html-postamble ,spike-leung/html-postamble
-         :exclude "rss\\.org\\|draft\\|blackhole"
          :auto-sitemap t
          :sitemap-filename "index.org"
          :sitemap-title "Taxodium"
@@ -256,8 +256,9 @@ Export File Name is returned by `denote-retrieve-title-value'."
 
         ("draft"
          :base-directory "~/git/taxodium/posts"
-         :base-extension "draft"
-         :publishing-directory "~/git/taxodium/draft-preview"
+         :base-extension "org"
+         :exclude "rss\\.org\\|blackholex\\|published"
+         :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
          :with-toc t
@@ -272,6 +273,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
         ("black-hole"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
+         :exclude "rss\\.org\\|draft\\|published"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -286,7 +288,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
 
         ("sitemap"
          :base-directory "~/git/taxodium/posts"
-         :base-extension "blackhole"
+         :base-extension "org"
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-sitemap
          :time-stamp-file nil
@@ -306,7 +308,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
          :publishing-function org-publish-attachment)
 
         ;; copy static fisrt
-        ("website" :components ("pages" "orgfiles" "sitemap" "black-hole"))))
+        ("website" :components ("pages" "orgfiles" "black-hole" "draft" "sitemap"))))
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
