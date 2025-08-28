@@ -217,6 +217,20 @@ PUB-DIR is the publishing directory."
                                    transition-name))))
         (write-region (point-min) (point-max) html-file)))))
 
+;; thanks https://jiewawa.me/2024/03/blogging-with-denote-and-hugo/
+(defun spike-leung/sluggify-denote-title-as-export-file-name ()
+  "Add metadata to current `org-mode' file containing export file name.
+Export File Name is returned by `denote-retrieve-title-value'."
+  (interactive)
+  (save-excursion
+    (goto-char 0)
+    (search-forward "title")
+    (end-of-line)
+    (insert (format
+             "\n#+export_file_name: %s"
+             (denote-sluggify-title
+              (denote-retrieve-title-value buffer-file-name 'org))))))
+
 (setq org-publish-project-alist
       `(("orgfiles"
          :base-directory "~/git/taxodium/posts"
