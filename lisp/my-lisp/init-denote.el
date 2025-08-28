@@ -1,4 +1,4 @@
-;;; init-my-denote.el --- denote relavive config
+;;; init-denote.el --- denote relavive config
 ;;; Commentary:
 ;;; Code:
 
@@ -127,4 +127,4 @@ backend."
 (org-link-set-parameters "denote" :export #'spike-leung/denote-link-ol-export)
 
 (provide 'init-denote)
-;;; init-my-denote.el ends here
+;;; init-denote.el ends here
