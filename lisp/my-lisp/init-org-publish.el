@@ -126,15 +126,16 @@ KEYWORD is case-insensitive."
   "Custom format for site map ENTRY, as a string.
 ENTRY is a file name.  STYLE is the style of the sitemap.
 PROJECT is the current project."
-  (let* ((export-file-name (spike-leung/org-publish-get-org-keyword entry project "export_file_name")))
+  (let* ((export-file-name (spike-leung/org-publish-get-org-keyword entry project "export_file_name"))
+         (date (spike-leung/org-publish-get-org-keyword entry project "date")))
     (cond ((not (directory-name-p entry))
-           (format "[[file:%s][%s]]"
+           (format "[[file:%s][%s]] %s"
                    (or
                     (if export-file-name
                         (format "%s.org" export-file-name)
                       nil)
                     entry)
-                   (org-publish-find-title entry project)))
+                   (org-publish-find-title entry project) date))
           ((eq style 'tree)
            ;; Return only last subdir.
            (file-name-nondirectory (directory-file-name entry)))
