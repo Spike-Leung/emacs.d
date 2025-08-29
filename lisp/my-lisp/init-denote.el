@@ -77,11 +77,7 @@
     (let ((map dired-mode-map))
       (define-key map (kbd "C-c C-d C-i") #'denote-link-dired-marked-notes)
       (define-key map (kbd "C-c C-d C-r") #'denote-dired-rename-marked-files)
-      (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter)))
-
-  (with-eval-after-load 'denote
-    (add-hook 'find-file-hook #'denote-fontify-links-mode-maybe)
-    (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)))
+      (define-key map (kbd "C-c C-d C-R") #'denote-dired-rename-marked-files-using-front-matter))))
 
 
 ;;; https://protesilaos.com/emacs/denote#h:fed09992-7c43-4237-b48f-f654bc29d1d8
@@ -107,24 +103,27 @@ backend."
                (export-file-name (when path (spike-leung/my-denote--get-export-file-name path)))
                (anchor (if export-file-name
                            export-file-name
-                           (when path (file-relative-name (file-name-sans-extension path)))))
+                         (when path (file-relative-name (file-name-sans-extension path)))))
                (desc (cond
-                       (description)
-                       (file-search (format "denote:%s::%s" query file-search))
-                       (t (concat "denote:" query)))))
+                      (description)
+                      (file-search (format "denote:%s::%s" query file-search))
+                      (t (concat "denote:" query)))))
     (if path
         (pcase format
           ('html (if file-search
                      (format "<a href=\"%s.html%s\">%s</a>" anchor file-search desc)
-                     (format "<a href=\"%s.html\">%s</a>" anchor desc)))
+                   (format "<a href=\"%s.html\">%s</a>" anchor desc)))
           ('latex (format "\\href{%s}{%s}" (replace-regexp-in-string "[\\{}$%&_#~^]" "\\\\\\&" path) desc))
           ('texinfo (format "@uref{%s,%s}" path desc))
           ('ascii (format "[%s] <denote:%s>" desc path))
           ('md (format "[%s](%s)" desc path))
           (_ path))
-        (format-message "[[Denote query for `%s']]" query))))
+      (format-message "[[Denote query for `%s']]" query))))
 
-(org-link-set-parameters "denote" :export #'spike-leung/denote-link-ol-export)
+(with-eval-after-load 'denote
+  (add-hook 'find-file-hook #'denote-fontify-links-mode-maybe)
+  (add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
+  (org-link-set-parameters "denote" :export #'spike-leung/denote-link-ol-export))
 
 (provide 'init-denote)
 ;;; init-denote.el ends here
