@@ -3,7 +3,7 @@
 ;;; Code:
 
 (maybe-require-package 'olivetti)
-
+(require 'rx)
 
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
@@ -235,7 +235,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
       `(("orgfiles"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
-         :exclude "rss\\.org\\|draft\\|blackhole"
+         :exclude ,(rx (or "rss.org" "_draft" "_blackhole"))
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -257,7 +257,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
         ("draft"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
-         :exclude "rss\\.org\\|blackholex\\|published"
+         :exclude ,(rx (or "rss.org" "_published" "_blackhole"))
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -273,7 +273,7 @@ Export File Name is returned by `denote-retrieve-title-value'."
         ("black-hole"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
-         :exclude "rss\\.org\\|draft\\|published"
+         :exclude ,(rx (or "rss.org" "_published" "_draft"))
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
