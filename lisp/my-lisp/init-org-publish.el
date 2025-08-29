@@ -4,6 +4,7 @@
 
 (maybe-require-package 'olivetti)
 (require 'rx)
+(require 'cl-lib)
 
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
@@ -232,11 +233,19 @@ Export File Name is returned by `denote-retrieve-title-value'."
              (denote-sluggify-title
               (denote-retrieve-title-value buffer-file-name 'org))))))
 
+(defun spike-leung/get-file-list-from-denote-silo (silos tag)
+  "Return files in SILOS match TAG.
+SILO is a file path from `denote-silo-directories'.
+TAG is string."
+  (cl-letf ((denote-directory (expand-file-name silos)))
+    (denote-directory-files tag)))
+
 (setq org-publish-project-alist
       `(("orgfiles"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
-         :exclude ,(rx (or "rss.org" "_draft" "_blackhole"))
+         :exclude ".*"
+         :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_published")
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -258,7 +267,8 @@ Export File Name is returned by `denote-retrieve-title-value'."
         ("draft"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
-         :exclude ,(rx (or "rss.org" "_published" "_blackhole"))
+         :exclude ".*"
+         :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
@@ -274,7 +284,8 @@ Export File Name is returned by `denote-retrieve-title-value'."
         ("black-hole"
          :base-directory "~/git/taxodium/posts"
          :base-extension "org"
-         :exclude ,(rx (or "rss.org" "_published" "_draft"))
+         :exclude ".*"
+         :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_blackhole")
          :publishing-directory "~/git/taxodium/publish"
          :publishing-function spike-leung/org-html-publish-to-html-orgfiles
          :section-numbers nil
