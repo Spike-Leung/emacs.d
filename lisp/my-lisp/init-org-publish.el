@@ -100,6 +100,28 @@ ARGS will pass to `org-publish'."
 
 (advice-add 'org-publish :around #'spike-leung/apply-theme-when-publish)
 
+(defun spike-leung/remove-unnessary-id-from-html (text backend info)
+  "Remove unnecessarily id attibute.
+These elements's ID will be remove: figure,details,pre ..."
+  (when (org-export-derived-backend-p backend 'html)
+    (replace-regexp-in-string (rx (seq "<"
+                                       (group (or "figure" "details" "pre"))
+                                       (group (zero-or-more (not ">")))
+                                       (group (seq whitespace "id=" (syntax string-quote) "org" (zero-or-more hex) (syntax string-quote)))
+                                       (group (zero-or-more (not ">")))
+                                       ">"))
+                              (lambda (match)
+                                (format "<%s%s%s%s>"
+                                        (match-string 1 match) ;; tag
+                                        (match-string 2 match) ;; keep other attrs
+                                        "" ;; remove id
+                                        (match-string 4 match) ;; keep other attrs
+                                        ))
+                              text)))
+(with-eval-after-load 'ox
+  (add-to-list 'org-export-filter-final-output-functions
+               'spike-leung/remove-unnessary-id-from-html))
+
 
 (defun spike-leung/org-publish-get-org-keyword (entry project keyword)
   "Get the value of the given KEYWORD in the current Org file.
