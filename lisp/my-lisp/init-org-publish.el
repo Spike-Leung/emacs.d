@@ -87,19 +87,6 @@
 "
   "sitemap `:html-postamble' for `org-publish'.")
 
-(defconst spike-leung/follow-claim-description
-  "feedId:63132271001948160+userId:72185894417953792"
-  "Follow claim description.")
-
-(defun spike-leung/add-custom-id-to-all-headings ()
-  "Add a CUSTOM_ID property to all headings in the current buffer, if it does not already exist."
-  (interactive)
-  (org-map-entries
-   (lambda ()
-     (unless (org-entry-get nil "CUSTOM_ID")
-       (let ((custom-id (org-id-new)))
-         (org-set-property "CUSTOM_ID" custom-id))))))
-
 (defun spike-leung/apply-theme-when-publish (&rest args)
   "Switch theme when do `org-publish'.
 ARGS will pass to `org-publish'."

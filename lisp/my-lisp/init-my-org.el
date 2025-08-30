@@ -3,14 +3,25 @@
 ;; links: https://koenig-haunstetten.de/2016/07/09/code-snippet-for-orgmode-e05s02/
 ;;; Code:
 
-(defun my/org-add-ids-to-headlines-in-file ()
+(defun spike-leung/org-add-ids-to-headlines-in-file ()
   "Add ID properties to all headlines in the current file which do not already have one."
   (interactive)
   (org-map-entries 'org-id-get-create))
 
-;; (add-hook 'org-mode-hook
-;;           (lambda ()
-;;             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
+(defun spike-leung/org-add-custom-id-to-headings-in-files ()
+  "Add a CUSTOM_ID property to all headings in the current buffer, if it does not already exist."
+  (interactive)
+  (org-map-entries
+   (progn
+     (lambda ()
+       (unless (org-entry-get nil "CUSTOM_ID")
+         (let ((custom-id (org-id-new)))
+           (org-set-property "CUSTOM_ID" custom-id))))
+     (org-id-get-create))))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'spike-leung/org-add-custom-id-to-headings-in-files nil 'local)))
 
 (defun my/copy-id-to-clipboard()
   "Copy the ID property value to killring.
