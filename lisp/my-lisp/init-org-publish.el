@@ -5,6 +5,7 @@
 (maybe-require-package 'olivetti)
 (require 'rx)
 (require 'cl-lib)
+(require 'denote)
 
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
@@ -240,87 +241,101 @@ TAG is string."
   (cl-letf ((denote-directory (expand-file-name silos)))
     (denote-directory-files tag)))
 
-(setq org-publish-project-alist
-      `(("orgfiles"
-         :base-directory "~/git/taxodium/posts"
-         :base-extension "org"
-         :exclude ".*"
-         :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_published")
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function spike-leung/org-html-publish-to-html-orgfiles
-         :section-numbers nil
-         :with-toc t
-         :with-tags t
-         :time-stamp-file nil
-         :html-head ,spike-leung/html-head
-         :html-preamble ,spike-leung/html-preamble-content
-         :html-postamble ,spike-leung/html-postamble
-         :auto-sitemap t
-         :sitemap-filename "index.org"
-         :sitemap-title "Taxodium"
-         :sitemap-format-entry spike-leung/sitemap-format-entry
-         :sitemap-sort-files anti-chronologically
-         :sitemap-function spike-leung/sitemap-function
-         :author "Spike Leung"
-         :email "l-yanlei@hotmail.com")
+;; see: https://tusharhero.codeberg.page/creating_a_blog.html
+;; (add-hook 'org-export-before-processing-hook
+;;           #'(lambda (backend)
+;;               (insert "#+INCLUDE: \"./setup.org\"\n")))
+;; (setq org-confirm-babel-evaluate nil) ; Don't ask permission for evaluating source blocks
 
-        ("draft"
-         :base-directory "~/git/taxodium/posts"
-         :base-extension "org"
-         :exclude ".*"
-         :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function spike-leung/org-html-publish-to-html-orgfiles
-         :section-numbers nil
-         :with-toc t
-         :with-tags t
-         :time-stamp-file nil
-         :html-head ,spike-leung/html-head
-         :html-postamble ,spike-leung/html-postamble
-         :html-preamble ,spike-leung/html-preamble-content
-         :author "Spike Leung"
-         :email "l-yanlei@hotmail.com")
+(defun spike-leung/setup-org-publish-project-alist (&rest _args)
+  "Setup `org-publish-project-alist'."
+  (message "setup org-publish-project-alist")
+  (setq org-publish-project-alist
+        `(("orgfiles"
+           :base-directory "~/git/taxodium/posts"
+           :base-extension "org"
+           :exclude ".*"
+           :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_published")
+           :publishing-directory "~/git/taxodium/publish"
+           :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+           :section-numbers nil
+           :with-toc t
+           :with-tags t
+           :time-stamp-file nil
+           :html-head ,spike-leung/html-head
+           :html-preamble ,spike-leung/html-preamble-content
+           :html-postamble ,spike-leung/html-postamble
+           :auto-sitemap t
+           :sitemap-filename "index.org"
+           :sitemap-title "Taxodium"
+           :sitemap-format-entry spike-leung/sitemap-format-entry
+           :sitemap-sort-files anti-chronologically
+           :sitemap-function spike-leung/sitemap-function
+           :author "Spike Leung"
+           :email "l-yanlei@hotmail.com")
 
-        ("black-hole"
-         :base-directory "~/git/taxodium/posts"
-         :base-extension "org"
-         :exclude ".*"
-         :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_blackhole")
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function spike-leung/org-html-publish-to-html-orgfiles
-         :section-numbers nil
-         :with-toc t
-         :with-tags t
-         :time-stamp-file nil
-         :html-head ,spike-leung/html-head
-         :html-preamble ,spike-leung/html-preamble-content
-         :html-postamble ,spike-leung/html-postamble
-         :author "Spike Leung"
-         :email "l-yanlei@hotmail.com")
+          ("draft"
+           :base-directory "~/git/taxodium/posts"
+           :base-extension "org"
+           :exclude ".*"
+           :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
+           :publishing-directory "~/git/taxodium/publish"
+           :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+           :section-numbers nil
+           :with-toc t
+           :with-tags t
+           :time-stamp-file nil
+           :auto-sitemap nil
+           :html-head ,spike-leung/html-head
+           :html-postamble ,spike-leung/html-postamble
+           :html-preamble ,spike-leung/html-preamble-content
+           :author "Spike Leung"
+           :email "l-yanlei@hotmail.com")
 
-        ("sitemap"
-         :base-directory "~/git/taxodium/posts"
-         :base-extension "org"
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function spike-leung/org-html-publish-to-html-sitemap
-         :time-stamp-file nil
-         :html-head ,spike-leung/html-head-sitemap
-         :html-preamble ,spike-leung/html-preamble
-         :html-postamble ,spike-leung/html-postamble-sitemap
-         :include ("index.org")
-         :exclude ".*"
-         :author "Spike Leung"
-         :email "l-yanlei@hotmail.com")
+          ("black-hole"
+           :base-directory "~/git/taxodium/posts"
+           :base-extension "org"
+           :exclude ".*"
+           :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_blackhole")
+           :publishing-directory "~/git/taxodium/publish"
+           :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+           :section-numbers nil
+           :with-toc t
+           :with-tags t
+           :time-stamp-file nil
+           :auto-sitemap nil
+           :html-head ,spike-leung/html-head
+           :html-preamble ,spike-leung/html-preamble-content
+           :html-postamble ,spike-leung/html-postamble
+           :author "Spike Leung"
+           :email "l-yanlei@hotmail.com")
 
-        ("pages"
-         :base-directory "~/git/taxodium/pages"
-         :base-extension any
-         :recursive t
-         :publishing-directory "~/git/taxodium/publish"
-         :publishing-function org-publish-attachment)
+          ("sitemap"
+           :base-directory "~/git/taxodium/posts"
+           :base-extension "org"
+           :include ("index.org")
+           :exclude ".*"
+           :publishing-directory "~/git/taxodium/publish"
+           :publishing-function spike-leung/org-html-publish-to-html-sitemap
+           :time-stamp-file nil
+           :html-head ,spike-leung/html-head-sitemap
+           :html-preamble ,spike-leung/html-preamble
+           :html-postamble ,spike-leung/html-postamble-sitemap
+           :author "Spike Leung"
+           :email "l-yanlei@hotmail.com")
 
-        ;; copy static fisrt
-        ("website" :components ("pages" "orgfiles" "black-hole" "draft" "sitemap"))))
+          ("pages"
+           :base-directory "~/git/taxodium/pages"
+           :base-extension any
+           :recursive t
+           :publishing-directory "~/git/taxodium/publish"
+           :publishing-function org-publish-attachment)
+
+          ;; copy static fisrt
+          ("website" :components ("pages" "orgfiles" "black-hole" "draft" "sitemap")))))
+
+(spike-leung/setup-org-publish-project-alist)
+(advice-add 'org-publish :before #'spike-leung/setup-org-publish-project-alist)
 
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here
