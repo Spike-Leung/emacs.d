@@ -12,12 +12,10 @@
   "Add a CUSTOM_ID property to all headings in the current buffer, if it does not already exist."
   (interactive)
   (org-map-entries
-   (progn
-     (lambda ()
-       (unless (org-entry-get nil "CUSTOM_ID")
-         (let ((custom-id (org-id-new)))
-           (org-set-property "CUSTOM_ID" custom-id))))
-     (org-id-get-create))))
+   (lambda ()
+     (unless (org-entry-get nil "CUSTOM_ID")
+       (let ((custom-id (org-id-new)))
+         (org-set-property "CUSTOM_ID" custom-id))))))
 
 (add-hook 'org-mode-hook
           (lambda ()
