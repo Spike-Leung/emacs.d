@@ -123,10 +123,10 @@ These elements's ID will be remove: figure,details,pre ..."
                'spike-leung/remove-unnessary-id-from-html))
 
 
-(defun spike-leung/org-publish-get-org-keyword (entry project keyword)
+(defun spike-leung/org-publish-get-org-keyword (entry project keyword &optional filename)
   "Get the value of the given KEYWORD in the current Org file.
 KEYWORD is case-insensitive."
-  (let ((file (org-publish--expand-file-name entry project)))
+  (let ((file (or filename (org-publish--expand-file-name entry project))))
     (when (and (file-readable-p file) (not (directory-name-p file)))
       (org-with-file-buffer file
         (let* ((normalized-keyword (s-upcase keyword))
@@ -172,31 +172,13 @@ TITLE is the sitemap title and LIST contains files to include."
 (with-eval-after-load 'ox
   (add-to-list 'org-export-filter-table-functions 'spike-leung/org-html-wrap-table))
 
-
-(defun spike-leung/org-html-publish-common (plist filename pub-dir)
-  "Common HTML publishing logic for org files and sitemap.
-PLIST is the property list for the given project.
-FILENAME is the org file being published.
-PUB-DIR is the publishing directory.
-Returns the path to the generated HTML file."
-  (let ((org-html-link-org-files-as-html t))
-    ;; First publish to HTML using org-mode's standard publishing function
-    (org-html-publish-to-html plist filename pub-dir)
-    ;; Return the path to the generated HTML file
-    (concat pub-dir "/" (file-name-nondirectory (file-name-sans-extension filename)) ".html")))
-
-(defun spike-leung/get-view-transition-name (filename)
-  "Generate consistent view-transition-name based on FILENAME.
-Strips directory and .org extension, and converts to valid CSS identifier."
-  (let ((basename (file-name-base filename)))
-    (replace-regexp-in-string "[^a-zA-Z0-9-]" "-" basename)))
-
 (defun spike-leung/org-html-publish-to-html-orgfiles (plist filename pub-dir)
   "Publish FILENAME to HTML with view-transition-name added to title.
 PLIST is the property list for the given project.
 FILENAME is the org file being published.
 PUB-DIR is the publishing directory."
-  (let ((html-file (spike-leung/org-html-publish-common plist filename pub-dir)))
+  (let* ((html-file (spike-leung/org-html-publish-common plist filename pub-dir))
+         (transition-name (spike-leung/get-view-transition-name (or (spike-leung/org-publish-get-org-keyword nil nil "export_file_name" filename) filename))))
     (when (file-exists-p html-file)
       (with-temp-buffer
         (insert-file-contents html-file)
@@ -205,7 +187,7 @@ PUB-DIR is the publishing directory."
         (while (re-search-forward "<h1[^>]*>\\([^<]+\\)</h1>" nil t)
           (let ((title (match-string 1)))
             (replace-match (format "<h1 style=\"view-transition-name: spike-%s\" class=\"title\">%s</h1>"
-                                   (spike-leung/get-view-transition-name filename)
+                                   transition-name
                                    title))))
         (write-region (point-min) (point-max) html-file)))))
 
@@ -228,6 +210,24 @@ PUB-DIR is the publishing directory."
                                    href
                                    transition-name))))
         (write-region (point-min) (point-max) html-file)))))
+
+(defun spike-leung/org-html-publish-common (plist filename pub-dir)
+  "Common HTML publishing logic for org files and sitemap.
+PLIST is the property list for the given project.
+FILENAME is the org file being published.
+PUB-DIR is the publishing directory.
+Returns the path to the generated HTML file."
+  (let ((org-html-link-org-files-as-html t)
+        ;; file will be exported with export_file_name
+        (export-file-name (or (spike-leung/org-publish-get-org-keyword nil nil "export_file_name" filename) filename)))
+    (org-html-publish-to-html plist filename pub-dir)
+    (concat pub-dir (file-name-nondirectory (file-name-sans-extension export-file-name)) ".html")))
+
+(defun spike-leung/get-view-transition-name (filename)
+  "Generate consistent view-transition-name based on FILENAME.
+Strips directory and .org extension, and converts to valid CSS identifier."
+  (let ((basename (file-name-base filename)))
+    (replace-regexp-in-string "[^a-zA-Z0-9-]" "-" basename)))
 
 ;; thanks https://jiewawa.me/2024/03/blogging-with-denote-and-hugo/
 (defun spike-leung/sluggify-denote-title-as-export-file-name ()
