@@ -346,5 +346,20 @@ TAG is string."
 (spike-leung/setup-org-publish-project-alist)
 (advice-add 'org-publish :before #'spike-leung/setup-org-publish-project-alist)
 
+(defun spike-leung/org-add-custom-id-to-headings-in-blog-files ()
+  "Add a CUSTOM_ID property to all headings in the current buffer, if it does not already exist."
+  (interactive)
+  (org-map-entries
+   (lambda ()
+     (unless (org-entry-get nil "CUSTOM_ID")
+       (let ((custom-id (org-id-new)))
+         (org-set-property "CUSTOM_ID" custom-id))))))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (when (and buffer-file-name
+                       (string-match "taxodium" buffer-file-name))
+              (add-hook 'before-save-hook 'spike-leung/org-add-custom-id-to-headings-in-blog-files nil 'local))))
+
 (provide 'init-org-publish)
 ;;; init-org-publish.el ends here

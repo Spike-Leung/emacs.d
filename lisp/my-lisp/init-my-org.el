@@ -8,19 +8,6 @@
   (interactive)
   (org-map-entries 'org-id-get-create))
 
-(defun spike-leung/org-add-custom-id-to-headings-in-files ()
-  "Add a CUSTOM_ID property to all headings in the current buffer, if it does not already exist."
-  (interactive)
-  (org-map-entries
-   (lambda ()
-     (unless (org-entry-get nil "CUSTOM_ID")
-       (let ((custom-id (org-id-new)))
-         (org-set-property "CUSTOM_ID" custom-id))))))
-
-(add-hook 'org-mode-hook
-          (lambda ()
-            (add-hook 'before-save-hook 'spike-leung/org-add-custom-id-to-headings-in-files nil 'local)))
-
 (defun my/copy-id-to-clipboard()
   "Copy the ID property value to killring.
 If no ID is there then create a new unique ID.
