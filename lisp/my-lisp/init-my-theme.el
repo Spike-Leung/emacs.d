@@ -115,6 +115,8 @@
     doric-light
     doric-marble
     doric-obsidian
+    doric-oak
+    doric-pine
     doric-plum
     doric-water
     doric-wind
