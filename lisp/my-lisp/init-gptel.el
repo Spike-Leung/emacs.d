@@ -53,7 +53,7 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
       :key (spike-leung/get-openrouter-api-key)
       :models spike-leung/openrouter-models-cache
       :request-params '(:reasoning ( :max_tokens 2000)))
-    (setq gptel-model   'google/gemini-2.5-flash
+    (setq gptel-model   'google/gemini-2.5-pro
           gptel-backend
           (gptel-make-openai "OpenRouter"
             :host "openrouter.ai"
@@ -61,8 +61,7 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
             :stream t
             :key (spike-leung/get-openrouter-api-key)
             :models spike-leung/openrouter-models-cache
-            :request-params '(:reasoning ( :max_tokens 2000)))
-          ))
+            :request-params '(:reasoning ( :max_tokens 2000)))))
 
   ;; Add hook function to refresh OpenRouter provider when models are updated
   (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
