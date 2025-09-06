@@ -122,16 +122,25 @@ These elements's ID will be remove: figure,details,pre ..."
   (add-to-list 'org-export-filter-final-output-functions
                'spike-leung/remove-unnessary-id-from-html))
 
-
 (defun spike-leung/org-publish-get-org-keyword (entry project keyword &optional filename)
-  "Get the value of the given KEYWORD in the current Org file.
+  "Get the value of KEYWORD from Org file using `rx` for the regexp.
+This is a fast version that avoids creating a full Org mode buffer.
 KEYWORD is case-insensitive."
   (let ((file (or filename (org-publish--expand-file-name entry project))))
     (when (and (file-readable-p file) (not (directory-name-p file)))
-      (org-with-file-buffer file
-        (let* ((normalized-keyword (s-upcase keyword))
-               (keywords (org-collect-keywords (list normalized-keyword))))
-          (car (cdr (assoc normalized-keyword keywords))))))))
+      (with-temp-buffer
+        (insert-file-contents-literally file)
+        (goto-char (point-min))
+        (let ((case-fold-search t))
+          (when (re-search-forward
+                 (rx line-start
+                     "#+"
+                     (literal keyword)
+                     (seq ":")
+                     (zero-or-more blank)
+                     (group (zero-or-more any)))
+                 nil t)
+            (s-trim (match-string 1))))))))
 
 (defun spike-leung/sitemap-format-entry (entry style project)
   "Custom format for site map ENTRY, as a string.
