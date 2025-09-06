@@ -154,6 +154,9 @@
 **** [[https://www.raptitude.com/feed/][Raptitude]]
 **** [[https://feedpress.me/TheTechnium][The Technium]]
 **** [[https://tusharhero.codeberg.page/rss.xml][tusharhero]]                                                                 :emacs:
+**** [[https://lucumr.pocoo.org/feed.atom][Armin Ronacher's Thoughts and Writings]]
+**** [[https://www.teamten.com/lawrence/writings/rss.xml][Lawrence Kesteloot's writings]]
+**** [[https://aresluna.org/main.rss][Aresluna]]
 *** Blaugust                                                                    :blog:blaugust:
 **** [[https://mattbee.zone/rss.xml][A Lovely Harmless Monster]]
 **** [[https://iam.skoo.bz/rss/][A Calm in the Chaos]]
