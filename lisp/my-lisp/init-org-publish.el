@@ -297,7 +297,7 @@ TAG is string."
            :base-extension "org"
            :exclude ".*"
            :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
-           :publishing-directory "~/git/taxodium/publish"
+           :publishing-directory "~/git/taxodium/publish/draft"
            :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
