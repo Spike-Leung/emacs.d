@@ -16,6 +16,10 @@
   "~/git/taxodium/publish/draft"
   "`:publishing-directory' for draft.")
 
+(defconst spike-leung/org-publish-default-publishing-directory
+  "~/git/taxodium/publish"
+  "`:publishing-directory' for draft.")
+
 (defconst spike-leung/html-head "
 <meta name=\"color-scheme\" content=\"light dark\" />
 <script src=\"/js/color-scheme.js\"></script>
@@ -285,7 +289,7 @@ TAG is string."
            :base-extension "org"
            :exclude ".*"
            :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_published")
-           :publishing-directory "~/git/taxodium/publish"
+           :publishing-directory ,spike-leung/org-publish-default-publishing-directory
            :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
@@ -327,7 +331,7 @@ TAG is string."
            :base-extension "org"
            :exclude ".*"
            :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_blackhole")
-           :publishing-directory "~/git/taxodium/publish"
+           :publishing-directory ,spike-leung/org-publish-default-publishing-directory
            :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
@@ -345,7 +349,7 @@ TAG is string."
            :base-extension "org"
            :include ("index.org")
            :exclude ".*"
-           :publishing-directory "~/git/taxodium/publish"
+           :publishing-directory ,spike-leung/org-publish-default-publishing-directory
            :publishing-function spike-leung/org-html-publish-to-html-sitemap
            :time-stamp-file nil
            :html-head ,spike-leung/html-head-sitemap
@@ -358,7 +362,7 @@ TAG is string."
            :base-directory "~/git/taxodium/pages"
            :base-extension any
            :recursive t
-           :publishing-directory "~/git/taxodium/publish"
+           :publishing-directory ,spike-leung/org-publish-default-publishing-directory
            :publishing-function org-publish-attachment)
 
           ;; copy static fisrt
