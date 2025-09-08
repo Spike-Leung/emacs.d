@@ -127,7 +127,12 @@
     sanityinc-tomorrow-bright
     sanityinc-tomorrow-eighties
     gruvbox
-    monokai
+    monokai-pro-classic
+    monokai-pro-machine
+    ;; monokai-pro-octagon
+    monokai-pro-ristretto
+    monokai-pro-spectrum
+    monokai-pro
     timu-caribbean)
   "A list of themes to randomly cycle through.")
 
