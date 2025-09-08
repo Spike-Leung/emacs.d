@@ -12,6 +12,10 @@
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-BoldItalic-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 
+(defconst spike-leung/org-publish-draft-publishing-directory
+  "~/git/taxodium/publish/draft"
+  "`:publishing-directory' for draft.")
+
 (defconst spike-leung/html-head "
 <meta name=\"color-scheme\" content=\"light dark\" />
 <script src=\"/js/color-scheme.js\"></script>
@@ -265,6 +269,13 @@ TAG is string."
 ;;               (insert "#+INCLUDE: \"./setup.org\"\n")))
 ;; (setq org-confirm-babel-evaluate nil) ; Don't ask permission for evaluating source blocks
 
+(defun spike-lenug/org-publish-clean-draft (dir)
+  "Clean draft files before org publish. DIR is the draft publish dir."
+  (dolist (file (directory-files dir t))
+    (when (and (file-regular-p file)
+               (not (member (file-name-nondirectory file) '("." ".."))))
+      (delete-file file))))
+
 (defun spike-leung/setup-org-publish-project-alist (&rest _args)
   "Setup `org-publish-project-alist'."
   (message "setup org-publish-project-alist")
@@ -297,7 +308,8 @@ TAG is string."
            :base-extension "org"
            :exclude ".*"
            :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
-           :publishing-directory "~/git/taxodium/publish/draft"
+           :preparation-function ,(spike-lenug/org-publish-clean-draft spike-leung/org-publish-draft-publishing-directory)
+           :publishing-directory ,spike-leung/org-publish-draft-publishing-directory
            :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
