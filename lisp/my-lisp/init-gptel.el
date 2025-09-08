@@ -61,18 +61,16 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
             :stream t
             :key (spike-leung/get-openrouter-api-key)
             :models spike-leung/openrouter-models-cache
-            :request-params '(:reasoning ( :max_tokens 2000)))))
-
-  ;; Add hook function to refresh OpenRouter provider when models are updated
-  (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
-
-  ;; If models were fetched before gptel loaded and hook was added,
-  ;; explicitly refresh now to ensure consistency if cache is populated.
-  ;; This is particularly relevant if init-openrouter-models.el's initial fetch
-  ;; populates the cache before this eval-after-load block runs.
-  (when (and spike-leung/openrouter-models-cache
-             (> (length spike-leung/openrouter-models-cache) 0))
-    (spike-leung/gptel-refresh-openrouter-provider)))
+            :request-params '(:reasoning ( :max_tokens 2000))))
+    ;; Add hook function to refresh OpenRouter provider when models are updated
+    (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
+    ;; If models were fetched before gptel loaded and hook was added,
+    ;; explicitly refresh now to ensure consistency if cache is populated.
+    ;; This is particularly relevant if init-openrouter-models.el's initial fetch
+    ;; populates the cache before this eval-after-load block runs.
+    (when (and spike-leung/openrouter-models-cache
+               (> (length spike-leung/openrouter-models-cache) 0))
+      (spike-leung/gptel-refresh-openrouter-provider))))
 
 ;;; some helpful utils use gptel
 
