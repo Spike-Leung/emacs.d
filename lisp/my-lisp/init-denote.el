@@ -18,6 +18,7 @@
   (setq denote-prompts '(template title keywords))
   (setq denote-excluded-directories-regexp nil)
   (setq denote-excluded-keywords-regexp nil)
+  (setq denote-org-store-link-to-heading 'id)
   (setq denote-excluded-files-regexp "hidden")
 
   ;; Pick dates, where relevant, with Org's advanced interface:
