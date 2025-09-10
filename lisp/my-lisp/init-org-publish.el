@@ -280,6 +280,14 @@ TAG is string."
                (not (member (file-name-nondirectory file) '("." ".."))))
       (delete-file file))))
 
+(defun spike-leung/insert-blog-images ()
+  "Insert images from blog."
+  (interactive)
+  (let* ((image-dir (expand-file-name "~/git/taxodium/publish/images/"))
+         (image-file (read-file-name "Select image: " image-dir))
+         (relative-path (file-relative-name image-file image-dir)))
+    (insert (format "#+CAPTION: \n[[file:images/%s]]" relative-path))))
+
 (defun spike-leung/setup-org-publish-project-alist (&rest _args)
   "Setup `org-publish-project-alist'."
   (message "setup org-publish-project-alist")
