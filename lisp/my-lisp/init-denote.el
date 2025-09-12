@@ -54,24 +54,21 @@
 
   ;;; Denote key bindings.
   (let ((map global-map))
-    (define-key map (kbd "C-c n n") #'denote-open-or-create)
-    (define-key map (kbd "C-c n N") #'denote-silo-open-or-create)
-    (define-key map (kbd "C-c n i") #'denote-link-or-create) ; "insert" mnemonic
+    (define-key map (kbd "C-c n n") #'denote-silo-open-or-create)
+    (define-key map (kbd "C-c n N") #'denote-open-or-create)
+    (define-key map (kbd "C-c n i") #'denote-link-or-create)
     (define-key map (kbd "C-c n I") #'denote-add-links)
     (define-key map (kbd "C-c n b") #'denote-backlinks)
     (define-key map (kbd "C-c n g") #'denote-grep)
-    (define-key map (kbd "C-c n c") #'denote-region) ; "contents" mnemonic
-    (define-key map (kbd "C-c n s") #'denote-subdirectory)
-    (define-key map (kbd "C-c n t") #'denote-template)
+    (define-key map (kbd "C-c n r") #'denote-rename-file)
+    (define-key map (kbd "C-c n R") #'denote-rename-file-using-front-matter)
+    (define-key map (kbd "C-c n d") #'denote-rename-file-date)
     (define-key map (kbd "C-c n k a") #'denote-keywords-add)
     (define-key map (kbd "C-c n k k") #'denote-keywords-remove)
     (define-key map (kbd "C-c n f f") #'denote-find-link)
     (define-key map (kbd "C-c n f b") #'denote-find-backlink)
     (define-key map (kbd "C-c n q c") #'denote-query-contents-link)
-    (define-key map (kbd "C-c n q f") #'denote-query-filenames-link)
-    (define-key map (kbd "C-c n r") #'denote-rename-file)
-    (define-key map (kbd "C-c n R") #'denote-rename-file-using-front-matter)
-    (define-key map (kbd "C-c n d") #'denote-rename-file-date))
+    (define-key map (kbd "C-c n q f") #'denote-query-filenames-link))
 
   ;; Key bindings specifically for Dired.
   (with-eval-after-load 'dired
