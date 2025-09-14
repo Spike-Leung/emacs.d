@@ -108,6 +108,16 @@ ARGS will pass to `org-publish'."
 
 (advice-add 'org-publish :around #'spike-leung/apply-theme-when-publish)
 
+(defadvice org-html-paragraph (before org-html-paragraph-advice (paragraph contents info) activate)
+  "Join consecutive Chinese lines into a single long line without unwanted space when exporting `org-mode' to html."
+  (let* ((origin-contents (ad-get-arg 1))
+         (fixed-contents
+          (replace-regexp-in-string
+           (rx (group not-newline) (regexp "\n") (group not-newline))
+           "\\1\\2"
+           origin-contents)))
+    (ad-set-arg 1 fixed-contents)))
+
 (defun spike-leung/remove-unnessary-id-from-html (text backend info)
   "Remove unnecessarily id attibute.
 These elements's ID will be remove: figure,details,pre ..."
