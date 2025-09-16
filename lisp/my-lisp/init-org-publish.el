@@ -71,7 +71,6 @@
 <p class=\"support-me\">支持我： <a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>
 <script src=\"/js/sidenote.js\" defer></script>
 <script src=\"/js/code-enhanced.js\" defer></script>
-<script src=\"/js/image-enhanced.js\" defer></script>
 <script src=\"/js/backtop.js\" defer></script>
 <noscript>
   <style>
@@ -107,6 +106,17 @@ ARGS will pass to `org-publish'."
       (load-theme current-theme :no-confirm))))
 
 (advice-add 'org-publish :around #'spike-leung/apply-theme-when-publish)
+
+(defun spike-leung/org-html-wrap-image-with-link (orig-fn source attributes info)
+  "Wrap the <img> tag in an <a> tag linking to the image source."
+  (let ((img-tag (funcall orig-fn source attributes info)))
+    (if (string-match-p (concat "^" org-preview-latex-image-directory) source)
+        img-tag
+      (format "<a href=\"%s\">%s</a>"
+              source
+              img-tag))))
+
+(advice-add 'org-html--format-image :around #'spike-leung/org-html-wrap-image-with-link)
 
 (defadvice org-html-paragraph (before org-html-paragraph-advice (paragraph contents info) activate)
   "Join consecutive Chinese lines into a single long line without unwanted space when exporting `org-mode' to html."
