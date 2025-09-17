@@ -10,8 +10,6 @@
     (with-eval-after-load 'vertico
       (define-key vertico-map (kbd "C-c C-o") 'embark-export)
       (define-key vertico-map (kbd "C-c C-c") 'embark-act)
-      ;; https://github.com/oantolin/embark?tab=readme-ov-file#selecting-commands-via-completion-outside-of-embark
-      (setq prefix-help-command #'embark-prefix-help-command)
       (vertico-multiform-mode)
       (add-to-list 'vertico-multiform-categories '(embark-keybinding grid))))
 
@@ -40,6 +38,9 @@
     (global-set-key [remap goto-line] 'consult-goto-line)
 
     (maybe-require-package 'embark-consult)))
+
+;; https://github.com/oantolin/embark?tab=readme-ov-file#selecting-commands-via-completion-outside-of-embark
+(setq prefix-help-command #'embark-prefix-help-command)
 
 (when (maybe-require-package 'marginalia)
   (add-hook 'after-init-hook 'marginalia-mode))
