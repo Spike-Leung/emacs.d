@@ -327,7 +327,7 @@ TAG is string."
            :exclude ".*"
            :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_published")
            :publishing-directory ,spike-leung/org-publish-default-publishing-directory
-           :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+           ;; :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
            :with-tags t
@@ -352,7 +352,7 @@ TAG is string."
            :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
            :preparation-function ,(spike-lenug/org-publish-clean-draft spike-leung/org-publish-draft-publishing-directory)
            :publishing-directory ,spike-leung/org-publish-draft-publishing-directory
-           :publishing-function spike-leung/org-html-publish-to-html-orgfiles
+           ;; :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
            :with-tags t
@@ -388,7 +388,7 @@ TAG is string."
            :include ("index.org")
            :exclude ".*"
            :publishing-directory ,spike-leung/org-publish-default-publishing-directory
-           :publishing-function spike-leung/org-html-publish-to-html-sitemap
+           ;; :publishing-function spike-leung/org-html-publish-to-html-sitemap
            :time-stamp-file nil
            :html-head ,spike-leung/html-head-sitemap
            :html-preamble ,spike-leung/html-preamble
