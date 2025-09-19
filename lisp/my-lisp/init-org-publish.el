@@ -157,7 +157,7 @@ KEYWORD is case-insensitive."
   (let ((file (or filename (org-publish--expand-file-name entry project))))
     (when (and (file-readable-p file) (not (directory-name-p file)))
       (with-temp-buffer
-        (insert-file-contents-literally file)
+        (insert-file-contents file)
         (goto-char (point-min))
         (let ((case-fold-search t))
           (when (re-search-forward
@@ -175,15 +175,21 @@ KEYWORD is case-insensitive."
 ENTRY is a file name.  STYLE is the style of the sitemap.
 PROJECT is the current project."
   (let* ((export-file-name (spike-leung/org-publish-get-org-keyword entry project "export_file_name"))
-         (date (spike-leung/org-publish-get-org-keyword entry project "date")))
+         (subtitle (spike-leung/org-publish-get-org-keyword entry project "subtitle")))
     (cond ((not (directory-name-p entry))
-           (format "[[file:%s][%s]] %s"
+           (concat (format "[[file:%s][%s]]"
+                           (or
+                            (if export-file-name
+                                (format "%s.org" export-file-name)
+                              nil)
+                            entry)
+                           (org-publish-find-title entry project))
+                   "\n"
                    (or
-                    (if export-file-name
-                        (format "%s.org" export-file-name)
+                    (if subtitle
+                        (format "@@html: <span class=\"sitemap-subtitle\">%s</span>@@" subtitle)
                       nil)
-                    entry)
-                   (org-publish-find-title entry project) date))
+                    "")))
           ((eq style 'tree)
            ;; Return only last subdir.
            (file-name-nondirectory (directory-file-name entry)))
@@ -195,11 +201,11 @@ TITLE is the sitemap title and LIST contains files to include."
   (concat
    "#+TITLE: " title
    "\n"
-   "#+DESCRIPTION: SpikeLeung's blog."
+   "#+DESCRIPTION: Spike Leung's blog."
    "\n\n"
    "That the powerful play goes on, and you may contribute a verse."
    "\n\n"
-   (org-list-to-org list)))
+   (org-list-to-org list '(:backend org :raw t))))
 
 (defun spike-leung/org-html-wrap-table (table backend info)
   "Wrap tables in a div when exporting to HTML."
@@ -332,6 +338,7 @@ TAG is string."
            :sitemap-format-entry spike-leung/sitemap-format-entry
            :sitemap-sort-files anti-chronologically
            :sitemap-function spike-leung/sitemap-function
+           :sitemap-style list
            :author "Spike Leung"
            :email "l-yanlei@hotmail.com")
 
