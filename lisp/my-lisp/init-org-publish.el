@@ -123,7 +123,10 @@ ARGS will pass to `org-publish'."
   (let* ((origin-contents (ad-get-arg 1))
          (fixed-contents
           (replace-regexp-in-string
-           (rx (group not-newline) (regexp "\n") (group not-newline))
+           (rx
+            (group (or (category chinese) "<" ">"))
+            (regexp "\n")
+            (group (or (category chinese) "<" ">")))
            "\\1\\2"
            origin-contents)))
     (ad-set-arg 1 fixed-contents)))
