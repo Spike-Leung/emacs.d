@@ -38,6 +38,7 @@
 (require 'init-translate)
 (require 'init-vue-mode)
 (require 'init-yasnippet)
+(require 'init-writing)
 
 (when *is-a-mac*
   (require 'init-beancount)

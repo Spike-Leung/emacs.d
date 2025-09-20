@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(maybe-require-package 'olivetti)
 (require 'rx)
 (require 'cl-lib)
 (require 'denote)
