@@ -109,11 +109,13 @@ ARGS will pass to `org-publish'."
 
 (defun spike-leung/org-html-wrap-image-with-link (orig-fn source attributes info)
   "Wrap the <img> tag in an <a> tag linking to the image source."
-  (let ((img-tag (funcall orig-fn source attributes info)))
+  (let ((href (or (plist-get attributes :data-href)
+                  (plist-get attributes :href)))
+        (img-tag (funcall orig-fn source attributes info)))
     (if (string-match-p (concat "^" org-preview-latex-image-directory) source)
         img-tag
       (format "<a href=\"%s\">%s</a>"
-              source
+              (or href source)
               img-tag))))
 
 (advice-add 'org-html--format-image :around #'spike-leung/org-html-wrap-image-with-link)
