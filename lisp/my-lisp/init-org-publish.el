@@ -66,7 +66,7 @@
 <p class=\"author\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">创建于： %d</p>
 <p class=\"date\">修改于： %C</p>
-<p class=\"license\">许可证： <a href=\"https://www.creativecommons.org/licenses/by-nc/4.0/deed.zh-hans\">CC BY-NC 4.0</a></p>
+<p class=\"license\">许可证： <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans\">CC BY-NC-SA 4.0</a></p>
 <p class=\"support-me\">支持我： <a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>
 <script src=\"/js/sidenote.js\" defer></script>
 <script src=\"/js/code-enhanced.js\" defer></script>
