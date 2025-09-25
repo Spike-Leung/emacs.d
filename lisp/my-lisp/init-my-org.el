@@ -153,7 +153,7 @@ If its assigned to a key it saves you marking the text and copying to the killri
 ;;; Agenda files
 (setq org-agenda-files (list "~/org/mylife.org"
                              "~/org/mywork.org"
-                             "~/org/birthday.org"
+                             "~/org/anniversary.org"
                              "~/org/reference.org"
                              "~/org/goals.org"
                              "~/org/dead.org"))
