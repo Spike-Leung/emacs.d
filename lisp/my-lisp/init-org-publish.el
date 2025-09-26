@@ -27,12 +27,14 @@
 <link rel=\"stylesheet\" href=\"/fonts/LXGWWenKai/LXGWWenKai-Medium/result.css\" />
 <link rel=\"stylesheet\" href=\"/styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
+<link rel=\"webmention\" href=\"https://webmention.io/taxodium.ink/webmention\" />
 "
-  "`:html-head' for `org-publish'.")
+"`:html-head' for `org-publish'.")
 
 (defconst spike-leung/html-head-sitemap (concat
                                          spike-leung/html-head
-                                         "<link rel=\"stylesheet\" href=\"/styles/sitemap.css\" type=\"text/css\"/>")
+                                         "<link rel=\"stylesheet\" href=\"/styles/sitemap.css\" type=\"text/css\"/>"
+                                         "<link href=\"https://github.com/Spike-Leung\" rel=\"me\">")
   "`:html-head' for `org-publish'.Customize for index.org.")
 
 (defconst spike-leung/html-preamble
@@ -63,6 +65,19 @@
   "`:html-preamble' for `org-publish'.Customize for content." )
 
 (defconst spike-leung/html-postamble "
+<details class=\"webmention-container js-required\">
+<summary>Webmentions <span class=\"webmention-count\">(加载中...)</span></summary>
+<p class=\"webmention-tip\"><a href=\"https://webmention.io/taxodium.ink/webmention\">Webmention</a> 由 <a href=\"https://webmention.io\">webmention.io</a> 提供服务。</p>
+<form action=\"https://webmention.io//taxodium.ink/webmention\" method=\"post\">
+<label for=\"source\">Source URL:</label>
+<input type=\"url\" name=\"source\" id=\"source\" placeholder=\"发送 Webmention 的页面 URL（一般来说是你的页面 URL）\"/>
+<label for=\"target\">Target URL:</label>
+<input type=\"url\" name=\"target\" id=\"target\" readonly />
+<input type=\"submit\" class=\"button\" value=\"发送 Webmention\"/>
+</form>
+<hr></hr>
+<ul class=\"webmention-content-list\"></ul>
+</details>
 <p class=\"author\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
 <p class=\"date\">创建于： %d</p>
 <p class=\"date\">修改于： %C</p>
@@ -71,6 +86,7 @@
 <script src=\"/js/sidenote.js\" defer></script>
 <script src=\"/js/code-enhanced.js\" defer></script>
 <script src=\"/js/backtop.js\" defer></script>
+<script src=\"/js/webmention.js\" defer></script>
 <noscript>
   <style>
     .js-required {
