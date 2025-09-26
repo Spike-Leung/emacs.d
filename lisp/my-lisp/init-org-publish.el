@@ -78,9 +78,9 @@
 <hr></hr>
 <ul class=\"webmention-content-list\"></ul>
 </details>
-<p class=\"author\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
-<p class=\"date\">创建于： %d</p>
-<p class=\"date\">修改于： %C</p>
+<p class=\"author h-entry p-author h-card p-name\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
+<p class=\"date h-entry dt-published\">创建于： %d</p>
+<p class=\"date h-entry dt-updated\">修改于： %C</p>
 <p class=\"license\">许可证： <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans\">署名—非商业性使用—相同方式共享 4.0</a></p>
 <p class=\"support-me\">支持我： <a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>
 <script src=\"/js/sidenote.js\" defer></script>
@@ -333,6 +333,8 @@ TAG is string."
          (image-file (read-file-name "Select image: " image-dir))
          (relative-path (file-relative-name image-file image-dir)))
     (insert (format "#+CAPTION: \n[[file:images/%s]]" relative-path))))
+
+(setq org-html-content-class "content h-entry")
 
 (defun spike-leung/setup-org-publish-project-alist (&rest _args)
   "Setup `org-publish-project-alist'."
