@@ -79,14 +79,21 @@
 <hr></hr>
 <ul class=\"webmention-content-list\"></ul>
 </details>
-<p class=\"author h-entry p-author h-card p-name\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
-<p class=\"date h-entry dt-published\">创建于： %d</p>
-<p class=\"date h-entry dt-updated\">修改于： %C</p>
+<p class=\"author\">作 者： <a href=\"mailto:l-yanlei@hotmail.com\">%a</a></p>
+<p class=\"date\">创建于：<span class=\"dt-published\">%d</span></p>
+<p class=\"date\">修改于： <span class=\"dt-updated\">%C</span></p>
 <p class=\"license\">许可证： <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans\">署名—非商业性使用—相同方式共享 4.0</a></p>
 <p class=\"support-me\">支持我： <a href=\"https://taxodium.ink/support-me.html\">用你喜欢的方式</a></p>
+<div class=\"h-card p-author\" aria-hidden=\"true\">
+<img src=\"https://taxodium.ink/favicon.ico\" class=\"u-logo\"/>
+<img src=\"https://taxodium.ink/images/common/avatar.png\" class=\"u-photo\"/>
+<a href=\"https://taxodium.ink\" class=\"u-url p-name\">Spike Leung</a>
+<a href=\"mailto:l-yanlei@hotmail.com\" class=\"u-email\">Spike Leung</a>
+</div>
 <script src=\"/js/sidenote.js\" defer></script>
 <script src=\"/js/code-enhanced.js\" defer></script>
 <script src=\"/js/backtop.js\" defer></script>
+<script src=\"/js/purify.min.js\" defer></script>
 <script src=\"/js/webmention.js\" defer></script>
 <noscript>
   <style>
@@ -167,9 +174,30 @@ These elements's ID will be remove: figure,details,pre ..."
                                         (match-string 4 match) ;; keep other attrs
                                         ))
                               text)))
+
+(defun spike-leung/add-extra-class-to-body (text backend info)
+  "Remove unnecessarily id attibute.
+These elements's ID will be remove: figure,details,pre ..."
+  (when (org-export-derived-backend-p backend 'html)
+    (replace-regexp-in-string "<body>"
+                              "<body class=\"h-entry\">"
+                              text)))
+
+(defun spike-leung/add-extra-class-to-title (text backend info)
+  "Remove unnecessarily id attibute.
+These elements's ID will be remove: figure,details,pre ..."
+  (when (org-export-derived-backend-p backend 'html)
+    (replace-regexp-in-string "<h1 class=\"title\">"
+                              "<h1 class=\"title p-name\">"
+                              text)))
+
 (with-eval-after-load 'ox
   (add-to-list 'org-export-filter-final-output-functions
-               'spike-leung/remove-unnessary-id-from-html))
+               'spike-leung/remove-unnessary-id-from-html)
+  (add-to-list 'org-export-filter-final-output-functions
+               'spike-leung/add-extra-class-to-body)
+  (add-to-list 'org-export-filter-final-output-functions
+               'spike-leung/add-extra-class-to-title))
 
 (defun spike-leung/org-publish-get-org-keyword (entry project keyword &optional filename)
   "Get the value of KEYWORD from Org file using `rx` for the regexp.
@@ -335,7 +363,7 @@ TAG is string."
          (relative-path (file-relative-name image-file image-dir)))
     (insert (format "#+CAPTION: \n[[file:images/%s]]" relative-path))))
 
-(setq org-html-content-class "content h-entry")
+(setq org-html-content-class "content e-content")
 
 (defun spike-leung/setup-org-publish-project-alist (&rest _args)
   "Setup `org-publish-project-alist'."
