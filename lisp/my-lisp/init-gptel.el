@@ -86,7 +86,7 @@ If called without prefix, use the default model
 If a model is selected, it is memorized for next use."
   (interactive
    (let* ((seperator " - ")
-          (key-face `(:foreground ,(modus-themes-get-color-value 'green-cooler)))
+          (key-face `(:foreground "lightgreen"))
           (model (if current-prefix-arg
                      (intern
                       (completing-read

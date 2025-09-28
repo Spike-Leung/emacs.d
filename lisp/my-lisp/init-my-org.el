@@ -262,12 +262,12 @@ If its assigned to a key it saves you marking the text and copying to the killri
                "CANCELLED(c@/!)")))
       org-todo-repeat-to-state "REPEAT")
 
-(setq org-todo-keyword-faces
-      `(("NEXT" . (:foreground ,(modus-themes-get-color-value `yellow-warmer)))
-        ("TODO" . (:foreground ,(modus-themes-get-color-value `red-intense)))
-        ("DONE" . (:foreground ,(modus-themes-get-color-value `green-cooler)))
-        ("PROJECT" . (:foreground ,(modus-themes-get-color-value `magenta-cooler)))
-        ("SOMEDAY" . (:foreground ,(modus-themes-get-color-value `rust)))))
+;; (setq org-todo-keyword-faces
+;;       `(("NEXT" . (:foreground ,(modus-themes-get-color-value `yellow-warmer)))
+;;         ("TODO" . (:foreground ,(modus-themes-get-color-value `red-intense)))
+;;         ("DONE" . (:foreground ,(modus-themes-get-color-value `green-cooler)))
+;;         ("PROJECT" . (:foreground ,(modus-themes-get-color-value `magenta-cooler)))
+;;         ("SOMEDAY" . (:foreground ,(modus-themes-get-color-value `rust)))))
 
 ;;; Mobile Org Settings
 ;;; https://mobileorg.github.io/documentation/#syncing-with-mobileorg

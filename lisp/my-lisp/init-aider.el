@@ -31,8 +31,8 @@
                   spike-leung/openrouter-models-cache))))
 
 (add-hook 'aider-comint-mode-hook (lambda ()
-                                    (set-face-attribute 'comint-highlight-prompt nil :foreground (modus-themes-get-color-value 'green-cooler))
-                                    (set-face-attribute 'comint-highlight-input nil :weight 'thin :foreground (modus-themes-get-color-value 'yellow-warmer))))
+                                    (set-face-attribute 'comint-highlight-prompt nil :foreground "green")
+                                    (set-face-attribute 'comint-highlight-input nil :weight 'thin :foreground "orange")))
 
 (provide 'init-aider)
 ;;; init-aider.el ends here
