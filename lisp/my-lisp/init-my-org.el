@@ -200,7 +200,13 @@ If its assigned to a key it saves you marking the text and copying to the killri
          "[[%:link][%:description]]\n%i\n\n"
          :jump-to-captured t
          :immediate-finish t)
-        ))
+        ("m" "Music Rank" entry
+         (file+headline "~/git/taxodium/posts/20250928T170716--听歌排行__blackhole_music.org" "每周排行")
+         "* %<%Y-%m-%d W%W %A> \n #+begin_details\n#+html: <summary>Top100</summary>\n%i\n#+end_details"
+         :jump-to-captured t
+         :empty-lines 1
+         :prepend t
+         :immediate-finish t)))
 
 (when *is-wsl*
   (setq org-capture-templates
