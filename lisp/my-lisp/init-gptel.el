@@ -3,7 +3,6 @@
 ;;; Code:
 
 (maybe-require-package 'gptel)
-
 (require 'init-openrouter-models) ; Ensures spike-leung/openrouter-models-cache and hook are defined
 
 (defun spike-leung/gptel-refresh-openrouter-provider ()
@@ -86,7 +85,6 @@ If called without prefix, use the default model
 If a model is selected, it is memorized for next use."
   (interactive
    (let* ((seperator " - ")
-          (key-face `(:foreground "lightgreen"))
           (model (if current-prefix-arg
                      (intern
                       (completing-read
@@ -102,9 +100,9 @@ If a model is selected, it is memorized for next use."
             (mapcar (lambda (entry)
                       (let ((key (car entry))
                             (val (cdr entry)))
-                        (format "%s%s%s" (propertize key 'face key-face) seperator val)))
+                        (format "%s%s%s" key seperator val)))
                     spike-leung/custom-rewrite-prompts)
-            (list (propertize "Custom..." 'face key-face))))
+            (list "Custom...")))
           (choice (completing-read "Choose rewrite prompt: " choices nil t))
           (prompt-text (if (string-equal choice "Custom...")
                            (read-string "Custom rewrite prompt: ")
