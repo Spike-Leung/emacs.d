@@ -1,6 +1,6 @@
 * feed                                                                   :elfeed:
 按照 [[https://kedara.eu/organising-feeds-permaculture][Organising my feeds using Permaculture principles]] 进行组织。
-** Z0:Home                                                                      :Z0:default:
+** Z0:Home                                                                      :z0:default:
 家园区用于检查我自己的订阅是否正常运行，以及关注我个人认识并深切关心的人：家人或亲密朋友。
 那些你会很高兴邀请到家里共度一个夜晚的人。
 
@@ -8,7 +8,7 @@
 *** [[https://webmention.io/api/mentions.html?token=qcwPCX61g9khbvZWp3U0qg
 ][webmention.io]]                                                               :webmention:
 **** [[https://webmention.io/api/mentions.html?token=qcwPCX61g9khbvZWp3U0qg][Mentions Feed]]
-** Z1:Porch                                                                     :Z1:default:
+** Z1:Porch                                                                     :z1:default:
 门廊是我邀请我最喜爱的作家的地方。
 我会阅读门廊群体的每一篇文章，即便起初标题看起来并不吸引人（他们几乎从不让我失望！）。
 门廊空间不大：这能确保我能跟上这里的每一个人。
@@ -24,13 +24,12 @@
 *** [[https://e.arlmy.me/atom.xml][素生]]                                                                        :daily:book:quote:
 *** [[https://polebug.github.io/atom.xml][Polebug]]
 *** [[https://overreacted.io/rss.xml][overreacted]]                                                                 :frontend:react:
-** Z2:Backyard                                                                  :Z2:default:
+** Z2:Backyard                                                                  :z2:default:
 在后院里，我和那些我喜欢的博客待在一起。
 我喜欢他们的大多数帖子，但并不觉得有必要立刻把所有东西都读完。
 他们都是很友好的人，我可以说我有兴趣阅读他们的大部分文章。
 相比门廊，这里稍微宽敞一些，但又足够温馨，不会让人迷失。
 
-*** [[https://1q43.blog/feed/][虹线]]
 *** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
 *** [[https://manateelazycat.github.io/feed.xml][Andy Stewart]]
 *** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
@@ -78,7 +77,9 @@
 *** [[https://blog.jim-nielsen.com/feed.xml][Jim Nielsen’s Blog]]
 *** [[https://endler.dev/rss.xml][Matthias Endler]]                                                             :code:
 
-** Z3:Orchard                                                                   :Z3:
+*** [[https://kayleerowena.com/rss.xml][Kaylee Rowena]]                                                               :weekly:设计好看的博客:
+*** [[https://1sle29.github.io/index.xml][1sle]]
+** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
 有时，只见树木不见森林（或者在这种情况下，可能恰恰相反），因为它更加密集。
@@ -108,7 +109,6 @@
 *** [[https://heydingus.net/feed.rss][HeyDingus]]                                                                   :weekly:
 *** [[https://talk.jackalope.city/feed/][jackalope.city]]
 *** [[https://hamatti.org/feed/feed.xml][Juhis]]
-*** [[https://kayleerowena.com/rss.xml][Kaylee Rowena]]                                                               :weekly:设计好看的博客:
 *** [[https://lars-christian.com/feed.xml][Lars-Christian's website]]
 *** [[https://www.didiermary.fr/feed/][Le Blog de Didier MARY]]                                                      :music:album:
 *** [[https://mtwb.blog/index.xml][Matt's Blog]]
@@ -169,9 +169,16 @@
 *** [[https://mo42.bearblog.dev/feed.xml][Mo's Blog]]
 *** [[https://hojberg.xyz/rss.xml][Simon Højberg]]                                                               :设计好看的博客:
 *** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
-
 *** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]                                                             :zine:
-** Z4:Pasture                                                                   :Z4:
+*** [[https://1q43.blog/feed/][虹线]]
+*** [[https://baxy.typlog.io/feed.xml][BAXY]]
+*** [[https://gobino.be/feed/][gobino's bites]]                                                              :weekly:
+*** [[https://thirdshire.com/index.xml][第三夏尔]]
+*** [[https://thewanderingallison.vercel.app/rss.xml/][The Wandering Allison]]
+*** [[https://renkotsuban.com/rss.xml][Midnight Reading]]                                                            :weekly:
+*** Z6:Undefined                                                                :z6:
+- [[https://wangquan.cc/feed/][小王日记]]
+** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
 如果标题看起来有吸引力，我大约会读每三篇文章中的一篇。
@@ -195,7 +202,7 @@
 *** [[https://www.technbuzz.com/feed/][Technbuzz]]
 *** [[https://teejay.blog/feed.atom][teejay.blog]]
 *** [[https://theworksofegan.net/feed.xml][The Works of Egan]]
-*** [[https://thetangent.space/feed.xml][theTangentSpace]]
+*** [[https://thetangent.space/feed.xml][theTangentSpace]]                                                             :weekly:
 *** [[https://www.kgadams.net/feed][Ubergeek Kellys World]]
 *** [[https://varunbarad.com/feed.xml][Varun Barad]]
 *** [[https://wordsundermyname.wordpress.com/feed/][Words Under My Name]]
@@ -286,7 +293,12 @@
 *** [[https://emacsredux.com/atom.xml][Emacs Redux]]                                                                 :emacs:
 
 *** [[https://arialdomartini.github.io/feed.xml][Arialdo on Code]]                                                             :emacs:programing:
-** Z5:Pond                                                                      :Z5:
+*** [[https://whimsies.bearblog.dev/feed/][Before 30]]
+*** [[https://www.bongotwisty.blog/index.xml][BongoTwisty]]                                                                 :weekly:
+*** [[https://your-local-grubdog.neocities.org/feed.xml][Your Local Grubdog]]
+*** [[https://ww0cj.radio/feed/][WW0CJ.radio]]
+*** [[https://unidentifiedsignalsource.wordpress.com/feed/][Unidentified Signal Source]]
+** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
 我会定期疏浚池塘，移除那些不再想继续关注的订阅源。
@@ -311,4 +323,3 @@
 *** [[https://www.codesimplicity.com/feed/][Code Simplicity]]
 *** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
 *** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                            :emacs:
-** Z6:Undefined                                                                 :Z6:
