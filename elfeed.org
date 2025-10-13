@@ -176,8 +176,10 @@
 *** [[https://thirdshire.com/index.xml][第三夏尔]]
 *** [[https://thewanderingallison.vercel.app/rss.xml/][The Wandering Allison]]
 *** [[https://renkotsuban.com/rss.xml][Midnight Reading]]                                                            :weekly:
-*** Z6:Undefined                                                                :z6:
-- [[https://wangquan.cc/feed/][小王日记]]
+*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
+*** [[https://quaily.com/cosine/feed/atom][FE Bits 前端周周谈]]                                                          :frontend:
+*** [[https://wangquan.cc/feed/][小王日记]]
+*** [[https://thecascade.dev/rss.xml][The Cascade]]                                                                 :css:
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
@@ -323,3 +325,4 @@
 *** [[https://www.codesimplicity.com/feed/][Code Simplicity]]
 *** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
 *** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                            :emacs:
+** Z6:Undefined                                                                 :z6:
