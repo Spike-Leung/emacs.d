@@ -5,9 +5,7 @@
 那些你会很高兴邀请到家里共度一个夜晚的人。
 
 *** [[https://taxodium.ink/rss.xml][taxodium]]
-*** [[https://webmention.io/api/mentions.html?token=qcwPCX61g9khbvZWp3U0qg
-][webmention.io]]                                                               :webmention:
-**** [[https://webmention.io/api/mentions.html?token=qcwPCX61g9khbvZWp3U0qg][Mentions Feed]]
+*** [[https://webmention.io/api/mentions.html?token=qcwPCX61g9khbvZWp3U0qg][webmention.io]]                                                               :webmention:
 ** Z1:Porch                                                                     :z1:default:
 门廊是我邀请我最喜爱的作家的地方。
 我会阅读门廊群体的每一篇文章，即便起初标题看起来并不吸引人（他们几乎从不让我失望！）。
