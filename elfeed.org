@@ -11,26 +11,38 @@
 我会阅读门廊群体的每一篇文章，即便起初标题看起来并不吸引人（他们几乎从不让我失望！）。
 门廊空间不大：这能确保我能跟上这里的每一个人。
 
-*** [[https://archive.casouri.cc/rock/day/atom.xml][余日摇滚]]                                                                    :music:
 *** [[https://anotherdayu.com/feed/][Another Dayu]]
-*** [[https://ameow.xyz/feed.xml][猫鱼周刊]]                                                                    :weekly:
-*** [[https://www.geedea.pro/index.xml][极客死亡计划]]                                                                :weekly:
 *** [[https://antfu.me/feed.xml][Anthony Fu]]
-*** [[https://chlo.is/feed.atom][园子里的日光]]
-*** [[https://blog.solazy.me/feed/][So!azy]]                                                                      :daily:
-*** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志]]                                                            :weekly:
-*** [[https://e.arlmy.me/atom.xml][素生]]                                                                        :daily:book:quote:
-*** [[https://polebug.github.io/atom.xml][Polebug]]
 *** [[https://overreacted.io/rss.xml][overreacted]]                                                                 :frontend:react:
+*** [[https://polebug.github.io/atom.xml][Polebug]]
+*** [[https://blog.solazy.me/feed/][So!azy]]                                                                      :daily:
+*** [[https://archive.casouri.cc/rock/day/atom.xml][余日摇滚]]                                                                    :music:
+*** [[https://chlo.is/feed.atom][园子里的日光]]
+*** [[https://www.geedea.pro/index.xml][极客死亡计划]]                                                                :weekly:
+*** [[https://ameow.xyz/feed.xml][猫鱼周刊]]                                                                    :weekly:
+*** [[https://z.arlmy.me/atom.xml][素生]]                                                                        :daily:book:quote:
+*** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志]]                                                            :weekly:
 ** Z2:Backyard                                                                  :z2:default:
 在后院里，我和那些我喜欢的博客待在一起。
 我喜欢他们的大多数帖子，但并不觉得有必要立刻把所有东西都读完。
 他们都是很友好的人，我可以说我有兴趣阅读他们的大部分文章。
 相比门廊，这里稍微宽敞一些，但又足够温馨，不会让人迷失。
 
-*** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
+*** [[https://1sle29.github.io/index.xml][1sle]]
+*** [[https://1900.live/rss/][@1900'Blog]]
+*** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
+*** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
 *** [[https://manateelazycat.github.io/feed.xml][Andy Stewart]]
-*** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
+*** [[https://cbvivi.today/feed.xml][cbvivi]]
+*** [[https://feeds.feedburner.com/CSS-Weekly][CSS Weekly]]                                                                  :css:weekly:
+*** [[https://dbushell.com/rss.xml][dbushell.com]]                                                                :frontend:
+*** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]                                                              :weekly:
+*** [[http://html5doctor.com/feed/][HTML5 doctor]]                                                                :weekly:frontend:
+*** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                           :javascript:weekly:
+*** [[https://takeonrules.com/index.xml][Jeremy Friesen]]                                                              :emacs:writing:
+*** [[https://blog.jim-nielsen.com/feed.xml][Jim Nielsen’s Blog]]
+*** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]                                                          :css:web:frontend:
+*** [[https://kayleerowena.com/rss.xml][Kaylee Rowena]]                                                               :weekly:设计好看的博客:
 *** [[https://kill-the-newsletter.com/feeds/3hl5jx56nh55vdvwhoh1.xml][kill-the-newsletter@taxodium]]
 
 处理那些没有 feed 的网站。
@@ -40,287 +52,275 @@
 
 - https://bytes.dev/
 
-*** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                   :design:ux:
-*** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]                                                              :weekly:
-*** [[https://cprss.s3.amazonaws.com/javascriptweekly.com.xml][JavaScript Weekly]]                                                           :javascript:weekly:
-*** [[https://feeds.feedburner.com/CSS-Weekly][CSS Weekly]]                                                                  :css:weekly:
-*** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                 :javascript:weekly:
-*** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]                                                              :weekly:
-*** [[http://html5doctor.com/feed/][HTML5 doctor]]                                                                :weekly:frontend:
-*** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                  :emacs:
-*** [[https://takeonrules.com/index.xml][Jeremy Friesen]]                                                              :emacs:writing:
-*** [[https://protesilaos.com/master.xml][Protesilaos]]                                                                 :emacs:
-*** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                           :writing:emacs:
-*** [[https://seths.blog/feed/][SETH'S BLOG]]
-*** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
-*** [[https://cbvivi.today/feed.xml][cbvivi]]
-*** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]                                                                  :weekly:
-*** [[https://www.muliama.blog/feed/][Muliama's diaries]]
-*** [[https://ribo.zone/feed.xml][ribo.zone]]
-*** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
-*** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
-*** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
-*** [[https://www.owenyoung.com/atom.xml][owenyoung]]
-*** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
-*** [[https://www.raptitude.com/feed/][Raptitude]]
-*** [[https://justgoidea.com/rss.xml][槿呈 Goidea]]
-*** [[https://jesor.me/feed.xml][大破进击]]
-*** [[https://song.al/feed.xml][Simon's Blog]]                                                                :日本:
-*** [[https://sightlessscribbles.com/feed.xml][Sightless Scribbles]]
-*** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]                                                          :css:web:frontend:
 *** [[https://matklad.github.io/feed.xml][matklad]]
-*** [[https://dbushell.com/rss.xml][dbushell.com]]                                                                :frontend:
-*** [[https://tracydurnell.com/feed/atom/][Tracy Durnell's Mind Garden]]                                                 :weekly:
-*** [[https://1900.live/rss/][@1900'Blog]]
-*** [[https://blog.jim-nielsen.com/feed.xml][Jim Nielsen’s Blog]]
 *** [[https://endler.dev/rss.xml][Matthias Endler]]                                                             :code:
 
-*** [[https://kayleerowena.com/rss.xml][Kaylee Rowena]]                                                               :weekly:设计好看的博客:
-*** [[https://1sle29.github.io/index.xml][1sle]]
+*** [[https://www.muliama.blog/feed/][Muliama's diaries]]
+*** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                 :javascript:weekly:
+*** [[https://www.owenyoung.com/atom.xml][owenyoung]]
+*** [[https://protesilaos.com/master.xml][Protesilaos]]                                                                 :emacs:
+*** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
+*** [[https://www.raptitude.com/feed/][Raptitude]]
+*** [[https://ribo.zone/feed.xml][ribo.zone]]
+*** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                  :emacs:
+*** [[https://seths.blog/feed/][SETH'S BLOG]]
+*** [[https://sightlessscribbles.com/feed.xml][Sightless Scribbles]]
+*** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
+*** [[https://song.al/feed.xml][Simon's Blog]]                                                                :日本:
+*** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                           :writing:emacs:
+*** [[https://tracydurnell.com/feed/atom/][Tracy Durnell's Mind Garden]]                                                 :weekly:
+*** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                   :design:ux:
+*** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]                                                              :weekly:
+*** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
+*** [[https://jesor.me/feed.xml][大破进击]]
+*** [[https://justgoidea.com/rss.xml][槿呈 Goidea]]
+*** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
+*** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]                                                                  :weekly:
+*** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
 有时，只见树木不见森林（或者在这种情况下，可能恰恰相反），因为它更加密集。
 在这里，我比在离家更近的前几个区域更频繁地根据标题来判断一篇文章。
-*** [[https://criminallyvulgar.dev/feed/][The Sun and the Air]]
-*** [[https://www.timbornholdt.com/blog/feed.rss][Tim Bornholdt]]
-*** [[https://www.gaotianchi.com/feed.xml][高天驰]]
-*** [[https://2cat.net/feed/][貓魚]]                                                                        :life:
-*** [[https://wangyurui.com/feed.xml][太隐]]
-*** [[https://joelchrono.xyz/feed.xml][Joelchrono's Blog]]
-*** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]
+*** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
 *** [[https://54321.versun.me/feed][54321 Weekly]]
-*** [[https://tao.zz.ac/feed.xml][Tao]]
-*** [[https://www.icebeer.top/feed/][IceBeer]]
-*** [[https://blog.douchi.space/index.xml][椒盐豆豉]]
-*** [[https://yinji.org/feed][印记]]
+*** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
 *** [[https://anerdyfujocries.wordpress.com/feed/][A Nerdy Fujo Cries]]
-*** [[https://innei.in/feed][静かな森]]
-*** [[https://lutaonan.com/rss.xml][Randy's Blog]]
-*** [[https://www.wikimoe.com/rss][维基萌]]
-*** [[https://lhasa.icu/rss.xml][游钓四方]]
+*** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
+*** [[https://alexwlchan.net/atom.xml][Alex Chan]]
+*** [[https://xenodium.com/rss.xml][Alvaro Ramirez's notes]]                                                      :emacs:
 *** [[https://anarchaeopteryx.bearblog.dev/feed/][An Archaeopteryx]]
+*** [[https://aresluna.org/main.rss][Aresluna]]                                                                    :设计有趣的博客:
+*** [[https://www.parkerchang.life/feed.xml][arker Chang's Web]]                                                           :台湾:
+*** [[https://lucumr.pocoo.org/feed.atom][Armin Ronacher's Thoughts and Writings]]
+*** [[https://arne.me/weekly/feed.xml][Arne’s Weekly]]
+*** [[https://atlas.xlog.app/feed][Atlas's 周记]]                                                                :weekly:
+*** [[https://atpx.com/feed.xml][atpX]]
 *** [[https://jeddacp.me/feed/][august morning]]                                                              :photo:
+*** [[https://baxy.typlog.io/feed.xml][BAXY]]
+*** [[https://bitfieldconsulting.com/posts?format=rss][Bitfield Consulting]]                                                         :go:code:experience:
+*** [[https://bluepika.life/rss.xml][Bluepikachu]]                                                                 :life:
+*** [[https://garden.bradwoods.io/rss.xml][Brad Woods Digital Garden]]                                                   :设计有趣的博客:
+*** [[https://yuanchaofa.com/][Chaofa Yuan]]
 *** [[https://clandestini.org/feed/][clandestini.org]]                                                             :葡萄牙语:设计好看的博客:
 *** [[https://cobb.land/feed.xml][cobb.land]]                                                                   :设计有趣的博客:
+*** [[https://css-irl.info/rss.xml][CSS In Real Life]]                                                            :css:web:frontend:
+*** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
+*** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
+*** [[https://falseknees.com/rss.xml][false knees]]                                                                 :manga:anime:
+*** [[https://quaily.com/cosine/feed/atom][FE Bits 前端周周谈]]                                                          :frontend:
+*** [[https://borretti.me/feed.xml][Fernando Borretti]]
 *** [[https://forkingmad.blog/feed/][Forking Mad]]
+*** [[https://yovey.me/feed/][Fragments]]
+*** [[https://www.fuzzycomputer.com/rss][fuzzycomputer.com]]
+*** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]                                                                 :weekly:
+*** [[https://gobino.be/feed/][gobino's bites]]                                                              :weekly:
+*** [[https://grantslatton.com/rss.xml][Grant Slatton's Blog]]                                                        :writing:code:
+*** [[https://gwern.substack.com/feed][Gwern.net]]                                                                   :newsletter:
 *** [[https://heydingus.net/feed.rss][HeyDingus]]                                                                   :weekly:
+*** [[https://www.icebeer.top/feed/][IceBeer]]
+*** [[https://j3s.sh/feed.atom][j3s.sh]]
 *** [[https://talk.jackalope.city/feed/][jackalope.city]]
+*** [[https://veryjack.com/feed/][Jack‘s Space]]
+*** [[https://joelchrono.xyz/feed.xml][Joelchrono's Blog]]
+*** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
 *** [[https://hamatti.org/feed/feed.xml][Juhis]]
+*** [[https://jvns.ca/atom.xml][Julia Evans]]
+*** [[https://www.justzht.com/rss/][JustZht's EchoChamber]]                                                       :weekly:
+*** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]
 *** [[https://lars-christian.com/feed.xml][Lars-Christian's website]]
+*** [[https://www.teamten.com/lawrence/writings/rss.xml][Lawrence Kesteloot's writings]]                                               :设计有趣的博客:
 *** [[https://www.didiermary.fr/feed/][Le Blog de Didier MARY]]                                                      :music:album:
+*** [[https://feihu.me/blog/feed.atom][libfeihu Blog]]                                                               :code:
 *** [[https://mtwb.blog/index.xml][Matt's Blog]]
 *** [[https://megancarnes.blog/feed/][Megan's writings]]
-*** [[https://monocyte.bearblog.dev/feed/][monocyte's blog]]
-*** [[https://tusharhero.codeberg.page/rss.xml][tusharhero]]                                                                  :emacs:
-*** [[https://jvns.ca/atom.xml][Julia Evans]]
-*** [[https://caa-ins.org/feed][网络社会研究所]]
-*** [[https://www.laomuzhu.cn/feed/][木竹]]
-*** [[https://www.chenrui.com/feed.php][陈锐]]
-*** [[https://bluepika.life/rss.xml][Bluepikachu]]                                                                 :life:
-*** [[https://luffy.cc/feed][蒙奇日记]]
-*** [[https://www.xiaozonglin.cn/feed/][林林杂语]]
-*** [[https://yuanchaofa.com/][Chaofa Yuan]]
-*** [[https://keelii.com/][临池不辍]]
-*** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
-*** [[https://atlas.xlog.app/feed][Atlas's 周记]]                                                                :weekly:
-*** [[https://blog.pursuitus.com/feed][Ouroboros]]                                                                   :life:
-*** [[https://veryjack.com/feed/][Jack‘s Space]]
-*** [[https://www.parkerchang.life/feed.xml][arker Chang's Web]]                                                           :台湾:
-*** [[https://atpx.com/feed.xml][atpX]]
-*** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]                                                                 :weekly:
-*** [[https://yovey.me/feed/][Fragments]]
-*** [[https://feihu.me/blog/feed.atom][libfeihu Blog]]                                                               :code:
-*** [[https://lenband.com/feed/][冷板凳]]
-*** [[https://www.justzht.com/rss/][JustZht's EchoChamber]]                                                       :weekly:
-*** [[https://oxxx.cn/feed/][森木志]]
-*** [[https://www.ctling.com/atom.xml][閒人筆記]]                                                                    :台湾:
-*** [[https://eduardoqian.com/rss.xml][司云有崖]]                                                                    :瑞典:
-*** [[https://rachelbythebay.com/w/atom.xml][rachelbythebay]]                                                              :writing:
-*** [[https://css-irl.info/rss.xml][CSS In Real Life]]                                                            :css:web:frontend:
-*** [[https://bilibi.li/feed.rss][midnight serial experiments]]
-*** [[https://garden.bradwoods.io/rss.xml][Brad Woods Digital Garden]]                                                   :设计有趣的博客:
-*** [[https://xenodium.com/rss.xml][Alvaro Ramirez's notes]]                                                      :emacs:
-*** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
-*** [[https://ayu.land/revlog#feed][Sweetfish Ayu]]                                                               :kawai:
-*** [[https://bitfieldconsulting.com/posts?format=rss][Bitfield Consulting]]                                                         :go:code:experience:
-*** [[https://arne.me/weekly/feed.xml][Arne’s Weekly]]
-*** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
-*** [[https://alexwlchan.net/atom.xml][Alex Chan]]
-*** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
-*** [[https://borretti.me/feed.xml][Fernando Borretti]]
-*** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]                                                           :设计好看的博客:
-*** [[https://falseknees.com/rss.xml][false knees]]                                                                 :manga:anime:
-*** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
 *** [[https://michal.sapka.pl/rss.xml][Michał M. Sapka]]                                                             :emacs:
-*** [[https://gwern.substack.com/feed][Gwern.net]]                                                                   :newsletter:
-*** [[https://plainvanillaweb.com/blog/feed.xml][Plain Vanilla Blog]]
-*** [[https://j3s.sh/feed.atom][j3s.sh]]
-*** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
-*** [[https://www.fuzzycomputer.com/rss][fuzzycomputer.com]]
-*** [[https://zine.milliesquilly.com/rss.xml][zine of millie]]                                                              :cool:ux:
-*** [[https://grantslatton.com/rss.xml][Grant Slatton's Blog]]                                                        :writing:code:
-*** [[https://lucumr.pocoo.org/feed.atom][Armin Ronacher's Thoughts and Writings]]
-*** [[https://www.teamten.com/lawrence/writings/rss.xml][Lawrence Kesteloot's writings]]                                               :设计有趣的博客:
-*** [[https://aresluna.org/main.rss][Aresluna]]                                                                    :设计有趣的博客:
-*** [[https://scyy.fi/index.xml][Sarabet Chang Yuye]]
-*** [[https://mo42.bearblog.dev/feed.xml][Mo's Blog]]
-*** [[https://hojberg.xyz/rss.xml][Simon Højberg]]                                                               :设计好看的博客:
-*** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
-*** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]                                                             :zine:
-*** [[https://1q43.blog/feed/][虹线]]
-*** [[https://baxy.typlog.io/feed.xml][BAXY]]
-*** [[https://gobino.be/feed/][gobino's bites]]                                                              :weekly:
-*** [[https://thirdshire.com/index.xml][第三夏尔]]
-*** [[https://thewanderingallison.vercel.app/rss.xml/][The Wandering Allison]]
 *** [[https://renkotsuban.com/rss.xml][Midnight Reading]]                                                            :weekly:
-*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
-*** [[https://quaily.com/cosine/feed/atom][FE Bits 前端周周谈]]                                                          :frontend:
-*** [[https://wangquan.cc/feed/][小王日记]]
+*** [[https://bilibi.li/feed.rss][midnight serial experiments]]
+*** [[https://mo42.bearblog.dev/feed.xml][Mo's Blog]]
+*** [[https://monocyte.bearblog.dev/feed/][monocyte's blog]]
+*** [[https://blog.pursuitus.com/feed][Ouroboros]]                                                                   :life:
+*** [[https://plainvanillaweb.com/blog/feed.xml][Plain Vanilla Blog]]
+*** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]                                                             :zine:
+*** [[https://rachelbythebay.com/w/atom.xml][rachelbythebay]]                                                              :writing:
+*** [[https://lutaonan.com/rss.xml][Randy's Blog]]
+*** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]                                                           :设计好看的博客:
+*** [[https://scyy.fi/index.xml][Sarabet Chang Yuye]]
+*** [[https://hojberg.xyz/rss.xml][Simon Højberg]]                                                               :设计好看的博客:
+*** [[https://ayu.land/revlog#feed][Sweetfish Ayu]]                                                               :kawai:
+*** [[https://tao.zz.ac/feed.xml][Tao]]
 *** [[https://thecascade.dev/rss.xml][The Cascade]]                                                                 :css:
+*** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
+*** [[https://criminallyvulgar.dev/feed/][The Sun and the Air]]
+*** [[https://thewanderingallison.vercel.app/rss.xml/][The Wandering Allison]]
+*** [[https://www.timbornholdt.com/blog/feed.rss][Tim Bornholdt]]
+*** [[https://tusharhero.codeberg.page/rss.xml][tusharhero]]                                                                  :emacs:
+*** [[https://zine.milliesquilly.com/rss.xml][zine of millie]]                                                              :cool:ux:
+*** [[https://keelii.com/][临池不辍]]
+*** [[https://lenband.com/feed/][冷板凳]]
+*** [[https://yinji.org/feed][印记]]
+*** [[https://eduardoqian.com/rss.xml][司云有崖]]                                                                    :瑞典:
+*** [[https://wangyurui.com/feed.xml][太隐]]
+*** [[https://wangquan.cc/feed/][小王日记]]
+*** [[https://www.laomuzhu.cn/feed/][木竹]]
+*** [[https://www.xiaozonglin.cn/feed/][林林杂语]]
+*** [[https://oxxx.cn/feed/][森木志]]
+*** [[https://blog.douchi.space/index.xml][椒盐豆豉]]
+*** [[https://lhasa.icu/rss.xml][游钓四方]]
+*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
+*** [[https://thirdshire.com/index.xml][第三夏尔]]
+*** [[https://www.wikimoe.com/rss][维基萌]]
+*** [[https://caa-ins.org/feed][网络社会研究所]]
+*** [[https://luffy.cc/feed][蒙奇日记]]
+*** [[https://1q43.blog/feed/][虹线]]
+*** [[https://2cat.net/feed/][貓魚]]                                                                        :life:
+*** [[https://www.ctling.com/atom.xml][閒人筆記]]                                                                    :台湾:
+*** [[https://www.chenrui.com/feed.php][陈锐]]
+*** [[https://innei.in/feed][静かな森]]
+*** [[https://www.gaotianchi.com/feed.xml][高天驰]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
 如果标题看起来有吸引力，我大约会读每三篇文章中的一篇。
 我会不时查看它，以便在必要时把作者邀请到更近的平台，或把他们引导到池塘。
 
-*** [[https://www.changhai.org/feed.xml][卢昌海个人主页]]
+*** [[https://pathos.page/feed.xml][2750 words]]
+*** [[https://iam.skoo.bz/rss/][A Calm in the Chaos]]
+*** [[https://mattbee.zone/rss.xml][A Lovely Harmless Monster]]
+*** [[https://scripter.co/index.xml][A Scripter's Notes]]                                                          :emacs:code:
+*** [[https://www.achilletoupin.com/feed.xml][Achille Toupin]]                                                              :法语:裁缝:
+*** [[https://amf.didiermary.fr/feed/][African Music Forum]]                                                         :music:
+*** [[https://andrewkelley.me/rss.xml][Andrew Kelley]]                                                               :zig:code:
+*** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]                                                         :writing:
+*** [[https://arialdomartini.github.io/feed.xml][Arialdo on Code]]                                                             :emacs:programing:
+*** [[https://expensive.toys/rss.xml][Artur Bień]]                                                                  :emacs:css:
+*** [[https://axxuy.xyz/blog/feed.xml][Axxuy.xyz]]
+*** [[https://whimsies.bearblog.dev/feed/][Before 30]]
+*** [[https://licoricewhipit.tumblr.com/rss][Black Licorice]]                                                              :设计有趣的博客:
+*** [[https://blakewatson.com/feed.xml][Blake Watson]]
+*** [[https://www.bongotwisty.blog/index.xml][BongoTwisty]]                                                                 :weekly:
+*** [[https://bryn.codes/feed.xml][Bryn Newell]]
+*** [[https://chise.hachiroku.com/zh/feed/atom/][Chise Hachiroku]]                                                             :life:
+*** [[https://tallywinkle.bearblog.dev/feed/][coffee spills]]
+*** [[https://conge.livingwithfcs.org/feed.xml][Conge]]                                                                       :running:
+*** [[https://pilch.me/feed.xml][Craig]]
+*** [[https://danq.me/feed/][Dan Q]]                                                                       :ignore:
+*** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]                                                           :life:
+*** [[https://soatok.blog/feed/][Dhole Moments]]
+*** [[https://dirchansky.com/freetalk/rss.xml][dirchansky freetalk]]                                                         :comic:
+*** [[https://divergentrays.com/blog/blogfeed.xml][Divergent Rays]]                                                              :weekly:
+*** [[https://diygod.cc/feed][DIYgod]]
+*** [[https://emacsredux.com/atom.xml][Emacs Redux]]                                                                 :emacs:
+
+*** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]                                                      :设计有趣的博客:
+*** [[https://ferd.ca/feed.rss][Ferd.ca]]                                                                     :programing:code:
+*** [[https://fhur.me/feed.xml][fhur's blog]]                                                                 :code:
+*** [[https://fiat-mihi.com/rss.xml][Fiat Mihi]]                                                                   :宗教:
+*** [[https://filiph.net/text/atom.xml][filiph.net/text]]
+*** [[https://rscottjones.com/feed/][from rscottjones]]
+*** [[https://gaudetetheology.wordpress.com/feed/][Gaudete Theology]]                                                            :宗教:
+*** [[https://glome.bearblog.dev/feed/][Glome]]
+*** [[https://blog.gzj.life/zh-cn/index.xml][ISouthRain Blog]]                                                             :emacs:
+*** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]                                                            :frontend:css:web:
+*** [[https://jasonfantl.com/feed.xml][Jason Fantl]]
+*** [[https://jason-memo.dev/feed/feed.xml][Jason's Web Memo]]                                                            :code:
+*** [[https://www.jayeless.net/index.xml][Jayeless.net]]                                                                :数字花园:
+*** [[https://jeffbradberry.com/feeds/all.atom.xml][Jeff Bradberry]]                                                              :emacs:
+*** [[https://jetgirl.art/rss/][JetGirlArt]]
+*** [[https://kristofferbalintona.me/index.xml][Kristoffer Balintona]]                                                        :emacs:code:
+*** [[https://kuilz.github.io/index.xml][kuilz]]
+*** [[https://l1uyun.one/atom.xml][l1uyun's Blog]]
+*** [[https://laike9m.com/blog/rss/][laike9m's blog]]
+*** [[https://www.less-bug.com//index.xml][Less Bug]]                                                                    :code:
+*** [[https://www.lukew.com/ff/rss][LukeW]]                                                                       :design:
+*** [[https://lynn.sh/rss.xml][Lynn]]                                                                        :emacs:
+*** [[https://malwaretech.com/feed.xml][MalwareTech]]
+*** [[https://markentier.tech/feed.rss.xml][markentier.tech]]                                                             :code:rust:
+*** [[https://renkotsuban.com/rss.xml][Midnight Dreaming]]
+*** [[https://mikesthoughts.blog/feed/feed.xml][Mikes Thoughts]]
+作者删除了很多以前的文章。
+*** [[https://www.murilopereira.com/feed.atom][Murilo Pereira]]                                                              :emacs:
 *** [[https://www.nejimakiblog.com/feed][Nejimaki Blog]]
+*** [[https://nerdgirlthoughts.game.blog/feed/][Nerd Girl Thoughts]]
 *** [[https://neurofrontiers.blog/feed/][Neurofrontiers]]
 *** [[https://www.nicksimson.com/feed.xml][NickSimson.com]]
 *** [[https://www.nkantar.com/blog/feed][Nik Kantar]]
 *** [[https://notes.druchan.com/feed.xml][notes / druchan]]
+*** [[https://nothingissimple.ablatedsprocket.com/rss.xml][Nothing Is Simple]]                                                           :emacs:code:
+*** [[https://ploum.net/atom_en.xml][Ploum.net]]                                                                   :programing:
 *** [[https://angrybunnyman.com/feed/][Portrait of the Artist as a…]]
+*** [[https://www.yuqiqin.me/feed.xml][Psychic Paper]]                                                               :english:
+*** [[https://randomascii.wordpress.com/feed/][Random ASCII – tech blog of Bruce Dawson]]                                    :code:
 *** [[https://blog.nyman.re/feed.xml][re: nyman]]
 *** [[https://riverpunk.bearblog.dev/feed/][Riverpunk]]
 *** [[https://birming.com/feed.xml][Robert Birming]]
 *** [[https://rseeber.github.io/blog/feed.xml][Rseeber]]
 *** [[https://hollie.eilloh.net/rss.xml][Small Good Things]]
+*** [[https://smallyu.net/atom][smallyu]]
 *** [[https://splendide-mendax.com/rss.xml][Splendide Mendax]]
 *** [[https://missquote.net/rss.xml][Story Mode]]
 *** [[https://syls.blog/feed/][Syl's Blog]]
 *** [[https://www.technbuzz.com/feed/][Technbuzz]]
-*** [[https://teejay.blog/feed.atom][teejay.blog]]
-*** [[https://theworksofegan.net/feed.xml][The Works of Egan]]
-*** [[https://thetangent.space/feed.xml][theTangentSpace]]                                                             :weekly:
-*** [[https://www.kgadams.net/feed][Ubergeek Kellys World]]
-*** [[https://varunbarad.com/feed.xml][Varun Barad]]
-*** [[https://wordsundermyname.wordpress.com/feed/][Words Under My Name]]
-*** [[https://mattbee.zone/rss.xml][A Lovely Harmless Monster]]
-*** [[https://iam.skoo.bz/rss/][A Calm in the Chaos]]
-*** [[https://www.ixiqin.com/feed/][白宦成]]
-*** [[https://diygod.cc/feed][DIYgod]]
-*** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                      :frontend:
-*** [[https://amf.didiermary.fr/feed/][African Music Forum]]                                                         :music:
-*** [[https://www.achilletoupin.com/feed.xml][Achille Toupin]]                                                              :法语:裁缝:
-*** [[https://axxuy.xyz/blog/feed.xml][Axxuy.xyz]]
-*** [[https://tallywinkle.bearblog.dev/feed/][coffee spills]]
-*** [[https://pilch.me/feed.xml][Craig]]
-*** [[https://dirchansky.com/freetalk/rss.xml][dirchansky freetalk]]                                                         :comic:
-*** [[https://divergentrays.com/blog/blogfeed.xml][Divergent Rays]]                                                              :weekly:
-*** [[https://fiat-mihi.com/rss.xml][Fiat Mihi]]                                                                   :宗教:
-*** [[https://gaudetetheology.wordpress.com/feed/][Gaudete Theology]]                                                            :宗教:
-*** [[https://rscottjones.com/feed/][from rscottjones]]
-*** [[https://glome.bearblog.dev/feed/][Glome]]
-*** [[https://www.jayeless.net/index.xml][Jayeless.net]]                                                                :数字花园:
-*** [[https://renkotsuban.com/rss.xml][Midnight Dreaming]]
-*** [[https://mikesthoughts.blog/feed/feed.xml][Mikes Thoughts]]
-作者删除了很多以前的文章。
-*** [[https://conge.livingwithfcs.org/feed.xml][Conge]]                                                                       :running:
-*** [[https://smallyu.net/atom][smallyu]]
-*** [[http://xahlee.info/emacs/emacs/blog.xml][Xah Emacs Blog]]                                                              :emacs:
-*** [[https://l1uyun.one/atom.xml][l1uyun's Blog]]
-*** [[https://www.lxchapu.com/rss.xml][柃夏 chapu‘s blog]]
-*** [[https://spacexcode.com/blog/rss.xml][太空编程 Blog]]                                                               :frontend:
-*** [[https://chise.hachiroku.com/zh/feed/atom/][Chise Hachiroku]]                                                             :life:
-*** [[https://www.less-bug.com//index.xml][Less Bug]]                                                                    :code:
-*** [[https://mazzzystar.github.io/atom.xml][TL;DR]]
-*** [[https://xuanwo.io/index.xml][Xuanwo's Blog]]                                                               :code:
-*** [[https://yipai.me/feed][一派胡言]]
-*** [[https://guozh.net/feed/][老郭种树]]
-*** [[https://www.yvesx.com/feed/][举头三尺有神鱼]]
-*** [[https://laike9m.com/blog/rss/][laike9m's blog]]
-*** [[https://ctian.livejournal.com/][春田冰河]]
-*** [[https://kuilz.github.io/index.xml][kuilz]]
-*** [[https://blog.gzj.life/zh-cn/index.xml][ISouthRain Blog]]                                                             :emacs:
-*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
-*** [[https://pathos.page/feed.xml][2750 words]]
-*** [[https://chengpeiquan.com/feed.xml][程沛权]]                                                                      :code:
-*** [[https://www.kawabangga.com/feed][卡瓦邦噶！]]                                                                  :code:
-*** [[https://www.yuqiqin.me/feed.xml][Psychic Paper]]                                                               :english:
-*** [[https://elliot00.com/rss][编码与禅]]                                                                    :emacs:
-*** [[https://jason-memo.dev/feed/feed.xml][Jason's Web Memo]]                                                            :code:
-*** [[https://dansinker.com/feed.xml][Dan Sinker's Blog]]                                                           :life:
-*** [[https://jetgirl.art/rss/][JetGirlArt]]
-*** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]                                                            :frontend:css:web:
-*** [[https://expensive.toys/rss.xml][Artur Bień]]                                                                  :emacs:css:
-*** [[https://blakewatson.com/feed.xml][Blake Watson]]
 *** [[https://technicalwriting.dev/rss.xml][technicalwriting.dev]]
-*** [[https://kristofferbalintona.me/index.xml][Kristoffer Balintona]]                                                        :emacs:code:
-*** [[https://markentier.tech/feed.rss.xml][markentier.tech]]                                                             :code:rust:
-*** [[https://fhur.me/feed.xml][fhur's blog]]                                                                 :code:
-*** [[https://emacsninja.com/emacs.atom][Vasilij Schneidermann]]                                                       :emacs:
-*** [[https://scripter.co/index.xml][A Scripter's Notes]]                                                          :emacs:code:
-*** [[https://www.autodidacts.io/rss/][The Autodidacts]]
-*** [[https://ferd.ca/feed.rss][Ferd.ca]]                                                                     :programing:code:
-*** [[https://ploum.net/atom_en.xml][Ploum.net]]                                                                   :programing:
-*** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]                                                         :writing:
-*** [[https://randomascii.wordpress.com/feed/][Random ASCII – tech blog of Bruce Dawson]]                                    :code:
-*** [[https://danq.me/feed/][Dan Q]]                                                                       :ignore:
-*** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
-*** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]                                                      :设计有趣的博客:
-*** [[https://jasonfantl.com/feed.xml][Jason Fantl]]
-*** [[https://blog.videah.net/atom.xml][videah's blog]]
-*** [[https://thelogicaloptimist.com/index.php/blog/feed/][The Logical Optimist]]
-*** [[https://www.lukew.com/ff/rss][LukeW]]                                                                       :design:
-*** [[https://feeds.feedburner.com/thoughtsfromtheredplanet?format=xml][thoughts from the red planet]]                                                :code:
+*** [[https://teejay.blog/feed.atom][teejay.blog]]
 *** [[https://taonaw.com/feed.xml][The Art Of Not Asking Why]]                                                   :emacs:
-*** [[https://themkat.net/feed.xml][TheMKat’s blog]]
-*** [[https://bryn.codes/feed.xml][Bryn Newell]]
-*** [[https://blog.plover.com/index.atom][The Universe of Discourse]]
-*** [[https://filiph.net/text/atom.xml][filiph.net/text]]
-*** [[https://jeffbradberry.com/feeds/all.atom.xml][Jeff Bradberry]]                                                              :emacs:
+*** [[https://www.autodidacts.io/rss/][The Autodidacts]]
 *** [[https://chrismaiorana.com/feed/][The Daily Macro]]                                                             :emacs:
-*** [[https://lynn.sh/rss.xml][Lynn]]                                                                        :emacs:
-*** [[https://nerdgirlthoughts.game.blog/feed/][Nerd Girl Thoughts]]
-*** [[https://nothingissimple.ablatedsprocket.com/rss.xml][Nothing Is Simple]]                                                           :emacs:code:
-*** [[https://licoricewhipit.tumblr.com/rss][Black Licorice]]                                                              :设计有趣的博客:
-*** [[https://andrewkelley.me/rss.xml][Andrew Kelley]]                                                               :zig:code:
-*** [[https://www.murilopereira.com/feed.atom][Murilo Pereira]]                                                              :emacs:
-*** [[https://soatok.blog/feed/][Dhole Moments]]
+*** [[https://thelogicaloptimist.com/index.php/blog/feed/][The Logical Optimist]]
+*** [[https://emilygorcenski.com/index.xml][The Personal Blog of Emily Gorcenski]]
 *** [[https://feedpress.me/thetechnium][The Technium]]
-*** [[https://malwaretech.com/feed.xml][MalwareTech]]
-*** [[https://emacsredux.com/atom.xml][Emacs Redux]]                                                                 :emacs:
-
-*** [[https://arialdomartini.github.io/feed.xml][Arialdo on Code]]                                                             :emacs:programing:
-*** [[https://whimsies.bearblog.dev/feed/][Before 30]]
-*** [[https://www.bongotwisty.blog/index.xml][BongoTwisty]]                                                                 :weekly:
-*** [[https://your-local-grubdog.neocities.org/feed.xml][Your Local Grubdog]]
-*** [[https://ww0cj.radio/feed/][WW0CJ.radio]]
+*** [[https://blog.plover.com/index.atom][The Universe of Discourse]]
+*** [[https://theworksofegan.net/feed.xml][The Works of Egan]]
+*** [[https://themkat.net/feed.xml][TheMKat’s blog]]
+*** [[https://thetangent.space/feed.xml][theTangentSpace]]                                                             :weekly:
+*** [[https://feeds.feedburner.com/thoughtsfromtheredplanet?format=xml][thoughts from the red planet]]                                                :code:
+*** [[https://mazzzystar.github.io/atom.xml][TL;DR]]
+*** [[https://www.kgadams.net/feed][Ubergeek Kellys World]]
 *** [[https://unidentifiedsignalsource.wordpress.com/feed/][Unidentified Signal Source]]
+*** [[https://varunbarad.com/feed.xml][Varun Barad]]
+*** [[https://emacsninja.com/emacs.atom][Vasilij Schneidermann]]                                                       :emacs:
+*** [[https://blog.videah.net/atom.xml][videah's blog]]
+*** [[https://wordsundermyname.wordpress.com/feed/][Words Under My Name]]
+*** [[https://ww0cj.radio/feed/][WW0CJ.radio]]
+*** [[http://xahlee.info/emacs/emacs/blog.xml][Xah Emacs Blog]]                                                              :emacs:
+*** [[https://xuanwo.io/index.xml][Xuanwo's Blog]]                                                               :code:
+*** [[https://your-local-grubdog.neocities.org/feed.xml][Your Local Grubdog]]
+*** [[https://yipai.me/feed][一派胡言]]
+*** [[https://www.yvesx.com/feed/][举头三尺有神鱼]]
+*** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                      :frontend:
+*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
+*** [[https://www.kawabangga.com/feed][卡瓦邦噶！]]                                                                  :code:
+*** [[https://www.changhai.org/feed.xml][卢昌海个人主页]]
+*** [[https://spacexcode.com/blog/rss.xml][太空编程 Blog]]                                                               :frontend:
+*** [[https://ctian.livejournal.com/][春田冰河]]
+*** [[https://www.lxchapu.com/rss.xml][柃夏 chapu‘s blog]]
+*** [[https://www.ixiqin.com/feed/][白宦成]]
+*** [[https://chengpeiquan.com/feed.xml][程沛权]]                                                                      :code:
+*** [[https://elliot00.com/rss][编码与禅]]                                                                    :emacs:
+*** [[https://guozh.net/feed/][老郭种树]]
 ** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
 我会定期疏浚池塘，移除那些不再想继续关注的订阅源。
 我有一条规则：只有那些曾经完全沉入池塘的订阅源，才会被我退订。
+*** [[https://www.calishat.com/feed/][Calishat]]                                                                    :search:engine:更年期:衰老:
+*** [[https://www.codesimplicity.com/feed/][Code Simplicity]]
+*** [[https://blog.cr.yp.to/feed.application=xml][D. J. Bernstein's personal weblog.]]                                          :code:
+*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :news:daily:
+*** [[https://www.hillelwayne.com/][Hillel Wayne]]                                                                :code:
 *** [[https://blog.itsnero.com/feed][Nero Villagallos O'Reilly Art Blog]]
 *** [[https://orbitalmartian.vercel.app/feed.xml][OrbitalMartian]]
 *** [[https://godless-internets.org/feed][owlblog]]
+*** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                            :emacs:
+*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :news:daily:
+*** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
 *** [[https://tagn.wordpress.com/feed/][The Ancient Gaming Noob]]                                                     :game:
 *** [[https://www.ghastlymirror.xyz/rss.xml][The Ghastly Mirror]]
 *** [[https://www.timetoloot.com/feed/][Time to Loot]]                                                                :game:
+*** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
 *** [[https://virtualmoose.org/feed/][Virtual Moose]]
 *** [[https://werd.io/rss/][Werd I/O]]
 *** [[https://whyigame.wordpress.com/feed/][Why I Game]]
 *** [[https://ww0cj.radio/feed/][WW0CJ.radio]]
 *** [[https://blu30rion.wordpress.com/feed/][Your friendly neighborhood Blu]]
-*** [[https://www.calishat.com/feed/][Calishat]]                                                                    :search:engine:更年期:衰老:
-*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :news:daily:
-*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :news:daily:
-*** [[https://www.hillelwayne.com/][Hillel Wayne]]                                                                :code:
-*** [[https://blog.cr.yp.to/feed.application=xml][D. J. Bernstein's personal weblog.]]                                          :code:
-*** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
-*** [[https://www.codesimplicity.com/feed/][Code Simplicity]]
-*** [[https://www.pentadact.com/feed/][Tom Francis Regrets This Already]]
-*** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                            :emacs:
 ** Z6:Undefined                                                                 :z6:
