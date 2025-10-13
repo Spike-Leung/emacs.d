@@ -105,6 +105,7 @@
 *** [[https://clandestini.org/feed/][clandestini.org]]                                                             :葡萄牙语:设计好看的博客:
 *** [[https://cobb.land/feed.xml][cobb.land]]                                                                   :设计有趣的博客:
 *** [[https://css-irl.info/rss.xml][CSS In Real Life]]                                                            :css:web:frontend:
+*** [[https://cytrogen.icu/atom.xml][Cytrogen 的个人博客]]
 *** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
 *** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
 *** [[https://falseknees.com/rss.xml][false knees]]                                                                 :manga:anime:
@@ -247,6 +248,7 @@
 *** [[https://www.nkantar.com/blog/feed][Nik Kantar]]
 *** [[https://notes.druchan.com/feed.xml][notes / druchan]]
 *** [[https://nothingissimple.ablatedsprocket.com/rss.xml][Nothing Is Simple]]                                                           :emacs:code:
+*** [[https://godless-internets.org/feed][owlblog]]
 *** [[https://ploum.net/atom_en.xml][Ploum.net]]                                                                   :programing:
 *** [[https://angrybunnyman.com/feed/][Portrait of the Artist as a…]]
 *** [[https://www.yuqiqin.me/feed.xml][Psychic Paper]]                                                               :english:
@@ -310,7 +312,6 @@
 *** [[https://www.hillelwayne.com/][Hillel Wayne]]                                                                :code:
 *** [[https://blog.itsnero.com/feed][Nero Villagallos O'Reilly Art Blog]]
 *** [[https://orbitalmartian.vercel.app/feed.xml][OrbitalMartian]]
-*** [[https://godless-internets.org/feed][owlblog]]
 *** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                            :emacs:
 *** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :news:daily:
 *** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
