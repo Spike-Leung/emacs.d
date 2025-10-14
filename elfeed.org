@@ -4,6 +4,11 @@
 家园区用于检查我自己的订阅是否正常运行，以及关注我个人认识并深切关心的人：家人或亲密朋友。
 那些你会很高兴邀请到家里共度一个夜晚的人。
 
+Checklist:
+- 日期是否正确
+- 标题是否正确
+- 内容是否正确
+
 *** [[https://taxodium.ink/rss.xml][taxodium]]
 *** [[https://webmention.io/api/mentions.html?token=qcwPCX61g9khbvZWp3U0qg][webmention.io]]                                                               :webmention:
 ** Z1:Porch                                                                     :z1:default:
