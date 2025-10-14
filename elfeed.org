@@ -184,6 +184,7 @@ Checklist:
 *** [[https://www.chenrui.com/feed.php][陈锐]]
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
+*** [[https://dorotac.eu/atom.xml][dcz's posts]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
