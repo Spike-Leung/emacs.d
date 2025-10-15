@@ -6,6 +6,30 @@
 (require 'cl-lib)
 (require 'denote)
 
+(with-eval-after-load 'ox-html
+  (setq org-html-head-include-default-style nil)
+  ;; override org-html-verse-block from ox-html
+  (defun org-html-verse-block (_verse-block contents info)
+    "Transcode a VERSE-BLOCK element from Org to HTML.
+CONTENTS is verse block contents.  INFO is a plist holding
+contextual information."
+    (let ((attributes (org-export-read-attribute :attr_html _verse-block)))
+      (if-let ((class-val (plist-get attributes :class)))
+          (setq attributes (plist-put attributes :class (concat "verse " class-val)))
+        (setq attributes (plist-put attributes :class "verse")))
+      (format "<p%s>\n%s</p>"
+              (concat " " (org-html--make-attribute-string attributes))
+              ;; Replace leading white spaces with non-breaking spaces.
+              (replace-regexp-in-string
+               "^[ \t]+" (lambda (m) (org-html--make-string (length m) "&#xa0;"))
+               ;; Replace each newline character with line break.  Also
+               ;; remove any trailing "br" close-tag so as to avoid
+               ;; duplicates.
+               (let* ((br (org-html-close-tag "br" nil info))
+                      (re (format "\\(?:%s\\)?[ \t]*\n" (regexp-quote br))))
+                 (replace-regexp-in-string re (concat br "\n") contents)))))))
+
+
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
