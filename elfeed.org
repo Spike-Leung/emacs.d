@@ -82,6 +82,7 @@ Checklist:
 *** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
 *** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]                                                                  :weekly:
 *** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
+*** [[https://lhasa.icu/rss.xml][游钓四方]]
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
@@ -172,7 +173,6 @@ Checklist:
 *** [[https://www.xiaozonglin.cn/feed/][林林杂语]]
 *** [[https://oxxx.cn/feed/][森木志]]
 *** [[https://blog.douchi.space/index.xml][椒盐豆豉]]
-*** [[https://lhasa.icu/rss.xml][游钓四方]]
 *** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
 *** [[https://thirdshire.com/index.xml][第三夏尔]]
 *** [[https://www.wikimoe.com/rss][维基萌]]
@@ -185,6 +185,7 @@ Checklist:
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
 *** [[https://dorotac.eu/atom.xml][dcz's posts]]
+*** [[https://lea.verou.me/feed.xml][Lea Verou’s blog]]                                                            :web:code:
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
