@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: html head extra font
+# key: hhefont
+# --
+
+#+html_head_extra: <link rel="stylesheet" href="/fonts/I.Ming/result.css" />
