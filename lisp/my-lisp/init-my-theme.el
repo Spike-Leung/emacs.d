@@ -200,12 +200,12 @@
       (message "Random theme cycling started. Next change in ~15 minutes. Timer: %s" spike-leung/theme-cycle-timer))))
 
 ;; Start theme cycling by default, ensuring only one instance from this init file
-(if (timerp spike-leung/theme-cycle-timer)
-    (message "Random theme cycling timer already active: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to manage." spike-leung/theme-cycle-timer)
-  (progn
-    (setq spike-leung/theme-cycle-timer
-          (run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme))
-    (message "Random theme cycling started automatically. Next change in ~15 minutes. Timer: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to stop/start." spike-leung/theme-cycle-timer)))
+;; (if (timerp spike-leung/theme-cycle-timer)
+;;     (message "Random theme cycling timer already active: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to manage." spike-leung/theme-cycle-timer)
+;;   (progn
+;;     (setq spike-leung/theme-cycle-timer
+;;           (run-with-timer (* 15 60) (* 15 60) 'spike-leung/apply-random-theme))
+;;     (message "Random theme cycling started automatically. Next change in ~15 minutes. Timer: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to stop/start." spike-leung/theme-cycle-timer)))
 
 ;; pick a random them when init
 ;; (spike-leung/apply-random-theme)
