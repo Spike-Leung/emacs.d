@@ -208,7 +208,7 @@
     (message "Random theme cycling started automatically. Next change in ~15 minutes. Timer: %s. Use 'M-x spike-leung/toggle-random-theme-cycling' to stop/start." spike-leung/theme-cycle-timer)))
 
 ;; pick a random them when init
-(spike-leung/apply-random-theme)
-
+;; (spike-leung/apply-random-theme)
+(load-theme 'modus-vivendi)
 (provide 'init-my-theme)
 ;;; init-my-theme.el ends here
