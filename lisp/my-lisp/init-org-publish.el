@@ -468,15 +468,8 @@ TAG is string."
            :author "Spike Leung"
            :email "l-yanlei@hotmail.com")
 
-          ("pages"
-           :base-directory "~/git/taxodium/pages"
-           :base-extension any
-           :recursive t
-           :publishing-directory ,spike-leung/org-publish-default-publishing-directory
-           :publishing-function org-publish-attachment)
-
           ;; copy static fisrt
-          ("website" :components ("pages" "orgfiles" "black-hole" "draft" "sitemap")))))
+          ("website" :components ("orgfiles" "black-hole" "draft" "sitemap")))))
 
 (spike-leung/setup-org-publish-project-alist)
 (advice-add 'org-publish :before #'spike-leung/setup-org-publish-project-alist)
