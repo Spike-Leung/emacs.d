@@ -86,6 +86,7 @@ Checklist:
 *** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
 *** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]                                                                  :weekly:
 *** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
+*** [[https://luszy.com/home/feed/][冬天里的向日葵]]                                                              :life:
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
