@@ -27,7 +27,31 @@ contextual information."
                ;; duplicates.
                (let* ((br (org-html-close-tag "br" nil info))
                       (re (format "\\(?:%s\\)?[ \t]*\n" (regexp-quote br))))
-                 (replace-regexp-in-string re (concat br "\n") contents)))))))
+                 (replace-regexp-in-string re (concat br "\n") contents))))))
+
+  (defun org-html-section (section contents info)
+    "Transcode a SECTION element from Org to HTML.
+CONTENTS holds the contents of the section.  INFO is a plist
+holding contextual information."
+    (let ((parent (org-element-lineage section 'headline)))
+      ;; Before first headline: no container, just return CONTENTS.
+      (if (not parent) contents
+        ;; Get div's class and id references.
+        (let* ((class-num (+ (org-export-get-relative-level parent info)
+                             (1- (plist-get info :html-toplevel-hlevel))))
+               (section-number
+                (and (org-export-numbered-headline-p parent info)
+                     (mapconcat
+                      #'number-to-string
+                      (org-export-get-headline-number parent info) "-"))))
+          ;; Build return value.
+          (format "<div class=\"outline-text-%d\" id=\"text-%s\">%s</div>\n"
+                  class-num
+                  (or (org-element-property :CUSTOM_ID parent)
+                      section-number
+                      (org-export-get-reference parent info))
+                  (or contents ""))))))
+  )
 
 
 ;; <link rel=\"preload\" href=\"/fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>
