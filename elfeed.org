@@ -29,7 +29,7 @@ Checklist:
 *** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志]]                                                            :weekly:
 *** [[https://gwern.substack.com/feed][Gwern.net]]                                                                   :newsletter:设计超级好的网站:
 *** [[https://www.linggandianbo.com/rss/][灵感电波]]                                                                    :weekly:newsletter:
-** Z2:Backyard                                                                  :z2:
+** Z2:Backyard                                                                  :z2:default:
 在后院里，我和那些我喜欢的博客待在一起。
 我喜欢他们的大多数帖子，但并不觉得有必要立刻把所有东西都读完。
 他们都是很友好的人，我可以说我有兴趣阅读他们的大部分文章。
@@ -41,7 +41,7 @@ Checklist:
 *** [[https://blog.ursb.me/feed.xml][Airing 的博客]]
 *** [[https://manateelazycat.github.io/feed.xml][Andy Stewart]]
 *** [[https://cbvivi.today/feed.xml][cbvivi]]
-*** [[https://feeds.feedburner.com/CSS-Weekly][CSS Weekly]]                                                                  :css:weekly:
+*** [[https://feedpress.me/cssweekly][CSS Weekly]]                                                                  :css:weekly:
 *** [[https://dbushell.com/rss.xml][dbushell.com]]                                                                :frontend:
 *** [[https://entropicthoughts.com/feed][Entropic Thoughts]]                                                           :emacs:
 *** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]                                                              :weekly:
@@ -67,7 +67,7 @@ Checklist:
 *** [[https://cprss.s3.amazonaws.com/nodeweekly.com.xml][Node Weekly]]                                                                 :javascript:weekly:
 *** [[https://www.owenyoung.com/atom.xml][owenyoung]]
 *** [[https://protesilaos.com/master.xml][Protesilaos]]                                                                 :emacs:
-*** [[https://www.pseudoyu.com/zh/index.xml][Pseudoyu]]
+*** [[https://www.pseudoyu.com/feed.xml][Pseudoyu]]
 *** [[https://www.raptitude.com/feed/][Raptitude]]
 *** [[https://ribo.zone/feed.xml][ribo.zone]]
 *** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                  :emacs:
@@ -87,6 +87,7 @@ Checklist:
 *** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]                                                                  :weekly:
 *** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
 *** [[https://luszy.com/home/feed/][冬天里的向日葵]]                                                              :life:
+*** [[https://anniemueller.com/posts_feed][annie's blog]]
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
@@ -191,6 +192,14 @@ Checklist:
 *** [[https://lea.verou.me/feed.xml][Lea Verou’s blog]]                                                            :web:code:
 *** [[https://blog.mfwt.top/index.php/feed/][枫林灯语]]                                                                    :无线电:
 *** [[https://lomus.cc/feed][Lumos's Blog]]
+*** [[https://sebastiano.tronto.net/blog/feed.xml][Sebastiano Tronto's blog]]
+*** [[https://onevcat.com/feed.xml][OneV's Den]]
+*** [[https://www.philschmid.de/rss][philschmid.de]]
+*** [[https://sive.rs/en.atom][Derek Sivers]]
+*** [[https://weiwei.place/feed][Weiwei Xu]]
+*** [[https://hughhowey.com/feed/][Hugh Howey]]                                                                  :writer:
+*** [[https://ryanmulligan.dev/feed.xml][Ryan Mulligan]]                                                               :设计好看的博客:frontend:
+*** [[https://stephenleng.com/cn/feed/][心的道理]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
