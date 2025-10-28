@@ -78,6 +78,7 @@ Checklist:
 *** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
 *** [[https://lhasa.icu/rss.xml][游钓四方]]
 *** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
+*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
@@ -189,7 +190,6 @@ Checklist:
 *** [[https://justgoidea.com/rss.xml][槿呈 Goidea]]
 *** [[https://shuiba.co/feed][水八口]]
 *** [[https://imgradeone.com/blog.xml][真正的自言者一么]]
-*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
 *** [[https://thirdshire.com/index.xml][第三夏尔]]
 *** [[https://www.wikimoe.com/rss][维基萌]]
 *** [[https://caa-ins.org/feed][网络社会研究所]]
@@ -197,7 +197,7 @@ Checklist:
 *** [[https://luffy.cc/feed][蒙奇日记]]
 *** [[https://1q43.blog/feed/][虹线]]
 *** [[https://ioerr.github.io/index.xml][读写错误]]
-*** [[https://2cat.net/feed/][貓魚]]                                                                        :life:
+*** [[https://2cat.net/feed/][猫鱼]]                                                                        :life:
 *** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
 *** [[https://www.ctling.com/atom.xml][閒人筆記]]                                                                    :台湾:
 *** [[https://www.chenrui.com/feed.php][陈锐]]
@@ -313,7 +313,6 @@ Checklist:
 *** [[https://yipai.me/feed][一派胡言]]
 *** [[https://www.yvesx.com/feed/][举头三尺有神鱼]]
 *** [[https://www.yunyoujun.cn/atom.xml][云游君]]                                                                      :frontend:
-*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
 *** [[https://www.kawabangga.com/feed][卡瓦邦噶！]]                                                                  :code:
 *** [[https://www.changhai.org/feed.xml][卢昌海个人主页]]
 *** [[https://spacexcode.com/blog/rss.xml][太空编程 Blog]]                                                               :frontend:
@@ -324,6 +323,7 @@ Checklist:
 *** [[https://elliot00.com/rss][编码与禅]]                                                                    :emacs:
 *** [[https://guozh.net/feed/][老郭种树]]
 *** [[https://onojyun.com/feed/][莫比乌斯]]
+*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
 ** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
