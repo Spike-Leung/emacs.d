@@ -5,7 +5,7 @@
   "My elfeed org files path.")
 
 (when (maybe-require-package 'elfeed)
-  (setq-default elfeed-search-filter "@6-months-ago +unread +default"))
+  (setq-default elfeed-search-filter "@3-months-ago +unread +default"))
 
 (when (maybe-require-package 'elfeed-org)
   (setq rmh-elfeed-org-files (list spike-leung/elfeed-org-files))
