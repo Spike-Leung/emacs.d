@@ -87,6 +87,7 @@ Checklist:
 *** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
 *** [[https://1sle29.github.io/index.xml][1sle]]
 *** [[https://54321.versun.me/feed][54321 Weekly]]
+*** [[https://61.life/feed.xml][61's life]]
 *** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
 *** [[https://anerdyfujocries.wordpress.com/feed/][A Nerdy Fujo Cries]]
 *** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
@@ -129,12 +130,10 @@ Checklist:
 *** [[https://www.icebeer.top/feed/][IceBeer]]
 *** [[https://j3s.sh/feed.atom][j3s.sh]]
 *** [[https://talk.jackalope.city/feed/][jackalope.city]]
-*** [[https://veryjack.com/feed/][Jack‘s Space]]
 *** [[https://joelchrono.xyz/feed.xml][Joelchrono's Blog]]
 *** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
 *** [[https://hamatti.org/feed/feed.xml][Juhis]]
 *** [[https://jvns.ca/atom.xml][Julia Evans]]
-*** [[https://www.justzht.com/rss/][JustZht's EchoChamber]]                                                       :weekly:
 *** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]
 *** [[https://lars-christian.com/feed.xml][Lars-Christian's website]]
 *** [[https://www.teamten.com/lawrence/writings/rss.xml][Lawrence Kesteloot's writings]]                                               :设计有趣的博客:
@@ -189,6 +188,7 @@ Checklist:
 *** [[https://blog.douchi.space/index.xml][椒盐豆豉]]
 *** [[https://justgoidea.com/rss.xml][槿呈 Goidea]]
 *** [[https://shuiba.co/feed][水八口]]
+*** [[https://2cat.net/feed/][猫鱼]]                                                                        :life:
 *** [[https://imgradeone.com/blog.xml][真正的自言者一么]]
 *** [[https://thirdshire.com/index.xml][第三夏尔]]
 *** [[https://www.wikimoe.com/rss][维基萌]]
@@ -197,12 +197,12 @@ Checklist:
 *** [[https://luffy.cc/feed][蒙奇日记]]
 *** [[https://1q43.blog/feed/][虹线]]
 *** [[https://ioerr.github.io/index.xml][读写错误]]
-*** [[https://2cat.net/feed/][猫鱼]]                                                                        :life:
 *** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
 *** [[https://www.ctling.com/atom.xml][閒人筆記]]                                                                    :台湾:
 *** [[https://www.chenrui.com/feed.php][陈锐]]
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
+*** [[https://herman.bearblog.dev/feed/][Herman's blog]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
@@ -245,12 +245,14 @@ Checklist:
 *** [[https://gaudetetheology.wordpress.com/feed/][Gaudete Theology]]                                                            :宗教:
 *** [[https://glome.bearblog.dev/feed/][Glome]]
 *** [[https://blog.gzj.life/zh-cn/index.xml][ISouthRain Blog]]                                                             :emacs:
+*** [[https://veryjack.com/feed/][Jack's Space]]
 *** [[https://jakelazaroff.com/rss.xml][jakelazaroff.com]]                                                            :frontend:css:web:
 *** [[https://jasonfantl.com/feed.xml][Jason Fantl]]
 *** [[https://jason-memo.dev/feed/feed.xml][Jason's Web Memo]]                                                            :code:
 *** [[https://www.jayeless.net/index.xml][Jayeless.net]]                                                                :数字花园:
 *** [[https://jeffbradberry.com/feeds/all.atom.xml][Jeff Bradberry]]                                                              :emacs:
 *** [[https://jetgirl.art/rss/][JetGirlArt]]
+*** [[https://www.justzht.com/rss/][JustZht's EchoChamber]]                                                       :weekly:
 *** [[https://kristofferbalintona.me/index.xml][Kristoffer Balintona]]                                                        :emacs:code:
 *** [[https://kuilz.github.io/index.xml][kuilz]]
 *** [[https://l1uyun.one/atom.xml][l1uyun's Blog]]
@@ -319,11 +321,11 @@ Checklist:
 *** [[https://ctian.livejournal.com/][春田冰河]]
 *** [[https://www.lxchapu.com/rss.xml][柃夏 chapu‘s blog]]
 *** [[https://www.ixiqin.com/feed/][白宦成]]
+*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
 *** [[https://chengpeiquan.com/feed.xml][程沛权]]                                                                      :code:
 *** [[https://elliot00.com/rss][编码与禅]]                                                                    :emacs:
 *** [[https://guozh.net/feed/][老郭种树]]
 *** [[https://onojyun.com/feed/][莫比乌斯]]
-*** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
 ** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
