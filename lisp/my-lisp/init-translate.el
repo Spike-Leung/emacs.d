@@ -48,6 +48,8 @@
   "Keymap for translation commands.")
 
 (define-key spike-leung/my-translate-keymap (kbd "i") 'immersive-translate-buffer)
+(define-key spike-leung/my-translate-keymap (kbd "p") 'immersive-translate-paragraph)
+(define-key spike-leung/my-translate-keymap (kbd "c") 'immersive-translate-clear)
 (define-key spike-leung/my-translate-keymap (kbd "f") 'fanyi-dwim2)
 (define-key spike-leung/my-translate-keymap (kbd "g") 'gt-do-translate)
 
