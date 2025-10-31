@@ -23,22 +23,20 @@
 
 
 
-;;; go-translate
-;; @see: https://github.com/lorniu/go-translate
-(maybe-require-package 'go-translate)
+;; @see: https://github.com/lorniu/gt.el
+(maybe-require-package 'gt)
 (maybe-require-package 'plz)
 (with-eval-after-load 'init-auth
-  (with-eval-after-load 'go-translate
+  (with-eval-after-load 'gt
     (setq gt-langs '(en zh)
           gt-chatgpt-key (spike-leung/get-openrouter-api-key)
           gt-chatgpt-host "https://openrouter.ai/api"
-          gt-chatgpt-model "google/gemini-2.5-flash-preview-05-20"
+          gt-chatgpt-model "google/gemini-2.5-flash"
           gt-default-translator (gt-translator
-                                 :engines (list
-                                           ;; FIXME: stream nil will pass stream: null in request, which is not support by openrouter, report a issue sometime
-                                           (gt-chatgpt-engine :stream nil))
+                                 :taker (gt-taker :pick nil :prompt t)
+                                 :engines (gt-chatgpt-engine :stream t)
                                  :render (gt-buffer-render
-                                          :buffer-name "gt-translator"
+                                          :name "gt-translator"
                                           :window-config '((display-buffer-at-bottom))
                                           :then (lambda (_) (pop-to-buffer "gt-translator")))))))
 
@@ -51,7 +49,7 @@
 (define-key spike-leung/my-translate-keymap (kbd "p") 'immersive-translate-paragraph)
 (define-key spike-leung/my-translate-keymap (kbd "c") 'immersive-translate-clear)
 (define-key spike-leung/my-translate-keymap (kbd "f") 'fanyi-dwim2)
-(define-key spike-leung/my-translate-keymap (kbd "g") 'gt-do-translate)
+(define-key spike-leung/my-translate-keymap (kbd "g") 'gt-translate)
 
 (with-eval-after-load 'init-my-keybindings
   (define-key spike-leung/meta-o-keymap (kbd "t") spike-leung/my-translate-keymap))
