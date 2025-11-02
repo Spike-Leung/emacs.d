@@ -18,6 +18,7 @@ Checklist:
 
 *** [[https://anotherdayu.com/feed/][Another Dayu]]
 *** [[https://antfu.me/feed.xml][Anthony Fu]]
+*** [[https://cytrogen.icu/atom.xml][Cytrogen]]
 *** [[https://overreacted.io/rss.xml][overreacted]]                                                                 :frontend:react:
 *** [[https://polebug.github.io/atom.xml][Polebug]]
 *** [[https://sightlessscribbles.com/feed.xml][Sightless Scribbles]]
@@ -50,6 +51,7 @@ Checklist:
 *** [[https://blog.jim-nielsen.com/feed.xml][Jim Nielsen’s Blog]]
 *** [[https://www.joshwcomeau.com/rss.xml][Josh Comeau's blog]]                                                          :css:web:frontend:
 *** [[https://kayleerowena.com/rss.xml][Kaylee Rowena]]                                                               :weekly:设计好看的博客:
+*** [[https://kedara.eu/blog/index.xml][Kedara.eu by Ruben Verweij]]
 *** [[https://kill-the-newsletter.com/feeds/3hl5jx56nh55vdvwhoh1.xml][kill-the-newsletter@taxodium]]
 
 处理那些没有 feed 的网站。
@@ -72,14 +74,14 @@ Checklist:
 *** [[https://simonwillison.net/atom/everything/][Simon Willison’s Weblog]]
 *** [[https://song.al/feed.xml][Simon's Blog]]                                                                :日本:
 *** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                           :writing:emacs:
+*** [[https://tianheg.co/index.xml][Tianhe Gao]]
 *** [[https://tracydurnell.com/feed/atom/][Tracy Durnell's Mind Garden]]                                                 :weekly:
+*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
 *** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                   :design:ux:
 *** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]                                                              :weekly:
 *** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
 *** [[https://lhasa.icu/rss.xml][游钓四方]]
 *** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
-*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
-*** [[https://tianheg.co/index.xml][Tianhe Gao]]
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
@@ -107,7 +109,6 @@ Checklist:
 *** [[https://clandestini.org/feed/][clandestini.org]]                                                             :葡萄牙语:设计好看的博客:
 *** [[https://cobb.land/feed.xml][cobb.land]]                                                                   :设计有趣的博客:
 *** [[https://css-irl.info/rss.xml][CSS In Real Life]]                                                            :css:web:frontend:
-*** [[https://cytrogen.icu/atom.xml][Cytrogen 的个人博客]]
 *** [[https://dorotac.eu/atom.xml][dcz's posts]]
 *** [[https://sive.rs/en.atom][Derek Sivers]]
 *** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
@@ -121,14 +122,15 @@ Checklist:
 *** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]                                                                 :weekly:
 *** [[https://gobino.be/feed/][gobino's bites]]                                                              :weekly:
 *** [[https://grantslatton.com/rss.xml][Grant Slatton's Blog]]                                                        :writing:code:
+*** [[https://herman.bearblog.dev/feed/][Herman's blog]]
 *** [[https://hughhowey.com/feed/][Hugh Howey]]                                                                  :writer:
 *** [[https://www.icebeer.top/feed/][IceBeer]]
 *** [[https://j3s.sh/feed.atom][j3s.sh]]
+*** [[https://jakearchibald.com/posts.rss][Jake Archibald's blog]]
 *** [[https://joelchrono.xyz/feed.xml][Joelchrono's Blog]]
 *** [[https://hamatti.org/feed/feed.xml][Juha-Matti Santala]]
 *** [[https://hamatti.org/feed/feed.xml][Juhis]]
 *** [[https://jvns.ca/atom.xml][Julia Evans]]
-*** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]
 *** [[https://lars-christian.com/feed.xml][Lars-Christian's website]]
 *** [[https://www.teamten.com/lawrence/writings/rss.xml][Lawrence Kesteloot's writings]]                                               :设计有趣的博客:
 *** [[https://www.didiermary.fr/feed/][Le Blog de Didier MARY]]                                                      :music:album:
@@ -161,6 +163,7 @@ Checklist:
 *** [[https://www.timbornholdt.com/blog/feed.rss][Tim Bornholdt]]
 *** [[https://tusharhero.codeberg.page/rss.xml][tusharhero]]                                                                  :emacs:
 *** [[https://weiwei.place/feed][Weiwei Xu]]
+*** [[https://what-if.xkcd.com/feed.atom][what if?.xkcd]]
 *** [[https://zine.milliesquilly.com/rss.xml][zine of millie]]                                                              :cool:ux:
 *** [[https://keelii.com/][临池不辍]]
 *** [[https://luszy.com/home/feed/][冬天里的向日葵]]                                                              :life:
@@ -172,6 +175,7 @@ Checklist:
 *** [[https://wangquan.cc/feed/][小王日记]]
 *** [[https://stephenleng.com/cn/feed/][心的道理]]
 *** [[https://stephenleng.com/cn/feed/][心的道理]]
+*** [[https://sinyalee.com/blog/?feed=rss2][新的原野]]
 *** [[https://www.laomuzhu.cn/feed/][木竹]]
 *** [[https://www.xiaozonglin.cn/feed/][林林杂语]]
 *** [[https://blog.mfwt.top/index.php/feed/][枫林灯语]]                                                                    :无线电:
@@ -189,11 +193,11 @@ Checklist:
 *** [[https://1q43.blog/feed/][虹线]]
 *** [[https://ioerr.github.io/index.xml][读写错误]]
 *** [[https://blog.ops-coffee.com/feed.xml][运维咖啡吧]]
+*** [[https://blog.helenchong.omg.lol/zh/feed.xml][银河花园]]                                                                    :马来西亚:
 *** [[https://www.ctling.com/atom.xml][閒人筆記]]                                                                    :台湾:
 *** [[https://www.chenrui.com/feed.php][陈锐]]
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
-*** [[https://herman.bearblog.dev/feed/][Herman's blog]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
@@ -327,6 +331,7 @@ Checklist:
 *** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
 *** [[https://talk.jackalope.city/feed/][jackalope.city]]
 *** [[https://anerdyfujocries.wordpress.com/feed/][A Nerdy Fujo Cries]]
+*** [[https://marisabel.nl/feeds/combined.php][Konfetti Explorations]]
 ** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
