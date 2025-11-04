@@ -64,6 +64,8 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
             :request-params '(:reasoning ( :enable t))))
     ;; Add hook function to refresh OpenRouter provider when models are updated
     (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
+    (add-hook 'gptel-mode-hook 'auto-fill-mode)
+    (add-hook 'gptel-mode-hook 'visual-line-mode)
     ;; If models were fetched before gptel loaded and hook was added,
     ;; explicitly refresh now to ensure consistency if cache is populated.
     ;; This is particularly relevant if init-openrouter-models.el's initial fetch
