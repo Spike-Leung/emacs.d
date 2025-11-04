@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: note section
+# key: ns
+# --
+
+#+attr_html: :role note
+#+begin_section
+$0
+#+end_section
