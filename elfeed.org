@@ -198,6 +198,8 @@ Checklist:
 *** [[https://www.chenrui.com/feed.php][陈锐]]
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
+*** [[https://waitbutwhy.com/feed][Wait But Why]]
+*** [[https://birming.com/feed.xml][Robert Birming]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
@@ -275,7 +277,6 @@ Checklist:
 *** [[https://randomascii.wordpress.com/feed/][Random ASCII – tech blog of Bruce Dawson]]                                    :code:
 *** [[https://blog.nyman.re/feed.xml][re: nyman]]
 *** [[https://riverpunk.bearblog.dev/feed/][Riverpunk]]
-*** [[https://birming.com/feed.xml][Robert Birming]]
 *** [[https://rseeber.github.io/blog/feed.xml][Rseeber]]
 *** [[https://hollie.eilloh.net/rss.xml][Small Good Things]]
 *** [[https://smallyu.net/atom][smallyu]]
