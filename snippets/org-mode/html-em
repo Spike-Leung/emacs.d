@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: html <em>
+# key: em
+# --
+
+@@html:<em>$0</em>@@
