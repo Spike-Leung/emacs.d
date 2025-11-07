@@ -163,6 +163,20 @@ If a model is selected, it is memorized for next use."
                   (insert response))
               (message "Translation failed."))))))))
 
+(defun spike-leung/gptel--replace-source-marker (num-ticks &optional end)
+  "Override `gptel--replace-source-marker', handle `=' in chinese."
+  (let ((from (match-beginning 0)))
+    (delete-region from (point))
+    (if (and (= num-ticks 3)
+             (save-excursion (beginning-of-line)
+                             (skip-chars-forward " \t")
+                             (eq (point) from)))
+        (insert (if end "#+end_src" "#+begin_src "))
+      (insert (if end "= " " =")))))
+
+(advice-add 'gptel--replace-source-marker :override #'spike-leung/gptel--replace-source-marker)
+
+
 (with-eval-after-load 'init-my-keybindings
   (define-key spike-leung/meta-o-keymap (kbd "g") 'gptel-menu)
   (define-key spike-leung/meta-o-keymap (kbd "u") 'spike-leung/gptel-rewrite))
