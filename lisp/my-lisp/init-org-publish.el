@@ -76,8 +76,14 @@ holding contextual information."
 <link rel=\"stylesheet\" href=\"/styles/style.css\" type=\"text/css\"/>
 <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
 <link rel=\"webmention\" href=\"https://webmention.io/taxodium.ink/webmention\" />
+<link rel=\"alternate\" type=\"application/atom+xml\" href=\"rss.xml\" title=\"Feed for all blogs.\"/>
+<link rel=\"alternate\" type=\"application/atom+xml\" href=\"album.xml\" title=\"Feed for all album.\"/>
+<link rel=\"alternate\" type=\"application/atom+xml\" href=\"emacs.xml\" title=\"Feed for all Emacs.\"/>
+<link rel=\"alternate\" type=\"application/atom+xml\" href=\"nichijou.xml\" title=\"Feed for 日常.\"/>
+<link rel=\"alternate\" type=\"application/atom+xml\" href=\"snippet.xml\" title=\"Feed for Snippet.\"/>
+<link rel=\"alternate\" type=\"application/atom+xml\" href=\"zine.xml\" title=\"Feed for Zine.\"/>
 "
-"`:html-head' for `org-publish'.")
+  "`:html-head' for `org-publish'.")
 
 (defconst spike-leung/html-head-sitemap (concat
                                          spike-leung/html-head
@@ -90,7 +96,7 @@ holding contextual information."
 <nav>
   <ul>
     <li><a href=\"/index.html\">主页</a></li>
-    <li><a href=\"/rss.xml\">订阅</a></li>
+    <li><a href=\"/subscribe.html\">订阅</a></li>
     <li><a href=\"/search.html\">搜索</a></li>
     <li><a href=\"/inside-black-hole.html\">黑洞里</a></li>
   </ul>
