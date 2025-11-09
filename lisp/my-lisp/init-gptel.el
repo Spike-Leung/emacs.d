@@ -5,6 +5,9 @@
 (maybe-require-package 'gptel)
 (require 'init-openrouter-models) ; Ensures spike-leung/openrouter-models-cache and hook are defined
 
+(defconst openrouter-default-model 'moonshotai/kimi-k2-thinking
+  "Default model for openrouter.")
+
 (defun spike-leung/gptel-refresh-openrouter-provider ()
   "Refresh gptel's OpenRouter provider with the latest models.
 This function is intended to be called from `spike-leung/openrouter-models-updated-hook`."
@@ -52,7 +55,7 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
       :key (spike-leung/get-openrouter-api-key)
       :models spike-leung/openrouter-models-cache
       :request-params '(:reasoning ( :enable t)))
-    (setq gptel-model   'google/gemini-2.5-pro
+    (setq gptel-model   openrouter-default-model
           gptel-default-mode 'org-mode
           gptel-backend
           (gptel-make-openai "OpenRouter"
@@ -163,18 +166,18 @@ If a model is selected, it is memorized for next use."
                   (insert response))
               (message "Translation failed."))))))))
 
-(defun spike-leung/gptel--replace-source-marker (num-ticks &optional end)
-  "Override `gptel--replace-source-marker', handle `=' in chinese."
-  (let ((from (match-beginning 0)))
-    (delete-region from (point))
-    (if (and (= num-ticks 3)
-             (save-excursion (beginning-of-line)
-                             (skip-chars-forward " \t")
-                             (eq (point) from)))
-        (insert (if end "#+end_src" "#+begin_src "))
-      (insert (if end "= " " =")))))
+;; (defun spike-leung/gptel--replace-source-marker (num-ticks &optional end)
+;;   "Override `gptel--replace-source-marker', handle `=' in chinese."
+;;   (let ((from (match-beginning 0)))
+;;     (delete-region from (point))
+;;     (if (and (= num-ticks 3)
+;;              (save-excursion (beginning-of-line)
+;;                              (skip-chars-forward " \t")
+;;                              (eq (point) from)))
+;;         (insert (if end "#+end_src" "#+begin_src "))
+;;       (insert (if end "= " " =")))))
 
-(advice-add 'gptel--replace-source-marker :override #'spike-leung/gptel--replace-source-marker)
+;; (advice-add 'gptel--replace-source-marker :override #'spike-leung/gptel--replace-source-marker)
 
 
 (with-eval-after-load 'init-my-keybindings
