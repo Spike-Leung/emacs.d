@@ -4,14 +4,15 @@
 
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'color-theme-sanityinc-tomorrow)
-(require 'modus-themes)
+(maybe-require-package 'modus-themes)
+(maybe-require-package 'standard-themes)
 
 ;; Don't prompt to confirm theme safety. This avoids problems with
 ;; first-time startup on Emacs > 26.3.
 (setq custom-safe-themes t)
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(sanityinc-tomorrow-bright))
+(setq-default custom-enabled-themes '(standard-light))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
@@ -30,7 +31,7 @@
 (defun light ()
   "Activate a light color theme."
   (interactive)
-  (setq custom-enabled-themes '(sanityinc-tomorrow-eighties))
+  (setq custom-enabled-themes '(standard-light))
   (reapply-themes))
 
 (defun dark ()
@@ -38,7 +39,6 @@
   (interactive)
   (setq custom-enabled-themes '(modus-vivendi))
   (reapply-themes))
-
 
 (when (maybe-require-package 'dimmer)
   (setq-default dimmer-fraction 0.15)

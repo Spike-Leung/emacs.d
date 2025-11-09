@@ -8,8 +8,10 @@
 (maybe-require-package 'gruvbox-theme)
 (maybe-require-package 'monokai-pro-theme)
 (maybe-require-package 'timu-caribbean-theme)
+(maybe-require-package 'standard-themes)
 
 (require 'modus-themes)
+(require 'standard-themes)
 (require 'ef-themes)
 (require 'doric-themes)
 (require 'gruvbox-theme)
