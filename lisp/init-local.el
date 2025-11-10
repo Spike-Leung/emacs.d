@@ -11,7 +11,7 @@
     (add-to-list 'load-path dir)))
 
 (require 'init-my-keybindings)
-;; (require 'init-my-theme)
+(require 'init-my-theme)
 (require 'init-aider)
 (require 'init-auth)
 (require 'init-auto-save)
