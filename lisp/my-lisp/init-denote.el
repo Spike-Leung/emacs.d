@@ -15,7 +15,8 @@
   (setq denote-infer-keywords t)
   (setq denote-sort-keywords t)
   (setq denote-file-type nil)    ; Org is the default, set others here
-  (setq denote-prompts '(template title keywords))
+  ;; (setq denote-prompts '(template title keywords))
+  (setq denote-prompts '(title keywords))
   (setq denote-excluded-directories-regexp nil)
   (setq denote-excluded-keywords-regexp nil)
   (setq denote-org-store-link-to-heading 'id)
@@ -39,8 +40,8 @@
 
   ;; Read manual for how to specify `denote-templates'.  We do not
   ;; include an example here to avoid potential confusion.
-  (setq denote-templates
-        '((memo . "* Refs")))
+  ;; (setq denote-templates
+  ;;       '((memo . "* Refs")))
 
   (setq xref-search-program
         (cond
