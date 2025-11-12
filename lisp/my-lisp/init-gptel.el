@@ -5,8 +5,9 @@
 (maybe-require-package 'gptel)
 (require 'init-openrouter-models) ; Ensures spike-leung/openrouter-models-cache and hook are defined
 
-(defconst openrouter-default-model 'moonshotai/kimi-k2-thinking
+(defconst openrouter-default-model 'deepseek/deepseek-r1-0528
   "Default model for openrouter.")
+
 
 (defun spike-leung/gptel-refresh-openrouter-provider ()
   "Refresh gptel's OpenRouter provider with the latest models.
@@ -65,6 +66,8 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
             :key (spike-leung/get-openrouter-api-key)
             :models spike-leung/openrouter-models-cache
             :request-params '(:reasoning ( :enable t))))
+
+    (setopt gptel--system-message "You are a helpful assistant. Respond concisely.")
     ;; Add hook function to refresh OpenRouter provider when models are updated
     (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
     (add-hook 'gptel-mode-hook 'auto-fill-mode)
