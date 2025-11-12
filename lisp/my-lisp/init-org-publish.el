@@ -104,6 +104,8 @@ holding contextual information."
     <option value=\"auto\">Auto</option>
     <option value=\"light\">Light</option>
     <option value=\"dark\">Dark</option>
+    <option value=\"light-retro\" aria-label=\"复古 Light\">Light 👾</option>
+    <option value=\"dark-retro\" aria-lable=\"复古 Dark\">Dark 👾</option>
   </select>
 </nav>
 "
