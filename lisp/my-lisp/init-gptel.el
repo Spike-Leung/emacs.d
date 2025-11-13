@@ -5,9 +5,59 @@
 (maybe-require-package 'gptel)
 (require 'init-openrouter-models) ; Ensures spike-leung/openrouter-models-cache and hook are defined
 
-(defconst openrouter-default-model 'deepseek/deepseek-r1-0528
+(defconst openrouter-default-model 'google/gemini-2.5-pro
   "Default model for openrouter.")
 
+(with-eval-after-load 'init-auth
+  (with-eval-after-load 'gptel
+    (gptel-make-openai "DeepSeek"
+      :host "api.deepseek.com"
+      :endpoint "/chat/completions"
+      :stream t
+      :key (spike-leung/get-deepseek-api-key)
+      :models '(deepseek-chat deepseek-coder)
+      :request-params '(:reasoning (:enable t)))
+    (gptel-make-openai "OpenRouter"
+      :host "openrouter.ai"
+      :endpoint "/api/v1/chat/completions"
+      :stream t
+      :key (spike-leung/get-openrouter-api-key)
+      :models spike-leung/openrouter-models-cache
+      :request-params '(:reasoning (:enable t)))
+    (setq gptel-model   openrouter-default-model
+          gptel-default-mode 'org-mode
+          gptel-backend
+          (gptel-make-openai "OpenRouter"
+            :host "openrouter.ai"
+            :endpoint "/api/v1/chat/completions"
+            :stream t
+            :key (spike-leung/get-openrouter-api-key)
+            :models spike-leung/openrouter-models-cache
+            :request-params '(:reasoning ( :enable t))))
+    (setopt
+     gptel--system-message "You are a helpful assistant. Respond concisely."
+     gptel-highlight-methods '(fringe face margin))
+
+    (gptel-make-preset 'dict
+      :description "英语词典"
+      :system "你充当一个字典，将内容翻译成英文，如果结果一个单词，同时给出音标。考虑提供多个可能的含义。"
+      :backend "OpenRouter"
+      :model 'google/gemini-2.5-flash)
+
+    (gptel-make-preset 'quick
+      :description "快速回答"
+      :system "You are a helpful assistant. Respond concisely."
+      :backend "OpenRouter"
+      :model 'deepseek/deepseek-v3.2-exp)
+
+    (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
+    (add-hook 'gptel-mode-hook 'auto-fill-mode)
+    (add-hook 'gptel-mode-hook 'visual-line-mode)
+    (add-hook 'gptel-mode-hook 'gptel-highlight-mode)
+
+    (when (and spike-leung/openrouter-models-cache
+               (> (length spike-leung/openrouter-models-cache) 0))
+      (spike-leung/gptel-refresh-openrouter-provider))))
 
 (defun spike-leung/gptel-refresh-openrouter-provider ()
   "Refresh gptel's OpenRouter provider with the latest models.
@@ -16,7 +66,6 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
     (let ((api-key (spike-leung/get-openrouter-api-key)))
       (if api-key
           (progn
-            ;; Update the OpenRouter provider definition in gptel's list
             (gptel-make-openai "OpenRouter"
               :host "openrouter.ai"
               :endpoint "/api/v1/chat/completions"
@@ -24,11 +73,9 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
               :key api-key
               :models spike-leung/openrouter-models-cache)
 
-            ;; If gptel-backend is currently set to the OpenRouter provider,
-            ;; update it to use the new model list.
             (when (and (boundp 'gptel-backend)
-                       gptel-backend ; Ensure gptel-backend is not nil
-                       (listp gptel-backend) ; gptel-backend is a plist
+                       gptel-backend
+                       (listp gptel-backend)
                        (string= (plist-get gptel-backend :name) "OpenRouter"))
               (setq gptel-backend
                     (gptel-make-openai "OpenRouter"
@@ -40,48 +87,9 @@ This function is intended to be called from `spike-leung/openrouter-models-updat
             (message "gptel OpenRouter provider models refreshed via hook."))
         (message "Cannot refresh gptel OpenRouter provider via hook: API key not found.")))))
 
-(with-eval-after-load 'init-auth
-  (with-eval-after-load 'gptel
-    (gptel-make-openai "DeepSeek"
-      :host "api.deepseek.com"
-      :endpoint "/chat/completions"
-      :stream t
-      :key (spike-leung/get-deepseek-api-key)
-      :models '(deepseek-chat deepseek-coder)
-      :request-params '(:reasoning ( :enable t)))
-    (gptel-make-openai "OpenRouter"
-      :host "openrouter.ai"
-      :endpoint "/api/v1/chat/completions"
-      :stream t
-      :key (spike-leung/get-openrouter-api-key)
-      :models spike-leung/openrouter-models-cache
-      :request-params '(:reasoning ( :enable t)))
-    (setq gptel-model   openrouter-default-model
-          gptel-default-mode 'org-mode
-          gptel-backend
-          (gptel-make-openai "OpenRouter"
-            :host "openrouter.ai"
-            :endpoint "/api/v1/chat/completions"
-            :stream t
-            :key (spike-leung/get-openrouter-api-key)
-            :models spike-leung/openrouter-models-cache
-            :request-params '(:reasoning ( :enable t))))
-
-    (setopt gptel--system-message "You are a helpful assistant. Respond concisely.")
-    ;; Add hook function to refresh OpenRouter provider when models are updated
-    (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
-    (add-hook 'gptel-mode-hook 'auto-fill-mode)
-    (add-hook 'gptel-mode-hook 'visual-line-mode)
-    ;; If models were fetched before gptel loaded and hook was added,
-    ;; explicitly refresh now to ensure consistency if cache is populated.
-    ;; This is particularly relevant if init-openrouter-models.el's initial fetch
-    ;; populates the cache before this eval-after-load block runs.
-    (when (and spike-leung/openrouter-models-cache
-               (> (length spike-leung/openrouter-models-cache) 0))
-      (spike-leung/gptel-refresh-openrouter-provider))))
+
 
 ;;; some helpful utils use gptel
-
 (require 'init-gptel-prompts)
 
 (defvar spike-leung/gptel-rewrite-last-model 'google/gemini-2.5-flash
@@ -169,19 +177,7 @@ If a model is selected, it is memorized for next use."
                   (insert response))
               (message "Translation failed."))))))))
 
-;; (defun spike-leung/gptel--replace-source-marker (num-ticks &optional end)
-;;   "Override `gptel--replace-source-marker', handle `=' in chinese."
-;;   (let ((from (match-beginning 0)))
-;;     (delete-region from (point))
-;;     (if (and (= num-ticks 3)
-;;              (save-excursion (beginning-of-line)
-;;                              (skip-chars-forward " \t")
-;;                              (eq (point) from)))
-;;         (insert (if end "#+end_src" "#+begin_src "))
-;;       (insert (if end "= " " =")))))
-
-;; (advice-add 'gptel--replace-source-marker :override #'spike-leung/gptel--replace-source-marker)
-
+
 
 (with-eval-after-load 'init-my-keybindings
   (define-key spike-leung/meta-o-keymap (kbd "g") 'gptel-menu)
