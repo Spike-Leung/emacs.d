@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: image-href
+# key: ih
+# group: blog
+# --
+#+attr_html: :data-href $0
