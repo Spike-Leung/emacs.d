@@ -112,7 +112,7 @@ holding contextual information."
   "`:html-preamble' for `org-publish'.")
 
 (defconst spike-leung/html-preamble-content (concat "
-  <ul class=\"ally-nav\">
+  <ul class=\"a11y-nav\">
     <li>
       <a id=\"skip-content\" href=\"#content\">Skip to main content</a>
     </li>
