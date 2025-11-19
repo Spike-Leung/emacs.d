@@ -120,5 +120,12 @@ Then generate a #+begin_export html block with an iframe, replacing any existing
 (setq outline-minor-mode-cycle t)
 (setq text-mode-ispell-word-completion nil)
 
+
+;;; Making deleted files go to the trash can
+;;; https://www.masteringemacs.org/article/making-deleted-files-trash-can
+(setq delete-by-moving-to-trash t)
+
+
+
 (provide 'init-my-misc)
 ;;; init-my-misc.el ends here
