@@ -55,8 +55,8 @@
 
   ;;; Denote key bindings.
   (let ((map global-map))
-    (define-key map (kbd "C-c n n") #'denote-silo-open-or-create)
-    (define-key map (kbd "C-c n N") #'denote-open-or-create)
+    (define-key map (kbd "C-c n N") #'denote-silo-open-or-create)
+    (define-key map (kbd "C-c n n") #'denote-open-or-create)
     (define-key map (kbd "C-c n i") #'denote-link-or-create)
     (define-key map (kbd "C-c n I") #'denote-add-links)
     (define-key map (kbd "C-c n b") #'denote-backlinks)
