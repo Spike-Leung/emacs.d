@@ -5,7 +5,7 @@
 (maybe-require-package 'gptel)
 (require 'init-openrouter-models) ; Ensures spike-leung/openrouter-models-cache and hook are defined
 
-(defconst openrouter-default-model 'google/gemini-2.5-pro
+(defconst openrouter-default-model 'google/gemini-3-pro-preview
   "Default model for openrouter.")
 
 (with-eval-after-load 'init-auth
