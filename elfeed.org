@@ -75,12 +75,9 @@ Checklist:
 *** [[https://song.al/feed.xml][Simon]]                                                                :日本:
 *** [[https://simonwillison.net/atom/everything/][Simon Willison]]
 *** [[https://sindresorhus.com/rss.xml][Sindre Sorhus]]
+*** [[https://www.stefanjudis.com/rss.xml][Stefan Judis]]                                                                :frontend:weekly:
 *** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                           :writing:emacs:
-*** [[https://tianheg.co/index.xml][Tianhe Gao]]
 *** [[https://tracydurnell.com/feed/atom/][Tracy Durnell's Mind Garden]]                                                 :weekly:
-*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
-*** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                   :design:ux:
-*** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]                                                              :weekly:
 *** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
 *** [[https://lhasa.icu/rss.xml][游钓四方]]
 *** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
@@ -96,7 +93,6 @@ Checklist:
 *** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
 *** [[https://alexwlchan.net/atom.xml][Alex Chan]]
 *** [[https://alex.party/rss.xml][Alex.Party]]                                                                  :frontend:
-*** [[https://anarchaeopteryx.bearblog.dev/feed/][An Archaeopteryx]]
 *** [[https://aresluna.org/main.rss][Aresluna]]                                                                    :设计有趣的博客:
 *** [[https://www.parkerchang.life/feed.xml][arker Chang's Web]]                                                           :台湾:
 *** [[https://arne.me/weekly/feed.xml][Arne’s Weekly]]
@@ -152,18 +148,17 @@ Checklist:
 *** [[https://ribo.zone/feed.xml][ribo.zone]]
 *** [[https://rknight.me/subscribe/posts/atom.xml][Robb Knight]]
 *** [[https://robbowen.digital/feed.xml][Robb Owen Digital]]                                                           :设计好看的博客:
-*** [[https://birming.com/feed.xml][Robert Birming]]
 *** [[https://ryanmulligan.dev/feed.xml][Ryan Mulligan]]                                                               :设计好看的博客:frontend:
 *** [[https://www.sarasoueidan.com/blog/index.xml][Sara Soueidan]]                                                               :ui:frontend:
 *** [[https://sebastiano.tronto.net/blog/feed.xml][Sebastiano Tronto's blog]]
 *** [[https://hojberg.xyz/rss.xml][Simon Højberg]]                                                               :设计好看的博客:
-*** [[https://www.stefanjudis.com/rss.xml][Stefan Judis]]                                                                :frontend:weekly:
 *** [[https://ayu.land/revlog#feed][Sweetfish Ayu]]                                                               :kawai:
 *** [[https://tao.zz.ac/feed.xml][Tao]]
 *** [[https://thecascade.dev/rss.xml][The Cascade]]                                                                 :css:
 *** [[https://feeds.feedburner.com/brainpickings/rss][The Marginalian]]
 *** [[https://criminallyvulgar.dev/feed/][The Sun and the Air]]
 *** [[https://thewanderingallison.vercel.app/rss.xml/][The Wandering Allison]]
+*** [[https://tianheg.co/index.xml][Tianhe Gao]]
 *** [[https://www.timbornholdt.com/blog/feed.rss][Tim Bornholdt]]
 *** [[https://tusharhero.codeberg.page/rss.xml][tusharhero]]                                                                  :emacs:
 *** [[https://waitbutwhy.com/feed][Wait But Why]]
@@ -172,6 +167,9 @@ Checklist:
 *** [[https://xenodium.com/rss.xml][xenodium]]                                                      :emacs:
 *** [[https://zine.milliesquilly.com/rss.xml][zine of millie]]                                                              :cool:ux:
 *** [[https://keelii.com/][临池不辍]]
+*** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
+*** [[https://www.ftium4.com/rss.xml][体验碎周报 - 龙爪槐守望者]]                                                   :design:ux:
+*** [[https://echosoar.github.io/weekly/atom.xml][偷懒爱好者周刊]]                                                              :weekly:
 *** [[https://luszy.com/home/feed/][冬天里的向日葵]]                                                              :life:
 *** [[https://lenband.com/feed/][冷板凳]]
 *** [[https://yinji.org/feed][印记]]
@@ -180,8 +178,6 @@ Checklist:
 *** [[https://wangyurui.com/feed.xml][太隐]]
 *** [[https://wangquan.cc/feed/][小王日记]]
 *** [[https://stephenleng.com/cn/feed/][心的道理]]
-*** [[https://stephenleng.com/cn/feed/][心的道理]]
-*** [[https://sinyalee.com/blog/?feed=rss2][新的原野]]
 *** [[https://www.laomuzhu.cn/feed/][木竹]]
 *** [[https://www.xiaozonglin.cn/feed/][林林杂语]]
 *** [[https://blog.mfwt.top/index.php/feed/][枫林灯语]]                                                                    :无线电:
@@ -193,7 +189,6 @@ Checklist:
 *** [[https://imgradeone.com/blog.xml][真正的自言者一么]]
 *** [[https://thirdshire.com/index.xml][第三夏尔]]
 *** [[https://www.wikimoe.com/rss][维基萌]]
-*** [[https://caa-ins.org/feed][网络社会研究所]]
 *** [[https://weekly.howie6879.com/rss/rss.xml][老胡的周刊]]                                                                  :weekly:
 *** [[https://luffy.cc/feed][蒙奇日记]]
 *** [[https://1q43.blog/feed/][虹线]]
@@ -340,6 +335,10 @@ Checklist:
 *** [[https://chengpeiquan.com/feed.xml][程沛权]]                                                                      :code:
 *** [[https://elliot00.com/rss][编码与禅]]                                                                    :emacs:
 *** [[https://guozh.net/feed/][老郭种树]]
+*** [[https://sinyalee.com/blog/?feed=rss2][新的原野]]
+*** [[https://caa-ins.org/feed][网络社会研究所]]
+*** [[https://birming.com/feed.xml][Robert Birming]]
+*** [[https://anarchaeopteryx.bearblog.dev/feed/][An Archaeopteryx]]
 ** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
