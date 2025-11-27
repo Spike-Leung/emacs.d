@@ -110,8 +110,8 @@ backend."
     (if path
         (pcase format
           ('html (if file-search
-                     (format "<a href=\"%s.html%s\">%s</a>" anchor file-search desc)
-                   (format "<a href=\"%s.html\">%s</a>" anchor desc)))
+                     (format "<a href=\"%s.html%s\">%s</a>" (url-encode-url anchor) file-search desc)
+                   (format "<a href=\"%s.html\">%s</a>" (url-encode-url anchor) desc)))
           ('latex (format "\\href{%s}{%s}" (replace-regexp-in-string "[\\{}$%&_#~^]" "\\\\\\&" path) desc))
           ('texinfo (format "@uref{%s,%s}" path desc))
           ('ascii (format "[%s] <denote:%s>" desc path))

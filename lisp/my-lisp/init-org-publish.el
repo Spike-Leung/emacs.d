@@ -286,7 +286,7 @@ PROJECT is the current project."
            (concat (format "[[file:%s][%s]]"
                            (or
                             (if export-file-name
-                                (format "%s.org" export-file-name)
+                                (format "%s.org" (url-encode-url export-file-name))
                               nil)
                             entry)
                            (org-publish-find-title entry project))
