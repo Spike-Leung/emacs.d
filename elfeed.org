@@ -88,8 +88,6 @@ Checklist:
 在这里，我比在离家更近的前几个区域更频繁地根据标题来判断一篇文章。
 *** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
 *** [[https://1sle29.github.io/index.xml][1sle]]
-*** [[https://54321.versun.me/feed][54321 Weekly]]
-*** [[https://61.life/feed.xml][61's life]]
 *** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
 *** [[https://alexwlchan.net/atom.xml][Alex Chan]]
 *** [[https://alex.party/rss.xml][Alex.Party]]                                                                  :frontend:
@@ -142,7 +140,6 @@ Checklist:
 *** [[https://onevcat.com/feed.xml][OneV's Den]]
 *** [[https://blog.pursuitus.com/feed][Ouroboros]]                                                                   :life:
 *** [[https://plainvanillaweb.com/blog/feed.xml][Plain Vanilla Blog]]
-*** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]                                                             :zine:
 *** [[https://rachelbythebay.com/w/atom.xml][rachelbythebay]]                                                              :writing:
 *** [[https://lutaonan.com/rss.xml][Randy's Blog]]
 *** [[https://ribo.zone/feed.xml][ribo.zone]]
@@ -206,6 +203,8 @@ Checklist:
 我会不时查看它，以便在必要时把作者邀请到更近的平台，或把他们引导到池塘。
 
 *** [[https://pathos.page/feed.xml][2750 words]]
+*** [[https://54321.versun.me/feed][54321 Weekly]]
+*** [[https://61.life/feed.xml][61's life]]
 *** [[https://iam.skoo.bz/rss/][A Calm in the Chaos]]
 *** [[https://mattbee.zone/rss.xml][A Lovely Harmless Monster]]
 *** [[https://anerdyfujocries.wordpress.com/feed/][A Nerdy Fujo Cries]]
@@ -213,6 +212,7 @@ Checklist:
 *** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
 *** [[https://www.achilletoupin.com/feed.xml][Achille Toupin]]                                                              :法语:裁缝:
 *** [[https://amf.didiermary.fr/feed/][African Music Forum]]                                                         :music:
+*** [[https://anarchaeopteryx.bearblog.dev/feed/][An Archaeopteryx]]
 *** [[https://andrewkelley.me/rss.xml][Andrew Kelley]]                                                               :zig:code:
 *** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]                                                         :writing:
 *** [[https://arialdomartini.github.io/feed.xml][Arialdo on Code]]                                                             :emacs:programing:
@@ -287,9 +287,11 @@ Checklist:
 *** [[https://ploum.net/atom_en.xml][Ploum.net]]                                                                   :programing:
 *** [[https://angrybunnyman.com/feed/][Portrait of the Artist as a…]]
 *** [[https://www.yuqiqin.me/feed.xml][Psychic Paper]]                                                               :english:
+*** [[https://www.quantamagazine.org/feed/][Quanta Magazine]]                                                             :zine:
 *** [[https://randomascii.wordpress.com/feed/][Random ASCII – tech blog of Bruce Dawson]]                                    :code:
 *** [[https://blog.nyman.re/feed.xml][re: nyman]]
 *** [[https://riverpunk.bearblog.dev/feed/][Riverpunk]]
+*** [[https://birming.com/feed.xml][Robert Birming]]
 *** [[https://rseeber.github.io/blog/feed.xml][Rseeber]]
 *** [[https://scyy.fi/index.xml][Sarabet Chang Yuye]]
 *** [[https://hollie.eilloh.net/rss.xml][Small Good Things]]
@@ -328,17 +330,15 @@ Checklist:
 *** [[https://www.kawabangga.com/feed][卡瓦邦噶！]]                                                                  :code:
 *** [[https://www.changhai.org/feed.xml][卢昌海个人主页]]
 *** [[https://spacexcode.com/blog/rss.xml][太空编程 Blog]]                                                               :frontend:
+*** [[https://sinyalee.com/blog/?feed=rss2][新的原野]]
 *** [[https://ctian.livejournal.com/][春田冰河]]
 *** [[https://www.lxchapu.com/rss.xml][柃夏 chapu‘s blog]]
 *** [[https://www.ixiqin.com/feed/][白宦成]]
 *** [[https://blog.sakoamc.com/atom.xml][神仙鱼不吃鱼鱼]]
 *** [[https://chengpeiquan.com/feed.xml][程沛权]]                                                                      :code:
 *** [[https://elliot00.com/rss][编码与禅]]                                                                    :emacs:
-*** [[https://guozh.net/feed/][老郭种树]]
-*** [[https://sinyalee.com/blog/?feed=rss2][新的原野]]
 *** [[https://caa-ins.org/feed][网络社会研究所]]
-*** [[https://birming.com/feed.xml][Robert Birming]]
-*** [[https://anarchaeopteryx.bearblog.dev/feed/][An Archaeopteryx]]
+*** [[https://guozh.net/feed/][老郭种树]]
 ** Z5:Pond                                                                      :z5:
 池塘是最后一个分区：这里的文章会沉到底层，进入我的“待读”堆。
 其包含的订阅源是那些我偶尔才想粗略浏览的。
