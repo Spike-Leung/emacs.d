@@ -65,7 +65,7 @@ holding contextual information."
 
 (defconst spike-leung/org-publish-default-publishing-directory
   "~/git/taxodium/publish"
-  "`:publishing-directory' for draft.")
+  "Default `:publishing-directory'.")
 
 (defconst spike-leung/html-head "
 <meta name=\"color-scheme\" content=\"light dark\" />
@@ -454,9 +454,8 @@ TAG is string."
            :base-directory "~/git/taxodium/posts"
            :base-extension "org"
            :exclude ".*"
-           :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" "_draft")
-           :preparation-function ,(spike-lenug/org-publish-clean-draft spike-leung/org-publish-draft-publishing-directory)
-           :publishing-directory ,spike-leung/org-publish-draft-publishing-directory
+           :include  ,(spike-leung/get-file-list-from-denote-silo "~/git/taxodium/posts" (rx (* anychar) "_draft" (* anychar) "_preview"))
+           :publishing-directory ,spike-leung/org-publish-default-publishing-directory
            ;; :publishing-function spike-leung/org-html-publish-to-html-orgfiles
            :section-numbers nil
            :with-toc t
