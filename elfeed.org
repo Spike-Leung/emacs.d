@@ -88,8 +88,6 @@ Checklist:
 在这里，我比在离家更近的前几个区域更频繁地根据标题来判断一篇文章。
 *** [[https://i.hsfzxjy.site/rss.xml][#hsfzxjy#]]
 *** [[https://1sle29.github.io/index.xml][1sle]]
-*** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
-*** [[https://alexwlchan.net/atom.xml][Alex Chan]]
 *** [[https://alex.party/rss.xml][Alex.Party]]                                                                  :frontend:
 *** [[https://aresluna.org/main.rss][Aresluna]]                                                                    :设计有趣的博客:
 *** [[https://www.parkerchang.life/feed.xml][arker Chang's Web]]                                                           :台湾:
@@ -106,10 +104,8 @@ Checklist:
 *** [[https://dorotac.eu/atom.xml][dcz's posts]]
 *** [[https://sive.rs/en.atom][Derek Sivers]]
 *** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
-*** [[https://entropicthoughts.com/feed][Entropic Thoughts]]                                                           :emacs:
 *** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
 *** [[https://quaily.com/cosine/feed/atom][FE Bits 前端周周谈]]                                                          :frontend:
-*** [[https://borretti.me/feed.xml][Fernando Borretti]]
 *** [[https://yovey.me/feed/][Fragments]]
 *** [[https://www.fuzzycomputer.com/rss][fuzzycomputer.com]]
 *** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]                                                                 :weekly:
@@ -125,7 +121,6 @@ Checklist:
 *** [[https://jvns.ca/atom.xml][Julia Evans]]
 *** [[https://lars-christian.com/feed.xml][Lars-Christian's website]]
 *** [[https://www.teamten.com/lawrence/writings/rss.xml][Lawrence Kesteloot's writings]]                                               :设计有趣的博客:
-*** [[https://www.didiermary.fr/feed/][Le Blog de Didier MARY]]                                                      :music:album:
 *** [[https://lea.verou.me/feed.xml][Lea Verou’s blog]]                                                            :web:code:
 *** [[https://feihu.me/blog/feed.atom][libfeihu Blog]]                                                               :code:
 *** [[https://lomus.cc/feed][Lumos's Blog]]
@@ -137,6 +132,7 @@ Checklist:
 *** [[https://bilibi.li/feed.rss][midnight serial experiments]]
 *** [[https://mo42.bearblog.dev/feed.xml][Mo's Blog]]
 *** [[https://monocyte.bearblog.dev/feed/][monocyte's blog]]
+*** [[https://www.newcommute.net/feed?format=rss][New Commute]]                                                                 :music:album:
 *** [[https://onevcat.com/feed.xml][OneV's Den]]
 *** [[https://blog.pursuitus.com/feed][Ouroboros]]                                                                   :life:
 *** [[https://plainvanillaweb.com/blog/feed.xml][Plain Vanilla Blog]]
@@ -161,7 +157,6 @@ Checklist:
 *** [[https://waitbutwhy.com/feed][Wait But Why]]
 *** [[https://weiwei.place/feed][Weiwei Xu]]
 *** [[https://what-if.xkcd.com/feed.atom][what if?.xkcd]]
-*** [[https://xenodium.com/rss.xml][xenodium]]                                                      :emacs:
 *** [[https://zine.milliesquilly.com/rss.xml][zine of millie]]                                                              :cool:ux:
 *** [[https://keelii.com/][临池不辍]]
 *** [[https://jt26wzz.com/rss.xml][从不说安全词]]                                                                :code:
@@ -205,6 +200,7 @@ Checklist:
 *** [[https://pathos.page/feed.xml][2750 words]]
 *** [[https://54321.versun.me/feed][54321 Weekly]]
 *** [[https://61.life/feed.xml][61's life]]
+*** [[http://antirez.com/rss][<antirez>]]                                                                   :programing:llm:
 *** [[https://iam.skoo.bz/rss/][A Calm in the Chaos]]
 *** [[https://mattbee.zone/rss.xml][A Lovely Harmless Monster]]
 *** [[https://anerdyfujocries.wordpress.com/feed/][A Nerdy Fujo Cries]]
@@ -212,6 +208,7 @@ Checklist:
 *** [[https://emptysqua.re/blog/index.xml][A. Jesse Jiryu Davis]]
 *** [[https://www.achilletoupin.com/feed.xml][Achille Toupin]]                                                              :法语:裁缝:
 *** [[https://amf.didiermary.fr/feed/][African Music Forum]]                                                         :music:
+*** [[https://alexwlchan.net/atom.xml][Alex Chan]]
 *** [[https://anarchaeopteryx.bearblog.dev/feed/][An Archaeopteryx]]
 *** [[https://andrewkelley.me/rss.xml][Andrew Kelley]]                                                               :zig:code:
 *** [[https://www.galactanet.com/feed.xml][Andy Weir's Writing]]                                                         :writing:
@@ -238,9 +235,11 @@ Checklist:
 *** [[https://divergentrays.com/blog/blogfeed.xml][Divergent Rays]]                                                              :weekly:
 *** [[https://diygod.cc/feed][DIYgod]]
 *** [[https://emacsredux.com/atom.xml][Emacs Redux]]                                                                 :emacs:
+*** [[https://entropicthoughts.com/feed][Entropic Thoughts]]                                                           :emacs:
 *** [[https://boehs.org/in/blog.xml][Evan Boehs in the blog]]                                                      :设计有趣的博客:
 *** [[https://falseknees.com/rss.xml][false knees]]                                                                 :manga:anime:
 *** [[https://ferd.ca/feed.rss][Ferd.ca]]                                                                     :programing:code:
+*** [[https://borretti.me/feed.xml][Fernando Borretti]]
 *** [[https://fhur.me/feed.xml][fhur's blog]]                                                                 :code:
 *** [[https://fiat-mihi.com/rss.xml][Fiat Mihi]]                                                                   :宗教:
 *** [[https://filiph.net/text/atom.xml][filiph.net/text]]
@@ -265,6 +264,7 @@ Checklist:
 *** [[https://kuilz.github.io/index.xml][kuilz]]
 *** [[https://l1uyun.one/atom.xml][l1uyun's Blog]]
 *** [[https://laike9m.com/blog/rss/][laike9m's blog]]
+*** [[https://www.didiermary.fr/feed/][Le Blog de Didier MARY]]                                                      :music:album:
 *** [[https://www.less-bug.com//index.xml][Less Bug]]                                                                    :code:
 *** [[https://www.lukew.com/ff/rss][LukeW]]                                                                       :design:
 *** [[https://lynn.sh/rss.xml][Lynn]]                                                                        :emacs:
@@ -322,6 +322,7 @@ Checklist:
 *** [[https://wordsundermyname.wordpress.com/feed/][Words Under My Name]]
 *** [[https://ww0cj.radio/feed/][WW0CJ.radio]]
 *** [[http://xahlee.info/emacs/emacs/blog.xml][Xah Emacs Blog]]                                                              :emacs:
+*** [[https://xenodium.com/rss.xml][xenodium]]                                                                    :emacs:
 *** [[https://xuanwo.io/index.xml][Xuanwo's Blog]]                                                               :code:
 *** [[https://your-local-grubdog.neocities.org/feed.xml][Your Local Grubdog]]
 *** [[https://yipai.me/feed][一派胡言]]
