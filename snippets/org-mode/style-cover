@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: style-cover
+# key: scover
+# --
+
+#+attr_html: :style max-height: 510px; :class center
