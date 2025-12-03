@@ -53,7 +53,6 @@
     (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
     (add-hook 'gptel-mode-hook 'auto-fill-mode)
     (add-hook 'gptel-mode-hook 'visual-line-mode)
-    (add-hook 'gptel-mode-hook 'gptel-highlight-mode)
 
     (when (and spike-leung/openrouter-models-cache
                (> (length spike-leung/openrouter-models-cache) 0))
