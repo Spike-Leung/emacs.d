@@ -31,6 +31,7 @@ Checklist:
 *** [[https://ameow.xyz/feed.xml][猫鱼周刊]]                                                                    :weekly:
 *** [[https://z.arlmy.me/atom.xml][素生]]                                                                        :daily:book:quote:
 *** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志]]                                                            :weekly:
+*** [[https://emacsformacosx.com/atom/release][Emacs For Mac OS X: Releases RSS Feed]]
 ** Z2:Backyard                                                                  :z2:default:
 在后院里，我和那些我喜欢的博客待在一起。
 我喜欢他们的大多数帖子，但并不觉得有必要立刻把所有东西都读完。
@@ -81,6 +82,7 @@ Checklist:
 *** [[https://www.hecaitou.com/feeds/posts/default][和菜头]]
 *** [[https://lhasa.icu/rss.xml][游钓四方]]
 *** [[https://weekly.tw93.fun/rss.xml][潮流周刊]]
+*** [[https://lawtee.com/index.xml][老 T 博客]]
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
@@ -191,6 +193,7 @@ Checklist:
 *** [[https://www.chenrui.com/feed.php][陈锐]]
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
+*** [[https://feeds.feedblitz.com/alearningaday&x=1][A Learning Day Feed]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
