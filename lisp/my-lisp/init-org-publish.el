@@ -100,11 +100,14 @@ holding contextual information."
     <li><a href=\"/search.html\">搜索</a></li>
     <li><a href=\"/inside-black-hole.html\">黑洞里</a></li>
   </ul>
+  <span class=\"snow-toggle-container\">
+    <input type=\"checkbox\" id=\"snow-toggle\" aria-label=\"切换雪花效果\" checked>
+    <label for=\"snow-toggle\" class=\"snow-icon\"></label>
+  </span>
   <select id=\"lightdark\" class=\"js-required\">
     <option value=\"auto\">Auto</option>
     <option value=\"light\">Light</option>
     <option value=\"dark\">Dark</option>
-    <option value=\"light-retro\" aria-label=\"复古 Light\">Light 👾</option>
     <option value=\"dark-retro\" aria-lable=\"复古 Dark\">Dark 👾</option>
   </select>
 </nav>
@@ -152,6 +155,8 @@ holding contextual information."
 <script src=\"/js/backtop.js\" defer></script>
 <script src=\"/js/purify.min.js\" defer></script>
 <script src=\"/js/webmention.js\" defer></script>
+<script src=\"/js/snow-fall.js\" defer type=\"module\"></script>
+<snow-fall></snow-fall>
 <noscript>
   <style>
     .js-required {
@@ -164,6 +169,8 @@ holding contextual information."
 
 (defconst spike-leung/html-postamble-sitemap "
 <script src=\"/js/backtop.js\" defer></script>
+<script src=\"/js/snow-fall.js\" defer type=\"module\"></script>
+<snow-fall></snow-fall>
 <noscript>
   <style>
     .js-required {
