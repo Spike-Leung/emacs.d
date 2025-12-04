@@ -5,7 +5,7 @@
 (maybe-require-package 'gptel)
 (require 'init-openrouter-models) ; Ensures spike-leung/openrouter-models-cache and hook are defined
 
-(defconst openrouter-default-model 'google/gemini-3-pro-preview
+(defconst openrouter-default-model 'deepseek/deepseek-v3.2-speciale
   "Default model for openrouter.")
 
 (with-eval-after-load 'init-auth
@@ -42,13 +42,13 @@
       :description "英语词典"
       :system "你充当一个字典，将内容翻译成英文，如果结果一个单词，同时给出音标。考虑提供多个可能的含义。"
       :backend "OpenRouter"
-      :model 'google/gemini-2.5-flash)
+      :model 'deepseek/deepseek-v3.2)
 
     (gptel-make-preset 'quick
       :description "快速回答"
       :system "You are a helpful assistant. Respond concisely."
       :backend "OpenRouter"
-      :model 'deepseek/deepseek-v3.2-exp)
+      :model 'deepseek/deepseek-v3.2)
 
     (add-hook 'spike-leung/openrouter-models-updated-hook #'spike-leung/gptel-refresh-openrouter-provider)
     (add-hook 'gptel-mode-hook 'auto-fill-mode)
