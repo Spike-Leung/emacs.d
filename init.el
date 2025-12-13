@@ -105,6 +105,7 @@
 (require 'init-sql)
 (require 'init-yaml)
 (require 'init-docker)
+(require 'init-python)
 (maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
