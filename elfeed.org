@@ -194,6 +194,7 @@ Checklist:
 *** [[https://innei.in/feed][静かな森]]
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
 *** [[https://feeds.feedblitz.com/alearningaday&x=1][A Learning Day Feed]]
+*** [[https://www.paddysun.top/feed][Under the Sun with Paddy]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
@@ -351,12 +352,10 @@ Checklist:
 *** [[https://www.calishat.com/feed/][Calishat]]                                                                    :search:engine:更年期:衰老:
 *** [[https://www.codesimplicity.com/feed/][Code Simplicity]]
 *** [[https://blog.cr.yp.to/feed.application=xml][D. J. Bernstein's personal weblog.]]                                          :code:
-*** [[https://www.daemonology.net/hn-daily/index.rss][Hacker News Daily]]                                                           :news:daily:
 *** [[https://www.hillelwayne.com/][Hillel Wayne]]                                                                :code:
 *** [[https://blog.itsnero.com/feed][Nero Villagallos O'Reilly Art Blog]]
 *** [[https://orbitalmartian.vercel.app/feed.xml][OrbitalMartian]]
 *** [[https://planet.emacslife.com/atom.xml][Planet Emacslife]]                                                            :emacs:
-*** [[https://decohack.com/feed/][Product Hunt 每日热榜]]                                                       :news:daily:
 *** [[https://smallyu.net/atom][smallyu]]
 *** [[https://mikkolaine.blogspot.com/feeds/posts/default][Stars, Open source and more]]
 *** [[https://tagn.wordpress.com/feed/][The Ancient Gaming Noob]]                                                     :game:
