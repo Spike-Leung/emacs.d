@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: style-vertical
-# key: svertical
+# key: sv
 # --
 
 #+attr_html: :class vertical-rl center

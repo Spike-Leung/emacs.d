@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: 图片描述 网易云
-# key: cam
-# --
-
-#+ATTR_HTML: :class unset-figcation-margin-inline
-#+CAPTION: 《$0》专辑封面 (图片来源：网易云音乐)
