@@ -195,6 +195,8 @@ Checklist:
 *** [[https://www.gaotianchi.com/feed.xml][高天驰]]
 *** [[https://feeds.feedblitz.com/alearningaday&x=1][A Learning Day Feed]]
 *** [[https://www.paddysun.top/feed][Under the Sun with Paddy]]
+*** [[https://lynan.cn/feed.xml][Lynan's Page]]
+*** [[https://xeonzilla.top/feed.xml][x7aNote]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
