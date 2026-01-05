@@ -31,14 +31,12 @@
 (defun light ()
   "Activate a light color theme."
   (interactive)
-  (setq custom-enabled-themes '(standard-light))
-  (reapply-themes))
+  (modus-themes-load-random-light))
 
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (setq custom-enabled-themes '(modus-vivendi))
-  (reapply-themes))
+  (modus-themes-load-random-dark))
 
 (when (maybe-require-package 'dimmer)
   (setq-default dimmer-fraction 0.15)
