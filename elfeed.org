@@ -19,6 +19,7 @@ Checklist:
 *** [[https://anotherdayu.com/feed/][Another Dayu]]
 *** [[https://antfu.me/feed.xml][Anthony Fu]]
 *** [[https://feedpress.me/cssweekly][CSS Weekly]]                                                                  :css:weekly:
+*** [[https://cytrogen.icu/atom.xml][Cytrogen]]
 *** [[https://emacsformacosx.com/atom/release][Emacs For Mac OS X: Releases RSS Feed]]
 *** [[https://cprss.s3.amazonaws.com/frontendfoc.us.xml][Frontend Focus]]                                                              :weekly:
 *** [[http://html5doctor.com/feed/][HTML5 doctor]]                                                                :weekly:frontend:
@@ -37,6 +38,7 @@ Checklist:
 *** [[https://protesilaos.com/master.xml][Protesilaos]]                                                                 :emacs:
 *** [[https://sachachua.com/blog/feed/index.xml][Sacha Chua]]                                                                  :emacs:
 *** [[https://sightlessscribbles.com/feed.xml][Sightless Scribbles]]
+*** [[https://simonwillison.net/atom/everything/][Simon Willison]]
 *** [[https://www.stefanjudis.com/rss.xml][Stefan Judis]]                                                                :frontend:weekly:
 *** [[https://archive.casouri.cc/rock/day/atom.xml][余日摇滚]]                                                                    :music:
 *** [[https://www.geedea.pro/index.xml][极客死亡计划]]                                                                :weekly:
@@ -44,6 +46,8 @@ Checklist:
 *** [[https://ameow.xyz/feed.xml][猫鱼周刊]]                                                                    :weekly:
 *** [[https://z.arlmy.me/atom.xml][素生]]                                                                        :daily:book:quote:
 *** [[https://www.ruanyifeng.com/blog/atom.xml][阮一峰的网络日志]]                                                            :weekly:
+*** [[https://chlo.is/feed.atom][园子里的日光]]
+*** [[https://quaily.com/cosine/feed/atom][FE Bits 前端周周谈]]                                                          :frontend:
 ** Z2:Backyard                                                                  :z2:
 在后院里，我和那些我喜欢的博客待在一起。
 我喜欢他们的大多数帖子，但并不觉得有必要立刻把所有东西都读完。
@@ -56,7 +60,6 @@ Checklist:
 *** [[https://anniemueller.com/posts_feed][annie]]
 *** [[https://garden.bradwoods.io/rss.xml][Brad Woods Digital Garden]]                                                   :设计有趣的博客:
 *** [[https://cbvivi.today/feed.xml][cbvivi]]
-*** [[https://cytrogen.icu/atom.xml][Cytrogen]]
 *** [[https://dbushell.com/rss.xml][dbushell.com]]                                                                :frontend:
 *** [[https://gwern.substack.com/feed][Gwern.net]]                                                                   :newsletter:设计超级好的网站:
 *** [[https://takeonrules.com/index.xml][Jeremy Friesen]]                                                              :emacs:writing:
@@ -68,12 +71,12 @@ Checklist:
 *** [[https://www.muliama.blog/feed/][Muliama's diaries]]
 *** [[https://overreacted.io/rss.xml][overreacted]]                                                                 :frontend:react:
 *** [[https://www.owenyoung.com/atom.xml][owenyoung]]
+*** [[http://www.aaronsw.com/2002/feeds/pgessays.rss][Paul Graham]]
 *** [[https://polebug.github.io/atom.xml][Polebug]]
 *** [[https://www.pseudoyu.com/feed.xml][Pseudoyu]]
 *** [[https://www.raptitude.com/feed/][Raptitude]]
 *** [[https://seths.blog/feed/][SETH'S BLOG]]
 *** [[https://song.al/feed.xml][Simon]]                                                                :日本:
-*** [[https://simonwillison.net/atom/everything/][Simon Willison]]
 *** [[https://sindresorhus.com/rss.xml][Sindre Sorhus]]
 *** [[https://blog.solazy.me/feed/][So!azy]]                                                                      :daily:
 *** [[https://johnrakestraw.com/index.xml][thinking out loud]]                                                           :writing:emacs:
@@ -82,7 +85,6 @@ Checklist:
 *** [[https://lhasa.icu/rss.xml][游钓四方]]
 *** [[https://www.linggandianbo.com/rss/][灵感电波]]                                                                    :weekly:newsletter:
 *** [[https://lawtee.com/index.xml][老 T 博客]]
-*** [[https://chlo.is/feed.atom][园子里的日光]]
 ** Z3:Orchard                                                                   :z3:
 果园比后院更大，也生长得更加狂野。
 它包含我刚刚发现并种在这里的博客，因为我想了解它们。
@@ -107,7 +109,6 @@ Checklist:
 *** [[https://sive.rs/en.atom][Derek Sivers]]
 *** [[https://dylanbeattie.net/rss][dylanbeattie.net]]
 *** [[https://www.autodidacts.io/tag/essay/rss/][Essay - The Autodidacts]]
-*** [[https://quaily.com/cosine/feed/atom][FE Bits 前端周周谈]]                                                          :frontend:
 *** [[https://yovey.me/feed/][Fragments]]
 *** [[https://www.fuzzycomputer.com/rss][fuzzycomputer.com]]
 *** [[https://blog.gentlelucky.com/zh/index.xml][GentleLucky]]                                                                 :weekly:
@@ -197,6 +198,7 @@ Checklist:
 *** [[https://www.paddysun.top/feed][Under the Sun with Paddy]]
 *** [[https://lynan.cn/feed.xml][Lynan's Page]]
 *** [[https://xeonzilla.top/feed.xml][x7aNote]]
+*** [[https://flowtwo.io/synd/rss][flow2]]
 ** Z4:Pasture                                                                   :z4:
 牧场比果园还要大，但密度较低。
 它包含那些我偶尔想略读的订阅源。
