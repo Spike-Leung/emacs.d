@@ -4,4 +4,4 @@
 # --
 
 #+caption: @@html:<b>$1</b>@@ @@html:<br>@@ $2 @@html:<br>@@
-#+attr_html: loading="lazy" :data-href $0 :alt ${1:专辑} by ${2:歌手} (${3:年份})} :title $1 by $2 ($3)
+#+attr_html: loading="lazy" :data-href `(spike-leung/insert-album-href)` :alt ${1:专辑} by ${2:歌手} (${3:年份})} :title $1 by $2 ($3)

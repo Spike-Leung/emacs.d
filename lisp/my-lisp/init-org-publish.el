@@ -453,6 +453,18 @@ TAG is string."
          (relative-path (file-relative-name image-file image-dir)))
     (insert (format "#+CAPTION: \n[[file:images/%s]]" relative-path))))
 
+(defun spike-leung/insert-album-href ()
+  "Insert album wall href."
+  (interactive)
+  (save-excursion
+    (forward-line 1)
+    (if (re-search-forward (rx (* anychar) "/" (group (*  anychar)) ".avif") (line-end-position) t)
+        (let ((filename (match-string 1)))
+          (re-search-backward ":data-href " (line-beginning-position -1) t)
+          (goto-char (match-end 0))
+          (insert (format "images/album/%s.webp" filename)))
+      (message "No valid file link found on the next line."))))
+
 (setq org-html-content-class "content e-content")
 
 (defun spike-leung/setup-org-publish-project-alist (&rest _args)
